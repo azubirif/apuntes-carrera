@@ -1,7 +1,5 @@
 ---
-title: My GitHub Pages Notebook!
+title: ¡Bienvenido!
 ---
 
-Hello world!
-
-Write some words here!
+Aquí están mis apuntes de la carrera. A la izquierda puedes moverte sobre los diferentes archivos y apuntes.
