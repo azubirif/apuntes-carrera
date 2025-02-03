@@ -150,7 +150,50 @@ $$
 0 & i\neq j
 \end{matrix}\right.
 $$
+Los vectores de la base canónica cumplen que:
+$$
+\mathbf{e}_{i}\cdot \mathbf{e}_{j}=\delta_{ij}
+$$
+Las bases cuyos vectores cumplan esto se dice que son bases **ortonormales**.
 **Ejemplos**:
 $$
 \mathbf{v}\cdot \mathbf{w}=\sum_{i=1}^{n}\sum_{j=1}^{n}v_{i}w_{i}\delta_{ij}
+$$
+Volviendo a donde estábamos antes, podemos expresar el determinante anterior mediante
+$$
+N_{i}\delta_{ij}\varepsilon_{jj_{1},\dots j_{n-1}}v_{1,j_{1}}\dots v_{n-1,j_{n-1}}
+$$
+Utilizando lo que teníamos antes
+$$
+\overset{\mathbf{N}}{N_{i}\mathbf{e}_{i}\cdot \mathbf{e}_{j}}\overset{\mathbf{V}}{\varepsilon_{jj_{1},\dots j_{n-1}}v_{1,j_{1}}\dots v_{n-1,j_{n-1}}}=\mathbf{N}\cdot \mathbf{V} \neq 0
+$$
+Como $\mathbf{N}$ la única condición que queremos para $\mathbf{N}$ es que sea perpendicular a $H$ y que $\mathbf{N}\cdot \mathbf{V}\neq 0$, entonces podemos elegir $\mathbf{N}=\mathbf{V}$, donde
+$$
+\mathbf{V}= \mathbf{N}=
+\begin{vmatrix}
+\mathbf{e}_{1} & \mathbf{e}_{2} & \dots & \mathbf{e}_{n} \\
+v_{1,1} & v_{1,2} & \dots & v_{1,n} \\
+\dots & \dots & \dots & \dots \\
+v_{n,1} & v_{n,2} & \dots & v_{n-1,n}
+\end{vmatrix}
+$$
+Observemos que en $\mathbb{R}^3$, tendríamos
+$$
+\begin{vmatrix}
+i & j & k \\
+v_{1} & v_{2} & v_{3} \\
+w_{1} & w_{2} & w_{3}
+\end{vmatrix}
+$$
+este determinante se puede ver como el vector ortogonal a $\mathbf{v}$ y $\mathbf{w}$, y es una operación interna en $\mathbb{R}^{3}$:
+$$
+\wedge: \mathbb{R}^{3}\times \mathbb{R}^{3} \to \mathbb{R}^{3}
+$$
+el llamado producto vectorial de $\mathbb{R}^{3}$.
+En $\mathbb{R}^{2}$ tenemos una recta (hiperplano) con vector director $\mathbf{v}=(v_{1},v_{2})$, entonces una recta perpendicular a la misma vendrá dada por
+$$
+\mathbf{N}=\begin{vmatrix}
+i & j \\
+v_{1} & v_{2}
+\end{vmatrix}= (v_{2},-v_{1})
 $$
