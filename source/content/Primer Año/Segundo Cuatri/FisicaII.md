@@ -7,7 +7,8 @@ title: Física II
 > $$
 \vec{F} = \frac{1}{4\pi \varepsilon_{0}} \frac{q_1q_2}{r^{2}}\vec{u}_{r}= k_{0} \frac{q_1q_2}{r^{2}}\vec{u}_{r}~(N)
 >$$
->Siendo $k_{0} = 9 \cdot 10^{9}~( \frac{Nm^{2}}{r^{2}})$, $\varepsilon_{0}$ la permitividad eléctrica del vacío, y $\vec{u}_{r}$ el vector que va desde el foco al receptor.
+
+Siendo $k_{0} = 9 \cdot 10^{9}~( \frac{Nm^{2}}{r^{2}})$, $\varepsilon_{0}$ la permitividad eléctrica del vacío, y $\vec{u}_{r}$ el vector que va desde el foco al receptor.
 
 >[!info] Definición
 >El campo eléctrico es una region en el espacio alrededor de una carga en la que se pueda situar otra carga receptora para que esta sufra una fuerza repulsora o atractora.
@@ -39,3 +40,11 @@ Para unas coordenadas necesitamos un origen $\vec{0}$, y una base. Para unas coo
 Sin embargo, también podemos utilizar las coordenadas polares, que consisten en una distancia al origen $r$, y un ángulo respecto al eje horizontal $\phi$.![[coords_polares.png]]
 Para definir el ángulo, hay que tener en cuenta que, al desplazar el vector un ángulo, proyectamos el vector sobre el eje $x$ positivo, y giramos el vector en sentido anti horario hasta alcanzar la posición del vector original. Ese ángulo es nuestra coordenada $\phi$.
 Si trazamos el vector unitario de $r$, su vector perpendicular $\vec{u}_{\phi}$ es tangencial al ángulo $\phi$.
+Para poder cambiar entre coordenadas cartesianas y polares, utilizamos las siguientes ecuaciones:
+$$
+\boxed{\begin{align}
+x &= r\cos \phi\\ y &= r\sin \phi\\r^{2}&= x^{2}+y^{2}\\
+\vec{u}_{r} &= (\cos \phi, \sin \phi) \\
+\vec{u}_{\phi} &= (-\sin \phi, \cos \phi)
+\end{align}}
+$$
