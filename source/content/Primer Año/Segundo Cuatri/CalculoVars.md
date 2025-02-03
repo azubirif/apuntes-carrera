@@ -114,3 +114,19 @@ $$
 \end{matrix}\right.
 $$
 $i_{1},\dots,i_{n}$ es una permutación par $123,\dots,n$ si para transformar una en otra necesitamos un número par de trasposiciones. Una trasposición es una permutación en la que solo se intercambian dos y solo dos elementos (no tienen por qué ser adyacentes).
+**Ejemplo**:
+En $\mathbb{R}^4$, $\varepsilon_{4312} \to 1342 \to 1243 \to 1234 \implies~3$ trasposiciones, y $\varepsilon_{1341}=0$
+Una propiedad muy útil del símbolo de Levi-Civita es que con él podemos dar una expresión cerrada a cualquier determinante $n\times n$.
+$$
+\begin{vmatrix}
+a_{11} & \dots & a_{1n} \\
+\dots  & \dots & \dots\\
+a_{n-1} & \dots & a_{nn}
+\end{vmatrix}= \sum_{i_{1}=1}^n \sum_{i_{2}=1}^n\dots \sum_{i_{n}=1}^n
+\varepsilon_{i_{1},\dots,i_{n}}a_{1i_{1}}\dots a_{ni_{n}}
+$$
+Si queremos abusar todavía más de la notación, podemos usar el criterio de suma de Einstein. Este consiste en suponer que hay una suma siempre que un índice se repita, y la suma se hace en todo el rango de definición del índice:
+$$
+\mathbf{v} \cdot \mathbf{w} = v_{i} w_{i}
+$$
+
