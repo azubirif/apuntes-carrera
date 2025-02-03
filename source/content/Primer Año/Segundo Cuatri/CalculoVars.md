@@ -129,4 +129,28 @@ Si queremos abusar todavía más de la notación, podemos usar el criterio de su
 $$
 \mathbf{v} \cdot \mathbf{w} = v_{i} w_{i}
 $$
-
+---
+$$
+\begin{vmatrix}
+\mathbf{N} \\
+\mathbf{v}_{1} \\
+\dots \\
+\mathbf{v}_{n-1}
+\end{vmatrix}=
+\begin{vmatrix}
+N_{1} & \dots & N_{n} \\
+\dots & \dots & \dots \\
+v_{n-1,1} & \dots & v_{n-1,n}
+\end{vmatrix}=\varepsilon_{ij_{1}j_{2}\dots j_{n-1}}N_{i}v_{1j_{1}}v_{2j_{2}}\dots v_{n-1,j_{n-1}}
+$$
+### La delta de Kronecker
+$$
+\delta_{ij}=  \left\{\begin{matrix}
+1 & i=j \\
+0 & i\neq j
+\end{matrix}\right.
+$$
+**Ejemplos**:
+$$
+\mathbf{v}\cdot \mathbf{w}=\sum_{i=1}^{n}\sum_{j=1}^{n}v_{i}w_{i}\delta_{ij}
+$$
