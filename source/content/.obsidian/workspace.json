@@ -41,7 +41,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cálculo en varias variables.md",
+                "file": "Primer Año/Segundo Cuatri/Cálculo en varias variables.md",
                 "mode": "source",
                 "source": false
               },
@@ -198,12 +198,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2c5189183afb15ef",
+  "active": "b77831b90dd9f87b",
   "lastOpenFiles": [
+    "Primer Año",
     "index.md",
-    "Cálculo en varias variables.md",
-    "Segundo Cuatri",
-    "Primer Cuatri",
+    "Primer Año/Segundo Cuatri/Cálculo en varias variables.md",
+    "Primer Año/Segundo Cuatri",
+    "Primer Año/Primer Cuatri",
     "category-folder/Some note.md",
     "category-folder/index.md",
     "category-folder"
