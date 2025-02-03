@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Primer Año/Segundo Cuatri/CalculoVars.md",
+                "file": "Primer Año/Segundo Cuatri/FisicaII.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CalculoVars"
+              "title": "FisicaII"
             }
           }
         ],
@@ -184,10 +184,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "b77831b90dd9f87b",
+  "active": "48ffd2a75173a171",
   "lastOpenFiles": [
-    "Primer Año/Segundo Cuatri/FisicaII.md",
     "Primer Año/Segundo Cuatri/CalculoVars.md",
+    "Primer Año/Segundo Cuatri/FisicaII.md",
     "Primer Año/Primer Cuatri/nota_primer_cuatri.md",
     "imágenes/coords_polares.png",
     "imágenes/plano_cartesiano.png",

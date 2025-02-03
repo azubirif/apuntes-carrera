@@ -42,3 +42,13 @@ x &= |r|\cos \phi\\ y &= |r|\sin \phi\\r^{2}&= x^{2}+y^{2} \\
 \vec{u}_{\phi} &= (-\sin \phi, \cos \phi)
 \end{align}}
 $$
+Respecto a la velocidad en coordenadas polares, tenemos el siguiente desarrollo:
+$$
+\begin{align}
+v^{2}&=\dot{x}^{2}+\dot{y}^{2} \\
+&=\dot{r}^{2}\cos ^{2}\phi-2\dot{r} r \dot{\phi}\sin \phi \cos \phi+r^{2}\sin ^{2}\phi
+\dot{\phi}^{2} \\
+&+\dot{r}^{2}\sin ^{2}\phi+2 \dot{r}r \dot{\phi}\sin \phi \cos \phi+ r^{2}\cos ^{2}\phi \dot{\phi}^{2} \\
+&= \dot{r}^{2}+r^{2} \dot{\phi}^{2}
+\end{align}
+$$
