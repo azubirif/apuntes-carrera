@@ -86,3 +86,12 @@ $$
 3. Es transitivo: $P\sim Q \iff d(P,O) = d(Q,O)$. Si $Q\sim R \iff d(Q,O) = d(R,O)$, entonces si sustituimos tenemos que $d(P,O)=d(R,O) \iff P \sim R$.
 ### Definición
 Sea $A \neq \phi$ y $\sim$ una relación de equivalencia sobre $A$. Entonces $\forall a \in A$, el conjunto $[a] = \{ x \in A : a \sim x \}$ se llama la clase de equivalencia de $a$.
+### Definición
+El conjunto de todas las clases de equivalencia que define la relación $\sim$ sobre $A$, se llama el conjunto cociente de la relación y se denota por
+$$
+\boxed{A / \sim}
+$$
+Para la congruencia de módulo $n$ en $\mathbb{Z}$:
+$$
+\frac{\mathbb{Z}}{\sim} = \{ [0],[1],\dots,[n-1] \} \equiv \mathbb{Z}_{n}
+$$
