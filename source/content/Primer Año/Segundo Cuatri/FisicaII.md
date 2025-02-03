@@ -36,7 +36,8 @@ Si trazamos el vector unitario de $r$, su vector perpendicular $\vec{u}_{\phi}$ 
 Para poder cambiar entre coordenadas cartesianas y polares, utilizamos las siguientes ecuaciones:
 $$
 \boxed{\begin{align}
-x &= r\cos \phi\\ y &= r\sin \phi\\r^{2}&= x^{2}+y^{2}\\
+x &= |r|\cos \phi\\ y &= |r|\sin \phi\\r^{2}&= x^{2}+y^{2} \\
+\phi &= \arctan \frac{y}{x}\\
 \vec{u}_{r} &= (\cos \phi, \sin \phi) \\
 \vec{u}_{\phi} &= (-\sin \phi, \cos \phi)
 \end{align}}
