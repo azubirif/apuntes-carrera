@@ -1,3 +1,7 @@
+---
+title: Topología Elemental
+---
+
 ## Relaciones
 Existen dos tipos de relaciones:
 - De orden
@@ -45,6 +49,32 @@ $$
 ¿Qué pasa si $a$ es congruente con $b$ módulo $n$?
 Entonces, $n |b-a$, y $b-a=n(q_{2}-q_{1}) +r_{2}-r_{1}$. Si $n|b-a$, entonces $\exists m \in \mathbb{Z}: b-a=nm \implies nm=(q_{2}-q_{1})n+r_{2}-r_{1}\implies n(m-q_{2}+q_{1})=r_{2}-r_{1}$.
 Pero como $0\leq|r_{2}-r_{1}|<n$. Sabiendo que $r_{2}-r_{1} = kn$, y $r_{2}-r_{1} < n$, entonces la única posibilidad es que $k=0$. Esto implica que $\frac{n}{a}$ y $\frac{n}{b}$ tienen el mismo resto.
+Vamos a demostrar ahora el recíproco:
+Supongamos ahora que $a = qn+r$ y $b=q'n+r$. Entonces, $b-a = n(q'-q)$ es decir, $n|b-a$, y por tanto, $a \sim b~mod_{n}$
+Con esto podemos afirmar para $a\in \mathbb{Z}$,
+$$
+[a] = \{ b \in \mathbb{Z}:n\%a=n\%b \}
+$$
+Es decir, el conjunto de todos los $b$ congruentes con $a$ módulo $n$. Como los residuos de dividir un entero entre $n$ van desde $[0,n-1]$, las clases son las clases de $[0],[1],\dots,[n-1]$. Entonces la clase de un número $r$ es
+$$
+[r]= \{ qn+r:q\in \mathbb{Z} \}
+$$
+Por ejemplo, si dividimos un número entre $3$, solo podemos obtener resto $0,1$ o $2$.
+### Teorema
+Sea $A \neq \phi$ y $\sim$ una relación de equivalencia sobre $A$. Entonces
+$$
+a\sim b\iff[a]=[b]
+$$
+$$
+a\not\sim b \iff [a] \cap  [b]=\phi
+$$
+**Demostración**
+Supongamos que $a\sim b$. Sea $x \in[a]$, entonces $x\sim a$. Como es una relación de equivalencia, $x\sim b$ y por tanto $x \in [b]$, y por tanto, como se cumple para todo elemento, $[a]=[b]$.
+Supongamos $[a]=[b]$. Por la reflexividad, $b\in[b]$, entonces $b\in[a]$, y por tanto $a\sim b$.
+Para la segunda parte, si $x \in[a]\cap[b]\iff x\sim a$ y $x\sim b\iff a\sim b$. Por tanto, dos clases de equivalencia de una misma relación o son iguales o son disjuntas.
+Sea $X$ un conjunto. Una partición de $X$ es un conjunto $P$ cuyos elementos son subconjuntos de $X= \cup A : A \in P$ y $A \in P \wedge B \in P \implies A \cap B = \phi$.
+**Corolario**
+Si $\sim$ es una relación de equivalencia definida sobre $A$, entonces el conjunto de todas las clases de equivalencia distintas es una partición.
 
 ---
 Vamos a tomar en el plano $\mathbb{R}^2$, decimos que dos puntos $P$ y $Q$ son equivalentes (o están relacionados) sí y solo sí la distancia de $P$ al origen es la distancia de $Q$ al origen, donde $\vec{O} = (0,0)$. Vamos a ver si cumple las propiedades:
