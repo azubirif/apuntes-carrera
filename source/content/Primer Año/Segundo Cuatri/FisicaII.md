@@ -3,18 +3,19 @@ title: Física II
 ---
 # Campo eléctrico
 >[!info] Definición
->Definimos la \textbf{fuerza de Coulomb} entre dos cargas, siendo una fija (foco) y otra la que se mueve (receptora).
+>Definimos la **fuerza de Coulomb** entre dos cargas, siendo una fija (foco) y otra la que se mueve (receptora).
 > $$
 \vec{F} = \frac{1}{4\pi \varepsilon_{0}} \frac{q_1q_2}{r^{2}}\vec{u}_{r}= k_{0} \frac{q_1q_2}{r^{2}}\vec{u}_{r}~(N)
 >$$
 >Siendo $k_{0} = 9 \cdot 10^{9}~( \frac{Nm^{2}}{r^{2}})$, $\varepsilon_{0}$ la permitividad eléctrica del vacío, y $\vec{u}_{r}$ el vector que va desde el foco al receptor.
 
 >[!info] Definición
->El campo eléctrco es una region en el espacio alrededor de una carga en la que se pueda situar otra carga receptora para que esta sufra una fuerza repulsora o atractora.
+>El campo eléctrico es una region en el espacio alrededor de una carga en la que se pueda situar otra carga receptora para que esta sufra una fuerza repulsora o atractora.
 >$$
 \vec{E} = \frac{1}{4\pi \varepsilon_{0}}\frac{q}{r^{2}}\vec{u}_{r}\left(\frac{N}{C}\right)
 >$$
->Podemos representar un campo eléctrico mediante punto-vector o líneas de fuerza.
+
+Podemos representar un campo eléctrico mediante punto-vector o líneas de fuerza.
 
 >[!info] Definición
 >Las líneas de fuerza es aquella que tienen como origen el foco, y su vector tangente es el campo eléctrico en cada uno de sus puntos.
