@@ -32,3 +32,9 @@ $$
 					&= Q \sum_{i=1}^{N} \vec{E}_{i}~(N)
 \end{align}
 $$
+# Sistemas de coordenadas
+Para unas coordenadas necesitamos un origen $\vec{0}$, y una base. Para unas coordenadas cartesianas, tenemos los vectores $\vec{i}$ y $\vec{j}$:
+![[plano_cartesiano.png]]
+Sin embargo, también podemos utilizar las coordenadas polares, que consisten en una distancia al origen $r$, y un ángulo respecto al eje horizontal $\phi$.![[coords_polares.png]]
+Para definir el ángulo, hay que tener en cuenta que, al desplazar el vector un ángulo, proyectamos el vector sobre el eje $x$ positivo, y giramos el vector en sentido anti horario hasta alcanzar la posición del vector original. Ese ángulo es nuestra coordenada $\phi$.
+Si trazamos el vector unitario de $r$, su vector perpendicular $\vec{u}_{\phi}$ es tangencial al ángulo $\phi$.
