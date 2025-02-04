@@ -36,3 +36,4 @@ Una probabilidad $P$ definida sobre un álgebra de sucesos $A$, de un espacio mu
 - $P(A-B)=P(A)-P(A \cap B)$
 	- Además, si $B \subset A$, $P(A-B)=P(A)-P(B)$
 - $P(A \cup B)=P(A)+P(B)-P(A \cap B)$
+- $P(A_{1}\cup A_{2}\cup A_{3})=\sum_{i=1}^3P(A_{i})-\sum_{i<j}P(A_{i}\cap A_{j})+P(A_{1}\cap A_{2}\cap A_{3})$
