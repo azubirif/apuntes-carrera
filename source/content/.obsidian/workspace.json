@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "ba1ec06a672fb227",
@@ -173,18 +172,18 @@
   "active": "0c1e18c9a723d42c",
   "lastOpenFiles": [
     "Primer Año/Segundo Cuatri/Probabilidad/Probabilidad.md",
-    "Primer Año/Segundo Cuatri/GeometriaProyectiva/GeometriaProyectiva.md",
+    "Primer Año/Segundo Cuatri/SegundoCuatri.md",
+    "Primer Año/primerAño.md",
+    "index.md",
     "Primer Año/Segundo Cuatri/Probabilidad/PrimerTema.md",
+    "Primer Año/Segundo Cuatri/GeometriaProyectiva/GeometriaProyectiva.md",
     "Primer Año/Segundo Cuatri/Probabilidad",
     "Primer Año/Segundo Cuatri/GeometriaProyectiva/EspacioAfin.md",
-    "Primer Año/Segundo Cuatri/SegundoCuatri.md",
     "Primer Año/Segundo Cuatri/GeometriaProyectiva",
     "Primer Año/Segundo Cuatri/FisicaII/CampoElectrico.md",
     "Primer Año/Segundo Cuatri/Topología/NocionesBasicas.md",
     "Primer Año/Segundo Cuatri/CalculoEnVariasVariables/EspacioRN.md",
     "Primer Año/Segundo Cuatri/CalculoEnVariasVariables/CalculoVars.md",
-    "Primer Año/primerAño.md",
-    "index.md",
     "Primer Año/Segundo Cuatri/FisicaII/FisicaII.md",
     "Primer Año/Segundo Cuatri/Topología/topologia.md",
     "Primer Año/Segundo Cuatri/Topología",

@@ -5,3 +5,4 @@ title: Segundo Cuatrimestre
 [Física II](FisicaII)
 [Topología Elemental](topologia)
 [Geometría Proyectiva](GeometriaProyectiva)
+[Matemática Probabilística](Probabilidad)
