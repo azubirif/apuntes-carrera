@@ -24,3 +24,15 @@ $$
 $$
 Si $A$ ocurre siempre, $n(A)=n \implies P(A)=1$
 Además, si $A$ y $B$ son excluyentes, se tiene que $P(A \cap B) = 0$, y que $P(A \cup B) = P(A)+P(B)$.
+# Axiomas de Kolmogorov
+Las propiedades anteriores dotan a $\mathbb{A}, \cap, \cup$ de una estructura de álgebra de Boole ($\sigma$-álgebra).
+Una probabilidad $P$ definida sobre un álgebra de sucesos $A$, de un espacio muestral finito $\Omega$, es una función $P:A\to[0,1]$.
+- $P(\Omega)=1$
+- $P(A) \in [0,1] \forall A$
+- Si $A$ y $B$ son excluyentes, se tiene que $P(A \cap B) = 0$, y que $P(A \cup B) = P(A)+P(B)$.
+## Propiedades
+- $P(\phi)=0$
+- $P(\bar{A})=1-P(A)$
+- $P(A-B)=P(A)-P(A \cap B)$
+	- Además, si $B \subset A$, $P(A-B)=P(A)-P(B)$
+- $P(A \cup B)=P(A)+P(B)-P(A \cap B)$
