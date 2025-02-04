@@ -7,16 +7,16 @@ $$
 \varphi: A \times A \mapsto \mathbb{V}
 $$
 Esta terna debe cumplir que:
-- $\forall p \in A \wedge \vec{v} \in \mathbb{V}, \exists! Q \in A/ \varphi(P,Q) = \vec{PQ}=\vec{u}=Q-P$
+- $\forall p \in A \wedge \mathbf{v} \in \mathbb{V}, \exists! Q \in A/ \varphi(P,Q) = \mathbf{PQ}=\mathbf{u}=Q-P$
 - Relación de Chasles: $\forall P,Q,R \in A \wedge\varphi (P,Q) + \varphi (Q,R) = \varphi (P,R)$
 $$
-\vec{PQ} + \vec{QR} = \vec{PR}
+\mathbf{PQ} + \mathbf{QR} = \mathbf{PR}
 $$
 **Demostración**
-- $\vec{PQ}=Q-P$
-- $\vec{QR}=R-Q$ 
+- $\mathbf{PQ}=Q-P$
+- $\mathbf{QR}=R-Q$ 
 $$
-\vec{PQ}+\vec{QR} = Q-P +R-Q = R-P = \vec{PR} 
+\mathbf{PQ}+\mathbf{QR} = Q-P +R-Q = R-P = \mathbf{PR} 
 $$
 La dimensión del espacio afín va a ser la dimensión de $\mathbb{V}$. 
 ## Propiedades del espacio afín
@@ -27,3 +27,46 @@ La dimensión del espacio afín va a ser la dimensión de $\mathbb{V}$.
 $$
 \varphi(P,Q)=\varphi(R,S) \iff \varphi (P,R) = \varphi (Q,S)
 $$
+# Vector de posición
+Es un vector que representa la posición de un punto en el espacio respecto a un origen, además de la distancia que separa dichos puntos. El vector $\mathbf{OP}$ es el vector que une el origen al punto $P$. Esta aplicación es **biyectiva** (injectiva y sobreyectiva).
+**Demostración**
+Supongamos que no es inyectiva. Es decir, existen dos $\varphi(x)=\varphi (y) / x \neq y$ 
+$$
+\begin{align}
+\mathbf{OP}+\mathbf{PQ}&=\mathbf{OQ} \\
+\mathbf{P}+\mathbf{PQ}&=\mathbf{Q} \\
+\mathbf{P}=\mathbf{Q} &\implies \mathbf{OP}=\mathbf{OQ} \\
+&\implies P = Q
+\end{align}
+$$
+# Estructura afín canónica
+Dado un espacio vectorial $\mathbb{V}$, la aplicación $\varphi$
+$$
+\varphi: \mathbb{V} \times \mathbb{V} \to \mathbb{V}; \mathbf{uv}=\mathbf{v}-\mathbf{u}
+$$
+satisface los axiomas de la definición de un espacio afín y define una estructura de espacio afín $(\mathbb{V}, \mathbb{V}, \varphi)$ conocida como la estructura afín canónica de $\mathbb{V}$.
+## Traslación  de un vector
+Dado $\mathbf{v}\in \mathbb{V}$, la traslación de un vector es la aplicación
+$$
+\tau_{\mathbf{v}}: A \to A
+$$
+$$
+\tau_{\mathbf{v}} (P)=P+\mathbf{v}=Q
+$$
+Una traslación de vector $\mathbf{v}$ transforma el punto $P$ a otro punto $Q$.
+### Propiedades de traslación
+- $\tau_{\mathbf{0}}(P)=P$
+- $\tau_{\mathbf{u}} \circ \tau_{\mathbf{v}}=\tau_{\mathbf{v}} \circ\tau_{\mathbf{u}}=\tau_{\mathbf{u}+\mathbf{v}}$
+## Teorema
+Cualquier transformación afín se puede escribir como un producto de una transformación afín.
+# Suma de un punto y un vector
+Fijado $P \in A$, denotaremos por $F_{P}: A \to \mathbf{A}$ a la aplicación dada por $F_{P}(Q)=\mathbf{PQ}$. Si $P \in A$ y $\mathbf{v}\in A$, el único punto $Q\in A$ dado, tal que $\mathbf{PQ}=\mathbf{v}$ se denotará como $P+\mathbf{v}$.
+Como consecuencia la siguientes identidades son inmediatas:
+$$
+Q=P+\mathbf{PQ} \quad \mathbf{P(P+v)}=\mathbf{v}
+$$
+## Propiedades
+- $P+\mathbf{0}=P,~\forall P\in A$
+$Q = P + \mathbf{PQ}, P = Q \implies \mathbf{PQ}=\mathbf{0}$.
+- $P+\mathbf{u}+\mathbf{v}=(P+\mathbf{u})+\mathbf{v}$
+- 
