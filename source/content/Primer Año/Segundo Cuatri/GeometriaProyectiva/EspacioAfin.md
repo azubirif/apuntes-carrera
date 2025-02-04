@@ -69,4 +69,7 @@ $$
 - $P+\mathbf{0}=P,~\forall P\in A$
 $Q = P + \mathbf{PQ}, P = Q \implies \mathbf{PQ}=\mathbf{0}$.
 - $P+\mathbf{u}+\mathbf{v}=(P+\mathbf{u})+\mathbf{v}$
-- 
+- $\forall P\in A,\mathbf{u},\mathbf{v}\in \mathbf{A}, \overrightarrow{(P+\mathbf{u})(P+\mathbf{v})}=\mathbf{v}-\mathbf{u}$
+	- $P+\mathbf{u}=Q$
+	- $P+\mathbf{v}=R$
+	- $\mathbf{QR}=R-Q=\overrightarrow{(P+\mathbf{u})(P+\mathbf{v})}=\mathbf{v}+P-\mathbf{u}-P=\mathbf{v}-\mathbf{u}$
