@@ -1,7 +1,6 @@
 ---
-title: Topología Elemental
+title: Nociones Básicas
 ---
-
 ## Relaciones
 Existen dos tipos de relaciones:
 - De orden
@@ -34,9 +33,9 @@ $$
 $a$ congruente con $b$ módulo $n$.
 Esto define una relación de equivalencia en $\mathbb{Z}$ de módulo $n$.
 Debemos demostrar que esa relación cumple las propiedades definidas anteriormente para poder afirmar que es de equivalencia.
-1. Es reflexiva: dado un $a \in \mathbb{Z}$, $n | a-a$, ya que $a-a = 0$, entonces $a$ es congruente con $a ~ mod_{n} \forall a \in \mathbb{Z}$.
-2. Es simétrica: dados dos $a,b \in \mathbb{Z}$, si $a \equiv b ~mod_{n} \iff n|b-a$, entonces $n |a-b \iff b \equiv a ~mod_{n}$.
-3. Es transitiva: dados $a,b,c \in \mathbb{Z} / a \equiv b~ mod_{n}$ y $b \equiv c ~ mod_{n}$, entonces $n |b-a$ y $n|c-b$, por tanto $b-a = nx$ y $c-b = ny$, entonces $c-a=n(x+y)=nz \implies n |c-a$.
+4. Es reflexiva: dado un $a \in \mathbb{Z}$, $n | a-a$, ya que $a-a = 0$, entonces $a$ es congruente con $a ~ mod_{n} \forall a \in \mathbb{Z}$.
+5. Es simétrica: dados dos $a,b \in \mathbb{Z}$, si $a \equiv b ~mod_{n} \iff n|b-a$, entonces $n |a-b \iff b \equiv a ~mod_{n}$.
+6. Es transitiva: dados $a,b,c \in \mathbb{Z} / a \equiv b~ mod_{n}$ y $b \equiv c ~ mod_{n}$, entonces $n |b-a$ y $n|c-b$, por tanto $b-a = nx$ y $c-b = ny$, entonces $c-a=n(x+y)=nz \implies n |c-a$.
 Como cumple con las propiedades, es una relación de equivalencia.
 Si $n>1$, ¿cuáles son las clases de equivalencia de la congruencia módulo $n$?
 Sean $a,b\in \mathbb{Z}$, y los dividimos entre $n$:
@@ -81,9 +80,9 @@ Vamos a tomar en el plano $\mathbb{R}^2$, decimos que dos puntos $P$ y $Q$ son e
 $$
 P \sim Q \iff d(P,O)=d(Q,O)
 $$
-1. Es reflexivo: $P \sim P \iff d(P,O) = d(P,O)$. Esto se cumple por sí mismo.
-2. Es simétrico: $P\sim Q \iff d(P,O) = d(Q,O)$, y se cumple que como $d(Q,O)=d(P,O) \iff Q\sim P$.
-3. Es transitivo: $P\sim Q \iff d(P,O) = d(Q,O)$. Si $Q\sim R \iff d(Q,O) = d(R,O)$, entonces si sustituimos tenemos que $d(P,O)=d(R,O) \iff P \sim R$.
+7. Es reflexivo: $P \sim P \iff d(P,O) = d(P,O)$. Esto se cumple por sí mismo.
+8. Es simétrico: $P\sim Q \iff d(P,O) = d(Q,O)$, y se cumple que como $d(Q,O)=d(P,O) \iff Q\sim P$.
+9. Es transitivo: $P\sim Q \iff d(P,O) = d(Q,O)$. Si $Q\sim R \iff d(Q,O) = d(R,O)$, entonces si sustituimos tenemos que $d(P,O)=d(R,O) \iff P \sim R$.
 ### Definición
 Sea $A \neq \phi$ y $\sim$ una relación de equivalencia sobre $A$. Entonces $\forall a \in A$, el conjunto $[a] = \{ x \in A : a \sim x \}$ se llama la clase de equivalencia de $a$.
 ### Definición

@@ -1,12 +1,6 @@
 ---
-title: Cálculo en varias variables
+title: El espacio R^n
 ---
-
-# Bibliografía
-- Stewart, J. Cálculo en varias variables.
-- Apuntes de Pepe Aranda.
-- Tom M. Apostol, "Calculus"
-- Tom M. Apostol, Análisis Matemático.
 # El espacio $\mathbb{R}^n$
 ## El conjunto $\mathbb{R}^n$
 $\mathbb{R}^n$ es el conjunto definido por

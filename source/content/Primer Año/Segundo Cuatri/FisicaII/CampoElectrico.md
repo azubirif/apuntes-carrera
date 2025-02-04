@@ -1,5 +1,5 @@
 ---
-title: Física II
+title: Campo Eléctrico
 ---
 # Campo eléctrico
 Definimos la **fuerza de Coulomb** entre dos cargas, siendo una fija (foco) y otra la que se mueve (receptora).
