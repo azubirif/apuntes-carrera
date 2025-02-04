@@ -73,3 +73,25 @@ $Q = P + \mathbf{PQ}, P = Q \implies \mathbf{PQ}=\mathbf{0}$.
 	- $P+\mathbf{u}=Q$
 	- $P+\mathbf{v}=R$
 	- $\mathbf{QR}=R-Q=\overrightarrow{(P+\mathbf{u})(P+\mathbf{v})}=\mathbf{v}+P-\mathbf{u}-P=\mathbf{v}-\mathbf{u}$
+# Subespacios afines
+$$
+\begin{pmatrix}
+a_{11}x_{1}+\dots+a_{1n}x_{n}=0 \\
+a_{21}x_{1}+\dots+a_{2n}x_{n}=0 \\
+\dots \\
+a_{n_{1}}x_{1}+\dots+a_{nn}x_{n}=0
+\end{pmatrix}
+$$
+Si el sistema de ecuaciones es homogéneo, este genera un **subespacio vectorial**. Si no es homogéneo, el conjunto de soluciones genera un **subespacio afín**.
+El subespacio vectorial es el asociado al conjunto de soluciones del sistema no homogéneo que generan el subespacio afín.
+## Definición
+Sea $(A,\mathbb{V},\varphi)$ un espacio afín real. Un subconjunto no vacío $L\subset A$ es un subespacio afín de $A$ si existe un subespacio $W\subset V$ tal que $(L,W,\varphi)$ tiene estructura de espacio.
+## Propiedades
+Dado $P \in L$, existe $W \subset V$ tal que $L=P+W$. Todos los puntosFijado un punto ￼￼ el conjunto es un subespacio vectorial de ￼￼ si de $L$ se pueden expresar como $P+\mathbf{w}$, con $\mathbf{w}\in W$.
+Además, existe $P\in L$ tal que la imagen de la aplicación
+$$
+\varphi_{L}:L\to V
+$$
+$\varphi(Q)=\mathbf{PQ}$ es un subespacio vectorial de $V$.
+## Dimensión
+La dimensión del espacio afín es la dimensión del subespacio vectorial asociado.
