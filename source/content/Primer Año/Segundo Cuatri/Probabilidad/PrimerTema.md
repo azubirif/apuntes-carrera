@@ -14,3 +14,4 @@ Y tenemos diferentes tipos:
 - Discreto: finito o numerable.
 - Continuo.
 Un suceso es cualquier subconjunto del espacio muestral.
+El proceso de codificación es el que consiste en pasar de una variable cualitativa a una cuantitativa.
