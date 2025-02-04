@@ -85,13 +85,19 @@ $$
 Si el sistema de ecuaciones es homogéneo, este genera un **subespacio vectorial**. Si no es homogéneo, el conjunto de soluciones genera un **subespacio afín**.
 El subespacio vectorial es el asociado al conjunto de soluciones del sistema no homogéneo que generan el subespacio afín.
 ## Definición
-Sea $(A,\mathbb{V},\varphi)$ un espacio afín real. Un subconjunto no vacío $L\subset A$ es un subespacio afín de $A$ si existe un subespacio $W\subset V$ tal que $(L,W,\varphi)$ tiene estructura de espacio.
-## Propiedades
-Dado $P \in L$, existe $W \subset V$ tal que $L=P+W$. Todos los puntosFijado un punto ￼￼ el conjunto es un subespacio vectorial de ￼￼ si de $L$ se pueden expresar como $P+\mathbf{w}$, con $\mathbf{w}\in W$.
-Además, existe $P\in L$ tal que la imagen de la aplicación
-$$
-\varphi_{L}:L\to V
-$$
-$\varphi(Q)=\mathbf{PQ}$ es un subespacio vectorial de $V$.
+Sea $(A,\mathbb{V},\varphi)$ un espacio afín real. Un subconjunto no vacío $L\subset A$ es un subespacio afín de $A$ si existe un subespacio $W\subset V$ tal que $(L,W,\varphi)$ satisface la restricción de $\varphi$ A $L$.
 ## Dimensión
 La dimensión del espacio afín es la dimensión del subespacio vectorial asociado.
+Si tenemos subespacios afines $L_{1} \subseteq L_{2}\subseteq A$ entonces
+$$
+dim(L_{1})\leq dim(L_{2})\leq dim(A)
+$$
+Además, $L_{1}=L_{2} \iff dim(L_{1})=dim(L_{2})$.
+### Definición
+Dado un espacio afín  de dimension $n$, un hiperplano es un subespacio afín de dimensión $n-1$.
+### Ecuación
+Un hiperplano afín en un espacio $n$-dimensional se describe por una ecuación lineal no degenerada de la siguiente forma:
+$$
+a_{1}x_{1}+\dots a_{n}x_{n}=b
+$$
+Si $b=0$, el hiperplano pasa por el origen.
