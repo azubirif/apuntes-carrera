@@ -136,9 +136,33 @@ Sea $f:X\to Y$. $f$ es **injectiva** (o 1:1) si y solo si:
 $$
 f(x_{1})=f(x_{2}) \implies x_{1}=x_{2}~ \forall x_{1},x_{2}\in X
 $$
+O, equivalentemente
+$$
+x_{1}\neq x_{2} \implies f(x_{1})\neq f(x_{2})
+$$
 Una función es **sobreyectiva** si y solo si:
 $$
 \mathrm{Im}(f)=Y
 $$
 Es decir, $\forall y \in Y \exists x \in X:f(x)=y$
 Si ocurren ambas propiedades, la función es **biyectiva**.
+Con esto podemos deducir que:
+- $f:A\to B. \#A=\#B \iff~f$ es biyectiva.
+Sea $f:X\to Y$ una función biyectiva. Sea $g:Y\to X : g(y)=x \iff f(x)=y$.
+¿$g$ define una función de $Y\to X$?
+Es decir, ¿$\forall y \in Y$, existe un único $x \in X : g(y)=x$?
+Dado $y \subset Y$, sabemos que $\exists x \in X : f(x)=y$, ya que $f$ es sobreyectiva. Entonces $g(y)=x$.
+Demostremos que si $\exists ! x \in X :g(y)=x$. Esto se cumple ya que $f$ es inyectiva. Por tanto, tenemos una función $g:Y\to X : g(y)=x \iff f(x)=y$. Esta función se llama la **inversa** de $f$ y la denotamos por $f^{-1}$.
+$$
+f^{-1}:Y\to X: f^{-1}(y)=x\iff f(x)=y
+$$
+### Definición
+Sean $f:X\to Y$, $g:Y\to Z$ dos funciones. Definimos la composición de $f$ con $g$ como la función $g\circ f: X\to Z:(g\circ f)(x)=g(f(x))$.
+Esto se puede entender como un producto de funciones no conmutativo, pero sí es asociativa:
+$$
+h\circ(g\circ f)=(h\circ g)\circ f
+$$
+Si $f:X\to Y$ es biyectiva, entonces
+$$
+(f\circ f^{-1})(y)=y \iff (f^{-1}\circ f)(x)=x
+$$
