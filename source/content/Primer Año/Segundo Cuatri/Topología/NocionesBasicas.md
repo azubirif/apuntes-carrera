@@ -94,3 +94,51 @@ Para la congruencia de módulo $n$ en $\mathbb{Z}$:
 $$
 \frac{\mathbb{Z}}{\sim} = \{ [0],[1],\dots,[n-1] \} \equiv \mathbb{Z}_{n}
 $$
+### Definición
+$f:X\to Y$ es una función si y solo si:
+1. Para cada elemento $x \in X \exists y \in y : (x,y) \in f$
+2. $(x,y) \in f \wedge (x,z) \in F \implies y = z$
+Si $(x,y) \in f$, escribimos $f(x)=y$. El conjunto $X$ se llama **dominio** de la función, y el conjunto $Y$ se llama **rango** o **codominio** o **conjunto de llegada** de $f$.
+Además, la **imagen** de $f$ es el conjunto
+$$
+\mathrm{Im}(f)=\{ y \in Y : (\exists x \in X)(f(x)=y) \} \subset Y
+$$
+$$
+Dom (f) = X
+$$
+Por ejemplo, para buscar el dominio de la función $f$ dada por la fórmula
+$$
+f(x)=\sqrt{ x^{2}-1 }:x \in \mathbb{R}
+$$
+Necesitamos saber el conjunto de valores de $x$ para los cuales $f(x)$ existe. Es decir, para los cuales $\sqrt{ x^{2}-1 }$ tiene sentido. En este caso, esto se cumple cuando
+$$
+x^{2}-1\geq 0 \implies |x|\geq 1
+$$
+---
+Dado un conjunto $A \subset X$, definimos
+$$
+f(A)= \{ f(x) / x \in A \}
+$$
+y además, definimos la **preimagen** de un conjunto $B \subset Y$:
+$$
+f^{-1}(B)= \{ x \in X : f(x) \in B \}
+$$
+Es decir, teniendo $y \subset Y$:
+$$
+\begin{align}
+f^{-1}(y)&= \{ x \in X : f(x)=y \}\\ \\
+f^{-1}(\{ y \})&= \{ x \in X : f(x)\in \{ y \} \}\\ \\
+f(x) \in \{  y \}&\iff f(x)=y
+\end{align}
+$$
+## Tipos de funciones
+Sea $f:X\to Y$. $f$ es **injectiva** (o 1:1) si y solo si:
+$$
+f(x_{1})=f(x_{2}) \implies x_{1}=x_{2}~ \forall x_{1},x_{2}\in X
+$$
+Una función es **sobreyectiva** si y solo si:
+$$
+\mathrm{Im}(f)=Y
+$$
+Es decir, $\forall y \in Y \exists x \in X:f(x)=y$
+Si ocurren ambas propiedades, la función es **biyectiva**.
