@@ -170,3 +170,12 @@ La función que cumple que $f(x)=x \forall x$ se llama la función **identidad**
 $$
 id:X\to X
 $$
+---
+Sea $X$ un conjunto no vacío. $f:X\to Y$ una función sobreyectiva. Definimos la siguiente relación: dados $x_{1},x_{2}\in X$, decimos que $x_{1} \sim x_{2} \iff f(x_{1})=f(x_{2})$.
+¿Es una relación de equivalencia?
+- Reflexiva: $f(x)=f(x) \iff x \sim x$
+- Simétrica: $x_{1}\sim x_{2} \implies f(x_{1})=f(x_{2})\iff f(x_{2})=f(x_{1})\iff x_{2}\sim x_{1}$
+- Transitiva: $x_{1}\sim x_{2} \wedge x_{2}\sim x_{1} \implies f(x_{1})=f(x_{2}), f(x_{2})=f(x_{3})\implies f(x_{1})=f(x_{3})\implies x_{1}\sim x_{3}$
+Consideremos el conjunto cociente $\frac{X}{\sim}$, es decir, el conjunto formado por todas las clases de equivalencia. Entonces, ¿existe una biyección entre $X / \sim$ e $Y$?
+Sea $\hat{f}:X / \sim \to Y : \hat{f}([x])=f(x)$
+$\hat{f}$ está bien definida ya que $[x_{1}]=[x_{2}] \implies x_{1}\sim x_{2} \implies f(x_{1})=f(x_{2})$. Por tanto, $\hat{f}([x_{1}])=\hat{f}([x_{2}])$. Por tanto todos los elementos de $\frac{X}{\sim}$ tienen imagen y esta es única. Dado $y \in Y$, como $f$ es sobreyectiva $\exists x \in X:y=f(x)$, pero como $f(x)=\hat{f}([x])$, entonces dado $y \in Y$ existe $[x] \in \frac{X}{\sim}:\hat{f}([x])=y$.
