@@ -166,3 +166,7 @@ Si $f:X\to Y$ es biyectiva, entonces
 $$
 (f\circ f^{-1})(y)=y \iff (f^{-1}\circ f)(x)=x
 $$
+La función que cumple que $f(x)=x \forall x$ se llama la función **identidad**:
+$$
+id:X\to X
+$$
