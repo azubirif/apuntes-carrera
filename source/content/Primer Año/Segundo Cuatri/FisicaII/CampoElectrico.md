@@ -67,7 +67,25 @@ $$
 $$
 \sigma = \frac{dq}{dS}
 $$
-- **Volumétrica**: de la misma forma, la carga se distribuye a lo largo de un terminado volumen:
+- **Volumétrica**: de la misma forma, la carga se distribuye a lo largo de un determinado volumen:
 $$
 \rho = \frac{dq}{dV}
+$$
+# Flujo eléctrico
+El flujo eléctrico es una medida del flujo del campo eléctrico que atraviesa una superfície:
+$$
+\phi = \int_{S} \mathbf{E}\cdot \mathbf{n}~dA~\left( \frac{N\cdot m^{2}}{C} \right)
+$$
+Donde $\mathbf{E}$ es el campo eléctrico y $\mathbf{n}$ es el vector normal a la superfície en cada punto.
+Si dividimos la superficie total en áreas infinitesimalmente pequeñas $dA$. El flujo infinitesimal $d\phi$ que atraviesa esa superficie es
+$$
+d\phi=\mathbf{E}\cdot \mathbf{n}~dA
+$$
+El flujo que atraviesa una superficie cerrada se expresa de la siguiente forma:
+$$
+\phi = \oint_{S} \mathbf{E}\cdot d \mathbf{s}
+$$
+## Teorema de Gauss
+$$
+\phi_{neto}=\oint_{A} \mathbf{E}\cdot \mathbf{n}~dA=\frac{Q}{\varepsilon_{0}}
 $$
