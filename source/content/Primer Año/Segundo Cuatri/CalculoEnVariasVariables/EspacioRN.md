@@ -204,7 +204,7 @@ Usaremos la topología inducida por la métrica euclídea.
 > B_{r}^*(\mathbf{x})=B_{r}(\mathbf{x})- \{ \mathbf{x} \}
 > $$
 > Un conjunto abierto $A\subset \mathbb{R}^n$ es abierto si y solo si para todo $\mathbf{x}\in A \exists \delta >0 : B_{\delta}(\mathbf{x})\subset A$
-> Además, se verifica que $ext(S)=\mathbb{R}^{n}-(S\cap\partial S)$
+> Además, se verifica que $ext(S)=\mathbb{R}^{n}-(S\cup\partial S)$
 > 
 
 
