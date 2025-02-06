@@ -274,3 +274,5 @@ Por tanto, solo podremos dibujar $\Gamma(f)$ si $n=1,2$.
 **Ejemplo**:
 $f(x,y)=x^{2}+y^{2}$. En este caso, $L_{f}(c)$ son circunferencias de radio $\sqrt{ c }$.
 ![[circunferencia.png]]
+
+Además de los conjuntos de nivel, también se pueden utilizar los puntos de corte de la gráfica de $f$ con los planos de la forma $x=c$ o $y=k$ (constantes).
