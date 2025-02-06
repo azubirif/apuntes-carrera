@@ -206,4 +206,13 @@ Usaremos la topología inducida por la métrica euclídea.
 > Un conjunto abierto $A\subset \mathbb{R}^n$ es abierto si y solo si para todo $\mathbf{x}\in A \exists \delta >0 : B_{\delta}(\mathbf{x})\subset A$
 > 
 
+> [!info] Conjuntos cerrados
+> Un conjunto $B\subset \mathbb{R}^n$ es cerrado si y solo si
+> $\mathbb{R}^n-B$ es abierto.
+> 
 
+Dado cualquier conjunto $S\subset \mathbb{R}^n$,podemos clasificar los puntos de $\mathbb{R}^n$ en:
+- Puntos interiores de $S$: si existe una bola centrada en dicho punto contenida en $S$.
+- Puntos exteriores de $S$: si existe una bola centrada en el punto tal que $B(\mathbf{x},r) \cap S = \phi$
+- Puntos frontera de $S$: si $\forall r\in \mathbb{R}^{+} B(\mathbf{x},r)\cap S \neq \phi$ y $B(\mathbf{x},r)\cap(\mathbb{R}^n-S)\neq \phi$
+Todos estos conjuntos son disjuntos entre sí. Al conjunto de todos los puntos interiores de $S$ se les llama interior de $S$ y lo denotaremos por $int S$. Al conjunto de todos los puntos exteriores a $S$ se les llama exterior de $S$ y se denota por $ext S$.
