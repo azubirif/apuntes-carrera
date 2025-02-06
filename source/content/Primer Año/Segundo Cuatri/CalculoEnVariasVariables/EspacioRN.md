@@ -270,3 +270,7 @@ $$
 \Gamma(f)=\{ (\mathbf{x},y)\in \mathbb{R}^{n+1}:\mathbf{x}\in D, y =f(\mathbf{x}) \}
 $$
 Por tanto, solo podremos dibujar $\Gamma(f)$ si $n=1,2$.
+
+**Ejemplo**:
+$f(x,y)=x^{2}+y^{2}$. En este caso, $L_{f}(c)$ son circunferencias de radio $\sqrt{ c }$.
+![[circunferencia.png]]
