@@ -114,18 +114,21 @@ $$
 \overrightarrow{L_{1}\cap L_{2}}=\overrightarrow{L_{1}}\cap \overrightarrow{L_{2}}
 $$
 Con esto llegamos a la siguiente definición
+
+> [!info] Subespacio afín generado
+> Sea $S\subset A$ un conjunto no vacío. Definimos el subespacio afín generado por $S$, denotado por $V(S)$, como el **menor subespacio afín** de $A$ que contiene a $S$. Siendo $L_{i}$ el conjunto de espacios vectoriales tal que $S \subset L_{i} \forall L_{i}$
+> 
+> $$V(S) = \bigcap L_{i}$$
+
+
 ### Subespacio afín generado
 Sea $S\subset A$ un conjunto no vacío. Definimos el subespacio afín generado por $S$, denotado por $V(S)$, como el **menor subespacio afín** de $A$ que contiene a $S$. Siendo $L_{i}$ el conjunto de espacios vectoriales tal que $S \subset L_{i} \forall L_{i}$
 $$
 V(S) = \bigcap L_{i}
 $$
 
-> [!Info] Hola
-> BuenaS
-> 
-> $$1+1=2$$
-
 Dados puntos $\{ P_{i} \}\subset A$, el subespacio afín que generan viene dado por todas sus **combinaciones lineales afines**:
 $$
 V(\{ P_{i} \})=\sum \lambda_{i}P_{i} :\lambda_{i} \in K
 $$
+y tiene dirección $L(\vec{P_{0}P_{1}},\vec{PoP_{r}})$
