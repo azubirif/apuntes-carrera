@@ -145,3 +145,12 @@ Si ahora sumamos las constantes que multiplican cada punto:
 $$
 \sum\lambda_{i}= 1-\lambda+\lambda=1
 $$
+**Suma de subespacios afines**
+Definimos la suma como el subespacio generado por la unión de los subespacios, que es el mínimo subespacio afín que contiene a todos los subespacios de la suma:
+$$
+\sum L_{i}= V\left( \bigcap L_{i} \right)
+$$
+Dados subespacios afines $L_{i} \subset A$ de la forma $L_{i}=P_{i}+W_{i}$, su suma es un subespacio afín que tiene por dirección
+$$
+\mathcal{L}\{ \vec{P_{i}P_{j}} \}+\sum W_{i}
+$$
