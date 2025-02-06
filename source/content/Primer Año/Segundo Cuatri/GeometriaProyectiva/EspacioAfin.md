@@ -126,14 +126,22 @@ Con esto llegamos a la siguiente definición
 > V(\{ P_{i} \})=\sum \lambda_{i}P_{i} :\lambda_{i} \in K, \sum\lambda_{i}=1
 > $$
 > y tiene dirección $L(\vec{P_{0}P_{1}},\vec{PoP_{r}})$
-### Subespacio afín generado
-Sea $S\subset A$ un conjunto no vacío. Definimos el subespacio afín generado por $S$, denotado por $V(S)$, como el **menor subespacio afín** de $A$ que contiene a $S$. Siendo $L_{i}$ el conjunto de espacios vectoriales tal que $S \subset L_{i} \forall L_{i}$
-$$
-V(S) = \bigcap L_{i}
-$$
 
-Dados puntos $\{ P_{i} \}\subset A$, el subespacio afín que generan viene dado por todas sus **combinaciones lineales afines**:
+Dados un conjunto de puntos $\{ P_{i} \}$, decimos que son
+- **afínmente independientes** si y solo si
 $$
-V(\{ P_{i} \})=\sum \lambda_{i}P_{i} :\lambda_{i} \in K, \sum\lambda_{i}=1
+dim(V(\{ P_{0},\dots,P_{r} \}))=r
 $$
-y tiene dirección $L(\vec{P_{0}P_{1}},\vec{PoP_{r}})$
+- **afínmente generadores** de $A$ si y solo si
+$$
+dim(V(\{ P_{0},\dots,P_{r} \}))=dimA
+$$
+**Ejemplo**:
+Sean dos puntos $P,Q \in A$ que generan una recta de dimensión $1$ con dirección $\mathcal{L}\{ \vec{PQ} \}$
+$$
+Q=P+\lambda\vec{PQ}=P+\lambda(Q-P)=P(1-\lambda)+\lambda Q
+$$
+Si ahora sumamos las constantes que multiplican cada punto:
+$$
+\sum\lambda_{i}= 1-\lambda+\lambda=1
+$$
