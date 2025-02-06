@@ -94,10 +94,32 @@ dim(L_{1})\leq dim(L_{2})\leq dim(A)
 $$
 Además, $L_{1}=L_{2} \iff dim(L_{1})=dim(L_{2})$.
 ### Definición
-Dado un espacio afín  de dimension $n$, un hiperplano es un subespacio afín de dimensión $n-1$.
+Dado un espacio afín de dimension $n$, un hiperplano es un subespacio afín de dimensión $n-1$.
 ### Ecuación
 Un hiperplano afín en un espacio $n$-dimensional se describe por una ecuación lineal no degenerada de la siguiente forma:
 $$
 a_{1}x_{1}+\dots a_{n}x_{n}=b
 $$
 Si $b=0$, el hiperplano pasa por el origen.
+### Operaciones con subespacios afines
+**Intersección**
+Supongamos un espacio afín $(A,\mathbb{V},\varphi)$ y otros dos subespacios afines $L_{1}$ y $L_{2}$. Sea $\{ L_{i} \}_{i\in \mathbb{N}}$ una familia de subespacios afines de $A$.
+Si $\bigcap L_{i} \neq \phi$, entonces la intersección es un subespacio afín de $A$ con dirección $\bigcap W_{i}$. El subespacio afín final sería
+$$
+\left( \bigcap L_{i}, \bigcap W_{i}, \phi_{\cap} \right)
+$$
+Donde $\phi_{\cap}$ es la aplicación que relaciona la intersección de los subespacios con la intersección de los subespacios vectoriales.
+Si la intersección es no vacía
+$$
+\overrightarrow{L_{1}\cap L_{2}}=\overrightarrow{L_{1}}\cap \overrightarrow{L_{2}}
+$$
+Con esto llegamos a la siguiente definición
+### Subespacio afín generado
+Sea $S\subset A$ un conjunto no vacío. Definimos el subespacio afín generado por $S$, denotado por $V(S)$, como el **menor subespacio afín** de $A$ que contiene a $S$. Siendo $L_{i}$ el conjunto de espacios vectoriales tal que $S \subset L_{i} \forall L_{i}$
+$$
+V(S) = \bigcap L_{i}
+$$
+
+> [!Info] Hola
+> BuenaS
+> $$1+1=2$$
