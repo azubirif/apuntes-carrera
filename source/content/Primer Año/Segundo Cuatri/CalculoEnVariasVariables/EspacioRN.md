@@ -226,3 +226,11 @@ Un conjunto $A \subset \mathbb{R}^{n}$ es abierto si y solo si $A=int(A)$, y es 
 $A=\{ (x,y)\in \mathbb{R}^{2}: x \in (0,1), y \in(0,1) \}=(0,1)\times(0,1)$. En este caso tenemos que $ext(A)=\mathbb{R}^2-A$.
 
 $B=\{ (x,y)\in \mathbb{R}^{2}:x \in[0,1], y \in (0,1) \}$. En este caso $B$ no es ni abierto ni cerrado.
+
+> [!info] Adherencia
+> A $int(S)\cap\partial S$ se la denomina adherencia de $S$ y se denota por $\bar{S}$.
+> 
+
+> [!info] Puntos límite
+> A los puntos $\mathbf{x}$ que cumplen $B(\mathbf{x},r)\cap S\neq \phi$ se les llama puntos límite de $S$.
+> 
