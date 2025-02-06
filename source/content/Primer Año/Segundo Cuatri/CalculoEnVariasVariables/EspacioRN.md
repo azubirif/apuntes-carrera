@@ -191,3 +191,19 @@ i & j \\
 v_{1} & v_{2}
 \end{vmatrix}= (v_{2},-v_{1})
 $$
+# Topología en $\mathbb{R}^n$
+Usaremos la topología inducida por la métrica euclídea.
+> [!info] Conjuntos abiertos
+> Definimos un conjunto abierto de $\mathbb{R}^n$ a partir de la definición de bolas abiertas.
+> Dado $\mathbf{x}\in \mathbb{R}^n$ y dado $r\in \mathbb{R}^+$ se define la bola abierta centrada en $\mathbf{x}$ y de radio $r$ como el conjunto
+> $$
+> B_{r}(\mathbf{x})=\{ \mathbf{y}\in \mathbb{R}^n: d(\mathbf{x},\mathbf{y}) < r \}
+> $$
+> A veces convendrá usar bolas abiertas sin el punto central (perforadas), y se denotan por $B_{r}^*(\mathbf{x})$:
+> $$
+> B_{r}^*(\mathbf{x})=B_{r}(\mathbf{x})- \{ \mathbf{x} \}
+> $$
+> Un conjunto abierto $A\subset \mathbb{R}^n$ es abierto si y solo si para todo $\mathbf{x}\in A \exists \delta >0 : B_{\delta}(\mathbf{x})\subset A$
+> 
+
+
