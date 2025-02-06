@@ -174,4 +174,3 @@ $$
 > - $\varepsilon = 0 : L_{1}\cap L_{2}\neq 0$
 > - $\varepsilon=1:L_{1}\cap L_{2} = 0$
 
-
