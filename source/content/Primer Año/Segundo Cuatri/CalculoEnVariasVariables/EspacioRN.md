@@ -215,4 +215,4 @@ Dado cualquier conjunto $S\subset \mathbb{R}^n$,podemos clasificar los puntos de
 - Puntos interiores de $S$: si existe una bola centrada en dicho punto contenida en $S$.
 - Puntos exteriores de $S$: si existe una bola centrada en el punto tal que $B(\mathbf{x},r) \cap S = \phi$
 - Puntos frontera de $S$: si $\forall r\in \mathbb{R}^{+} B(\mathbf{x},r)\cap S \neq \phi$ y $B(\mathbf{x},r)\cap(\mathbb{R}^n-S)\neq \phi$
-Todos estos conjuntos son disjuntos entre sí. Al conjunto de todos los puntos interiores de $S$ se les llama interior de $S$ y lo denotaremos por $int S$. Al conjunto de todos los puntos exteriores a $S$ se les llama exterior de $S$ y se denota por $ext S$.
+Todos estos conjuntos son disjuntos entre sí. Al conjunto de todos los puntos interiores de $S$ se les llama interior de $S$ y lo denotaremos por $int S$. Al conjunto de todos los puntos exteriores a $S$ se les llama exterior de $S$ y se denota por $ext S$. A los puntos frontera de $S$ se les llama frontera de $S$ y se denota por $\partial S$.
