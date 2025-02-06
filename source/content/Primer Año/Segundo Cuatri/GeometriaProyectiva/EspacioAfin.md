@@ -146,6 +146,7 @@ $$
 \sum\lambda_{i}= 1-\lambda+\lambda=1
 $$
 **Suma de subespacios afines**
+
 Definimos la suma como el subespacio generado por la unión de los subespacios, que es el mínimo subespacio afín que contiene a todos los subespacios de la suma:
 $$
 \sum L_{i}= V\left( \bigcap L_{i} \right)
@@ -158,3 +159,19 @@ Sea la suma de $L_{1}$ y $L_{2}$ el menor subespacio afín que contiene a ambos.
 $$
 L_{1}+L_{2}=P_{1}+W_{1}+W_{2}+\mathcal{L}\{ \vec{P_{1}P_{2}} \}
 $$
+
+> [!info] Fórmula de Grassmann
+> La fórmula de Grassmann relaciona la dimensión de la suma de los subespacios vectoriales y es la siguiente:
+> $$
+> dim(U+V)=dim(U)+dim(V)-dim(U\cap V)
+> $$
+> 
+> Ahora podemos relacionar esta ecuación con los subespacios afines. Como la dimensión de los SEA es igual a la dimensión de su SEV, simplemente sustituimos:
+> $$
+> dim(L_{1}+L_{2})=dimL_{1}+dimL_{2}-dim(L_{1}\cap L_{2})+ \varepsilon
+> $$
+> Donde $\varepsilon$ es:
+> - $\varepsilon = 0 : L_{1}\cap L_{2}\neq 0$
+> - $\varepsilon=1:L_{1}\cap L_{2} = 0$
+
+
