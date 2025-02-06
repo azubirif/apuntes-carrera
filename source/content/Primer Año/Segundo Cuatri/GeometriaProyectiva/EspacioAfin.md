@@ -154,3 +154,7 @@ Dados subespacios afines $L_{i} \subset A$ de la forma $L_{i}=P_{i}+W_{i}$, su s
 $$
 \mathcal{L}\{ \vec{P_{i}P_{j}} \}+\sum W_{i}
 $$
+Sea la suma de $L_{1}$ y $L_{2}$ el menor subespacio afín que contiene a ambos. Si $L_{1}=P_{1}+W_{1}$ y $L_{2}=P_{2}+W_{2}$ entonces
+$$
+L_{1}+L_{2}=P_{1}+W_{1}+W_{2}+\mathcal{L}\{ \vec{P_{1}P_{2}} \}
+$$
