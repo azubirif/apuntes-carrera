@@ -122,4 +122,10 @@ $$
 
 > [!Info] Hola
 > BuenaS
+> 
 > $$1+1=2$$
+
+Dados puntos $\{ P_{i} \}\subset A$, el subespacio afín que generan viene dado por todas sus **combinaciones lineales afines**:
+$$
+V(\{ P_{i} \})=\sum \lambda_{i}P_{i} :\lambda_{i} \in K
+$$
