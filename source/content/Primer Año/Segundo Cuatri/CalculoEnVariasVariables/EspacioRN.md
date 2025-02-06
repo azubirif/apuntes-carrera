@@ -232,5 +232,6 @@ $B=\{ (x,y)\in \mathbb{R}^{2}:x \in[0,1], y \in (0,1) \}$. En este caso $B$ no e
 > 
 
 > [!info] Puntos límite
-> A los puntos $\mathbf{x}$ que cumplen $B(\mathbf{x},r)\cap S\neq \phi$ se les llama puntos límite de $S$.
+> A los puntos $\mathbf{x}$ que cumplen $B^{*}(\mathbf{x},r)\cap S\neq \phi$ se les llama puntos límite de $S$.
 > 
+
