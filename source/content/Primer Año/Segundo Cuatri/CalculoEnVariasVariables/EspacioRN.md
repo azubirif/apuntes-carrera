@@ -235,3 +235,31 @@ $B=\{ (x,y)\in \mathbb{R}^{2}:x \in[0,1], y \in (0,1) \}$. En este caso $B$ no e
 > A los puntos $\mathbf{x}$ que cumplen $B^{*}(\mathbf{x},r)\cap S\neq \phi$ se les llama puntos límite de $S$.
 > 
 
+# Funciones de $\mathbb{R}^{n}$
+Sea
+$$
+f:D \subset \mathbb{R}^n\to \mathbb{R}^m
+$$
+Si $n=m=1$ entonces es una función de variable real. Si $n>1$ y $m=1$, entonces $f$ es una función real de variable vectorial o campo escalar.
+Para hacernos una idea del comportamiento de estas funciones es conveniente dibujar estas funciones (cuando sea posible). Para ello nos serán útiles los **conjuntos de nivel**:
+
+> [!info] Conjuntos de nivel
+> Sea $f: \mathbb{R}^{n}\to \mathbb{R}$
+> $$
+> L_{f}(c)=\{ \mathbf{x}\in D : f(\mathbf{x})=c \}=f^{-1}(c)
+> $$
+> Que es precisamente la preimagen de $c$.
+
+Por ejemplo, sea
+$$
+f(x,y,z)=\exp \left[ - \frac{x^{2}+y^{2}+z^{2}}{2} \right]
+$$
+Supongamos $f(x,y,z)=c, entonces$
+$$
+\begin{align*}
+\exp \left[ - \frac{x^{2}+y^{2}+z^{2}}{2} \right]&=c\\
+\frac{x^{2}+y^{2}+z^{2}}{2}&=-\ln c\\
+x^{2}+y^{2}+z^{2}&=-2\ln c
+\end{align*}
+$$
+Como $x^{2}+y^{2}+z^{2}>0$, necesitamos que $\ln c<0$, por tanto, esta ecuación tiene solución en $\mathbb{R}$ cuando $c \in (0,1]$. Esto define una superfície esférica de radio $\sqrt{ 2\ln\left( \frac{1}{c} \right) }$.
