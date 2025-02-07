@@ -4,24 +4,39 @@
     "type": "split",
     "children": [
       {
-        "id": "f306e913c33ca3be",
+        "id": "da00687678a55da1",
         "type": "tabs",
         "children": [
           {
-            "id": "b5c4316a664e3c57",
+            "id": "67d0bfcb6f310977",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SegundoTema.md",
+                "file": "Primer Año/Segundo Cuatri/SegundoCuatri.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SegundoTema"
+              "title": "SegundoCuatri"
+            }
+          },
+          {
+            "id": "3a48655233bc0f95",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Clang.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Clang"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -181,8 +196,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "b5c4316a664e3c57",
+  "active": "3a48655233bc0f95",
   "lastOpenFiles": [
+    "Clang.md",
+    "Programacion.md",
+    "Primer Año/Segundo Cuatri/SegundoCuatri.md",
+    "Primer Año/primerAño.md",
     "SegundoTema.md",
     "Primer Año/Segundo Cuatri/Probabilidad/Probabilidad.md",
     "Primer Año/Segundo Cuatri/Probabilidad/PrimerTema.md",
@@ -192,11 +211,9 @@
     "Integrales.md",
     "General.md",
     "index.md",
-    "Primer Año/primerAño.md",
     "Primer Año/Segundo Cuatri/FisicaII/CampoElectrico.md",
     "Primer Año/Segundo Cuatri/Topología/NocionesBasicas.md",
     "Primer Año/Segundo Cuatri/Topología/topologia.md",
-    "Primer Año/Segundo Cuatri/SegundoCuatri.md",
     "Primer Año/Segundo Cuatri/GeometriaProyectiva/GeometriaProyectiva.md",
     "Primer Año/Segundo Cuatri/Probabilidad",
     "Primer Año/Segundo Cuatri/GeometriaProyectiva",
