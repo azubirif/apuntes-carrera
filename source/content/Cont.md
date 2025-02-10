@@ -58,6 +58,7 @@ $$
 $$
 
 También es útil el siguiente teorema
+
 > [!info] Teorema
 > Sean $\mathbf{f}$ y $\mathbf{g}$ tales que
 > $$
@@ -71,3 +72,15 @@ También es útil el siguiente teorema
 > $$
 > \lim_{ \mathbf{x} \to \mathbf{a} } (\mathbf{f}\circ \mathbf{c})=\mathbf{c}
 > $$
+
+# Continuidad
+> [!info] Definición
+> Una función $\mathbf{f}$ es continua en un punto $\mathbf{a}$ si
+> $$
+> \lim_{ \mathbf{x} \to \mathbf{a} } \mathbf{f}(\mathbf{x})=\mathbf{f}(\mathbf{a})
+> $$
+
+Se asume la continuidad de los siguientes tipos de funciones:
+- Polinomios de varias variables.
+- Cocientes de polinomios en su dominio.
+- Logaritmos, exponenciales, trigonométricas, trigonométricas inversas en sus dominios.
