@@ -8,6 +8,4 @@ title: Cálculo en varias variables
 - Tom M. Apostol, Análisis Matemático.
 ---
 [Espacio R^n](EspacioRN)
-
-
-
+[Límites y continuidad](Cont)

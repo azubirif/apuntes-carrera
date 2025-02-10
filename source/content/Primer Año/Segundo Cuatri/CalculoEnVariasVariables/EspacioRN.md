@@ -276,3 +276,18 @@ $f(x,y)=x^{2}+y^{2}$. En este caso, $L_{f}(c)$ son circunferencias de radio $\sq
 ![[circunferencia.png]]
 
 Además de los conjuntos de nivel, también se pueden utilizar los puntos de corte de la gráfica de $f$ con los planos de la forma $x=c$ o $y=k$ (constantes).
+
+> [!info] Campos vectoriales
+> Estas funciones son de la forma
+> $$
+> \mathbf{f}: D \subset \mathbb{R}^{n} \to \mathbb{R}^{m>1}
+> $$
+> Estas funciones toman un vector $\mathbf{x}$ como entrada y se mappean a un vector $\mathbf{f}(\mathbf{x})$.
+> $f_{i}$ son componentes (campos escalares).
+> Si $n=1$, $\mathbf{f}$ es una curva en $\mathbb{R}^{m}$.
+> Si $n=2$, $\mathbf{f}$ es una superficie en $\mathbb{R}^{m}$.
+> En general, si $n<m$, $\mathbf{f}$ es una variedad $n$-dimensional dentro de $\mathbb{R}^{m}$.
+> Si $n=m$, entonces se puede representar a $\mathbf{f}$ sobre su dominio.
+> Si $n > m > 1$, ya no podemos dibujar a $\mathbf{f}$.
+> 
+
