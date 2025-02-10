@@ -86,6 +86,22 @@ $$
 \phi = \oint_{S} \mathbf{E}\cdot d \mathbf{s}
 $$
 ## Teorema de Gauss
+El teorema establece que el flujo **neto** que atraviesa una superficie cerrada $A$ es igual a la carga total $Q$ entre la permitividad del espacio encerrada por la superficie:
 $$
-\phi_{neto}=\oint_{A} \mathbf{E}\cdot \mathbf{n}~dA=\frac{Q}{\varepsilon_{0}}
+\phi_{neto}=\oint_{A} \mathbf{E}\cdot \mathbf{n}~dA=\frac{Q_{interior}}{\varepsilon_{0}}
+$$
+
+# Coordenadas cilíndricas
+![[coords_cil.png]]
+Las coordenadas cilíndricas se definen como
+$$
+\mathbf{r}=(\rho, \phi, z)
+$$
+Donde $\rho$ es el radio en el plano $XY$, $\phi$ es el ángulo (en sentido antihorario) con respecto al eje $X$, y $z$ es la "altura" o desplazamiento respecto al eje $XY$. En coordenadas cartesianas, esto sería
+$$
+\mathbf{r}=(\rho \cos \phi, \rho \sin \phi, z)
+$$
+La base definida por este sistema de coordenadas es:
+$$
+\{(\cos \phi,\sin \phi,0), (-\sin \phi,\cos \phi), (0,0,1) \}
 $$
