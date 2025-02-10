@@ -187,7 +187,7 @@ $$
 > [!info] Definición de una topología
 > Sea $X$ un conjunto no vacío. Una colección $\mathbf{T}$ de subconjuntos $X$ se dice que es una topología sobre $X$ si
 > 1. $X$ y el conjunto vacío $\phi$ pertenecen a $\mathbf{T}$.
-> 2. La unión de cualquier número (finito o infinito) de conjuntos de $T$ pertenece a $\mathbf{T}$.
+> 2. La unión de cualquier número (finito o infinito) de conjuntos de $\mathbf{T}$ pertenece a $\mathbf{T}$.
 > 3. La intersección de dos conjuntos cualesquiera de $\mathbf{T}$ pertenece a $\mathbf{T}$
 > El par $(X,\mathbf{T})$ se llama **espacio topológico**.
 > Por la propiedad 3 y mediante inducción, se puede demostrar que si $A_{i}$ conjuntos están en $\mathbf{T}$, entonces
@@ -200,3 +200,9 @@ $$
 > [!warning] La pertenencia no es transitiva
 > 
 
+> [!info] Topología discreta
+> Sea $X$ no vacío, y $\mathbf{T}$ la colección de todos los subconjuntos de $X$. Entonces $\mathbf{T}$ es una **topología discreta** sobre $X$, y $(X,\mathbf{T})$ es un **espacio discreto**.
+> Si para un espacio topológico, se cumple que $\forall x \in X, \{ x \} \in \mathbf{T}$, entonces $\mathbf{T}$ es una topología discreta.
+> 
+
+El conjunto $X$ de la definición anterior puede ser cualquier conjunto no vacío, por tanto, hay una cantidad infinita de espacios discretos para cada conjunto no vacío $X$.
