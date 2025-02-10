@@ -56,3 +56,18 @@ $$
 |\mathbf{f}(\mathbf{x})\cdot \mathbf{g}(\mathbf{x})-\mathbf{b}\cdot \mathbf{c}|&\to 0
 \end{align*}
 $$
+
+También es útil el siguiente teorema
+> [!info] Teorema
+> Sean $\mathbf{f}$ y $\mathbf{g}$ tales que
+> $$
+> \lim_{ \mathbf{x} \to \mathbf{a} }\mathbf{g}=\mathbf{b} 
+> $$
+> y
+> $$
+> \lim_{ \mathbf{y} \to \mathbf{b} } \mathbf{f}=\mathbf{c}
+> $$
+> De modo que tenga sentido $\mathbf{f}\circ \mathbf{g}$. Entonces
+> $$
+> \lim_{ \mathbf{x} \to \mathbf{a} } (\mathbf{f}\circ \mathbf{c})=\mathbf{c}
+> $$
