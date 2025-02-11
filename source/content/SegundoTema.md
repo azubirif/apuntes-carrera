@@ -42,6 +42,8 @@ Supongamos que tenemos $m$ elementos, y vamos a generar grupos. Cada grupo conti
 \end{pmatrix} = \frac{m!}{n!(m-n)!}
 > $$
 
+
+
 > [!info] Combinaciones con repetición
 > De $m$ elementos, los diferentes grupos que se pueden formar tal que cada grupo contiene $n$ elementos distintos, en cada grupo se pueden repetir elementos, y cada grupo se diferencia al menos en un elemento. El número total es:
 > 
@@ -50,4 +52,6 @@ Supongamos que tenemos $m$ elementos, y vamos a generar grupos. Cada grupo conti
 > m+n-1 \\ n
 \end{pmatrix} = \frac{(m+n-1)!}{n!(m-1)!}
 >$$
+
+
 
