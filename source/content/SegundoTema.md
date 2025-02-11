@@ -41,6 +41,7 @@ Supongamos que tenemos $m$ elementos, y vamos a generar grupos. Cada grupo conti
 > m \\ n
 \end{pmatrix} = \frac{m!}{n!(m-n)!}
 > $$
+> 
 
 
 
@@ -52,6 +53,7 @@ Supongamos que tenemos $m$ elementos, y vamos a generar grupos. Cada grupo conti
 > m+n-1 \\ n
 \end{pmatrix} = \frac{(m+n-1)!}{n!(m-1)!}
 >$$
+>
 
 
 
