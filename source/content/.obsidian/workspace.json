@@ -35,8 +35,7 @@
               "title": "Cont"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -182,7 +181,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 325.5
+    "width": 325.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -195,10 +195,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "20eb23ef9c18f45e",
+  "active": "67d0bfcb6f310977",
   "lastOpenFiles": [
-    "Primer Año/Segundo Cuatri/CalculoEnVariasVariables/CalculoVars.md",
     "Cont.md",
+    "Primer Año/Segundo Cuatri/CalculoEnVariasVariables/CalculoVars.md",
     "Primer Año/Segundo Cuatri/CalculoEnVariasVariables/EspacioRN.md",
     "Primer Año/Segundo Cuatri/Topología/NocionesBasicas.md",
     "Primer Año/Segundo Cuatri/FisicaII/CampoElectrico.md",
