@@ -1,2 +1,2 @@
 [Primer Tema](PrimerTema)
-[Segundo Tema](SegundoTema)
+[Segundo Tema](SegundoTema.md)
