@@ -203,6 +203,15 @@ $$
 > [!info] Topología discreta
 > Sea $X$ no vacío, y $\mathbf{T}$ la colección de todos los subconjuntos de $X$. Entonces $\mathbf{T}$ es una **topología discreta** sobre $X$, y $(X,\mathbf{T})$ es un **espacio discreto**.
 > Si para un espacio topológico, se cumple que $\forall x \in X, \{ x \} \in \mathbf{T}$, entonces $\mathbf{T}$ es una topología discreta.
+> La topología formada por $(X,\phi)$ es la topología indiscreta.
 > 
 
 El conjunto $X$ de la definición anterior puede ser cualquier conjunto no vacío, por tanto, hay una cantidad infinita de espacios discretos para cada conjunto no vacío $X$.
+
+> [!info] Definición
+> Dado un espacio topológico $(X,\mathbf{T})$, los elementos de $\mathbf{T}$ se llaman **conjuntos abiertos**.
+> 
+
+> [!info] Definición
+> Sea $(X, \mathbf{T})$ un espacio topológico. Un subconjunto $S$ de $X$ es cerrado en $(X,\mathbf{T})$ si su complemento es abierto.
+> 

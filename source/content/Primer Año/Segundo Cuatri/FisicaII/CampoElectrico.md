@@ -105,3 +105,13 @@ La base definida por este sistema de coordenadas es:
 $$
 \{(\cos \phi,\sin \phi,0), (-\sin \phi,\cos \phi), (0,0,1) \}
 $$
+# Coordenadas esféricas
+El punto $P$ se define mediante unas coordenadas esféricas.
+$$
+P = (r,\phi,\theta):~\theta \in[0,\pi],~\phi \in[0,2\pi]
+$$
+En coordenadas cartesianas, esto pasa a ser:
+$$
+P=(r\sin\theta \cos \phi, r\sin\theta \sin \phi, r\cos\theta)
+$$
+![[spher_coords.jpg]]

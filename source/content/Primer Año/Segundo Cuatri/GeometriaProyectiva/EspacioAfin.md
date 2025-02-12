@@ -174,3 +174,20 @@ $$
 > - $\varepsilon = 0 : L_{1}\cap L_{2}\neq 0$
 > - $\varepsilon=1:L_{1}\cap L_{2} = 0$
 
+> [!info] Paralelismo
+> Dados dos subespacios afines $L_{1}=P_{1}+W_{1}$ y $L_{2}=P_{2}+W_{2}$, decimos que son paralelos si $L_{1}\subset L_{2}$ o $L_{2}\subset L_{1}$.
+
+# Aplicaciones afines
+Sean $(A_{1},V_{1},\phi_{1})$ y $(A_{2},V_{2},\phi_{2})$ dos espacios afines. Diremos que una aplicación
+$$
+f:A_{1}\to A_{2}
+$$
+es una aplicación afín si existe una aplicación lineal $\bar{f}:V_{1}\to V_{2}$ tal que:
+$$
+\bar{f}(\mathbf{PQ})=\mathbf{f(P)f(Q)}
+$$
+y por tanto, que para todo punto $P \in A_{1}$ y todo vector en $V_{1}$ se tiene que
+$$
+f(P+\mathbf{v})=f(P)+\bar{f}(\mathbf{v})
+$$
+La anterior aplicación lineal $\bar{f}$ se llama **aplicación lineal asociada a $f$**.
