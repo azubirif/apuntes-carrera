@@ -194,3 +194,53 @@ La anterior aplicación lineal $\bar{f}$ se llama **aplicación lineal asociada 
 
 Es decir, tenemos un par de puntos $P,Q\in A_{1}$, que les corresponden dos puntos $f(P),f(Q)\in A_{2}$. El vector $\mathbf{PQ}$, sobre $A_{2}$, tiene como vector $\overrightarrow{f(P)f(Q)}$, que es la imagen de $\bar{f}(\mathbf{PQ})$.
 
+Si tenemos dos aplicaciones afines $f,g$ tal que $f(P)=g(P)$, y además que $\bar{f}=\bar{g}$, entonces
+$$
+f=g
+$$
+
+
+> [!info] Punto fijo, doble o invariante
+> Sea $(A,V,\phi)$ un espacio afín y $f$ una transformación afín de $A$. Un punto fijo es aquel que cumple que
+> $$
+> \boxed{f(P)=P}
+> $$
+> Con esto podemos definir el conjunto de puntos fijos como:
+> $$
+> F=\{ x \in A : f(x)=x \}
+> $$
+> 
+
+> [!info] Subespacio afín invariante
+> Sea $(A,V,\phi)$ un espacio afín, y $f$ una transformación afín de $A$ y $S$ un subespacio afín de $A$. Diremos que $S$ es un subespacio afín invariante de $f$ si
+> $$
+> f(S) \subset S 
+> $$
+> Con esto, se debe cumplir que:
+> - Si $L \subset A$ es un subespacio afín entonces:
+>   $$
+>   f(L)=\{ P'\in A',~\exists P \in L: f(P)=P'\}
+>   $$
+> - Si $L' \subset A'$ es un subespacio afín de $A'$ entonces:
+>   $$
+>   L=\{ P\in A: f(P) \in L' \}
+>   $$
+>   También, $S$ es invariante por $f$ si
+>   $$
+>   \mathcal{L}(\{ \bar{f}(\mathbf{u}_{1}),\dots,\bar{f}(\mathbf{u}_{r}) \}) \subset \mathcal{L}(\{ \mathbf{u}_{1},\dots,\mathbf{u}_{r} \})
+>   $$
+> 
+
+> [!tip] Teorema
+> Dados un espacio afín y una transformación afín $f:A \to A$. Entonces son equivalentes:
+> - Existe un conjunto fijo $V$ no trivial $(V \neq \{ 0 \})$.
+> - El $1$ es autovalor de $f$.
+> 
+> El conjunto de puntos fijos es un subespacio afín de $A$ con subespacio vectorial asociado de $V$ de autovectores de $\bar{f}$ con autovalor $\lambda=1$.
+> 
+
+## Composición de aplicaciones afines
+Sean $A_{1},A_{2},A_{3}$ espacios afines y sean $g:A_{1}\to A_{2}$ y $f:A_{2}\to A_{3}$ dos aplicaciones afines. La composición $f\circ g:A_{1}\to A_{3}$ también es una aplicación afín y su aplicación lineal asociada es:
+$$
+\overline{f\circ g}=\bar{f}\circ \bar{g}
+$$
