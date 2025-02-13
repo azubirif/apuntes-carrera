@@ -184,10 +184,13 @@ f:A_{1}\to A_{2}
 $$
 es una aplicación afín si existe una aplicación lineal $\bar{f}:V_{1}\to V_{2}$ tal que:
 $$
-\bar{f}(\mathbf{PQ})=\mathbf{f(P)f(Q)}
+\bar{f}(\mathbf{PQ})=\overrightarrow{f(P)f(Q)}
 $$
 y por tanto, que para todo punto $P \in A_{1}$ y todo vector en $V_{1}$ se tiene que
 $$
-f(P+\mathbf{v})=f(P)+\bar{f}(\mathbf{v})
+f(Q)=f(P+\mathbf{v})=f(P)+\bar{f}(\mathbf{v})=f(P)+\bar{f}(\mathbf{PQ})
 $$
 La anterior aplicación lineal $\bar{f}$ se llama **aplicación lineal asociada a $f$**.
+
+Es decir, tenemos un par de puntos $P,Q\in A_{1}$, que les corresponden dos puntos $f(P),f(Q)\in A_{2}$. El vector $\mathbf{PQ}$, sobre $A_{2}$, tiene como vector $\overrightarrow{f(P)f(Q)}$, que es la imagen de $\bar{f}(\mathbf{PQ})$.
+

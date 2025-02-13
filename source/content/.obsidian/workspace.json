@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Primer Año/Segundo Cuatri/FisicaII/CampoElectrico.md",
+                "file": "Primer Año/Segundo Cuatri/GeometriaProyectiva/EspacioAfin.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CampoElectrico"
+              "title": "EspacioAfin"
             }
           }
         ]
@@ -183,6 +183,7 @@
   },
   "active": "67d0bfcb6f310977",
   "lastOpenFiles": [
+    "Primer Año/Segundo Cuatri/FisicaII/CampoElectrico.md",
     "imágenes/spher_coords.jpg",
     "imágenes/spher_coords.jpg.crdownload",
     "Primer Año/Segundo Cuatri/Topología/NocionesBasicas.md",
@@ -197,7 +198,6 @@
     "Primer Año/Segundo Cuatri/Probabilidad/PrimerTema.md",
     "Primer Año/Segundo Cuatri/CalculoEnVariasVariables/CalculoVars.md",
     "Primer Año/Segundo Cuatri/CalculoEnVariasVariables/EspacioRN.md",
-    "Primer Año/Segundo Cuatri/FisicaII/CampoElectrico.md",
     "imágenes/coords_cil.png",
     "imágenes/coords_cil.png.crdownload",
     "Primer Año/Segundo Cuatri/FisicaII/FisicaII.md",
