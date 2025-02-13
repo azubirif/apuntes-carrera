@@ -245,3 +245,4 @@ $$
 \overline{f\circ g}=\bar{f}\circ \bar{g}
 $$
 Dadas dos aplicaciones afines, la **suma** de aplicaciones afines y el **producto por escalares** son aplicaciones afines también.
+
