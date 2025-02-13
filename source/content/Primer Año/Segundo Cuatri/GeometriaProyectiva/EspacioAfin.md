@@ -246,3 +246,14 @@ $$
 $$
 Dadas dos aplicaciones afines, la **suma** de aplicaciones afines y el **producto por escalares** son aplicaciones afines también.
 
+> [!info] Razón simple de tres puntos
+> Sea $A$ un espacio afín sobre $K$. Dados tres puntos alineados $P_{1}, P_{2}, P_{3}$ de $A$ tales que $P_{1}\neq P_{2}$, definimos su razón simple $(P_{1},P_{2},P_{3})$ como el elemento $\lambda \in K$ tal que
+> $$
+> \mathbf{P_{1}P_{3}}=\lambda \mathbf{P_{1}P_{2}}
+> $$
+> Las aplicaciones afines conservan la razón simple. Si $A,V, \phi: A_{n}\to A_{m}$ es una aplicación afín y $A,B,C$ son tres puntos distintos alineados tales que $\phi(A),\phi(B),\phi(C)$ también son distintos, entonces
+> $$
+> (A~B~C)=(\phi(A)~\phi(B)~\phi(C))
+> $$
+> 
+
