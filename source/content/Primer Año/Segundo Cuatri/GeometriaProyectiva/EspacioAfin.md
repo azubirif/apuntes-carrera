@@ -244,3 +244,4 @@ Sean $A_{1},A_{2},A_{3}$ espacios afines y sean $g:A_{1}\to A_{2}$ y $f:A_{2}\to
 $$
 \overline{f\circ g}=\bar{f}\circ \bar{g}
 $$
+Dadas dos aplicaciones afines, la **suma** de aplicaciones afines y el **producto por escalares** son aplicaciones afines también.
