@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Primer Año/Segundo Cuatri/Probabilidad/Probabilidad.md",
+                "file": "Primer Año/Segundo Cuatri/Probabilidad/SegundoTema.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Probabilidad"
+              "title": "SegundoTema"
             }
           },
           {
@@ -35,8 +35,7 @@
               "title": "TemaTres"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -196,13 +195,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d593ba53990b1909",
+  "active": "a4f84d176422146f",
   "lastOpenFiles": [
+    "Primer Año/Segundo Cuatri/Probabilidad/Probabilidad.md",
+    "TemaTres.md",
     "imágenes/diagrama_arbol_ej2.png",
     "imágenes/tree_diagram.png",
     "imágenes/tree_diagram.png.crdownload",
-    "TemaTres.md",
-    "Primer Año/Segundo Cuatri/Probabilidad/Probabilidad.md",
     "Primer Año/Segundo Cuatri/Probabilidad/PrimerTema.md",
     "Primer Año/Segundo Cuatri/Probabilidad/SegundoTema.md",
     "Primer Año/Segundo Cuatri/CalculoEnVariasVariables/Cont.md",
