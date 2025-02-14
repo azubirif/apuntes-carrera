@@ -48,3 +48,9 @@ $$
 > $$
 > 
 
+> [!info] Definición
+> $A$ y $B$ son sucesos independientes si
+> $$
+> P(A\cap B)=P(A)\cdot P(B)
+> $$
+> 
