@@ -80,3 +80,46 @@ Para obtener el contenido de un puntero
 | `NOT`    | `!`     |
 | `AND`    | `&&`    |
 | `OR`     | `\|\|`  |
+# Condicionales
+La instrucción `if` comprueba si se cumple la expresión lógica (condición) devuelve `True`:
+```
+if (condición)
+{
+	//
+}
+else if
+{
+	//
+}
+else
+{
+	//
+}
+```
+# Bucles
+Definimos los bucles mediante un valor inicial, una condición, y un incremento:
+```
+for (init; condition; increment)
+{
+	//
+}
+
+for (int i = 0; i < 10; i++)
+{
+	//
+}
+```
+Para hacer un bucle infinito con `for`, podemos hacer
+```
+for ( ; ; )
+{
+	//
+}
+```
+Lo más común es el `while`:
+```
+while (condition)
+{
+	//
+}
+```
