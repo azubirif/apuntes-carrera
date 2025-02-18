@@ -215,3 +215,13 @@ El conjunto $X$ de la definición anterior puede ser cualquier conjunto no vací
 > [!info] Definición
 > Sea $(X, \mathbf{T})$ un espacio topológico. Un subconjunto $S$ de $X$ es cerrado en $(X,\mathbf{T})$ si su complemento es abierto.
 > 
+
+> [!info] Topología Cofinita
+> Sea $X\neq \phi$. Una topología $\mathbf{T}$ sobre $X$ es llamada **topología cofinita** si y solo si los conjuntos cerrados de $X$ son, $X$ y todos los subconjuntos finitos de $X$. Por tanto, los conjuntos abiertos son $\phi$ y todos los subconjuntos de $X$ con complemento finito.
+> 
+> $$
+> T_{cof}=\{ A \subseteq X : X-A \text{ es finito o }A=\phi \}
+> $$
+> 
+> Un subconjunto de $X$ es abierto si su complemento es finito.
+> 
