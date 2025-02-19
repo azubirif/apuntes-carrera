@@ -225,3 +225,24 @@ El conjunto $X$ de la definición anterior puede ser cualquier conjunto no vací
 > 
 > Un subconjunto de $X$ es abierto si su complemento es finito.
 > 
+
+# Topología Euclidiana
+> [!info] Definición
+> Un subconjunto $S\subset \mathbb{R}$ se llamaba abierto en la topología euclidiana de $\mathbb{R}$ si y solo si
+> 
+> $$
+> \forall x \in S \exists a,b \in \mathbb{R}:a<b \wedge x \in (a,b) \subseteq S
+> $$
+> 
+> Otra forma de formular esto es
+> 
+> $$
+> \forall x \in S \exists \delta > 0 : (x-\delta,x+\delta)\subseteq S
+> $$
+> 
+## Conjuntos abiertos y cerrados
+Los intervalos abiertos $(r,s)$ son abiertos, ya que $\forall x \in (r,s) \exists \delta > 0 : (x-\delta,x+\delta)\subset (r,s)$.
+
+> [!tip] Propiedades
+> - $\mathbb{R},\phi, \mathbb{Z}$ son abiertos.
+> - $(a,b),(-\infty,a),(a,\infty)$ son abiertos.

@@ -115,3 +115,32 @@ $$
 P=(r\sin\theta \cos \phi, r\sin\theta \sin \phi, r\cos\theta)
 $$
 ![[spher_coords.jpg]]
+# Electrización de un cuerpo
+> [!info] Dipolo eléctrico
+> Un sistema formado por un centro de carga (positivo y negativo). La carga positiva es igual y opuesta a la negativa. La distancia entre ambos centros son constantes.
+
+> [!info] Momento dipolar
+> A todo dipolo se le asocia un momento dipolar $\mathbf{p}$. El origen de este vector está en el **centro de carga negativo**. La dirección de este es la recta que une el centro de carga negativo con el positivo.
+> El módulo de este viene dado por
+> 
+> $$
+> |\mathbf{p}|=q\cdot d~(C\cdot m)=(e\cdot pm)
+> $$
+> 
+> Cada enlace tendrá asociado un momento dipolar, y el total será la suma de todos ellos. Una molécula es **apolar** si su momento dipolar total es $0$.
+
+## Campo eléctrico creado por un dipolo
+Viene dado por las siguientes ecuaciones
+$$
+\begin{align*}
+\mathbf{E}_{r}&=\frac{2p\cos\theta}{4\pi\varepsilon_{0}r^{3}} \mathbf{u}_{r}\\
+\mathbf{E}_{\theta}&= \frac{p \sin\theta}{4\pi\varepsilon_{0}r^{3}}\mathbf{u}_{\theta}
+\end{align*}
+$$
+## Par de fuerza sobre un dipolo en un campo exterior
+Situamos un dipolo en el interior de un campo eléctrico dado por $\mathbf{E}=E_{0}\mathbf{u}_{r}$. El dipolo gira, y se genera un momento de fuerza dado por
+$$
+\vec{\tau}= \vec{p}\times \vec{E}
+$$
+![[dipolo_en_E.jpg]]
+Se puede observar como el torque final es **entrante** al plano.

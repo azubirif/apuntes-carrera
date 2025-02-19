@@ -123,3 +123,16 @@ while (condition)
 	//
 }
 ```
+# Funciones
+Una función es un bloque de código que permite reutilizar código que se vaya a utilizar muchas veces.
+```
+type nombre(args...)
+{
+	//
+
+	return <type>;
+}
+```
+Podemos distinguir dos formas de pasar argumentos:
+- **Paso por valor**: `void incrementar(int x)`
+- **Paso por referencia**: `void incrementar(int *x)`
