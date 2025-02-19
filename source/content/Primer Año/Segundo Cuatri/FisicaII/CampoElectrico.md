@@ -144,3 +144,10 @@ $$
 $$
 ![[dipolo_en_E.jpg]]
 Se puede observar como el torque final es **entrante** al plano.
+
+---
+Un metal se caracteriza por una estructura formada por átomos de carácter metálico, tiene un elevado número atómico, y las estructuras son **cristalinas compacta**.
+El científico Drude estableció que, un metal está formado por una red compacta de iones positivos, y de una nube de electrones de valencia que están **ligeramente** unidos a los núcleos de los átomos. Cuando se eleva la energía térmica los electrones se mueven a los átomos colindantes. El resultado es la nube electrónica que rodea a la red iónica positiva. Cuando se aplica un campo eléctrico, los electrones de valencia se mueven por la red. En general existen dos bandas diferenciadas de electrones:
+- Banda de electrones de valencia: electrones próximos al átomo que se mantienen confinados dentro del propio átomo.
+- Banda de electrones de conducción: electrones que se van a mover ante un campo eléctrico, y son responsables de la conducción eléctrica (electrones deslocalizados).
+Si se acerca una carga a un conductor, se produce un movimiento de los electrones en la banda de conducción de tal forma que los electrones se sitúan en la superficie del cuerpo. La carga en el interior siempre es nula, y por tanto el campo eléctrico en el interior es también nulo.
