@@ -76,3 +76,13 @@ Teniendo dos puntos $A,B$ y el $M$ el punto medio del segmento $\mathbf{AB}$, en
 $$
 \mathbf{OM}=\mathbf{OA}+\frac{1}{2}\mathbf{AB}
 $$
+## Baricéntricas
+Sean $P_{0},\dots,P_{n}$ puntos afínmente independientes. Entonces una referencia afín
+$$
+R=\{ P_{0},\dots,P_{n} \}
+$$
+es un sistema de referencia baricéntrico de $A$. Dado un punto $X$, si $x_{0},\dots,x_{n}$ son los únicos escalares tales que
+$$
+x_{0}\mathbf{XP_{0}}+\dots+x_{n}\mathbf{XP_{n}}=0,~ x_{0}+\dots+x_{n}=1
+$$
+entonces $X=(x_{0},\dots,x_{n})$ son sus coordenadas baricéntricas.
