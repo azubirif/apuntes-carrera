@@ -255,3 +255,4 @@ Los intervalos abiertos $(r,s)$ son abiertos, ya que $\forall x \in (r,s) \exist
 > - $X=\bigcap_{S\in B}S$
 > - Para todo $S_{1},S_{2}\in B$, el conjunto $S_{1}\cap S_{2}$ es una unión de elementos de $B$.
 >   
+

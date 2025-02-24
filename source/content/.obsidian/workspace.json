@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Primer Año/Segundo Cuatri/Topología/NocionesBasicas.md",
+                "file": "Primer Año/Segundo Cuatri/CalculoEnVariasVariables/Diferencial.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "NocionesBasicas"
+              "title": "Diferencial"
             }
           }
         ]
@@ -183,6 +183,7 @@
   },
   "active": "7e8c28f8ca857efe",
   "lastOpenFiles": [
+    "Primer Año/Segundo Cuatri/Topología/NocionesBasicas.md",
     "Primer Año/Segundo Cuatri/Topología/topologia.md",
     "Primer Año/Segundo Cuatri/FisicaII/CampoElectrico.md",
     "Primer Año/Segundo Cuatri/Programacion/Clang.md",
@@ -192,7 +193,6 @@
     "Primer Año/Segundo Cuatri/GeometriaProyectiva/SisRef.md",
     "Primer Año/Segundo Cuatri/GeometriaProyectiva/GeometriaProyectiva.md",
     "imágenes/dipolo_en_E.jpg",
-    "Primer Año/Segundo Cuatri/Topología/NocionesBasicas.md",
     "Primer Año/Segundo Cuatri/Probabilidad/Probabilidad.md",
     "Primer Año/Segundo Cuatri/Probabilidad/SegundoTema.md",
     "Primer Año/Segundo Cuatri/GeometriaProyectiva/EspacioAfin.md",

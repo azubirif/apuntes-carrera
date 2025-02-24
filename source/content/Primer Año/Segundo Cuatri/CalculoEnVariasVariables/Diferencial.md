@@ -141,3 +141,17 @@ $$
 > f(\mathbf{x}+\mathbf{v})-f(\mathbf{x})=T_{\mathbf{x}}(\mathbf{v})+o(|\mathbf{v}|)
 > $$
 
+Vamos a ver si la diferencial es capaz de detectar discontinuidades.
+Supongamos que $f:D\subset \mathbb{R}^n\to \mathbb{R}$ es diferenciable en $\mathbf{x}\in int(D)$. Veamos si esto implica continuidad en $\mathbf{x}$:
+Si $f$ es continua en $\mathbf{x}$ se cumplirá
+$$
+\lim_{ \mathbf{h} \to \mathbf{0} } f(\mathbf{x}+\mathbf{h})=f(\mathbf{x})
+$$
+Cálculemos entonces este límite:
+$$
+\begin{align*}
+\lim_{ h \to 0 } f(\mathbf{x}+\mathbf{h})&=\lim_{ \mathbf{h} \to 0 } f(\mathbf{x})+T_{\mathbf{x}}+o(|\mathbf{h}|)\\
+&=f(\mathbf{x})+T_{\mathbf{x}}(\mathbf{0})+\lim_{ \mathbf{h} \to 0 } |\mathbf{h}|o(1)\\
+&=f(\mathbf{x})
+\end{align*}
+$$
