@@ -184,12 +184,14 @@ La conclusión de esto es que
 $$
 \boxed{f'(\mathbf{x},\mathbf{v})=\sum v_{i} \frac{ \partial f }{ \partial x_{i} } }
 $$
-> [!tip] Gradiente
-> El gradiente es un operador lineal que se define como
+> [!tip] Operador Nabla
+> El operador Nabla es un operador lineal que se define como
 > 
 > $$
 > \nabla = \left( \frac{ \partial  }{ \partial x_{i} },\dots,\frac{ \partial  }{ \partial x_{n} }   \right)
 > $$
+> 
+> Luego $\nabla f$ es el **gradiente** de $f$.
 
 Por tanto, podemos definir la anterior derivada como
 $$
