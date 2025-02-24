@@ -197,3 +197,7 @@ Por tanto, podemos definir la anterior derivada como
 $$
 f'(\mathbf{x},\mathbf{v})=\nabla f\cdot \mathbf{v}
 $$
+Con el gradiente es fácil determinar en qué direcciones $f$ crece más deprisa.
+Sea $\mathbf{u}$ un vector unitario, entonces:
+- $f'(\mathbf{x},\mathbf{u})=\mathbf{u}\cdot \nabla f=|\nabla f|\cos\theta$
+- 
