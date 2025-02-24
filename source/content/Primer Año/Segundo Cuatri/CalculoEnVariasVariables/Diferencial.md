@@ -184,7 +184,7 @@ La conclusión de esto es que
 $$
 \boxed{f'(\mathbf{x},\mathbf{v})=\sum v_{i} \frac{ \partial f }{ \partial x_{i} } }
 $$
-> [!tip] Operador Nabla
+> [!note] Operador Nabla
 > El operador Nabla es un operador lineal que se define como
 > 
 > $$
@@ -199,5 +199,27 @@ f'(\mathbf{x},\mathbf{v})=\nabla f\cdot \mathbf{v}
 $$
 Con el gradiente es fácil determinar en qué direcciones $f$ crece más deprisa.
 Sea $\mathbf{u}$ un vector unitario, entonces:
-- $f'(\mathbf{x},\mathbf{u})=\mathbf{u}\cdot \nabla f=|\nabla f|\cos\theta$
-- 
+$$f'(\mathbf{x},\mathbf{u})=\mathbf{u}\cdot \nabla f=|\nabla f|\cos\theta$$
+> [!tip] Lema
+> Si $\mathbf{v}=\lambda \mathbf{w}\neq \mathbf{0}$ y $f$ es un campo escalar para el que existe $f'(\mathbf{x},\mathbf{v})$ entonces
+> 
+> $$
+> f'(\mathbf{x},\mathbf{v})=\lambda f'(\mathbf{x},\mathbf{w})
+> $$
+
+> [!success] Demostración
+> 
+> $$
+> \begin{align*}
+> f'(\mathbf{x},\mathbf{v})&=\lim_{ h \to 0 } \frac{f(\mathbf{x}+\mathbf{v}h)-f(\mathbf{x})}{h}\\
+> &= \lim_{ h \to 0 } \frac{f(\mathbf{x}+\lambda h\mathbf{w})-f(\mathbf{x})}{h}\\
+> &= \lim_{ \hbar \to 0 } \frac{f(\mathbf{x}+\hbar \mathbf{w})-f(\mathbf{x})}{\hbar / \lambda}\\
+> &= \lambda \lim_{ \hbar \to 0 } \frac{f(\mathbf{x}+\hbar \mathbf{w})-f(\mathbf{x})}{\hbar}\\
+> &=\lambda f'(\mathbf{x},\mathbf{w})
+> \end{align*}
+> $$
+
+Para reconocer si una función es diferenciable usaremos el siguiente teorema:
+
+> [!tip] Teorema
+> Si existen las derivadas parciales $\frac{ \partial f }{ \partial x_{i} }$ en una cierta bola $B_{r}(\mathbf{x})$ y son continuas en $\mathbf{x}$ entonces $f$ es diferenciable en $\mathbf{x}$.
