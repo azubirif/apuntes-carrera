@@ -251,7 +251,7 @@ Los intervalos abiertos $(r,s)$ son abiertos, ya que $\forall x \in (r,s) \exist
 
 > [!info] Base de una topología
 > Una colección $B$ de subconjuntos abiertos de $X$ es una base de $\mathbf{T}$ si y solo si, cada conjunto abierto es una unión de elementos de $B$.
-
-
-
-
+> Se cumplirá que $B$ es una base de una topología sobre $X$ si:
+> - $X=\bigcap_{S\in B}S$
+> - Para todo $S_{1},S_{2}\in B$, el conjunto $S_{1}\cap S_{2}$ es una unión de elementos de $B$.
+>   
