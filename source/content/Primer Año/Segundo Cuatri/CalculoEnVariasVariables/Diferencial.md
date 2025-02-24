@@ -155,3 +155,43 @@ $$
 &=f(\mathbf{x})
 \end{align*}
 $$
+Por tanto, si $f$ es diferenciable en $\mathbf{x}$, también es continua en ese punto.
+Ahora, ¿cómo son las derivadas de una función diferenciable?
+Calculemos la derivada de $f$ respecto de un $\mathbf{v}$ en $\mathbf{x}$:
+$$
+\begin{align*}
+f'(\mathbf{x},\mathbf{v})&= \lim_{ h \to 0 } \frac{f(\mathbf{x}+h\mathbf{v})-f(\mathbf{x})}{h}\\
+&=\lim_{ h \to 0 } \frac{T_{\mathbf{x}}(h\mathbf{v})+o(h)}{h}\\
+&=\lim_{ h \to 0 } \frac{hT_{\mathbf{x}}(\mathbf{v})+h\cdot o(1)}{h}\\
+&=\lim_{ h \to 0 } T_{\mathbf{x}}(\mathbf{v})+o(1)\\
+&=T_{\mathbf{x}}(\mathbf{v})\\
+f'(\mathbf{x},\mathbf{v})&=T_{\mathbf{x}}(\mathbf{v})
+\end{align*}
+$$
+Si $\mathbf{v}=(v_{1},\dots,v_{n})\in \mathbb{R}^{n}$, entonces se puede escribir como combinación lineal de vectores de la base canónica de $\mathbb{R}^{n}$.
+$$
+\mathbf{v}=\sum v_{i}\mathbf{e}_{i}
+$$
+entonces
+$$
+T_{\mathbf{x}}(\mathbf{v})=T_{\mathbf{x}}\left( \sum v_{i}\mathbf{e}_{i} \right)=\sum v_{i}T_{\mathbf{x}}(\mathbf{e}_{i})
+$$
+Sabemos que una aplicación se define por cómo actua esta en los vectores de la base. Como sabemos que $f'(\mathbf{x},\mathbf{v})=T_{\mathbf{x}}(\mathbf{v})$, entonces
+$$
+=\sum v_{i}f'(\mathbf{x},\mathbf{e}_{i})=\sum v_{i} \frac{ \partial f }{ \partial x_{i} } 
+$$
+La conclusión de esto es que
+$$
+\boxed{f'(\mathbf{x},\mathbf{v})=\sum v_{i} \frac{ \partial f }{ \partial x_{i} } }
+$$
+> [!tip] Gradiente
+> El gradiente es un operador lineal que se define como
+> 
+> $$
+> \nabla = \left( \frac{ \partial  }{ \partial x_{i} },\dots,\frac{ \partial  }{ \partial x_{n} }   \right)
+> $$
+
+Por tanto, podemos definir la anterior derivada como
+$$
+f'(\mathbf{x},\mathbf{v})=\nabla f\cdot \mathbf{v}
+$$
