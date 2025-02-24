@@ -246,3 +246,12 @@ Los intervalos abiertos $(r,s)$ son abiertos, ya que $\forall x \in (r,s) \exist
 > [!tip] Propiedades
 > - $\mathbb{R},\phi, \mathbb{Z}$ son abiertos.
 > - $(a,b),(-\infty,a),(a,\infty)$ son abiertos.
+> - $\mathbb{Q}$ no es ni abierto ni cerrado.
+> - Un subconjunto $S \subset \mathbb{R}$ es abierto si y solo si es la unión de intervalos abiertos.
+
+> [!info] Base de una topología
+> Una colección $B$ de subconjuntos abiertos de $X$ es una base de $\mathbf{T}$ si y solo si, cada conjunto abierto es una unión de elementos de $B$.
+
+
+
+

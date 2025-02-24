@@ -78,3 +78,10 @@ $$
 > P(A_{i}|B) = \frac{P(A_{i})P(B|A_{i})}{P(B)}
 > $$
 > 
+
+## Independencia condicional
+Si se verifica que
+$$
+P(A\cap B|C)=P(A|C)P(B|C)
+$$
+Entonces $A$ y $B$ son condicionalmente independientes dado $C$.

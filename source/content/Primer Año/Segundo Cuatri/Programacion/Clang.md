@@ -136,3 +136,25 @@ type nombre(args...)
 Podemos distinguir dos formas de pasar argumentos:
 - **Paso por valor**: `void incrementar(int x)`
 - **Paso por referencia**: `void incrementar(int *x)`
+**Ejemplo**:
+```
+#include <stdio.h>
+
+void inc(int *n)
+{
+    *n += 1;
+}
+
+int main()
+{
+    int a = 0;
+    
+    printf("%d\n", a); //0
+    
+    inc(&a);
+    
+    printf("%d\n", a); //1
+
+    return 0;
+}
+```

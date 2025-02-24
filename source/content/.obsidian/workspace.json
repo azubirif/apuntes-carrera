@@ -8,35 +8,20 @@
         "type": "tabs",
         "children": [
           {
-            "id": "0f3c022d935311fe",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Primer Año/Segundo Cuatri/GeometriaProyectiva/GeometriaProyectiva.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "GeometriaProyectiva"
-            }
-          },
-          {
             "id": "7e8c28f8ca857efe",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Primer Año/Segundo Cuatri/GeometriaProyectiva/SisRef.md",
+                "file": "Primer Año/Segundo Cuatri/Topología/NocionesBasicas.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SisRef"
+              "title": "NocionesBasicas"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -198,23 +183,24 @@
   },
   "active": "7e8c28f8ca857efe",
   "lastOpenFiles": [
+    "Primer Año/Segundo Cuatri/Topología/topologia.md",
+    "Primer Año/Segundo Cuatri/FisicaII/CampoElectrico.md",
+    "Primer Año/Segundo Cuatri/Programacion/Clang.md",
+    "Primer Año/Segundo Cuatri/Probabilidad/TemaTres.md",
+    "Primer Año/Segundo Cuatri/Probabilidad/PrimerTema.md",
+    "Primer Año/Segundo Cuatri/CalculoEnVariasVariables/Diferencial.md",
     "Primer Año/Segundo Cuatri/GeometriaProyectiva/SisRef.md",
     "Primer Año/Segundo Cuatri/GeometriaProyectiva/GeometriaProyectiva.md",
-    "Primer Año/Segundo Cuatri/FisicaII/CampoElectrico.md",
     "imágenes/dipolo_en_E.jpg",
-    "Primer Año/Segundo Cuatri/Programacion/Clang.md",
     "Primer Año/Segundo Cuatri/Topología/NocionesBasicas.md",
-    "Primer Año/Segundo Cuatri/Probabilidad/TemaTres.md",
     "Primer Año/Segundo Cuatri/Probabilidad/Probabilidad.md",
     "Primer Año/Segundo Cuatri/Probabilidad/SegundoTema.md",
     "Primer Año/Segundo Cuatri/GeometriaProyectiva/EspacioAfin.md",
-    "Primer Año/Segundo Cuatri/CalculoEnVariasVariables/Diferencial.md",
     "Primer Año/Segundo Cuatri/CalculoEnVariasVariables/CalculoVars.md",
     "Primer Año/Segundo Cuatri/CalculoEnVariasVariables/Cont.md",
     "imágenes/diagrama_arbol_ej2.png",
     "imágenes/tree_diagram.png",
     "imágenes/tree_diagram.png.crdownload",
-    "Primer Año/Segundo Cuatri/Probabilidad/PrimerTema.md",
     "imágenes/spher_coords.jpg",
     "imágenes/spher_coords.jpg.crdownload",
     "Primer Año/Segundo Cuatri/Programacion/Programacion.md",
@@ -229,7 +215,6 @@
     "Integrales.md",
     "General.md",
     "index.md",
-    "Primer Año/Segundo Cuatri/Topología/topologia.md",
     "Primer Año/Segundo Cuatri/Probabilidad",
     "Primer Año/Segundo Cuatri/GeometriaProyectiva",
     "Primer Año/Segundo Cuatri/Topología",

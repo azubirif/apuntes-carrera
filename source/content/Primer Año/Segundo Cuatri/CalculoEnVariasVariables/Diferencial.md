@@ -80,3 +80,64 @@ $$
 \lvert \mathbf{x}+h\mathbf{v}-\mathbf{x} \rvert =\lvert h\mathbf{v} \rvert 
 $$
 Para solucionar este problema, utilizaremos vectores de norma $1$. Entonces la derivada se llama **derivada direccional**.
+
+# Derivadas parciales
+Las derivadas parciales son aquellas que se hacen respecto a un eje. Si como vector unitario usamos uno de la base canónica de $\mathbb{R}^{n}$
+$$
+\{ \mathbf{e}_{i} \}
+$$
+donde
+$$
+(\mathbf{e}_{i})_{j}=\delta_{ij}
+$$
+entonces la correspondiente derivada direccional en un punto $\mathbf{x}$ es
+$$
+f'(\mathbf{x};\mathbf{e}_{i})
+$$
+es la **derivada parcial** respecto a $\mathbf{e}_{i}$, y se denota por $D_{i}f=\partial_{i}f$.
+Observemos que
+$$
+\boxed{
+f'(\mathbf{x},\mathbf{e}_{i})=\lim_{ h \to 0 } \frac{f(\mathbf{x}+h \mathbf{e}_{i})-f(\mathbf{x})}{h}= \frac{ \partial f }{ \partial x_{i} } 
+}
+$$
+Como todos los componentes que no estén alineados con $\mathbf{e}_{i}$ no cambian, podemos tomarlos como si **fuesen constantes**, es decir, como una derivada ordinaria respecto a $x_{i}$.
+# La diferencial
+Las derivadas direccionales nos dan una información muy pobre del comportamiento de una función. Queremos buscar algo análogo a
+$$
+Df(\mathbf{x})=\lim_{ \mathbf{h} \to 0 } \frac{f(\mathbf{x}+\mathbf{h})-f(\mathbf{x})}{\mathbf{h}} 
+$$
+El problema es que tenemos un vector dividiendo. Vamos a tomar que $\mathbf{h}$ es un vector finito
+$$
+\begin{align*}
+Df(\mathbf{x})+\varepsilon(\mathbf{x},\mathbf{h})&=\frac{f(\mathbf{x}+\mathbf{h})-f(\mathbf{x})}{\mathbf{h}}\\
+\mathbf{h}(Df(\mathbf{x})+\varepsilon(\mathbf{x},\mathbf{h}))&=f(\mathbf{x}+\mathbf{h})-f(\mathbf{x})
+\end{align*}
+$$
+Se tiene que cumplir que
+$$
+\lim_{ h \to 0 } \varepsilon(\mathbf{x},\mathbf{h})=0 
+$$
+ahora sigue que
+$$
+\begin{align*}
+\mathbf{h}Df+\mathbf{h}\varepsilon &=f(\mathbf{x}+\mathbf{h})-f(\mathbf{x})
+\end{align*}
+$$
+Para que el lado izquierdo sea escalar, $\mathbf{h}$ debe ser una matriz $n\times 1$, y $Df$ otra de $1\times n$. Podemos reescribir esto como
+$$
+f(\mathbf{x}+\mathbf{h})-f(\mathbf{x})=T_{\mathbf{x}}(\mathbf{h})+|\mathbf{h}|E(\mathbf{x},\mathbf{h})
+$$
+Como $\varepsilon\to {0}$ si $h\to 0$, entonces también lo hará $E(\mathbf{x},\mathbf{h})$. Entonces obtenemos
+$$
+f(\mathbf{x}+\mathbf{h})-f(\mathbf{x})=T_{\mathbf{x}}(\mathbf{h})+o(|\mathbf{h}|)
+$$
+
+> [!tip] Diferencial de una función
+> Sean $f:S\subset \mathbb{R}^n\to \mathbb{R}$ y $x \in int(S)$, $B_{r}(\mathbf{x})\subset S$ y $\mathbf{v}\in \mathbb{R}^{n}$ tal que $\mathbf{x}+\mathbf{v}\in B_{r}(\mathbf{x})$.
+> Decimos que $f$ es diferenciable en $\mathbf{x}$ si existe una transformación lineal $T_{\mathbf{x}}:\mathbb{R}^{n}\to \mathbb{R}$ tal que
+> 
+> $$
+> f(\mathbf{x}+\mathbf{v})-f(\mathbf{x})=T_{\mathbf{x}}(\mathbf{v})+o(|\mathbf{v}|)
+> $$
+
