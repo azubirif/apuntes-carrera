@@ -115,3 +115,23 @@ Es decir, cada vector está respecto a su propia base (aquella definida por el s
 
 > [!note] Cada sistema de referencia (siempre que cumpla las condiciones adecuadas) es válido, y no existe una preferencia para un determinado sistema. Por tanto, es conveniente buscar un sistema de referencia (siempre que sea posible) que simplifique el problema a resolver.
 
+## Matriz de cambio de sistema de referencia
+Esta matriz se define como
+$$
+M_{R'R}= \begin{pmatrix}
+1 & 0 \\
+a & M_{B'B}
+\end{pmatrix}
+$$
+Donde $a$ son las coordenadas de $O'$ respecto de $R$, y es una matriz de $n\times 1$.
+Esta matriz es la de cambio de sistema de referencia de $R'$ a $R$.
+
+> [!tip] Corolario
+> Si se desarrolla el determinante (por adjuntos) de $M_{R'R}$ por la primera fila, se observa que esta es igual al determinante de la matriz $M_{B'B}$. Como esta última tiene determinante distinto de $0$ (ya que esta matriz debe ser invertible), entonces la matriz $M_{R'R}$ es también invertible.
+> 
+> $$
+> M_{R'R}=M_{R R'}^{-1}
+> $$
+
+Con esto se dan diversas situaciones. Supongamos dos sistemas de referencia como descritos anteriormente.
+- Si se cumple que $O=O'$, entonces el punto de referencia es el mismo y por tanto solo cambia la base.

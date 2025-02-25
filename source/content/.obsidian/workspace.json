@@ -178,11 +178,17 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "obsidian-excalidraw-plugin:New drawing": false
     }
   },
   "active": "7e8c28f8ca857efe",
   "lastOpenFiles": [
+    "Primer Año/Segundo Cuatri/CalculoEnVariasVariables/EspacioRN.md",
+    "Primer Año/Segundo Cuatri/CalculoEnVariasVariables/Cont.md",
+    "Primer Año/Segundo Cuatri/GeometriaProyectiva/SisRef.md",
+    "Excalidraw/Drawing 2025-02-25 09.41.36.excalidraw.md",
+    "Excalidraw",
     "Primer Año/Segundo Cuatri/GeometriaProyectiva/GeometriaProyectiva.md",
     "Primer Año/Segundo Cuatri/GeometriaProyectiva/EspacioAfin.md",
     "Primer Año/Segundo Cuatri/CalculoEnVariasVariables/Diferencial.md",
@@ -192,12 +198,10 @@
     "Primer Año/Segundo Cuatri/Programacion/Clang.md",
     "Primer Año/Segundo Cuatri/Probabilidad/TemaTres.md",
     "Primer Año/Segundo Cuatri/Probabilidad/PrimerTema.md",
-    "Primer Año/Segundo Cuatri/GeometriaProyectiva/SisRef.md",
     "imágenes/dipolo_en_E.jpg",
     "Primer Año/Segundo Cuatri/Probabilidad/Probabilidad.md",
     "Primer Año/Segundo Cuatri/Probabilidad/SegundoTema.md",
     "Primer Año/Segundo Cuatri/CalculoEnVariasVariables/CalculoVars.md",
-    "Primer Año/Segundo Cuatri/CalculoEnVariasVariables/Cont.md",
     "imágenes/diagrama_arbol_ej2.png",
     "imágenes/tree_diagram.png",
     "imágenes/tree_diagram.png.crdownload",
@@ -206,7 +210,6 @@
     "Primer Año/Segundo Cuatri/Programacion/Programacion.md",
     "Primer Año/Segundo Cuatri/SegundoCuatri.md",
     "Primer Año/Segundo Cuatri/Programacion",
-    "Primer Año/Segundo Cuatri/CalculoEnVariasVariables/EspacioRN.md",
     "imágenes/coords_cil.png",
     "imágenes/coords_cil.png.crdownload",
     "Primer Año/Segundo Cuatri/FisicaII/FisicaII.md",
@@ -223,7 +226,6 @@
     "Primer Año/Primer Cuatri/nota_primer_cuatri.md",
     "imágenes/coords_polares.png",
     "imágenes/plano_cartesiano.png",
-    "imágenes",
     "category-folder/Some note.md",
     "category-folder/index.md"
   ]
