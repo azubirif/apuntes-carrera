@@ -133,7 +133,30 @@ Esta matriz es la de cambio de sistema de referencia de $R'$ a $R$.
 > M_{R'R}=M_{R R'}^{-1}
 > $$
 
+A menudo esta ecuación acaba siendo
+$$
+P_{R}=O'+M_{B'B}P_{R'}
+$$
 Con esto se dan diversas situaciones. Supongamos dos sistemas de referencia como descritos anteriormente.
 - Si se cumple que $O=O'$, entonces el punto de referencia es el mismo y por tanto solo cambia la base.
 - Si $\forall i~\mathbf{u}_{i}=\mathbf{v}_{i}$, entonces los vectores de la base no cambian (la matriz de cambio de sistema es la identidad) y por tanto solo estamos trasladando el origen.
 - Si se cumplen ambas propiedades, (evidentemente) ambos sistemas de referencia coinciden.
+
+## Teorema
+Cualquier transformación afín se puede escribir como un producto entre una transformación afín y una traslación que deja invariante un punto. Se pueden escribir en forma matricial como
+
+$$
+\begin{pmatrix}
+M & v \\
+0 & 1
+\end{pmatrix}=
+\begin{pmatrix}
+I & v \\
+0 & 1
+\end{pmatrix}
+\begin{pmatrix}
+M & 0 \\
+0 & 1
+\end{pmatrix}
+$$
+La matriz $M$ es la transformación que deja un punto $P$ fijo, y $v$ representa el vector de la traslación.
