@@ -22,7 +22,7 @@ A=P+B
 $$
 
 > [!info] Combinación afín
-> Dados los puntos $\{ P_{i} \}$ y los escalares $\{ \lambda_{i} \}$ tal que $\lambda_{i}=1$, la combinación afín es
+> Dados los puntos $\{ P_{i} \}$ y los escalares $\{ \lambda_{i} \}$ tal que $\sum\lambda_{i}=1$, la combinación afín es
 > 
 > $$
 > P=\sum_{i=0} \lambda_{i} \mathbf{P_{0}P_{i}}
