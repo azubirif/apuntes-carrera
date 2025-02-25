@@ -86,3 +86,32 @@ $$
 x_{0}\mathbf{XP_{0}}+\dots+x_{n}\mathbf{XP_{n}}=0,~ x_{0}+\dots+x_{n}=1
 $$
 entonces $X=(x_{0},\dots,x_{n})$ son sus coordenadas baricéntricas.
+# Cambio de sistema de referencia
+Sea $(A,\mathbb{V},\phi)$ un espacio afín y sean
+$$
+\begin{align*}
+R&=\{ O;B=\{ \mathbf{v}_{1},\dots,\mathbf{v}_{n} \} \}\\
+R'&=\{ O',B'=\{ \mathbf{u}_{1},\dots,\mathbf{u}_{n} \}\}
+\end{align*}
+$$
+dos sistemas de referencia afines de $A$.
+Sea $P\in A:P(x_{1},\dots,x_{n})_{R}=(y_{1},\dots,y_{n})_{R'}$.
+Entonces, el vector que va desde $O$ hasta $P$ se define como
+$$
+\boxed{\mathbf{OP}=\mathbf{OO'}+\mathbf{O'P}}
+$$
+Esto se cumple debido a la **relación de Chasles**.
+Esta relación nos permite obtener el vector que une el origen de un sistema de referencia a un punto, si tenemos el vector que une ambos orígenes, y el vector que va desde el segundo origen al punto.
+También nos permite obtener el vector que relaciona dos orígenes, si tenemos los vectores que van a un mismo punto desde dos sistemas de referencia.
+El vector $\mathbf{OP}$ se define como
+$$
+\mathbf{OP}=\sum_{i=1}^n\lambda_{i}\mathbf{v}_{i}
+$$
+mientras que $\mathbf{O'P}$ se define como
+$$
+\mathbf{O'P}=\sum_{i=1}^n\mu_{i}\mathbf{u}_{i}
+$$
+Es decir, cada vector está respecto a su propia base (aquella definida por el sistema de referencia) y por tanto tendrá sus propias coordenadas.
+
+> [!note] Cada sistema de referencia (siempre que cumpla las condiciones adecuadas) es válido, y no existe una preferencia para un determinado sistema. Por tanto, es conveniente buscar un sistema de referencia (siempre que sea posible) que simplifique el problema a resolver.
+
