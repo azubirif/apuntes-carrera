@@ -1,5 +1,5 @@
 ---
-title: Sistemas de referencias y coordenadas
+title: Sistemas de referencias y coordenadas 🤓
 ---
 Para definir un espacio afín, tenemos dos elementos:
 - Una referencia formada por un conjunto de puntos.
@@ -135,3 +135,5 @@ Esta matriz es la de cambio de sistema de referencia de $R'$ a $R$.
 
 Con esto se dan diversas situaciones. Supongamos dos sistemas de referencia como descritos anteriormente.
 - Si se cumple que $O=O'$, entonces el punto de referencia es el mismo y por tanto solo cambia la base.
+- Si $\forall i~\mathbf{u}_{i}=\mathbf{v}_{i}$, entonces los vectores de la base no cambian (la matriz de cambio de sistema es la identidad) y por tanto solo estamos trasladando el origen.
+- Si se cumplen ambas propiedades, (evidentemente) ambos sistemas de referencia coinciden.
