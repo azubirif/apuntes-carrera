@@ -250,9 +250,22 @@ Los intervalos abiertos $(r,s)$ son abiertos, ya que $\forall x \in (r,s) \exist
 > - Un subconjunto $S \subset \mathbb{R}$ es abierto si y solo si es la unión de intervalos abiertos.
 
 > [!info] Base de una topología
-> Una colección $B$ de subconjuntos abiertos de $X$ es una base de $\mathbf{T}$ si y solo si, cada conjunto abierto es una unión de elementos de $B$.
+> Una colección $B$ de subconjuntos abiertos de $X$ es una base de $\mathbf{T}$ si y solo si, cada conjunto abierto es una unión de elementos de $B$, es decir:
+> 
+> $$
+> \forall D \in \mathbf{T} \exists \{ S_{i} \} \subset B :D = \bigcup S_{i} 
+> $$
+> 
+> 
 > Se cumplirá que $B$ es una base de una topología sobre $X$ si:
 > - $X=\bigcup_{S\in B}S$
 > - Para todo $S_{1},S_{2}\in B$, el conjunto $S_{1}\cap S_{2}$ es una unión de elementos de $B$.
->   
+> Otra forma de demostrar si algo es una base de una topología es la siguiente:
+> 
+> $$
+> \forall x \in A \subset \mathbf{T} \exists S \in B : x \in S \subseteq A
+> $$
 
+Sean $B_{1}$ y $B_{2}$ bases de $T_{1}$ y $T_{2}$ respectivamente. $T_{1}=T_{2}$ si y solo si:
+- $\forall S\in B_{1},x \in S, \exists S'\in B_{2}:x \in S'\subseteq S$
+- $\forall S \in B_{2},x \in S, \exists S' \in B_{1}:x \in S' \subseteq S$
