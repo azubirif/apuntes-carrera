@@ -193,7 +193,7 @@ $$
 > 
 > Luego $\nabla f$ es el **gradiente** de $f$.
 
-Por tanto, podemos definir la anterior derivada como
+Por tanto, si $f$ es diferenciable entonces
 $$
 f'(\mathbf{x},\mathbf{v})=\nabla f\cdot \mathbf{v}
 $$
@@ -223,3 +223,17 @@ Para reconocer si una función es diferenciable usaremos el siguiente teorema:
 
 > [!tip] Teorema
 > Si existen las derivadas parciales $\frac{ \partial f }{ \partial x_{i} }$ en una cierta bola $B_{r}(\mathbf{x})$ y son continuas en $\mathbf{x}$ entonces $f$ es diferenciable en $\mathbf{x}$.
+# Cálculo de planos tangentes a funciones en puntos
+Supongamos que tenemos una función $f(x,y)$. Vamos a definir una función de la forma
+$$
+g(x,y,z)=f(x,y)-z
+$$
+Ahora, evaluaremos la función $f(x_{1},x_{2})$, y calcularemos
+$$
+\nabla g(x_{1},x_{2},f(x_{1},x_{2}))= (\alpha,\beta,\gamma)
+$$
+Ahora definiremos un plano como
+$$
+\pi \equiv \alpha x+\beta y+\gamma z+c=0
+$$
+Para calcular $c$, sustituimos en el plano los valores de $x_{1},x_{2},f(x_{1},x_{2})$, y despejamos.
