@@ -183,7 +183,10 @@ $$
 Donde $X=(x_{1},\dots,x_{n})^{T}$ y $D$ es la matriz fila traspuesta formada por las coordenadas de $f(O)$ respecto a $R'$.
 Realmente estamos afirmando que
 $$
-f(P)=f(O')+M\cdot P
+\begin{align*}
+f(P)&=f(O')+M\cdot P\\
+\bar{f}(\mathbf{OP})&=M\cdot P
+\end{align*}
 $$
 # Composiciones de aplicaciones afines con matrices
 Sean tres espacios afines con sus respectivas referencias cartesianas $R_{1},R_{2}R_{3}$. Sean $h:A_{1}\to A_{2}$ y $g:A_{2}\to A_{3}$ dos aplicaciones afines, sea $f=g\circ h =g(h)$. Entonces
@@ -191,13 +194,24 @@ $$
 M_{R_{1}R_{3}}(f)=M_{R_{2}R_{3}}(g)\cdot M_{R_{1}R_{2}}(h)
 $$
 **Propiedades**
-1. Dados dos espacios afines, cada uno con dos referencias cartesianas $R_{1},R_{2}$ y $R_{1}',R_{2}'$, siendo $f:A\to A'$, entonces
+- Dados dos espacios afines, cada uno con dos referencias cartesianas $R_{1},R_{2}$ y $R_{1}',R_{2}'$, siendo $f:A\to A'$, entonces
    $$
 M_{R_{2}R_{2}'}(f)=M_{R_{1}'R_{2}'}\cdot M_{R_{1}R_{1}'}(f)\cdot M_{R_{2}R_{1}}
 $$
 
 ![[propiedad_matrices_referencias.excalidraw]]
-1. Teniendo dos espacios afines de la misma dimensión, con sus respectivas referencias cartesianas $R,R'$, y siendo $f:A\to A'$ un isomorfismo afín, entonces $M_{R R'}(f)$
+- Teniendo dos espacios afines de la misma dimensión, con sus respectivas referencias cartesianas $R,R'$, y siendo $f:A\to A'$ un isomorfismo afín, entonces $M_{R R'}(f)$
    $$
 M_{R'R}(f^{-1})=(M_{R R'}(f))^{-1}
 $$
+- Teniendo un espacio afín con tres referencias cartesianas de $\mathbb{A}$, entonces
+  $$
+M_{R_{1}R_{3}}=M_{R_{2}R_{3}}\cdot M_{R_{1}R_{2}}
+$$
+- Dadas dos referencias cartesianas de un mismo espacio, $M_{R_{1}R_{2}}$ es invertible y
+  $$
+M_{R_{2}R_{1}}=(M_{R_{1}R_{2}})^{-1}
+$$
+Se tiene que, si en un espacio, con una aplicación $f:\mathbb{A}\to \mathbb{A}$ tal que $f(P)=P$, entonces
+- $f$ es la identidad
+- Toda referencia cartesiana $R$ de $A$, la matriz de $f$ respecto a $R$ es la identidad.
