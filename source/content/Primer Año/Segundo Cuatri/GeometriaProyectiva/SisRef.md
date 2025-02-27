@@ -200,15 +200,18 @@ M_{R_{2}R_{2}'}(f)=M_{R_{1}'R_{2}'}\cdot M_{R_{1}R_{1}'}(f)\cdot M_{R_{2}R_{1}}
 $$
 
 - Teniendo dos espacios afines de la misma dimensión, con sus respectivas referencias cartesianas $R,R'$, y siendo $f:A\to A'$ un isomorfismo afín, entonces $M_{R R'}(f)$
-   $$
+
+$$
 M_{R'R}(f^{-1})=(M_{R R'}(f))^{-1}
 $$
 - Teniendo un espacio afín con tres referencias cartesianas de $\mathbb{A}$, entonces
-  $$
+
+$$
 M_{R_{1}R_{3}}=M_{R_{2}R_{3}}\cdot M_{R_{1}R_{2}}
 $$
 - Dadas dos referencias cartesianas de un mismo espacio, $M_{R_{1}R_{2}}$ es invertible y
-  $$
+
+$$
 M_{R_{2}R_{1}}=(M_{R_{1}R_{2}})^{-1}
 $$
 Se tiene que, si en un espacio, con una aplicación $f:\mathbb{A}\to \mathbb{A}$ tal que $f(P)=P$, entonces
