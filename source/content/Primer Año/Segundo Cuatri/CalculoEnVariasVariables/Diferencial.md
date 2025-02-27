@@ -236,4 +236,4 @@ Ahora definiremos un plano como
 $$
 \pi \equiv \alpha x+\beta y+\gamma z+c=0
 $$
-Para calcular $c$, sustituimos en el plano los valores de $x_{1},x_{2},f(x_{1},x_{2})$, y despejamos.
+Para calcular $c$, sustituimos en el plano los valores de $x_{1},x_{2},f(x_{1},x_{2})$, y despejamoss.
