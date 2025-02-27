@@ -160,3 +160,44 @@ M & 0 \\
 \end{pmatrix}
 $$
 La matriz $M$ es la transformación que deja un punto $P$ fijo, y $v$ representa el vector de la traslación.
+
+Sean dos espacios afines, y sea $R=\{ O,\mathcal{B}=\{ \mathbf{v}_{i} \} \}$ la referencia cartesiana de la primera. Sea $O'$ un punto cualquiera de $A'$ y sean $\{ \mathbf{v}_{i}' \}$ vectores cualesquiera de $\mathbb{V}'$.
+Existe una única **aplicación afín** $f$ tal que $f(O)=O'$ y cuya aplicación lineal asociada cumple que
+$$
+\bar{f}(\mathbf{v}_{i})=\mathbf{v}_{i}'
+$$
+Además, dados $\{ P_{i} \}~n+1$ puntos **afínmente indepedientes** de $A$, y $\{ P_{i}' \}~n+1$ puntos de $A'$ existe una única aplicación afñin tal que
+$$
+f(P_{i})=P_{i}'
+$$
+Si se tienen dos espacios afines de dimensión $n$, teniendo una aplicación afín $f$ de $\mathbb{A}$ a $\mathbb{A'}$, las siguientes afirmaciones son equivalentes:
+1. $f$ es un isomorfismo afín.
+2. Existe una referencia cartesiana $\{ O;B \}$ de $\mathbb{A}$ que $f$ transforma en una referencia cartesiana de $\mathbb{A}'$.
+3. Existe un conjunto de $n+1$ puntos afínmente independientes de $\mathbb{A}$ que $f$ transforma en un conjunto de $n+1$ puntos afínmente independientes de $\mathbb{A}'$.
+
+Teniendo dos espacios afines de dimensión $n$ y $m$, cada uno con sus respectivas referencias cartesianas $R$ y $R'$, con la aplicación afín $f:A\to A'$ y su respectiva aplicación lineal asociada $\bar{f}$, y siendo $M$ la matriz de $\bar{f}$ respecto de las bases $B$ y $B'$.
+Si las coordenadas de $P\in A$ de $R$ son $(x_{i})$ y las coordenadas de $f(P)$ respecto de $A'$ son $(y_{i})$, se tiene que
+$$
+M\cdot X+D=Y
+$$
+Donde $X=(x_{1},\dots,x_{n})^{T}$ y $D$ es la matriz fila traspuesta formada por las coordenadas de $f(O)$ respecto a $R'$.
+Realmente estamos afirmando que
+$$
+f(P)=f(O')+M\cdot P
+$$
+# Composiciones de aplicaciones afines con matrices
+Sean tres espacios afines con sus respectivas referencias cartesianas $R_{1},R_{2}R_{3}$. Sean $h:A_{1}\to A_{2}$ y $g:A_{2}\to A_{3}$ dos aplicaciones afines, sea $f=g\circ h =g(h)$. Entonces
+$$
+M_{R_{1}R_{3}}(f)=M_{R_{2}R_{3}}(g)\cdot M_{R_{1}R_{2}}(h)
+$$
+**Propiedades**
+1. Dados dos espacios afines, cada uno con dos referencias cartesianas $R_{1},R_{2}$ y $R_{1}',R_{2}'$, siendo $f:A\to A'$, entonces
+   $$
+M_{R_{2}R_{2}'}(f)=M_{R_{1}'R_{2}'}\cdot M_{R_{1}R_{1}'}(f)\cdot M_{R_{2}R_{1}}
+$$
+
+![[propiedad_matrices_referencias.excalidraw]]
+1. Teniendo dos espacios afines de la misma dimensión, con sus respectivas referencias cartesianas $R,R'$, y siendo $f:A\to A'$ un isomorfismo afín, entonces $M_{R R'}(f)$
+   $$
+M_{R'R}(f^{-1})=(M_{R R'}(f))^{-1}
+$$
