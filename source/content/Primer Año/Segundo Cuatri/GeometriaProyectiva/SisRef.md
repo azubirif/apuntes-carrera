@@ -199,7 +199,6 @@ $$
 M_{R_{2}R_{2}'}(f)=M_{R_{1}'R_{2}'}\cdot M_{R_{1}R_{1}'}(f)\cdot M_{R_{2}R_{1}}
 $$
 
-![[propiedad_matrices_referencias.excalidraw]]
 - Teniendo dos espacios afines de la misma dimensión, con sus respectivas referencias cartesianas $R,R'$, y siendo $f:A\to A'$ un isomorfismo afín, entonces $M_{R R'}(f)$
    $$
 M_{R'R}(f^{-1})=(M_{R R'}(f))^{-1}
