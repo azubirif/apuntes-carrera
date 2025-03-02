@@ -21,3 +21,22 @@ $$
 - $F$ es monótona decreciente.
 - $F$ es continua por la derecha.
 - $P(x_{1}< x\leq x_{2})=F(x_{2})-F(x_{1})$
+# Estadística descriptiva
+Dada una variable aleatoria discreta $X$, se define esperanza de $X$ como
+$$
+\mu=E(X)=\sum_{i}x_{i}P(X=x_{i})
+$$
+también la moda, que se define como el valor con mayor probabilidad.
+La mediana se define como el valor que se encuentra en la mitad del resto de los valores:
+$$
+P(-\infty, med]=F(X=med) \geq \frac{1}{2}
+$$
+## Distribución de una variable condicionada por un suceso $A$
+Dada una función de masa $P(X)$, la probabilidad de que $X$ tome $x_{i}$ si ha ocurrido $A$ viene dada por
+$$
+P(X=x_{i}|A)=\frac{P(\{ \omega \in \Omega|X(\omega)=x_{i} \}\cap A)}{P(A)}
+$$
+y entonces
+$$
+E(X|A)=\sum x_{i}P(x_{i}|A)
+$$

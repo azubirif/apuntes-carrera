@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Primer Año/Segundo Cuatri/CalculoEnVariasVariables/Diferencial.md",
+                "file": "Primer Año/Segundo Cuatri/Programacion/Clang.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Diferencial"
+              "title": "Clang"
             }
           }
         ]
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "ba1ec06a672fb227",
@@ -183,10 +184,11 @@
   },
   "active": "ccf76fb12f9b9bb7",
   "lastOpenFiles": [
+    "Primer Año/Segundo Cuatri/Probabilidad/TemaCuatro.md",
+    "Primer Año/Segundo Cuatri/CalculoEnVariasVariables/Diferencial.md",
     "Primer Año/Segundo Cuatri/CalculoEnVariasVariables/Calculo.pdf",
     "Primer Año/Segundo Cuatri/CalculoEnVariasVariables/CalculoVars.md",
     "Primer Año/Segundo Cuatri/GeometriaProyectiva/SisRef.md",
-    "Primer Año/Segundo Cuatri/Probabilidad/TemaCuatro.md",
     "Excalidraw/propiedad_matrices_referencias.excalidraw.md",
     "Primer Año/Segundo Cuatri/FisicaII/CampoElectrico.md",
     "Primer Año/Segundo Cuatri/Programacion/Clang.md",
@@ -200,7 +202,6 @@
     "Excalidraw",
     "Primer Año/Segundo Cuatri/GeometriaProyectiva/GeometriaProyectiva.md",
     "Primer Año/Segundo Cuatri/GeometriaProyectiva/EspacioAfin.md",
-    "Primer Año/Segundo Cuatri/CalculoEnVariasVariables/Diferencial.md",
     "Primer Año/Segundo Cuatri/Topología/topologia.md",
     "imágenes/dipolo_en_E.jpg",
     "Primer Año/Segundo Cuatri/Probabilidad/SegundoTema.md",

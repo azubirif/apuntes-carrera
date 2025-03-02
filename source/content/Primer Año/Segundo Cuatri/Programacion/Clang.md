@@ -154,7 +154,28 @@ int main()
     inc(&a);
     
     printf("%d\n", a); //1
-
+    
     return 0;
+}
+```
+Podemos acceder a elementos específicos de un array de la siguiente forma:
+```
+#include <stdio.h>
+
+int main()
+{
+    int a[2];
+    *a = 5; //Asignamos el primer elemento del array a 5
+    
+    int *p = a + 1; //Un puntero que apunta al segundo elemento
+    
+    *p = 10; //Definimos el segundo elemento como 10
+    
+    for (int i = 0; i < 2; i++)
+    {
+        printf("%d\n", *(a+i));
+    }
+    //5
+    //10
 }
 ```
