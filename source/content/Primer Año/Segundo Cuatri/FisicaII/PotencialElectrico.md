@@ -31,6 +31,16 @@ $$
 por tanto, definimos el **potencial eléctrico** como
 $$
 \boxed{
-V(r) = \frac{q_{1}}{4\pi\varepsilon_{0}r} = \frac{U}{q_{2}}
+V(r) = \frac{q_{1}}{4\pi\varepsilon_{0}r}~ \left( \frac{J}{C} \right) = \frac{U}{q_{2}}~(V)
 }
 $$
+que es la energía potencial por unidad de carga. También podemos deducir que
+$$
+[E]=\left[ \frac{V}{m} \right]
+$$
+# Campo Vectorial
+Supongamos una carga $q_{1}$ que genera un campo eléctrico $\mathbf{E}$ sobre una carga de $1~(C)$ a una distancia $r$ del foco. Se dice que $\mathbf{E}$ es conservativo si cumple que:
+- $\mathbf{E}$ solo depende de la posición, y no depende explícitamente del tiempo.
+- Si se cumple $1$, existe una función $V(\mathbf{r})$ tal que $V(\mathbf{r}_{i})-V(\mathbf{r}_{f})=\frac{W}{q_{2}}$. La diferencia de potencial solo depende de la posición inicial y final de la carga desplazada.
+- La integral del trabajo a lo largo de un camino cerrado es $0$. Consecuentemente, la circulación de un vector siempre es nula.
+- $dV=-\mathbf{E}\cdot \mathbf{dr}$
