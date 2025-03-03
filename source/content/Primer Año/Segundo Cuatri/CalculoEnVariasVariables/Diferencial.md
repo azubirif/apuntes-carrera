@@ -238,3 +238,33 @@ $$
 $$
 Para calcular $c$, sustituimos en el plano los valores de $x_{1},x_{2},f(x_{1},x_{2})$, y despejamoss.
 # Diferencial para campos vectoriales
+Cada una de las componentes de un campo vectorial $\mathbf{f}(\mathbf{x})=(f_{1}(\mathbf{x}),\dots,f(\mathbf{x})_{m})$ es un campo escalar, y si cada una de ellas es diferenciable en $\mathbf{x}$, podemos introducir la matriz **jacobiana** como
+$$
+D\mathbf{f}(\mathbf{x})= \begin{pmatrix}
+\nabla f_{1}(\mathbf{x}) \\
+\dots \\
+\nabla f_{m}(\mathbf{x})
+\end{pmatrix}
+$$
+Geométricamente, si tenemos una curva $\mathbf{c}(t)$, que se mappea a $\mathbb{R}^{m}$ como $\mathbf{f}(\mathbf{c}(t))$, se tiene que su vector tangente $\mathbf{v}$ en $\mathbf{x}$ es $D[\mathbf{f}(\mathbf{x})]\mathbf{v}$.
+# Derivadas parciales de orden superior
+$$
+\frac{ \partial  }{ \partial x_{j} } \frac{ \partial f }{ \partial x_{i}}
+= \frac{ \partial^{2} f }{ \partial x_{j} \partial x_{i} } 
+$$
+> [!note] Funciones de clase $\mathcal{C}^{r}$
+> Una función $f:A\to \mathbb{R}$ es de clase $\mathcal{C}^{r}$  en $A$, con $r \in \mathbb{N}_{0}$ si todas sus derivadas parciales de orden $r$ existen y son continuas.
+
+> [!success] Teorema de Schwarz
+> Si $f\in \mathcal{C}^{2}$, entonces
+> 
+> $$
+> \frac{ \partial^{2}f }{ \partial x_{i}x_{j} } = \frac{ \partial^{2}f }{ \partial x_{j}x_{i} }  
+> $$
+
+# Polinomio de Taylor
+Sea $A\subset \mathbb{R}^{n}$ un conjunto abierto y convexo (si $\mathbf{a},\mathbf{b}\in A$ está contenido en $A$, entonces $\mathbf{ab}$ está contenido en $A$). Si $f\in \mathcal{C}^{k}$, entonces, definimos el polinomio de Taylor de grado $k$ centrado en $\mathbf{a}$ como
+$$
+P_{\mathbf{a},k}f(\mathbf{x})=f(\mathbf{a})+\sum_{i=1}^{n}\frac{ \partial f }{ \partial x_{i} }(\mathbf{a})(x_{i}-a_{i}) 
+$$
+
