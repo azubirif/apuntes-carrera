@@ -269,3 +269,11 @@ Los intervalos abiertos $(r,s)$ son abiertos, ya que $\forall x \in (r,s) \exist
 Sean $B_{1}$ y $B_{2}$ bases de $T_{1}$ y $T_{2}$ respectivamente. $T_{1}=T_{2}$ si y solo si:
 - $\forall S\in B_{1},x \in S, \exists S'\in B_{2}:x \in S'\subseteq S$
 - $\forall S \in B_{2},x \in S, \exists S' \in B_{1}:x \in S' \subseteq S$
+
+> [!note] Definición
+> Sea $A$ un subconjunto de un espacio topológico $(X,\mathbf{T})$. Un punto $x \in X$ se llama punto límite de $A$ si y solo si, todo conjunto abierto $U$ que contiene a $x$ contiene también otro punto de $A$ diferente de $x$, es decir, si $U\cap A-\{ x \} \neq \phi$. Si $x \not\in A$, basta con verificar si para todo conjunto abierto, $U\cap A \neq \phi$.
+> Si la topología contiene el singular de un elemento $x$, entonces $x$ nunca puede ser punto límite de ningún subconjunto.
+
+Con esto podemos llegar a un criterio para demostrar si un conjunto es cerrado:
+> [!tip] Conjunto cerrado
+> Un conjunto $A$ es cerrado si y solo si todos los puntos límites de $A$ pertenecen a $A$.
