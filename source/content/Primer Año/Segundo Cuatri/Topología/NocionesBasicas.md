@@ -277,3 +277,12 @@ Sean $B_{1}$ y $B_{2}$ bases de $T_{1}$ y $T_{2}$ respectivamente. $T_{1}=T_{2}$
 Con esto podemos llegar a un criterio para demostrar si un conjunto es cerrado:
 > [!tip] Conjunto cerrado
 > Un conjunto $A$ es cerrado si y solo si todos los puntos límites de $A$ pertenecen a $A$.
+
+> [!note] Clausura
+> La clausura de un conjunto $A$, denominado como $\bar{A}$, se define como $A$ unido con sus puntos límites, es decir, $\bar{A}=A\cup A'$. Además, será el cerrado más pequeño que contenga a $A$.
+
+> [!note] Densidad
+> Un subconjunto $D$ de un espacio topológico $(X,\mathbf{T})$ es denso en $X$ si y solo si $\overline{D}=X$.
+
+
+
