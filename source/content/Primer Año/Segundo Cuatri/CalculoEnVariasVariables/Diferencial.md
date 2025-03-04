@@ -265,6 +265,30 @@ $$
 # Polinomio de Taylor
 Sea $A\subset \mathbb{R}^{n}$ un conjunto abierto y convexo (si $\mathbf{a},\mathbf{b}\in A$ está contenido en $A$, entonces $\mathbf{ab}$ está contenido en $A$). Si $f\in \mathcal{C}^{k}$, entonces, definimos el polinomio de Taylor de grado $k$ centrado en $\mathbf{a}$ como
 $$
-P_{\mathbf{a},k}f(\mathbf{x})=f(\mathbf{a})+\sum_{i=1}^{n}\frac{ \partial f }{ \partial x_{i} }(\mathbf{a})(x_{i}-a_{i}) 
+\begin{align*}
+P_{\mathbf{a},k}f(\mathbf{x})=f(\mathbf{a})+\sum_{i=1}^{n}\frac{ \partial f }{ \partial x_{i} }(\mathbf{a})(x_{i}-a_{i}) (FALTA~ACABAR)
+\end{align*}
+$$
+
+Con esto se puede demostrar que
+$$
+f(\mathbf{x})-P(\mathbf{x})=o(||\mathbf{x}-\mathbf{a}||^{k})
+$$
+Es decir, que el error se hace más pequeño cuanto más cerca esté $\mathbf{x}$ y $\mathbf{a}$.
+Con esto introducimos la **matriz hessiana**, denotada por $H_{f}(\mathbf{a})$, cuyos componentes son
+$$
+(H_{f}(\mathbf{a}))_{ij}=\frac{ \partial^{2}f }{ \partial x_{i}\partial x_{j} }(\mathbf{a}) 
+$$
+# Regla de la cadena
+$$
+D(\mathbf{f}\circ \mathbf{g})(\mathbf{x})=D(\mathbf{f}(\mathbf{g}(\mathbf{x})))D\mathbf{g}(\mathbf{x})
+$$
+Cada uno de los componentes se define como
+$$
+[D(\mathbf{f}\circ \mathbf{g})(\mathbf{x})]_{ij} = \frac{ \partial f_{i}(\mathbf{g}(\mathbf{x})) }{ \partial x_{j} }=\sum_{k=1}^{p} \frac{ \partial f_{i} }{ \partial g_{k} }\frac{ \partial g_{k} }{ \partial x_{j} }  
+$$
+## Derivada de un campo escalar a lo largo de una curva
+$$
+\frac{d}{dt} (f\circ \mathbf{c}) = \sum_{i=1}^{n} \frac{ \partial f }{ \partial x_{i} }(\mathbf{x}) \frac{d x_{i}}{dt}  
 $$
 
