@@ -284,5 +284,27 @@ Con esto podemos llegar a un criterio para demostrar si un conjunto es cerrado:
 > [!note] Densidad
 > Un subconjunto $D$ de un espacio topológico $(X,\mathbf{T})$ es denso en $X$ si y solo si $\overline{D}=X$.
 
+> [!tip] Proposición
 
+Sea $D\subset(X,\mathbf{T})$. Entonces, $D$ es denso en $X$, si y solo si, todo subconjunto abierto y no vacío de $X$ interseca (no trivialmente) a $D$, es decir, $U \neq \phi, U \cap D \neq \phi$.
 
+> [!note] Definición: vecindad
+> Sea $(X,\mathbf{T}), V$ un subconjunto de $X$ y $p \in V$. $V$ es una vecindad de $P$ si y solo si existe un abierto $A$ tal que $p \in A \subseteq V$. Con esta definición se cumple que:
+> - En $\mathbb{R}$, los intervalos abiertos (y cerrados) que contengan a $p$, son vecindades de este.
+
+> [!tip] Proposición
+
+Un punto $x \in X$ es punto límite de $S$ si y solo si toda vecindad de $x$ contiene un punto de $S$ diferente de $x$.
+
+> [!tip] Corolarios
+
+1. Sea $S$ un subconjunto de un ET. Entonces $S$ es cerrado si y solo si, para cada $x \in X-S$ existe una vecindad $V$ de $x$ tal que $V \subseteq X - S$.
+2. Sea $A$ un subconjunto de un ET. Entonces $A\in \mathbf{T}$ si y solo si, para cada $x \in A$ existe una vecindad $V$ de $x$ tal que $V\subseteq A$.
+3. Sea $A$ un subconjunto de un ET. Entonces $A \in \mathbf{T}$ si y solo si, para $x \in A$ existe un $V \in \mathbf{T}$ tal que $x \in V \subseteq A$.
+
+## Conexidad y conjuntos acotados
+Sea $S$ un subconjunto de $\mathbb{R}$. Si existe $\alpha \in S$ tal que para todo $x \in S, x \leq \alpha$, se dice que $\alpha$ es el máximo de $S$ (y análogo para el mínimo). $S \subset \mathbb{R}$, se dice que $S$ está acotado superiormente si y solo si, existe un $c \in \mathbb{R}$ tal que $\forall x \in S, x \leq c$ (análogo para acotado inferiormente).
+$S$ es un conjunto acotado si y solo si tiene cota inferior y superior.
+Si $S$ está acotado superiormente, entonces la menor cota superior se llama **supremo** de $S$, denotado por $sup(S)$. El máximo será el supremo de $S$ si este está en $S$.
+
+- Si $S$ está acotado superiormente y $S$ es cerrado, entonces $sup(S) \in S$.
