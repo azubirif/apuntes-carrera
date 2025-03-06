@@ -1,1 +1,8 @@
 .trash/*
+*.toc
+*.aux
+*.fls
+*.log
+*.dvi
+*.fdb_latexmk
+*.gz

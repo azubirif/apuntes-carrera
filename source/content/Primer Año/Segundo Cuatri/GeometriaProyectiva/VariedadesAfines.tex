@@ -1,0 +1,90 @@
+\documentclass{article}
+\author{Alejandro Zubiri}
+\title{Variedades Afines}
+
+\renewcommand*\contentsname{Índice}
+
+\usepackage[margin=1.1in]{geometry}
+\usepackage{amsmath, physics, amsthm, amsfonts, mdframed, subfiles, tikz}
+\usepackage[a]{esvect}
+
+\newmdtheoremenv{teorema}{Teorema}
+\newmdtheoremenv{defin}{Definición}
+
+\newcommand{\R}{\mathbb{R}}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\pagebreak
+\section{Variedades Afines}
+Se define como un subespacio afín de dimensión finita, y estos se pueden definir de diferentes formas.
+\[
+	S= \{ P_0, \dots , P_{n} \}
+\]
+Este conjunto de puntos generan el subespacio vectorial asociado:
+\[
+	W=\{ \mathbf{P_0P_1},\dots ,\mathbf{P_0P_{n}} \}
+\]
+Y estos generan el subespacio afín
+\[
+	L=P+W
+\]
+También, dado un conjunto de vectores $\{ \mathbf{u}_{i} \}$  que formen un sistema generador, junto con un punto, podríamos generar la variedad.\\
+Todas estas definiciones conforman la misma variedad afín.
+\begin{defin}
+
+	Sea $A$ un espacio afín $(A, V, \phi)$ asociado a un espacio vectorial $V$. Sea $L$ un subespacio afín de $A$, y $P \in L$, y $U$ un subespacio vectorial de $V$.\\
+	Se llama variedad lineal de $A$ que pasa por $P$ y con dirección $U$ al conjunto de puntos
+	\begin{equation}
+		\begin{split}
+			P+U=\{ P+\mathbf{u}: \mathbf{u} \in U \}
+		\end{split}
+	\end{equation}
+También se da que en un espacio afín $(A,V,\phi)$, $A$ es variedad lineal de $A$.   
+\end{defin}
+Dada una variedad afín $P+W$ y un punto $Q\in P+W$, entonces
+\[
+	P+W=Q+W
+\]
+lo que quiere decir que podemos definir la misma variedad afín con cualquier punto que pertenezca a esta.\\
+Dado un subconjunto de puntos $L$ de $A$, podemos comprobar si es una variedad afín si:
+\begin{itemize}
+	\item Que el conjunto de vectores generado por los puntos pertenece a $V$.
+	\item en tal caso, comprobar que $L=P+\{ \mathbf{AB}, A, B \in L \}$ para algún punto de $L$.  
+\end{itemize}
+\begin{defin}
+
+	Dado un espacio afín $A$ de dimensión $n$ y $L=P+W$ una variedad lineal de $A$ con dirección $W$. Dado que $L$ es espacio afín sobre $W$, entonces
+	\[
+		dim(L)=dim(W)
+	\]
+
+\end{defin}
+El conjunto de soluciones de un sistema lineal
+\[
+	PX=C
+\] 
+de $m$ ecuaciones con $n$ incógnitas, compatible, es una variedad lineal de $\mathbb{R} ^{n}$.
+\subsection{Ecuaciones de una variedad lineal}
+Sea $L=P+W$ una variedad lineal de $\mathbb{R}^{n}$ de dimensión $n$, tal que $W$ está generado por una base de vectores $\{ \mathbf{v}_{1},\dots ,\mathbf{v}_{k} \}$. Para cualquier punto $X \in L$, se cumple que
+\[
+	\mathbf{PX}= \sum_{i=1}^{k} \lambda_{i} \mathbf{v}_{i}
+\]
+Ahora, siendo $O$ el origen, entonces un punto $X \in L$ se puede expresar como
+\[
+	\mathbf{OX} = \mathbf{OP} + \sum_{i=1}^{k} \lambda_{i} \mathbf{v}_{i}
+\]
+que llamaremos \textbf{ecuación vectorial}.
+\subsection{Ecuaciones paramétricas de una VA}
+Si conocemos las coordenadas de un punto $P$, podemos sustituir en la ecuación vectorial, y tras igualar coordenadas obtenemos las ecuaciones paramétricas:
+\begin{equation*}
+	\begin{split}
+		x_1 &= p_1 + \lambda_1v_{11}+\dots +\lambda_{k}v_{k_1}\\
+		\dots \\
+		x_{n} &= p_{n} + \lambda_{n}v_{1n} + \dots +\lambda_{k}v_{kn}
+	\end{split}
+\end{equation*}
+\subsection{Ecuaciones cartesianas}
+Si despejamos los valores $\lambda_{i}$, obtenemos las ecuaciones cartesianas. 
+\end{document}
