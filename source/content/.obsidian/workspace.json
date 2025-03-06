@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "8348f77e61c0efc8",
+        "id": "ed7804e2acd5bfd1",
         "type": "tabs",
         "children": [
           {
-            "id": "e69deff74125600a",
+            "id": "74c3356f8152818f",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Primer Año/Segundo Cuatri/CalculoEnVariasVariables/Diferencial.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Diferencial"
             }
           }
         ]
@@ -74,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "ba1ec06a672fb227",
@@ -90,6 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Primer Año/Segundo Cuatri/CalculoEnVariasVariables/Diferencial.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +105,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for Diferencial"
             }
           },
           {
@@ -160,7 +166,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 325.5
+    "width": 325.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -174,7 +181,7 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "e69deff74125600a",
+  "active": "74c3356f8152818f",
   "lastOpenFiles": [
     "Primer Año/Segundo Cuatri/GeometriaProyectiva/VariedadesAfines.synctex(busy)",
     "Primer Año/Segundo Cuatri/GeometriaProyectiva/pdflatex10671.fls",

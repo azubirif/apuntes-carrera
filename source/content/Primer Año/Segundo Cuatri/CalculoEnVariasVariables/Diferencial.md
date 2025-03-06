@@ -291,4 +291,4 @@ $$
 $$
 \frac{d}{dt} (f\circ \mathbf{c}) = \sum_{i=1}^{n} \frac{ \partial f }{ \partial x_{i} }(\mathbf{x}) \frac{d x_{i}}{dt}  
 $$
-
+	
