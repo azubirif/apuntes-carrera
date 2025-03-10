@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Primer Año/Segundo Cuatri/Topología/NocionesBasicas.md",
+                "file": "Primer Año/Segundo Cuatri/CalculoEnVariasVariables/CalculoVars.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "NocionesBasicas"
+              "title": "CalculoVars"
             }
           }
         ]
@@ -183,11 +183,12 @@
   },
   "active": "74c3356f8152818f",
   "lastOpenFiles": [
+    "Primer Año/Segundo Cuatri/CalculoEnVariasVariables/Diferencial.md",
+    "Primer Año/Segundo Cuatri/Topología/NocionesBasicas.md",
     "Primer Año/Segundo Cuatri/Topología/topologia.md",
     "python.md",
     "Primer Año/Segundo Cuatri/Programacion/Programacion.md",
     "Primer Año/Segundo Cuatri/Probabilidad/TemaCuatro.md",
-    "Primer Año/Segundo Cuatri/CalculoEnVariasVariables/Diferencial.md",
     "Primer Año/Segundo Cuatri/GeometriaProyectiva/VariedadesAfines.synctex(busy)",
     "Primer Año/Segundo Cuatri/GeometriaProyectiva/pdflatex10671.fls",
     "Primer Año/Segundo Cuatri/GeometriaProyectiva/pdflatex10670.fls",
@@ -201,7 +202,6 @@
     "Primer Año/Segundo Cuatri/GeometriaProyectiva/GeometriaProyectiva.md",
     "VariedadesAfines.md",
     "Primer Año/Segundo Cuatri/FisicaII/FisicaII.md",
-    "Primer Año/Segundo Cuatri/Topología/NocionesBasicas.md",
     "Primer Año/Segundo Cuatri/FisicaII/PotencialElectrico.md",
     "imágenes/trabajoElectrico.png",
     "Primer Año/Segundo Cuatri/Programacion/Clang.md",
