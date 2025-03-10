@@ -40,3 +40,16 @@ y entonces
 $$
 E(X|A)=\sum x_{i}P(x_{i}|A)
 $$
+# Momentos respecto al origen
+Se denomina momento respecto al origen de orden $r \forall r \in \mathbb{N}$ y se denota como $\alpha_{r}$:
+$$
+\alpha_{r}=E[X^{r}] = \sum_{i=0}^{n} x_{i}^{r}P(X=x_{i})
+$$
+El momento de orden $1$ es el valor medio. Con esto podemos definir la varianza como
+$$
+\sigma^{2}=E[X^{2}]-E[X]^{2}
+$$
+También definimos
+$$
+\mu_{r} = \sum(x-\bar{x})^rP(x)
+$$
