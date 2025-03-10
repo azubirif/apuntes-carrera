@@ -1,0 +1,21 @@
+\documentclass{report}
+\author{Alejandro Zubiri}
+\title{Topología Elemental}
+
+\renewcommand*\contentsname{Índice}
+
+\usepackage[margin=1.1in]{geometry}
+\usepackage{amsmath, physics, amsthm, amsfonts, mdframed, subfiles}
+
+\newmdtheoremenv{teorema}{Teorema}
+\newmdtheoremenv{defin}{Definición}
+\newmdtheoremenv{prop}{Proposición}
+\hbadness = 99999
+\newcommand{\R}{\mathbb{R}}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\pagebreak
+\subfile{Introduccion.tex}
+\end{document}
