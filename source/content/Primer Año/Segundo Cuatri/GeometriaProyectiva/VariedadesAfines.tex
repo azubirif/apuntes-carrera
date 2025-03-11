@@ -1,22 +1,9 @@
-\documentclass{article}
-\author{Alejandro Zubiri}
-\title{Variedades Afines}
+%! TEX root = Geometria.tex
 
-\renewcommand*\contentsname{Índice}
-
-\usepackage[margin=1.1in]{geometry}
-\usepackage{amsmath, physics, amsthm, amsfonts, mdframed, subfiles, tikz}
-\usepackage[a]{esvect}
-
-\newmdtheoremenv{teorema}{Teorema}
-\newmdtheoremenv{defin}{Definición}
-
-\newcommand{\R}{\mathbb{R}}
+\documentclass{./Geometria.tex}
 
 \begin{document}
-\maketitle
-\tableofcontents
-\pagebreak
+\chapter{Variedades afines y posiciones relativas}
 \section{Variedades Afines}
 Se define como un subespacio afín de dimensión finita, y estos se pueden definir de diferentes formas.
 \[
@@ -86,5 +73,80 @@ Si conocemos las coordenadas de un punto $P$, podemos sustituir en la ecuación 
 	\end{split}
 \end{equation*}
 \subsection{Ecuaciones cartesianas}
-Si despejamos los valores $\lambda_{i}$, obtenemos las ecuaciones cartesianas. 
+Si despejamos los valores $\lambda_{i}$, obtenemos las ecuaciones cartesianas.
+\section{Variedades afines en el plano $A_{2}$ }
+Teniendo el sistema de referencia
+\[
+	R = \{ O, \mathbf{e}_{1}, \mathbf{e}_{2} \}
+\]
+que define un punto por sus coordenadas
+\[
+	P=(p_1,p_2)
+\]
+\subsection{Rectas}
+Una recta es un \textbf{hiperplano}, determinada por
+\begin{itemize}
+	\item Un punto $P(p_1,p_2)$
+	\item Un vector de dirección $\mathbf{v}=(v_1,v_2) \neq \mathbf{0}$ 
+\end{itemize}
+Este vector de dirección determina el subespacio de dirección:
+\[
+	S=L(\mathbf{v})
+\]
+Si una recta viene determinada por dos puntos $P,Q$, podemos expresarla de forma continua como
+\[
+	\frac{x-p_1}{q_1-p_1}= \frac{y-p_2}{q_2-p_2}
+\]
+Siendo el vector director de esta el vector $\mathbf{PQ}$. En el caso particular en el que $P=(a, 0)$ y $Q=(0,b)$, se da que
+\[
+	\frac{x}{a}+\frac{y}{b}=1
+\]
+\section{Variedades afines en $A_{3}$ }
+Teniendo un sistema de referencia
+\[
+	R = \{ O, \mathbf{e}_{1}, \mathbf{e}_{2}, \mathbf{e}_{3} \}
+\]
+Un punto se define por sus coordenadas
+\[
+	P=(p_1,p_2,p_3)
+\]
+\subsection{Rectas}
+Las rectas se definen (de nuevo) por un punto $P$ y un vector director $\mathbf{u}$, y cualquier punto de la recta se define como
+\[
+	X = P +\lambda \mathbf{u}
+\]
+Si una recta viene determinada por dos puntos $P,Q$, esta se puede expresar como
+\[
+	\frac{x-p_1}{q_1-p_1} = \frac{y-p_2}{q_2-p_2}= \frac{z-p_3}{q_3-p_3}
+\]
+Que es su forma de ecuación continua, con vector director $\mathbf{PQ}$.\\
+\subsubsection{Tipos de ecuaciones de una recta}
+\begin{itemize}
+	\item Implícitas: expresadas como la intersección de dos planos.
+	\item Vectorial: punto más vector.
+	\item Continua: despejar los parámetros.
+	\item Paramétrica: una ecuación para cada componente de un punto.
+\end{itemize}
+\subsection{Planos}
+Un plano se define como una base $\{ \mathbf{u}, \mathbf{v} \}$ apoyado sobre un punto $P$. La base define todos los puntos que se pueden expresar de la forma
+\[
+	X = P + \lambda \mathbf{u} + \mu \mathbf{v}
+\]
+que serán los puntos que pertenecen al plano. También podemos definir un plano con tres puntos $P,Q,R$, siendo la base los vectores $\mathbf{PQ}$ y $\mathbf{PR}$, apoyados sobre cualquiera de los tres puntos.
+\begin{equation}
+	\begin{split}	
+	\pi \equiv \begin{vmatrix}
+		x-p_1 & u_1 & v_1 \\
+		y - p_2 & u_2 & v_2 \\
+		z - p_3 & u_3 & v_3
+	\end{vmatrix} = 0
+	\end{split}
+\end{equation}
+\section{Haces de variedades afines}
+Se llama \textbf{haz de rectas} al conjunto de rectas del plano que pasan por un punto, este se denomina \textbf{vértice}. La ecuación del haz de rectas que pasa por el punto $P$ es:
+\[
+	\alpha(x-x_0)+\beta(y-y_0)=0
+\]
+\subsubsection{Haces de rectas dado por dos rectas}
+Dadas dos rectas $r,s$ por sus ecuaciones cartesianas, el haz de rectas formado por $r$ y $s$ es el conjunto de todas las rectas que pasan por su interseccion.
 \end{document}

@@ -1,0 +1,23 @@
+\documentclass{report}
+\author{Alejandro Zubiri}
+\title{Geometría Proyectiva}
+
+\renewcommand*\contentsname{Índice}
+
+\usepackage[margin=1.1in]{geometry}
+\usepackage{amsmath, physics, amsthm, amsfonts, mdframed, subfiles}
+\hbadness 99999
+\newmdtheoremenv{teorema}{Teorema}
+\newmdtheoremenv{defin}{Definición}
+
+\newcommand{\R}{\mathbb{R}}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\pagebreak
+\subfile{Introduccion.tex}
+\subfile{EspacioAfin.tex}
+\subfile{SisRef.tex}
+\subfile{VariedadesAfines.tex}
+\end{document}

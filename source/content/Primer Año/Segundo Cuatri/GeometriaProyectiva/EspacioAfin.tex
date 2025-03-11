@@ -1,0 +1,96 @@
+%! TEX root = Geometria.tex
+
+\documentclass{./Geometria.tex}
+\begin{document}
+\chapter{Espacio Afín}
+\section{El espacio afín}
+Dados un conjunto de elementos, siendo estos puntos, $A$, y un espacio vectorial $\mathbb{V}$, llamamos el espacio afín a la terna $(A,\mathbb{V},\varphi)$, siendo $\varphi$ una aplicación entre elementos de $A$, tal que:
+$$
+\varphi: A \times A \mapsto \mathbb{V}
+$$
+Esta terna debe cumplir que:
+\begin{itemize}
+    \item $\forall p \in A \wedge \mathbf{v} \in \mathbb{V}, \exists! Q \in A/ \varphi(P,Q) = \mathbf{PQ}=\mathbf{u}=Q-P$
+    \item Relaci\'on de Chasles: $\forall P,Q,R \in A \wedge\varphi (P,Q) + \varphi (Q,R) = \varphi (P,R)$
+\end{itemize}
+$$
+\mathbf{PQ} + \mathbf{QR} = \mathbf{PR}
+$$
+
+\textbf{Demostraci\'on}
+\begin{itemize}
+    \item $\mathbf{PQ}=Q-P$
+    \item $\mathbf{QR}=R-Q$ 
+\end{itemize}
+$$
+\mathbf{PQ}+\mathbf{QR} = Q-P +R-Q = R-P = \mathbf{PR} 
+$$
+La dimensi\'on del espacio af\'in va a ser la dimensi\'on de $\mathbb{V}$. 
+
+\section{Propiedades del espacio af\'in}
+\begin{itemize}
+    \item $\forall P \in A, \varphi(P,P)=0$
+    \item $\varphi(P,Q)=0 \iff P=Q$
+    \item $\forall P,Q \in A, \varphi(P,Q) = -\varphi(Q,P)$
+    \item Regla del paralelogramo: $\forall P,Q,R,S \in A$:
+$$
+\varphi(P,Q)=\varphi(R,S) \iff \varphi (P,R) = \varphi (Q,S)
+$$
+\end{itemize}
+
+\section{Vector de posici\'on}
+Es un vector que representa la posici\'on de un punto en el espacio respecto a un origen, adem\'as de la distancia que separa dichos puntos. El vector $\mathbf{OP}$ es el vector que une el origen al punto $P$. Esta aplicaci\'on es \textbf{biyectiva} (inyectiva y sobreyectiva).
+
+\begin{defin}
+Supongamos que no es inyectiva. Es decir, existen dos $\varphi(x)=\varphi (y) / x \neq y$ 
+\begin{equation}
+	\begin{split}		
+		\mathbf{OP}+\mathbf{PQ}&=\mathbf{OQ} \\
+		\mathbf{P}+\mathbf{PQ}&=\mathbf{Q} \\
+		\mathbf{P}=\mathbf{Q} &\implies \mathbf{OP}=\mathbf{OQ} \\
+		&\implies P = Q
+	\end{split}
+\end{equation}
+\end{defin}
+
+\section{Estructura af\'in can\'onica}
+Dado un espacio vectorial $\mathbb{V}$, la aplicaci\'on $\varphi$
+$$
+\varphi: \mathbb{V} \times \mathbb{V} \to \mathbb{V}; \mathbf{uv}=\mathbf{v}-\mathbf{u}
+$$
+satisface los axiomas de la definici\'on de un espacio af\'in y define una estructura de espacio af\'in $(\mathbb{V}, \mathbb{V}, \varphi)$ conocida como la estructura af\'in can\'onica de $\mathbb{V}$.
+
+\section{Traslaci\'on de un vector}
+Dado $\mathbf{v}\in \mathbb{V}$, la traslaci\'on de un vector es la aplicaci\'on
+$$
+\tau_{\mathbf{v}}: A \to A
+$$
+$$
+\tau_{\mathbf{v}} (P)=P+\mathbf{v}=Q
+$$
+Una traslaci\'on de vector $\mathbf{v}$ transforma el punto $P$ a otro punto $Q$.
+
+\subsection{Propiedades de traslaci\'on}
+\begin{itemize}
+    \item $\tau_{\mathbf{0}}(P)=P$
+    \item $\tau_{\mathbf{u}} \circ \tau_{\mathbf{v}}=\tau_{\mathbf{v}} \circ\tau_{\mathbf{u}}=\tau_{\mathbf{u}+\mathbf{v}}$
+\end{itemize}
+
+\begin{teorema}
+Cualquier transformaci\'on af\'in se puede escribir como un producto de una transformaci\'on af\'in.
+\end{teorema}
+
+\section{Suma de un punto y un vector}
+Fijado $P \in A$, denotaremos por $F_{P}: A \to \mathbf{A}$ a la aplicaci\'on dada por $F_{P}(Q)=\mathbf{PQ}$. Si $P \in A$ y $\mathbf{v}\in A$, el \'unico punto $Q\in A$ dado, tal que $\mathbf{PQ}=\mathbf{v}$ se denotar\'a como $P+\mathbf{v}$.
+
+\begin{teorema}
+Dados un espacio af\'in y una transformaci\'on af\'in $f:A \to A$. Entonces son equivalentes:
+\begin{itemize}
+    \item Existe un conjunto fijo $V$ no trivial $(V \neq \{ 0 \})$.
+    \item El $1$ es autovalor de $f$.
+\end{itemize}
+El conjunto de puntos fijos es un subespacio af\'in de $A$ con subespacio vectorial asociado de $V$ de autovectores de $\bar{f}$ con autovalor $\lambda=1$.
+\end{teorema}
+
+\end{document}
+
