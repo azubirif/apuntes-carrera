@@ -1,0 +1,24 @@
+\documentclass{report}
+\author{Alejandro Zubiri}
+\title{Probabilidad}
+
+\renewcommand*\contentsname{Índice}
+
+\usepackage[margin=1.1in]{geometry}
+\usepackage{amsmath, physics, amsthm, amsfonts, mdframed, subfiles, tikz, subfiles}
+\usepackage[a]{esvect}
+
+\newmdtheoremenv{teorema}{Teorema}
+\newmdtheoremenv{defin}{Definición}
+
+\newcommand{\R}{\mathbb{R}}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\pagebreak
+\subfile{TemaUno.tex}
+\subfile{TemaDos.tex}
+\subfile{TemaTres.tex}
+\subfile{TemaCuatro.tex}
+\end{document}

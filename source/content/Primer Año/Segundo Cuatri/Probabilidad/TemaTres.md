@@ -1,7 +1,7 @@
 ---
 title: Tema 3
 ---
-f# Probabilidad condicionada
+# Probabilidad condicionada
 - Modelos dinámicos: experimentos que se realizan a lo largo del tiempo. Los experimentos son dependientes entre sí.
 - Modelos estáticos: mismo período de tiempo.
 
