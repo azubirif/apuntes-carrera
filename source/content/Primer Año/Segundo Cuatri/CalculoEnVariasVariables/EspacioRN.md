@@ -244,11 +244,7 @@ Si $n=m=1$ entonces es una función de variable real. Si $n>1$ y $m=1$, entonces
 Para hacernos una idea del comportamiento de estas funciones es conveniente dibujar estas funciones (cuando sea posible). Para ello nos serán útiles los **conjuntos de nivel**:
 
 > [!info] Conjuntos de nivel
-> Sea $f: \mathbb{R}^{n}\to \mathbb{R}$
-> $$
-> L_{f}(c)=\{ \mathbf{x}\in D : f(\mathbf{x})=c \}=f^{-1}(c)
-> $$
-> Que es precisamente la preimagen de $c$.
+> 
 
 Por ejemplo, sea
 $$

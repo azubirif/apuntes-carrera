@@ -315,4 +315,89 @@ Y entonces
 \end{equation}
 Por tanto, la recta está definida por $n-1$ ecuaciones. Por tanto, la recta
 es un objeto de codimensión $n-1$. 
+\section{El símbolo de Levi-Civita o símbolo totalmente antisimétrico}
+En $\mathbb{R}^n$ se define por:
+$$
+\varepsilon_{i, \dots, i_{n}}=  \left\{\begin{matrix}
+1 &\text{ si } i_{i},\dots,i_{n}\text{ es una permutación par} \\
+-1 &\text{si es una permutación impar}  \\
+0 &\text{ en el resto de casos, cuando un índice se repite}  \\
+\end{matrix}\right.
+$$
+$i_{1},\dots,i_{n}$ es una permutación par $123,\dots,n$ si para transformar una en otra necesitamos un número par de trasposiciones. Una trasposición es una permutación en la que solo se intercambian dos y solo dos elementos (no tienen por qué ser adyacentes).\\
+Si queremos abusar todavía más de la notación, podemos usar el criterio de suma de Einstein. Este consiste en suponer que hay una suma siempre que un índice se repita, y la suma se hace en todo el rango de definición del índice:
+$$
+\mathbf{v} \cdot \mathbf{w} = v_{i} w_{i}
+$$
+\subsection{La delta de Kronecker}
+$$
+\delta_{ij}=  \left\{\begin{matrix}
+1 & i=j \\
+0 & i\neq j
+\end{matrix}\right.
+$$
+Los vectores de la base canónica cumplen que:
+$$
+\mathbf{e}_{i}\cdot \mathbf{e}_{j}=\delta_{ij}
+$$
+Las bases cuyos vectores cumplan esto se dice que son bases \textbf{ortonormales}.
+\section{Topología en $\mathbb{R}^{n}$}
+\begin{defin}
+
+Definimos un conjunto abierto de $\mathbb{R}^n$ a partir de la definición de bolas abiertas.\\
+Dado $\mathbf{x}\in \mathbb{R}^n$ y dado $r\in \mathbb{R}^+$ se define la bola abierta centrada en $\mathbf{x}$ y de radio $r$ como el conjunto
+$$
+B_{r}(\mathbf{x})=\{ \mathbf{y}\in \mathbb{R}^n: d(\mathbf{x},\mathbf{y}) < r \}
+$$
+A veces convendrá usar bolas abiertas sin el punto central (perforadas), y se denotan por $B_{r}^*(\mathbf{x})$:
+$$
+B_{r}^*(\mathbf{x})=B_{r}(\mathbf{x})- \{ \mathbf{x} \}
+$$
+Un conjunto abierto $A\subset \mathbb{R}^n$ es abierto si y solo si para todo $\mathbf{x}\in A \exists \delta >0 : B_{\delta}(\mathbf{x})\subset A$
+Además, se verifica que $ext(S)=\mathbb{R}^{n}-(S\cup\partial S)$
+\end{defin}
+\begin{defin}
+Un conjunto $B\subset \mathbb{R}^n$ es cerrado si y solo si
+$\mathbb{R}^n-B$ es abierto.
+Además se verifica que $ext(B)=\mathbb{R}^{n}-B$
+\end{defin}
+Dado cualquier conjunto $S\subset \mathbb{R}^n$,podemos clasificar los puntos de $\mathbb{R}^n$ en:
+\begin{itemize}
+	\item Puntos interiores de $S$: si existe una bola centrada en dicho punto contenida en $S$.
+	\item Puntos exteriores de $S$: si existe una bola centrada en el punto tal que $B(\mathbf{x},r) \cap S = \phi$.
+	\item Puntos frontera de $S$: si $\forall r\in \mathbb{R}^{+} B(\mathbf{x},r)\cap S \neq \phi$ y $B(\mathbf{x},r)\cap(\mathbb{R}^n-S)\neq \phi$.
+\end{itemize}
+Todos estos conjuntos son disjuntos entre sí. Al conjunto de todos los puntos interiores de $S$ se les llama interior de $S$ y lo denotaremos por $int S$. Al conjunto de todos los puntos exteriores a $S$ se les llama exterior de $S$ y se denota por $ext S$. A los puntos frontera de $S$ se les llama frontera de $S$ y se denota por $\partial S$.
+\begin{defin}
+A $int(S)\cap\partial S$ se la denomina adherencia de $S$ y se denota por $\bar{S}$.
+\end{defin}
+\begin{defin}
+A los puntos $\mathbf{x}$ que cumplen $B^{*}(\mathbf{x},r)\cap S\neq \phi$ se les llama puntos límite de $S$.
+\end{defin}
+\section{Funciones en $\mathbb{R}^{n}$ }
+Sea
+$$
+f:D \subset \mathbb{R}^n\to \mathbb{R}^m
+$$
+Si $n=m=1$ entonces es una función de variable real. Si $n>1$ y $m=1$, entonces $f$ es una función real de variable vectorial o campo escalar.
+Para hacernos una idea del comportamiento de estas funciones es conveniente dibujar estas funciones (cuando sea posible). Para ello nos serán útiles los \textbf{conjuntos de nivel}:
+\begin{defin}
+Sea $f: \mathbb{R}^{n}\to \mathbb{R}$
+$$
+L_{f}(c)=\{ \mathbf{x}\in D : f(\mathbf{x})=c \}=f^{-1}(c)
+$$
+Que es precisamente la preimagen de $c$.
+\end{defin}
+\subsection{Campos vectoriales}
+Estas funciones son de la forma
+$$
+\mathbf{f}: D \subset \mathbb{R}^{n} \to \mathbb{R}^{m>1}
+$$
+Estas funciones toman un vector $\mathbf{x}$ como entrada y se mappean a un vector $\mathbf{f}(\mathbf{x})$.
+$f_{i}$ son componentes (campos escalares).
+Si $n=1$, $\mathbf{f}$ es una curva en $\mathbb{R}^{m}$.
+Si $n=2$, $\mathbf{f}$ es una superficie en $\mathbb{R}^{m}$.
+En general, si $n<m$, $\mathbf{f}$ es una variedad $n$-dimensional dentro de $\mathbb{R}^{m}$.
+Si $n=m$, entonces se puede representar a $\mathbf{f}$ sobre su dominio.
+Si $n > m > 1$, ya no podemos dibujar a $\mathbf{f}$.
 \end{document}
