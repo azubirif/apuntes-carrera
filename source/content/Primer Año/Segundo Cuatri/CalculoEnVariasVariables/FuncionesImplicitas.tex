@@ -31,5 +31,45 @@ Para ello, introducimos el siguiente teorema.
 \begin{teorema}[Teorema de la función inversa]
 	Dada una función $f:\mathbb{R}^{n} \to \R^{n}$, esta tiene inversa si y solo si el determinante jacobiano (determinante de su diferencial) es distinto a $0$.  
 \end{teorema}
-
+\pagebreak
+	Dado un sistema de ecuaciones, no necesariamente lineales, siempre lo podemos escribir de la forma:
+	\begin{equation}
+		\begin{split}
+			f_{1}(x_1,\dots ,x_{n+k})&=0\\
+			\dots \\
+			f_{n}(x_1,\dots ,x_{n+k})&=0
+		\end{split}
+	\end{equation}
+	Vamos a analizar en qué condiciones podemos despejar $n$ incógnitas en función de las $k$ restantes, que serían parámetros libres. En este caso, estas ecuaciones describen un objeto de $k$ dimensiones en $\mathbb{R}^{n+k}$. Para distinguir entre parámetros libres e incógnitas, introduciremos la siguiente notación:
+\begin{itemize}
+	\item Las incógnitas son $x_{i},\dots ,x_{n}$.
+	\item Los parámetros libres serán $t_1=x_{n+1},\dots ,t_{k}=x_{n+k}$. 
+\end{itemize}
+Además, introduciremos la función vectorial $\bar{f}=(f_1,\dots ,f_{n})$, entonces el sistema a resolver acaba siendo
+\[
+	\bar{f}(\mathbf{x}, \mathbf{t})=\mathbf{0}
+\]
+Ahora, supongamos que $(\mathbf{x}_{0}, \mathbf{t}_{0})$ es una solución del sistema que cumple la ecuación anteriormente establecida, y que además $\bar{f} \in \mathcal{C}^{1}$. Entonces, podemos hacer la aproximación
+\[
+	\bar{f}(\mathbf{x}, \mathbf{t}) \approx \bar{f}(\mathbf{x}_{0}, \mathbf{t}_{0})+D \bar{f}(\mathbf{x}_{0}, \mathbf{t}_{0})(\mathbf{x}-\mathbf{x}_{0}, \mathbf{t}-\mathbf{t}_{0})
+\]
+Como hemos asumido que la anterior tupla era solución del sistema, y queremos una solución a la ecuación, queda
+\[
+	D \bar{f}(\mathbf{x}_{0}, \mathbf{t}_{0})(\mathbf{x}-\mathbf{x}_{0},\mathbf{t}-\mathbf{t}_{0})=\mathbf{0}
+\]
+Si escribimos explícitamente el diferencial, obtenemos que
+\[
+	\begin{bmatrix}
+	
+		\pdv{f_1}{x_1}&\dots &\pdv{f_1}{x_{n}} & \pdv{f_1}{t_1}&\dots &\pdv{f_1}{t_{k}}\\
+		\dots \\
+		\pdv{f_{n}}{x_{1}}&\dots &\pdv{f_{n}}{x_{n}}&\pdv{f_{n}}{t_{1}}&\dots &\pdv{f_{n}}{t_{k}}
+	
+	\end{bmatrix}^{\text{Evaluado en }(\mathbf{x_{0}}, \mathbf{t}_{0})}\cdot (\mathbf{x}-\mathbf{x}_{0}, \mathbf{t}-\mathbf{t}_{0})= \mathbf{0}
+\]
+Aquí sigue que
+\[
+	\left(D_{x} \bar{f}(\mathbf{x_{0}}, \mathbf{t_0}),D_{t}\bar{f}(\mathbf{x}_{0}, \mathbf{t}_{0}) \right)(\mathbf{x}-\mathbf{x}_{0}, \mathbf{t}-\mathbf{t}_{0})=\mathbf{0}
+\]
+Reordenando y simplificando, obtenemos que debe existir la inversa de la matriz $D_{x} \bar{f}$, y por tanto su determinante debe ser distinto a $0$.
 \end{document}
