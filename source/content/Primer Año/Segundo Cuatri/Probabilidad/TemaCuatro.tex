@@ -98,4 +98,16 @@ Para $X\sim P(X,\lambda)$, la función distibución de $X$ se denota por
 	P(X;\lambda)=P \{ \omega \in \Omega : X \leq x\} = \sum_{y=0}^{x} p(y,\lambda)
 \]
 Donde se cumple que $\mu = E(X) = \lambda$, y que $V(X) = \sigma ^{2} = \lambda$ 
+\subsection{Distribución geométrica}
+Definimos la probabilidad de que $X=k$ como
+\[
+	P(X=k)=(1-p)^{k-1}p~si~k=1,2,3\dots 
+\]
+y la función distribución como
+\[
+	F(X=k)=P(-\infty,X]= \sum_{j=1}^{k} (1-p)^{j-1}p~si~x=0,1,\dots ,n
+\]
+teniendo que $\mu=E(X)=\frac{1}{p}$, y que $V(X)=\sigma ^{2}= \frac{1-p}{p ^{2}}$
+\subsection{Distribución binomial negativa}
+
 \end{document}
