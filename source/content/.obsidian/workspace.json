@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Primer Año/Segundo Cuatri/Topología/NocionesBasicas.md",
+                "file": "python.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "NocionesBasicas"
+              "title": "python"
             }
           }
         ]
@@ -183,21 +183,23 @@
   },
   "active": "82bb18f778aa858e",
   "lastOpenFiles": [
+    "Primer Año/Segundo Cuatri/Programacion/Programacion.synctex(busy)",
+    "Primer Año/Segundo Cuatri/Programacion/pdflatex12790.fls",
+    "Primer Año/Segundo Cuatri/Programacion/pdflatex12789.fls",
+    "Primer Año/Segundo Cuatri/Programacion/Programacion.synctex.gz",
+    "Primer Año/Segundo Cuatri/Programacion/Programacion.pdf",
+    "Primer Año/Segundo Cuatri/Programacion/Programacion.toc",
+    "Primer Año/Segundo Cuatri/Programacion/Programacion.log",
+    "Primer Año/Segundo Cuatri/Programacion/Programacion.fls",
+    "Primer Año/Segundo Cuatri/Programacion/pdflatex12657.fls",
+    "Primer Año/Segundo Cuatri/Programacion/Programacion.fdb_latexmk",
+    "Primer Año/Segundo Cuatri/Programacion/Programacion.aux",
+    "Primer Año/Segundo Cuatri/Topología/NocionesBasicas.md",
     "Primer Año/Segundo Cuatri/Topología/topologia.md",
     "Primer Año/Segundo Cuatri/GeometriaProyectiva/SisRef.md",
-    "Primer Año/Segundo Cuatri/CalculoEnVariasVariables/Calculo.pdf",
     "Primer Año/Segundo Cuatri/SegundoCuatri.md",
     "Primer Año/Segundo Cuatri/FisicaII/CampoElectrico.md",
     "Primer Año/Segundo Cuatri/CalculoEnVariasVariables/Diferencial.md",
-    "Primer Año/Segundo Cuatri/CalculoEnVariasVariables/Calculo.synctex(busy)",
-    "Primer Año/Segundo Cuatri/CalculoEnVariasVariables/pdflatex6721.fls",
-    "Primer Año/Segundo Cuatri/CalculoEnVariasVariables/pdflatex6691.fls",
-    "Primer Año/Segundo Cuatri/CalculoEnVariasVariables/pdflatex6657.fls",
-    "Primer Año/Segundo Cuatri/CalculoEnVariasVariables/pdflatex6638.fls",
-    "Primer Año/Segundo Cuatri/CalculoEnVariasVariables/pdflatex6610.fls",
-    "Primer Año/Segundo Cuatri/CalculoEnVariasVariables/pdflatex6569.fls",
-    "Primer Año/Segundo Cuatri/CalculoEnVariasVariables/pdflatex6542.fls",
-    "Primer Año/Segundo Cuatri/CalculoEnVariasVariables/pdflatex5558.fls",
     "Primer Año/Segundo Cuatri/CalculoEnVariasVariables/Cont.md",
     "Primer Año/Segundo Cuatri/CalculoEnVariasVariables/EspacioRN.md",
     "Primer Año/Segundo Cuatri/CalculoEnVariasVariables/CalculoVars.md",
@@ -206,7 +208,6 @@
     "Primer Año/Segundo Cuatri/Probabilidad/PrimerTema.md",
     "Primer Año/Segundo Cuatri/Probabilidad/TemaCuatro.md",
     "Primer Año/Segundo Cuatri/GeometriaProyectiva/EspacioAfin.md",
-    "Primer Año/Segundo Cuatri/Topología/NocionesBasicas.md",
     "python.md",
     "Primer Año/Segundo Cuatri/Programacion/Programacion.md",
     "Primer Año/Segundo Cuatri/GeometriaProyectiva/GeometriaProyectiva.md",

@@ -1,0 +1,44 @@
+%! TEX root = Programacion.tex
+
+\documentclass{./Programacion.tex}
+
+\begin{document}
+\chapter{Python}
+\section{Programación Orientada a Objetos (POO)}
+Permite programar realizando abstracciones. Consiste en definir plantillas que desarrollan como cada \textbf{objeto} (instancias de las clases) definirá sus atributos y los diferentes métodos que estos tienen.
+\begin{itemize}
+	\item Clase:
+		\begin{itemize}
+			\item Atributos
+			\item Métodos
+		\end{itemize}
+\end{itemize}
+\subsection{Encapsulamiento}
+Es el concepto de aislar el funcionamiento de los métodos y variables de una clase.
+\section{Declaración de clases}
+\begin{verbatim}
+	class Clase:
+		pass
+
+	objeto = Clase()
+\end{verbatim}
+Cada clase tiene atributos predefinido, pero luego tenemos los atributos de \textbf{instancia}, que permite al usuario modificar los atributos en su creación:
+\begin{verbatim}
+	class Clase:
+	def __init__(self, at1, at2):
+		self.var1 = at1
+		self.var2 = at2
+
+	obj = Clase(1, 2)
+	obj.var1 #1
+	obj.var2 #2
+\end{verbatim}
+Las diferencias entre ambos es que los atributos de clase se almacenan en los metadatos de la clase, mientras que los de instancia se guardan en los metadatos del objeto.
+\subsection{Métodos}
+Son funciones definidas dentro de una propia clase, y representan las acciones que cada instancia de dicha clase puede realizar. Estos métodos también pueden acceder a los atributos de una clase, por lo que es una forma de encapsular estos.
+Existen dos tipos de métodos:
+\begin{itemize}
+	\item Métodos de instancia: relacionados con cada objeto.
+	\item Métodos de clase: solo se pueden usar con la clase.
+\end{itemize}
+\end{document}

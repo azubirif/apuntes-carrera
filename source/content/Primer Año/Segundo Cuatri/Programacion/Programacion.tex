@@ -1,0 +1,21 @@
+\documentclass{report}
+\author{Alejandro Zubiri}
+\title{Programacion}
+
+\renewcommand*\contentsname{Índice}
+
+\usepackage[margin=1.1in]{geometry}
+\usepackage{amsmath, physics, amsthm, amsfonts, mdframed, subfiles, tikz}
+\usepackage[a]{esvect}
+
+\newmdtheoremenv{teorema}{Teorema}
+\newmdtheoremenv{defin}{Definición}
+
+\newcommand{\R}{\mathbb{R}}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\pagebreak
+\subfile{Python.tex}
+\end{document}
