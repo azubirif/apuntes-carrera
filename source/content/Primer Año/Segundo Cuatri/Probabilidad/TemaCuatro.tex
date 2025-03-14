@@ -38,6 +38,7 @@ La mediana se define como el valor que se encuentra en la mitad del resto de los
 $$
 P(-\infty, med]=F(X=med) \geq \frac{1}{2}
 $$
+\pagebreak
 \subsection{Distribución de una variable condicionada por un suceso $A$}
 Dada una función de masa $P(X)$, la probabilidad de que $X$ tome $x_{i}$ si ha ocurrido $A$ viene dada por
 $$
@@ -79,4 +80,22 @@ la varianza
 \[
 	\sigma ^{2}= np(1-p)
 \]
+\subsection{Distribución de Poisson}
+Si $n \to \infty$ y $x \in [0, \infty)$, entonces la función masa binomial se aproxima a una función llamada \textbf{masa de Poisson}:
+\[
+	\lim_{(n,p) \to (\infty,0)} b(x,n,p)=p(x,\lambda) 
+\]
+donde $\lambda = n\cdot p$, y la función masa es
+\[
+	p(x,\lambda) = \left\{
+		\begin{matrix}
+			&\frac{e^{-\lambda} \lambda^{x}}{x!}~si~x=0,1,\dots ,n\\
+			&0~else
+	\end{matrix}\right\}
+\]
+Para $X\sim P(X,\lambda)$, la función distibución de $X$ se denota por
+\[
+	P(X;\lambda)=P \{ \omega \in \Omega : X \leq x\} = \sum_{y=0}^{x} p(y,\lambda)
+\]
+Donde se cumple que $\mu = E(X) = \lambda$, y que $V(X) = \sigma ^{2} = \lambda$ 
 \end{document}
