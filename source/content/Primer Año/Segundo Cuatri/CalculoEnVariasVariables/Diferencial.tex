@@ -200,6 +200,17 @@ $$
 \frac{ \partial^{2}f }{ \partial x_{i}x_{j} } = \frac{ \partial^{2}f }{ \partial x_{j}x_{i} }  
 $$
 \end{teorema}
+\section{Polinomio de Taylor}
+Sea $A\subset \mathbb{R}^{n}$ un conjunto abierto y convexo (si $\mathbf{a},\mathbf{b}\in A$ está contenido en $A$, entonces $\mathbf{ab}$ está contenido en $A$). Si $f\in \mathcal{C}^{k}$, entonces, definimos el polinomio de Taylor de grado $k$ centrado en $\mathbf{a}$ como
+\[
+\]
+\begin{equation}
+	\begin{split}
+		P_{\mathbf{a},k}f(\mathbf{x})&= f(\mathbf{a})+\sum_{i=1}^{n} \pdv{f}{x_{i}}(\mathbf{a})(x_{i}-a_{i})\\
+									 &+\frac{1}{2!}\sum_{i,j=1}^{n} \pdv[2]{f}{x_{i}\partial x_{j}}(\mathbf{a})(x_{i}-a_{i})(x_{j}-a_{j})+\dots \\
+									 &+\frac{1}{k!} \sum_{i_{1},\dots ,i_{k}=1}^{n}\pdv[k]{f}{x_{i_{1}}\dots \partial x_{i_{k}}}(\mathbf{a})(x_{i_{1}}-a_{i_{1}})\dots (x_{i_{k}}-a_{i_{k}})
+	\end{split}
+\end{equation}
 \section{Regla de la cadena}
 
 $$
