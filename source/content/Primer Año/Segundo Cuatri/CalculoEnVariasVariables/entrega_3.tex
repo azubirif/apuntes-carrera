@@ -1,0 +1,175 @@
+\documentclass[12pt,a4paper,reqno]{article}
+
+
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\setlist{topsep=1.5em, itemsep=1.5em}
+\usepackage[exercisename=Problema,printsolution=true,solutionname=Solución]{exercises}
+\usepackage{hyperref, physics}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{wrapfig2}
+\usepackage{bm}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,intersections,through,backgrounds}
+\usetikzlibrary {arrows.meta}
+
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\dparcial}[2]{\frac{\partial#1}{\partial#2}}
+\newcommand{\derivada}[2]{\frac{d#1}{d#2}}
+\newcommand{\dom}{\text{dom }}
+\newcommand{\exterior}{\text{ext }}
+\newcommand{\evaluar}[2]{\left.#1\right|_{#2}}
+\newcommand{\frontera}{\partial}
+\newcommand{\interior}{\text{int }}
+\newcommand{\sgn}{\text{sgn}}
+\newcommand{\union}{\cup}
+
+%\newtheoremstyle{plain}
+\newtheorem{theorem}{Teorema}
+\newtheorem{corolary}{Corolario}
+\newtheorem{definition}{Definición}
+\newtheorem{lemma}{Lema}
+
+%\newtheoremstyle{definition}
+\newtheorem{ejemplo}{Ejemplo}
+\newtheorem{ejercicios}{Ejercicios}
+
+\let\oldemptyset\emptyset
+\let\emptyset\varnothing
+
+
+\title{Derivadas de orden superior, desarrollos de Taylor y regla de la cadena}
+\date{\today}
+
+\author{Alejandro Zubiri}
+%Si sois varias personas entonces quitad el símbolo % de las siguientes lineas y ponédselo a la anterior
+%\author{Nombre1 Apellidos1\\
+	%	Nombre2 Apellidos2\\
+	%	Nombre3 Apellidos3\\
+	%	Nombre4 Apellidos4}
+
+
+
+\begin{document}
+	\maketitle
+	\section{Problema 1}
+	Hallar los desarrollos de Taylor de orden 2 en torno a los puntos que se indican.
+	\begin{enumerate}[label={(\alph*)}]
+		\item \textbf{[2 puntos]} $f(x,y)=(x-y)^2$ en$(1,2)$.
+		
+		\subsection*{Solución}
+		Empezamos evaluando y desarrollando las derivadas:
+		\begin{itemize}
+			\item $f(1,2)=(1-2) ^{2}=1$
+			\item $\pdv{f}{x}(1,2)=2-4=-2$
+			\item $\pdv{f}{y}(1,2)=4-2=2$
+			\item $\grad{f}=(-2,2)$ 
+			\item $\pdv{f}{x}{y}(1,2)=-2$ 
+			\item $\pdv{f}{y}{x}(1,2)=-2$
+			\item $\pdv[2]{f}{x}(1,2)=2$
+			\item $\pdv[2]{f}{y}(2,2)=2$ 
+			\item $\grad{f}(1,2)\cdot (\mathbf{x}-\mathbf{a})=-2x+2y-2$ 
+		\end{itemize}
+	También, obtenemos que la correspondiente matriz Hessiana es
+	\[
+	H_{f}(\mathbf{a})= \begin{bmatrix}
+		2 & -2 \\ -2 & 2
+	\end{bmatrix}
+	\]
+	Ahora ya podemos desarrollar el polinomio de Taylor:
+	\begin{equation}
+		\begin{split}
+			P_{2,(1,2)}f(\mathbf{x})&=1-2x+2y-2+ \frac{1}{2}(x-1,y-2) \begin{bmatrix}
+				2 & -2 \\ -2 & 2	
+			\end{bmatrix} \begin{bmatrix}
+				x-1 \\ y -2
+			\end{bmatrix}\\
+			&=-1 -2x +2y +x ^{2}+y ^{2} -2xy -2y +2x\\
+			&=x ^{2}+y ^{2} -2xy -1
+		\end{split}
+	\end{equation}
+	Que es el polinomio de Taylor buscado		
+\item \textbf{[2 puntos]} $g(x,y)=(1+x^2+y^2)^{-1}$ en $(0,0)$.
+		
+		\subsection*{Solución}
+		\begin{itemize}
+			\item $\pdv{g}{x}(x,y) = \frac{-2x}{(1+x ^{2}+y ^{2}) ^{2}}$
+			\item $\pdv{g}{y}(x,y)= \frac{-2y}{(1+x ^{2}+y ^{2})^{2}}$
+			\item $\pdv{g}{x}{x}(x,y)= \frac{8x ^{2}}{(1+x ^{2}+y ^{2})^{3}}$
+			\item $\pdv{g}{y}{y}(x,y)= \frac{8y ^{2}}{(1+x ^{2}+y ^{2})^{3}}$
+			\item $\pdv{g}{x}{y}(x,y)= \frac{8xy}{(1+x ^{2}+y ^{2})^{3}}$
+			\item $\pdv{g}{y}{x}(x,y)= \frac{8xy}{(1+x ^{2}+y ^{2})^{3}}$ 
+		\end{itemize}
+		Si evaluamos cada una de estas derivadas en $(0,0)$, vemos claramente que tanto el gradiente como la correspondiente matrix Hessiana tienen componentes que son $0$, y por tanto solo sobrevive el término $g(x,y)=0$\footnote{Si observamos la función, vemos que esta solo se hace más pequeña a medida que $x$ o $y$ crecen, por lo que $g(0,0)$ es, de hecho, un máximo.}.   
+		\[
+			P_{2,(0,0)}(g(\mathbf{x}))=1
+		\]
+		\item \textbf{[2 puntos]} $h(x,y)=e^{xy}\cos(x+y)$ en $(0,\pi)$.
+		
+		\subsection*{Solución}
+		\begin{itemize}
+			\item $h(0, \pi)=1$
+			\item $\grad{h}=e^{xy}(y\cos(x+y)-\sin(x+y),x\cos(x+y)-\sin(x+y))$
+			\item $\grad{h}(0,\pi)=(-\pi,0)$ 
+		\end{itemize}		
+
+	\end{enumerate}
+	
+	\section{Problema 2}
+	Sean $\bm f(u,v)=\left(e^{u+2v},2u+v\right)$ y $\bm g(x,y,z)=\left(2x^2-y+3z^3,2y-x^2\right)$. Calcular la diferencial de $\bm f\circ\bm g$ en el punto $\bm a=(2,-1,1)$, de las siguientes maneras
+	\begin{enumerate}[label={(\alph*)}]
+		\item \textbf{[1 punto]} utilizando la regla de la cadena,
+		
+		\subsection*{Solución}
+		Haciendo esto y lo otro...
+		
+		\item \textbf{[1 punto]} componiendo y diferenciando.
+		
+		\subsection*{Solución}
+		Haciendo esto y lo otro...
+		
+	\end{enumerate}
+	
+	\section{Problema 3 [2 puntos]}
+	Las ecuaciones $u=f(x,y,z)$, $x=s^2+t^2$, $y=s^2-t^2$, $z=2st$ definen $u$ en función de $s$ y $t$: $u=F(s,t)$. Expresar las derivadas segundas de $F$ respecto a $s$ y $t$ en función de las derivadas de $f$ ($f\in\cC^2$).
+	
+	\subsection*{Solución}
+	Haciendo esto y lo otro...
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+\end{document}
