@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Primer Año/Segundo Cuatri/CalculoEnVariasVariables/Diferencial.md",
+                "file": "Primer Año/Segundo Cuatri/FisicaII/PotencialElectrico.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Diferencial"
+              "title": "PotencialElectrico"
             }
           }
         ]
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "ba1ec06a672fb227",
@@ -182,26 +183,27 @@
   },
   "active": "82bb18f778aa858e",
   "lastOpenFiles": [
-    "Primer Año/Segundo Cuatri/CalculoEnVariasVariables/Calculo.synctex(busy)",
-    "Primer Año/Segundo Cuatri/CalculoEnVariasVariables/pdflatex3049.fls",
-    "Primer Año/Segundo Cuatri/CalculoEnVariasVariables/pdflatex3048.fls",
+    "Primer Año/Segundo Cuatri/FisicaII/FisicaII.synctex(busy)",
+    "Primer Año/Segundo Cuatri/FisicaII/pdflatex3393.fls",
+    "Primer Año/Segundo Cuatri/FisicaII/pdflatex3314.fls",
+    "Primer Año/Segundo Cuatri/FisicaII/FisicaII.md",
+    "Primer Año/Segundo Cuatri/FisicaII/CampoElectrico.md",
+    "Primer Año/Segundo Cuatri/FisicaII/pdflatex2787.fls",
+    "Primer Año/Segundo Cuatri/FisicaII/FisicaII.synctex.gz",
+    "Primer Año/Segundo Cuatri/FisicaII/FisicaII.toc",
+    "Primer Año/Segundo Cuatri/FisicaII/FisicaII.log",
+    "Primer Año/Segundo Cuatri/FisicaII/FisicaII.fls",
+    "Primer Año/Segundo Cuatri/FisicaII/pdflatex2786.fls",
+    "Primer Año/Segundo Cuatri/FisicaII/FisicaII.fdb_latexmk",
+    "Primer Año/Segundo Cuatri/FisicaII/FisicaII.aux",
+    "Primer Año/Segundo Cuatri/CalculoEnVariasVariables/Diferencial.md",
     "Primer Año/Segundo Cuatri/CalculoEnVariasVariables/EspacioRN.md",
     "Primer Año/Segundo Cuatri/CalculoEnVariasVariables/Cont.md",
     "python.md",
-    "Primer Año/Segundo Cuatri/Programacion/Programacion.synctex(busy)",
-    "Primer Año/Segundo Cuatri/Programacion/pdflatex12790.fls",
-    "Primer Año/Segundo Cuatri/Programacion/pdflatex12789.fls",
-    "Primer Año/Segundo Cuatri/Programacion/Programacion.synctex.gz",
-    "Primer Año/Segundo Cuatri/Programacion/Programacion.pdf",
-    "Primer Año/Segundo Cuatri/Programacion/Programacion.toc",
-    "Primer Año/Segundo Cuatri/Programacion/Programacion.log",
-    "Primer Año/Segundo Cuatri/Programacion/Programacion.fls",
     "Primer Año/Segundo Cuatri/Topología/NocionesBasicas.md",
     "Primer Año/Segundo Cuatri/Topología/topologia.md",
     "Primer Año/Segundo Cuatri/GeometriaProyectiva/SisRef.md",
     "Primer Año/Segundo Cuatri/SegundoCuatri.md",
-    "Primer Año/Segundo Cuatri/FisicaII/CampoElectrico.md",
-    "Primer Año/Segundo Cuatri/CalculoEnVariasVariables/Diferencial.md",
     "Primer Año/Segundo Cuatri/CalculoEnVariasVariables/CalculoVars.md",
     "Primer Año/Segundo Cuatri/Probabilidad/TemaTres.md",
     "Primer Año/Segundo Cuatri/Probabilidad/SegundoTema.md",
@@ -211,7 +213,6 @@
     "Primer Año/Segundo Cuatri/Programacion/Programacion.md",
     "Primer Año/Segundo Cuatri/GeometriaProyectiva/GeometriaProyectiva.md",
     "VariedadesAfines.md",
-    "Primer Año/Segundo Cuatri/FisicaII/FisicaII.md",
     "Primer Año/Segundo Cuatri/FisicaII/PotencialElectrico.md",
     "imágenes/trabajoElectrico.png",
     "Primer Año/Segundo Cuatri/Programacion/Clang.md",

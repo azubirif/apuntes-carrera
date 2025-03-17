@@ -1,0 +1,33 @@
+\documentclass{report}
+\author{Alejandro Zubiri}
+\title{Física II}
+
+\renewcommand*\contentsname{Índice}
+
+\usepackage[margin=1.1in]{geometry}
+\usepackage{amsmath, physics, amsthm, amsfonts, mdframed, subfiles, tikz}
+
+\newmdtheoremenv{teorema}{Teorema}
+\newmdtheoremenv{defin}{Definición}
+
+\newcommand{\R}{\mathbb{R}}
+
+\begin{document}
+\maketitle
+\begin{equation}
+	\begin{split}
+		\nabla \cdot \vec{E} &= \frac{q}{\varepsilon_{0}}\\
+		\nabla \cdot \vec{B} &= 0
+	\end{split}
+\end{equation}
+\pagebreak
+\tableofcontents
+\pagebreak
+\section{Bibliografía}
+\begin{itemize}
+	\item Física para la ciencia y la tecnología - Tipler y Mosca
+	\item Física, Volumen II - Campos y Ondas - M. Alonso. E. J. Finn
+\end{itemize}
+\subfile{CampoElectrico.tex}
+\subfile{PotencialElectrico.tex}
+\end{document}
