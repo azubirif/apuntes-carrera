@@ -8,6 +8,18 @@
 \usepackage{amsmath, physics, amsthm, amsfonts, mdframed, subfiles, tikz}
 \usepackage[a]{esvect}
 
+\usepackage{import}
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{xcolor}
+
+\newcommand{\incfig}[2][1]{%
+    \def\svgwidth{#1\columnwidth}
+    \import{./figures/}{#2.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+
 \newmdtheoremenv{teorema}{Teorema}
 \newmdtheoremenv{defin}{Definición}
 

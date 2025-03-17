@@ -72,4 +72,46 @@ Aquí sigue que
 	\left(D_{x} \bar{f}(\mathbf{x_{0}}, \mathbf{t_0}),D_{t}\bar{f}(\mathbf{x}_{0}, \mathbf{t}_{0}) \right)(\mathbf{x}-\mathbf{x}_{0}, \mathbf{t}-\mathbf{t}_{0})=\mathbf{0}
 \]
 Reordenando y simplificando, obtenemos que debe existir la inversa de la matriz $D_{x} \bar{f}$, y por tanto su determinante debe ser distinto a $0$.
+\begin{defin}
+Dada una función $f:D \subset \mathbb{R}^{n} \to \mathbb{R}$, y sea $\mathbf{a} \in D$, $f$ tiene un mínimo absoluto en $\mathbf{a}$ si
+\[
+	f(\mathbf{a}) \leq f(\mathbf{x}) \forall \mathbf{x} \in D
+\]
+\end{defin}
+La definición de máximo es análoga.
+\begin{defin}[Mínimo local]
+Esta definición sigue de tomar los puntos en una cierta bola. Es decir, un punto $\mathbf{a}$ será mínimo local en $B_{\delta}$ si y solo si
+\[
+	f(\mathbf{a}) \leq f(\mathbf{x}) \forall \mathbf{x} \in B_{\delta}
+\]
+\end{defin}
+\section{Extremos de funciones escalares}
+Usaremos con frecuencia el siguiente teorema:
+\begin{teorema}
+Sea $f:D \subset \mathbb{R}^{n} \to \mathbb{R}$ una función diferenciable en $\mathbf{a} \in int(D)$. Si $f$ tiene un extremo local en $\mathbf{a}$, entonces
+\[
+	\nabla f(\mathbf{a}) = 0
+\]
+\end{teorema}
+\begin{proof}[Demostración]
+Hallemos la derivada de $f$ respecto de un vector $\mathbf{v} \in \mathbb{R}^{n}$ cualquiera:
+\begin{equation}
+	\begin{split}
+		f'(\mathbf{a}, \mathbf{v}) &= \lim_{h \to 0} \frac{f(\mathbf{a}+h \mathbf{v})-f(\mathbf{a})}{h}
+	\end{split}
+\end{equation}
+Sabemos que este límite existe ya que $f$ es diferenciable. Supongamos que $f$ tiene un mínimo local en $\mathbf{a}$. En particular, también existen los límites laterales en $\mathbf{x}=\mathbf{a}$.\\
+Si $f$ tiene un mínimo local en $\mathbf{a}$, entonces
+\[
+	f(\mathbf{a}+h \mathbf{v})-f(\mathbf{a}) \geq 0
+\]
+para un $h$ lo suficientemente pequeño. Entonces, la derivada lateral en ese punto, $f'(\mathbf{a}, \mathbf{v})^{+} \geq 0$. Y la otra derivada lateral, cumple que $f'(\mathbf{a}, \mathbf{v})^{-} \leq 0$. Para que ambas ecuaciones se cumplan, y teniendo en cuenta que es diferenciable:
+\[
+	f'(\mathbf{a}, \mathbf{v})= \nabla f(\mathbf{a}) \cdot \mathbf{v} =0
+\]
+Como esto se debe cumplir para todos los vectores, entonces el gradiente es perpendicular a todos los vectores. El único que lo cumple es
+\[
+	\nabla f(\mathbf{a}) = 0
+\]
+\end{proof}
 \end{document}
