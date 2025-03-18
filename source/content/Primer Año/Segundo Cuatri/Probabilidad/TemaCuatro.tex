@@ -108,6 +108,38 @@ y la función distribución como
 	F(X=k)=P(-\infty,X]= \sum_{j=1}^{k} (1-p)^{j-1}p~si~x=0,1,\dots ,n
 \]
 teniendo que $\mu=E(X)=\frac{1}{p}$, y que $V(X)=\sigma ^{2}= \frac{1-p}{p ^{2}}$
-\subsection{Distribución binomial negativa}
-
+\section{Distribución hipergeométrica}
+Tenemos las siguientes suposiciones:
+\begin{itemize}
+	\item La población es finita y consiste de $N$ elementos.
+	\item Cada individuo se caracteriza como un éxito $S$ o fracaso $F$, y hay $M$ éxitos.
+	\item Se elige una muestra de $n$ individuos tal que cada subconjunto tenga las mismas probabilidades de ser elegido. 
+\end{itemize}
+Si $X$ es el número de éxitos, entedremos $M$ éxitos y $(N-M)$ fracasos:
+\[
+	P(X=x)=h(x;n,M,N)
+\]
+Además, se da que
+\begin{itemize}
+	\item $E(X)=n \frac{M}{N}$
+	\item $V(X)=n \frac{N-n}{N-1} \frac{M}{N} (1 - \frac{M}{N})$ 
+\end{itemize}
+\textbf{Ejemplo}:\\
+De $5$ animales de una especie en extinción, se toman $25$ animales y se liberan con otros individuos. Después de mezclarse, se tomaron $10$ de esos $25$ animales. Se define $X$ como el número de animales marcados en la segunda muestra que contiene $10$ animales. Indica la función masa de $X$ y ciertas probabilidades.\\
+Datos:
+\begin{itemize}
+	\item $M=5$
+	\item $N=25$
+	\item $n=10$
+	\item $x$ será el número de ejemplares marcados. 
+\end{itemize}
+Ahora nos interesa que $x=2$, por lo que aplicamos la ley de Laplace:
+\[
+	P(X=2)= \frac{\binom{5}{2}\binom{20}{8}}{\binom{25}{10}}\approx 0.38
+\]
+Para $x\leq 2$, tenemos que
+\[
+	P(X\leq 2) = P(X=0) + P(X=1)+P(X=2)=0.056+0.2569+0.385=0.6988
+\]
+Y la esperanza es $E(X)=2$.
 \end{document}
