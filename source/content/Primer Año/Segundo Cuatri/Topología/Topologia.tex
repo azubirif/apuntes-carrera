@@ -5,8 +5,11 @@
 \renewcommand*\contentsname{Índice}
 
 \usepackage[margin=1.1in]{geometry}
-\usepackage{amsmath, physics, amsthm, amsfonts, mdframed, subfiles}
-
+\usepackage{amsmath, physics, amsthm, amsfonts, mdframed, subfiles, fancyhdr}
+\pagestyle{fancy}
+\fancyfoot[R]{Página \thepage}
+\fancyfoot[L]{Alejandro Zubiri}
+\pdfsuppresswarningpagegroup=1
 \newmdtheoremenv{teorema}{Teorema}
 \newmdtheoremenv{defin}{Definición}
 \newmdtheoremenv{prop}{Proposición}
@@ -18,4 +21,5 @@
 \tableofcontents
 \pagebreak
 \subfile{Introduccion.tex}
+\subfile{BajasDimensiones.tex}
 \end{document}
