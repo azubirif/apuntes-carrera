@@ -19,10 +19,10 @@
 \newcommand{\bbR}{\mathbb{R}}
 \newcommand{\cC}{\mathcal{C}}
 \newcommand{\dparcial}[2]{\frac{\partial#1}{\partial#2}}
-\newcommand{\derivada}[2]{\frac{d#1}{d#2}}
+\newcommand{\derivbda}[2]{\frac{d#1}{d#2}}
 \newcommand{\dom}{\text{dom }}
 \newcommand{\exterior}{\text{ext }}
-\newcommand{\evaluar}[2]{\left.#1\right|_{#2}}
+\newcommand{\evbluar}[2]{\left.#1\right|_{#2}}
 \newcommand{\frontera}{\partial}
 \newcommand{\interior}{\text{int }}
 \newcommand{\sgn}{\text{sgn}}
@@ -39,14 +39,14 @@
 \newtheorem{ejercicios}{Ejercicios}
 
 \let\oldemptyset\emptyset
-\let\emptyset\varnothing
+\let\emptyset\vbrnothing
 
 
-\title{Derivadas de orden superior, desarrollos de Taylor y regla de la cadena}
+\title{Derivbdas de orden superior, desarrollos de Taylor y regla de la cadena}
 \date{\today}
 
 \author{Alejandro Zubiri}
-%Si sois varias personas entonces quitad el símbolo % de las siguientes lineas y ponédselo a la anterior
+%Si sois vbrias personas entonces quitad el símbolo % de las siguientes lineas y ponédselo a la anterior
 %\author{Nombre1 Apellidos1\\
 	%	Nombre2 Apellidos2\\
 	%	Nombre3 Apellidos3\\
@@ -76,20 +76,20 @@
 		\end{itemize}
 	También, obtenemos que la correspondiente matriz Hessiana es
 	\[
-	H_{f}(\mathbf{a})= \begin{bmatrix}
+	H_{f}(\mathbf{a})= \begin{pmatrix}
 		2 & -2 \\ -2 & 2
-	\end{bmatrix}
+	\end{pmatrix}
 	\]
 	Ahora ya podemos desarrollar el polinomio de Taylor:
 	\begin{equation}
 		\begin{split}
-			P_{2,(1,2)}f(\mathbf{x})&=1-2x+2y-2+ \frac{1}{2}(x-1,y-2) \begin{bmatrix}
+			P_{2,(1,2)}f(\mathbf{x})&=1-2x+2y-2+ \frac{1}{2}(x-1,y-2) \begin{pmatrix}
 				2 & -2 \\ -2 & 2	
-			\end{bmatrix} \begin{bmatrix}
+			\end{pmatrix} \begin{pmatrix}
 				x-1 \\ y -2
-			\end{bmatrix}\\
-			&=-1 -2x +2y +x ^{2}+y ^{2} -2xy -2y +2x\\
-			&=x ^{2}+y ^{2} -2xy -1
+			\end{pmatrix}\\
+			&=1 -2x +2y -2 +x^{2}+2x-2xy+y^{2}+1-2y\\
+			&=x ^{2}+y ^{2} -2xy
 		\end{split}
 	\end{equation}
 	Que es el polinomio de Taylor buscado		
@@ -104,7 +104,7 @@
 			\item $\pdv{g}{x}{y}(x,y)= \frac{8xy}{(1+x ^{2}+y ^{2})^{3}}$
 			\item $\pdv{g}{y}{x}(x,y)= \frac{8xy}{(1+x ^{2}+y ^{2})^{3}}$ 
 		\end{itemize}
-		Si evaluamos cada una de estas derivadas en $(0,0)$, vemos claramente que tanto el gradiente como la correspondiente matrix Hessiana tienen componentes que son $0$, y por tanto solo sobrevive el término $g(x,y)=0$\footnote{Si observamos la función, vemos que esta solo se hace más pequeña a medida que $x$ o $y$ crecen, por lo que $g(0,0)$ es, de hecho, un máximo.}.   
+		Si evaluamos cada una de estas derivadas en $(0,0)$, vemos claramente que tanto el gradiente como la correspondiente matrix Hessiana tienen componentes que son $0$, y por tanto solo sobrevive el término $g(x,y)=1$\footnote{Si observamos la función, vemos que esta solo se hace más pequeña a medida que $x$ o $y$ crecen, por lo que $g(0,0)$ es, de hecho, un máximo.}.   
 		\[
 			P_{2,(0,0)}(g(\mathbf{x}))=1
 		\]
@@ -114,9 +114,25 @@
 		\begin{itemize}
 			\item $h(0, \pi)=1$
 			\item $\grad{h}=e^{xy}(y\cos(x+y)-\sin(x+y),x\cos(x+y)-\sin(x+y))$
-			\item $\grad{h}(0,\pi)=(-\pi,0)$ 
+			\item $\grad{h}(0,\pi)=(-\pi,0)$
+			\item $\grad{h}\cdot (\vb{x}-\vb{a})=-\pi x$
+			\item $H_{h}(0,\pi)= \begin{pmatrix}
+					-\pi ^{2}+1 & 0 \\ 0 & 1
+			\end{pmatrix}
+			$
+		\item $H_{h}(\vb{a})\cdot (\vb{x}-\vb{a})= \begin{pmatrix} 
+				x-x\pi ^{2}\\y-\pi
+			\end{pmatrix} $ 
+		\item $(\vb{x}-\vb{a})^{T}\cdot H_{h}(\vb{a})\cdot (\vb{x}-\vb{a})=
+				x ^{2}-x ^{2}\pi ^{2}+y ^{2}+ \pi ^{2} -2y\pi
+			$ 
 		\end{itemize}		
-
+	Y ahora, el polinomio es:
+	\begin{equation}
+		\begin{split}
+			P_{2,(0,\pi)} = -1-\pi x + \frac{x ^{2}}{2}(1-\pi ^{2}) +\frac{1}{2} y ^{2} +\frac{1}{2} \pi ^{2} -y \pi
+		\end{split}
+	\end{equation}
 	\end{enumerate}
 	
 	\section{Problema 2}
@@ -125,51 +141,100 @@
 		\item \textbf{[1 punto]} utilizando la regla de la cadena,
 		
 		\subsection*{Solución}
-		Haciendo esto y lo otro...
-		
+		Tenemos que
+		\[
+			D(f \circ g)=D f(g)Dg
+		\]
+		Y ahora
+		\[
+			D f(\vb{x})= \begin{pmatrix} 
+				e^{u+2v} & 2e^{u+2v} \\2 & 1
+			\end{pmatrix} 
+		\]
+		Sustituyendo $\vb{x}=\vb{g}(x,y,z)$, tenemos que
+		\[
+			D f(g)= \begin{pmatrix} 
+				e^{3y+3z ^{3}} & 2 e^{3y +3z ^{3}} \\ 2 & 1
+			\end{pmatrix} 
+		\]
+		Ahora pasamos a calcular $Dg$:
+		\[
+			Dg = \begin{pmatrix} 
+				4x & -1 & 9z ^{3} \\ -2x & 2 & 0
+			\end{pmatrix} 
+		\]
+		Ahora multiplicamos ambas para obtener el diferencial deseado:
+		\[
+			\vb{f} \circ \vb{g} = D(f(g))Dg = \begin{pmatrix} 
+				0 & 3e^{3(y+z ^{3})} & 9z ^{2}e^{3(y+z^{3})}\\
+				6x & 0 & 18z ^{2}
+			\end{pmatrix} 
+		\]
 		\item \textbf{[1 punto]} componiendo y diferenciando.
 		
 		\subsection*{Solución}
-		Haciendo esto y lo otro...
-		
+		Componemos ambas funciones para obtener
+		\[
+			\vb{f}\circ \vb{g} = (e^{3y+3z^{3}},3x ^{2}+6z ^{3})
+		\]
+		y ahora tomamos el diferencial de esta función:
+		\[
+			D(\vb{f}\circ\vb{g}) = \begin{pmatrix} 
+				0 & 3e^{3(y+z^{3})} & 9z^{2}e^{3(y+z^{3})}\\
+				6x & 0 & 18z^{2}
+			\end{pmatrix} 
+		\]
+		Que como podemos observar, coinciden.
 	\end{enumerate}
 	
 	\section{Problema 3 [2 puntos]}
-	Las ecuaciones $u=f(x,y,z)$, $x=s^2+t^2$, $y=s^2-t^2$, $z=2st$ definen $u$ en función de $s$ y $t$: $u=F(s,t)$. Expresar las derivadas segundas de $F$ respecto a $s$ y $t$ en función de las derivadas de $f$ ($f\in\cC^2$).
+	Las ecuaciones $u=f(x,y,z)$, $x=s^2+t^2$, $y=s^2-t^2$, $z=2st$ definen $u$ en función de $s$ y $t$: $u=F(s,t)$. Expresar las derivbdas segundas de $F$ respecto a $s$ y $t$ en función de las derivbdas de $f$ ($f\in\cC^2$).
 	
 	\subsection*{Solución}
-	Haciendo esto y lo otro...
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-\end{document}
+	Tenemos que
+	\[
+		u = f(x,y,z)=f(s^{2} + t ^{2}, s ^{2}-t ^{2}, 2st)=F(s,t)
+	\]
+	Empezamos con las derivadas primeras:
+	\begin{equation}
+		\begin{split}
+			\pdv{F}{s}&= \pdv{f}{x}\pdv{x}{s} + \pdv{f}{y}\pdv{y}{s} +\pdv{f}{z}\pdv{z}{s}\\
+					  &= 2s \pdv{f}{x}+2s\pdv{f}{y}+2t\pdv{f}{z}
+		\end{split}
+	\end{equation}
+	A partir de ahora se reducirán algunos cálculos para hacer el resultado más ameno. Los cálculos completos se pueden encontrar en el otro documento (donde están las soluciones hechas a mano).
+	\begin{equation}
+		\begin{split}
+			\pdv{F}{t} = 2t\pdv{f}{x}-2t\pdv{f}{y}+2s\pdv{f}{z}
+		\end{split}
+	\end{equation}
+	Y ahora pasamos a las derivadas segundas:
+	\begin{equation}
+		\begin{split}
+			\pdv[2]{F}{s} &= 2\pdv{f}{x} +4s ^{2}\pdv[2]{f}{x}-4s^{2}\pdv{f}{x}{y} +4st \pdv{f}{x}{z}\\
+						  &+2\pdv{f}{y} - 4s^{2}\pdv{f}{y}{x}+4s^{2}\pdv[2]{f}{y}-4st\pdv{f}{y}{z}\\
+						  &+4st\pdv{f}{z}{x}-4st\pdv{f}{z}{y}+4t^{2}\pdv[2]{f}{z}
+		\end{split}
+	\end{equation}
+	\begin{equation}
+		\begin{split}
+			\pdv[2]{F}{t} &= 2\pdv{f}{x}+4t^{2}\pdv[2]{f}{x}-4t^{2}\pdv{f}{x}{y}-4st\pdv{f}{x}{z}\\
+						  &-2\pdv{f}{y}-4t^{2}\pdv{f}{y}{x}+4t^{2}\pdv[2]{f}{y}-4st\pdv{f}{y}{z}\\
+						  &+4st\pdv{f}{z}{x}-4st\pdv{f}{z}{y}+4s^{2}\pdv[2]{f}{z}
+		\end{split}
+	\end{equation}
+	\begin{equation}
+		\begin{split}
+			\pdv{F}{s}{t} &= 4st\pdv[2]{f}{x}-4st\pdv{f}{x}{y}+4s^{2}\pdv{f}{x}{z}\\
+						  &+4st\pdv{f}{y}{x}-4st\pdv[2]{f}{y}+4s^{2}\pdv{f}{y}{z}\\
+						  &+2\pdv{f}{z}+4t^{2}\pdv{f}{z}{x}-4t^{2}\pdv{f}{z}{y}+4st\pdv[2]{f}{z}
+		\end{split}
+	\end{equation}
+	\begin{equation}
+		\begin{split}
+			\pdv{F}{t}{s} &= 4st\pdv[2]{f}{x}+4st\pdv{f}{x}{y}+4t^{2}\pdv{f}{x}{z}\\
+						  &-4st\pdv{f}{y}{x}-4st\pdv[2]{f}{y}-4t^{2}\pdv{f}{y}{z}\\
+						  &+2\pdv{f}{z}+4s^{2}\pdv{f}{z}{x}+4s^{2}\pdv{f}{z}{y}+4st\pdv[2]{f}{z}
+		\end{split}
+	\end{equation}
+	\end{document}
