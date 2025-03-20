@@ -42,7 +42,7 @@
 \let\emptyset\vbrnothing
 
 
-\title{Derivbdas de orden superior, desarrollos de Taylor y regla de la cadena}
+\title{Derivadas de orden superior, desarrollos de Taylor y regla de la cadena}
 \date{\today}
 
 \author{Alejandro Zubiri}
@@ -99,16 +99,31 @@
 		\begin{itemize}
 			\item $\pdv{g}{x}(x,y) = \frac{-2x}{(1+x ^{2}+y ^{2}) ^{2}}$
 			\item $\pdv{g}{y}(x,y)= \frac{-2y}{(1+x ^{2}+y ^{2})^{2}}$
-			\item $\pdv{g}{x}{x}(x,y)= \frac{8x ^{2}}{(1+x ^{2}+y ^{2})^{3}}$
-			\item $\pdv{g}{y}{y}(x,y)= \frac{8y ^{2}}{(1+x ^{2}+y ^{2})^{3}}$
+			\item $\pdv{g}{x}{x}(x,y)= \frac{6x^{2}-2y^{2}-2}{(1+x^{2}+y^{2})^{3}}$
+			\item $\pdv{g}{y}{y}(x,y)= \frac{6y^{2}-2x^{2}-2}{(1+x ^{2}+y ^{2})^{3}}$
 			\item $\pdv{g}{x}{y}(x,y)= \frac{8xy}{(1+x ^{2}+y ^{2})^{3}}$
 			\item $\pdv{g}{y}{x}(x,y)= \frac{8xy}{(1+x ^{2}+y ^{2})^{3}}$ 
 		\end{itemize}
-		Si evaluamos cada una de estas derivadas en $(0,0)$, vemos claramente que tanto el gradiente como la correspondiente matrix Hessiana tienen componentes que son $0$, y por tanto solo sobrevive el término $g(x,y)=1$\footnote{Si observamos la función, vemos que esta solo se hace más pequeña a medida que $x$ o $y$ crecen, por lo que $g(0,0)$ es, de hecho, un máximo.}.   
+		Como vemos, $\grad{f}(0,0)=(0,0)$, por lo que solo debemos preocuparnos por la matriz Hessiana:
 		\[
-			P_{2,(0,0)}(g(\mathbf{x}))=1
+			H_{g}(0,0) = \begin{pmatrix} 
+			-2 & 0 \\ 0 & -2
+			\end{pmatrix} 
 		\]
-		\item \textbf{[2 puntos]} $h(x,y)=e^{xy}\cos(x+y)$ en $(0,\pi)$.
+		Y ahora pasamos a calcular el producto:
+		\[
+			(\vb{x}-\vb{a})^{T}) H_{g}(\vb{a}) (\vb{x}-\vb{a})=
+			\begin{pmatrix} x & y \end{pmatrix}
+			\begin{pmatrix} -2 & 0 \\ 0 & -2 \end{pmatrix}
+			\begin{pmatrix} 
+			x \\ y	
+			\end{pmatrix} =-2x^{2}-2y^{2}
+		\]
+		Y finalmente, el polinomio completo es
+		\[
+			P_{2,(0,0)} = 1-2(x^{2}+y^{2})
+		\]
+	\item \textbf{[2 puntos]} $h(x,y)=e^{xy}\cos(x+y)$ en $(0,\pi)$.
 		
 		\subsection*{Solución}
 		\begin{itemize}
@@ -133,8 +148,7 @@
 			P_{2,(0,\pi)} = -1-\pi x + \frac{x ^{2}}{2}(1-\pi ^{2}) +\frac{1}{2} y ^{2} +\frac{1}{2} \pi ^{2} -y \pi
 		\end{split}
 	\end{equation}
-	\end{enumerate}
-	
+	\end{enumerate}	
 	\section{Problema 2}
 	Sean $\bm f(u,v)=\left(e^{u+2v},2u+v\right)$ y $\bm g(x,y,z)=\left(2x^2-y+3z^3,2y-x^2\right)$. Calcular la diferencial de $\bm f\circ\bm g$ en el punto $\bm a=(2,-1,1)$, de las siguientes maneras
 	\begin{enumerate}[label={(\alph*)}]
@@ -160,7 +174,7 @@
 		Ahora pasamos a calcular $Dg$:
 		\[
 			Dg = \begin{pmatrix} 
-				4x & -1 & 9z ^{3} \\ -2x & 2 & 0
+				4x & -1 & 9z ^{2} \\ -2x & 2 & 0
 			\end{pmatrix} 
 		\]
 		Ahora multiplicamos ambas para obtener el diferencial deseado:
@@ -169,6 +183,10 @@
 				0 & 3e^{3(y+z ^{3})} & 9z ^{2}e^{3(y+z^{3})}\\
 				6x & 0 & 18z ^{2}
 			\end{pmatrix} 
+		\]
+		y finalmente sustituimos
+		\[
+			Df(g)Dg(2,-1,1)= \begin{pmatrix} 0 &3&9\\ -12 & 0 & 18 \end{pmatrix} 
 		\]
 		\item \textbf{[1 punto]} componiendo y diferenciando.
 		
@@ -184,7 +202,10 @@
 				6x & 0 & 18z^{2}
 			\end{pmatrix} 
 		\]
-		Que como podemos observar, coinciden.
+		Que como podemos observar, coinciden. Susituimos el punto para obtener
+		\[
+			Df(g)= \begin{pmatrix} 0 & 3 & 9 \\ -12 & 0 & 18 \end{pmatrix} 
+		\]
 	\end{enumerate}
 	
 	\section{Problema 3 [2 puntos]}
@@ -216,25 +237,41 @@
 						  &+4st\pdv{f}{z}{x}-4st\pdv{f}{z}{y}+4t^{2}\pdv[2]{f}{z}
 		\end{split}
 	\end{equation}
+	Podemos aprovecharnos del hecho de que $f \in \mathcal{C}^{2}$ y por tanto
+	\[
+		\pdv{f}{x_{i}}{x_{j}} = \pdv{f}{x_{j}}{x_{i}}
+	\]
+	Y por tanto
+	\begin{equation}
+		\begin{split}
+			\pdv[2]{F}{s}&=2(\pdv{f}{x}+\pdv{f}{y})+4s^{2}\pdv[2]{f}{x}-8s^{2}\pdv{f}{x}{y}\\ &+8st\pdv{f}{x}{z}+4s^{2}\pdv[2]{f}{y}-8st\pdv{f}{y}{z}+4t^{2}\pdv[2]{f}{z}
+		\end{split}
+	\end{equation}
 	\begin{equation}
 		\begin{split}
 			\pdv[2]{F}{t} &= 2\pdv{f}{x}+4t^{2}\pdv[2]{f}{x}-4t^{2}\pdv{f}{x}{y}-4st\pdv{f}{x}{z}\\
 						  &-2\pdv{f}{y}-4t^{2}\pdv{f}{y}{x}+4t^{2}\pdv[2]{f}{y}-4st\pdv{f}{y}{z}\\
-						  &+4st\pdv{f}{z}{x}-4st\pdv{f}{z}{y}+4s^{2}\pdv[2]{f}{z}
+						  &+4st\pdv{f}{z}{x}-4st\pdv{f}{z}{y}+4s^{2}\pdv[2]{f}{z}\\
+						  &=2(\pdv{f}{x}-\pdv{f}{y})+4t^{2}\pdv[2]{f}{x}-8t^{2}\pdv{f}{x}{y}+8st\pdv{f}{x}{z}\\
+						  &+4t^{2}\pdv[2]{f}{y}-4st\pdv{f}{y}{z}+4s^{2}\pdv[2]{f}{z}
 		\end{split}
 	\end{equation}
 	\begin{equation}
 		\begin{split}
 			\pdv{F}{s}{t} &= 4st\pdv[2]{f}{x}-4st\pdv{f}{x}{y}+4s^{2}\pdv{f}{x}{z}\\
 						  &+4st\pdv{f}{y}{x}-4st\pdv[2]{f}{y}+4s^{2}\pdv{f}{y}{z}\\
-						  &+2\pdv{f}{z}+4t^{2}\pdv{f}{z}{x}-4t^{2}\pdv{f}{z}{y}+4st\pdv[2]{f}{z}
+						  &+2\pdv{f}{z}+4t^{2}\pdv{f}{z}{x}-4t^{2}\pdv{f}{z}{y}+4st\pdv[2]{f}{z}\\
+						  &=2\pdv{f}{z}+4st\pdv[2]{f}{x}+4\pdv{f}{x}{z}\cdot (s^{2}+t^{2})\\
+						  &-4st\pdv[2]{f}{y}+4\pdv{f}{y}{z}\cdot  (s^{2}-t^{2})+4st\pdv[2]{f}{z}
 		\end{split}
 	\end{equation}
 	\begin{equation}
 		\begin{split}
 			\pdv{F}{t}{s} &= 4st\pdv[2]{f}{x}+4st\pdv{f}{x}{y}+4t^{2}\pdv{f}{x}{z}\\
 						  &-4st\pdv{f}{y}{x}-4st\pdv[2]{f}{y}-4t^{2}\pdv{f}{y}{z}\\
-						  &+2\pdv{f}{z}+4s^{2}\pdv{f}{z}{x}+4s^{2}\pdv{f}{z}{y}+4st\pdv[2]{f}{z}
+						  &+2\pdv{f}{z}+4s^{2}\pdv{f}{z}{x}+4s^{2}\pdv{f}{z}{y}+4st\pdv[2]{f}{z}\\
+						  &= 2\pdv{f}{z}+4st\pdv[2]{f}{x}+4\pdv{f}{x}{z}\cdot (s^{2}+t^{2})\\
+						  &-4st\pdv[2]{f}{y}+4\pdv{f}{y}{z}\cdot (s^{2}-t^{2})+4st\pdv[2]{f}{z}
 		\end{split}
 	\end{equation}
 	\end{document}
