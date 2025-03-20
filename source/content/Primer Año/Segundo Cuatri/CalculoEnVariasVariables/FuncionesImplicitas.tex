@@ -114,4 +114,67 @@ Como esto se debe cumplir para todos los vectores, entonces el gradiente es perp
 	\nabla f(\mathbf{a}) = 0
 \]
 \end{proof}
+\begin{defin}
+	Si $\vb{a} \in int(D)$ y $\grad{f}(\vb{a})= \vb{0}$, entonces $\vb{a}$ se llama punto crítico o punto estacionario de $f$. Si desarrollamos la función como polinomio de Taylor de primer orden en $\vb{a}$, veremos que obtendremos
+	\[
+		P_{1, \vb{a}} = f(\vb{a})
+	\]
+\end{defin}
+Sin embargo, estas herramientas son muy pobres para analizar correctamente el comportamiento de una función. Si desarrollamos $f$ hasta segundo orden mediante el polinomio de Taylor, obtendremos más información acerca de cómo se comporta la función cerca del punto crítico en el que estamos interesados. Supongamos que $\vb{a}$ es un punto crítico:
+\[
+	f(\vb{x}) = f(\vb{a}) + \grad{f} (\vb{a}) \vb{h} +\frac{1}{2} \vb{h}^{T}H(\vb{a}) \vb{h} +o(|\vb{h}|^{2})
+\]
+Donde $\vb{h}=\vb{x}-\vb{a}$. Aplicando el hecho de que $\vb{a}$ es punto crítico, el término del gradiente se va
+\[
+	= f(\vb{a}) +\frac{1}{2} \vb{h}^{T} H(\vb{a}) \vb{h}+ o(|\vb{h}|^{2})
+\]
+Aquí podemos tener los siguientes casos:
+\begin{itemize}
+	\item $\vb{h}^{T} H(\vb{a})\vb{h} > 0 \forall \vb{h} \neq \vb{0}$. Entonces, $f$ crece en puntos cercanos a $\vb{a}$, entonces $\vb{a}$ es un mínimo.
+	\item En el caso de ser menor a $0$, análogamente, $\vb{a}$ es un máximo.
+	\item Si cambia en función de $\vb{h}$, entonces es un \textbf{punto de silla}.   
+	\item Si $H(\vb{a})= \vb{0}$, nos falta información para saber el tipo de punto crítico que tenemos. 
+\end{itemize}
+\begin{defin}
+	Si $A \in \mathcal{M}_{n \times n}$ es simétrica, entonces la función
+	\[
+		Q: \mathbb{R}^{n} \to \mathbb{R}
+	\]
+	donde
+	\[
+		\vb{v} \to Q(\vb{v})=\vb{v}^{t}A \vb{v}
+	\]
+	se llama forma cuadrática simétrica.
+\end{defin}
+\begin{teorema}
+	Sea $A \in \mathcal{M}_{n \times  n}$ una matriz simétrica, y sea $d_{i}$ el determinante de una de sus submatrices:
+	\begin{itemize}
+		\item Si $d_{i} > 0 \forall i$, $Q$ es definida positiva.
+		\item Si $d_{i} > 0$ para $i$ par y $d_{i} < 0$ para $i$ impar, es definida negativa     
+	\end{itemize}
+\end{teorema}
+\begin{teorema}
+	Si tenemos una matriz simétrica $n \times n$, entonces
+	\begin{itemize}
+		\item Si los autovalores de $A$ son positivos entonces $Q$ es definida positiva.
+		\item Si los autovalores de $A$ son negativos entonces $Q$ es definida negativa.
+		\item Si alguno es $0$ entonces $Q$ es singular.
+		\item En el resto de casos $Q$ es indefinida. 
+	\end{itemize}
+	También podemos usar el hecho de que, siendo $\lambda_{i}$ los autovalores de $A$, entonces
+	\[
+		\sum \lambda_{i} = tr(A)
+	\]
+\end{teorema}
+Ahora combinando todo
+\begin{teorema}
+Tenemos que $f$ tiene en $\vb{a}$ en función de $H(\vb{a})$:  
+\begin{itemize}
+	\item Mínimo local si $H$ es definida positiva.
+	\item Máximo local si $H$ es definida negativa.
+	\item Punto de silla si $H$ es indefinida.
+	\item Nos falta información si $H$ es singular. 
+\end{itemize}
+
+\end{teorema}
 \end{document}
