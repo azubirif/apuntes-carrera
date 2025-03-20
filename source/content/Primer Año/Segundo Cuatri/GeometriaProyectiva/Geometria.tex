@@ -5,12 +5,26 @@
 \renewcommand*\contentsname{Índice}
 
 \usepackage[margin=1.1in]{geometry}
-\usepackage{amsmath, physics, amsthm, amsfonts, mdframed, subfiles}
+\usepackage{amsmath, physics, amsthm, amsfonts, mdframed, subfiles, hyperref, silence}
 \hbadness 99999
 \newmdtheoremenv{teorema}{Teorema}
 \newmdtheoremenv{defin}{Definición}
 
+\WarningsOff[hyperref]
+
 \newcommand{\R}{\mathbb{R}}
+
+\usepackage{import}
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{xcolor}
+
+\newcommand{\incfig}[2][1]{%
+    \def\svgwidth{#1\columnwidth}
+    \import{./figures/}{#2.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
 
 \begin{document}
 \maketitle
@@ -20,4 +34,5 @@
 \subfile{EspacioAfin.tex}
 \subfile{SisRef.tex}
 \subfile{VariedadesAfines.tex}
+\subfile{EspacioEuclideo.tex}
 \end{document}
