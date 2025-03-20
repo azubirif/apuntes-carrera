@@ -85,5 +85,32 @@ Las coordenadas covariantes se pueden obtener multiplicando las coordenadas cont
 	\[
 		\vb{v}\cdot \vb{u} = 0
 	\]
+	También, dos variedades afines $L_1=P_1+S_1$, $L_2=P_2+S_2$, estos serán perpendiculares si se cumple que:
+	\begin{itemize}
+		\item $L_1 \cap L_2 \neq \phi$
+		\item $S_1 \perp S_2$ 
+	\end{itemize}
 \end{defin}
+Ahora introducimos el siguiente teorema
+\pagebreak
+\begin{teorema}
+	Dado un hiperplano $L$ cuya ecuación cartesiana respecto a un sistema rectangular (ortonormal), es
+	\[
+		\sum a_{i}x_{i} = c
+	\]
+	El vector de coordenadas $\vb{n} = (a_1,\dots ,a_{n})$ define rectas perpendiculares a $L$ y es el vector normal al hiperplano. Estas coordenadas son las \textbf{covariantes} del vector normal.  
+\end{teorema}
+\begin{defin}
+	Dado un EAE de dimensión $n$, y un subespacio afín $L \subset A$ de dimensión $m$ y dirección $W$, entonces, para cada punto $P \in A$, existe un único subespacio afín $L'$ de $A$ por $P$, ortogonal a $L$ y con dimensión $n-m$. Este es
+	\[
+		L' = P + W^{\perp}
+	\]
+	La intersección entre ambas variadades, $L \cap L'$, es la proyección de $P$ sobre $L$.   
+\end{defin}
+\begin{figure}[ht]
+    \centering
+    \incfig{p-ortogonal}
+    \caption{Proyección Ortogonal}
+    \label{fig:p-ortogonal}
+\end{figure}
 \end{document}
