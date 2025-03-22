@@ -55,12 +55,40 @@ $$
 $$
 El momento de orden $1$ es el valor medio. Con esto podemos definir la varianza como
 $$
-\sigma^{2}=E[X^{2}]-E[X]^{2}
+\sigma^{2}=E[X^{2}]-E[X]^{2}=\alpha_{2}-\alpha_{1}^{2}
 $$
-También definimos
-$$
-\mu_{r} = \sum(x-\bar{x})^rP(x)
-$$
+\section{Momentos respecto a la media}
+Dada la variable aleatoria $X$ discreta con función de masa $P(X=x_{i})$, se llama momento respecto a la media de orden $r$, denota por $\mu_{r}$ como
+\[
+	\mu_{r}=E[(X-\mu)^{r}]= \sum (x_{i}-\mu)^{r}P(X=x_{i})
+\]
+\section{Medidas de forma de la distribución}
+\subsection{Coeficiente de asimetría Fisher}
+El coeficiente de asimetría Fiser, denotado por $\gamma_1$, se define como
+\begin{equation}
+	\begin{split}
+		\gamma_1= \frac{\mu_{3}}{\sigma^{3}}
+	\end{split}
+\end{equation}
+En función de los valores de $\gamma_1$, tenemos:
+\begin{itemize}
+	\item $\gamma_1 = 0$: distribución simétrica.
+	\item $\gamma_1> 0$: distribución asimétrica positiva.
+	\item $\gamma_1<0$: distribución asimétrica negativa. 
+\end{itemize}
+\subsection{Curtosis}
+Se define como
+\begin{equation}
+	\begin{split}
+		\gamma_2= \frac{\mu_{4}}{\sigma^{4}}-3
+	\end{split}
+\end{equation}
+Este coeficiente mide el apuntamiento, es decir, como de "plana" es la distribución.
+\begin{itemize}
+	\item $\gamma_2 = 0$: mesocúrtica.
+	\item $\gamma_2 > 0$: menos aplastada.
+	\item $\gamma_2 < 0$: más aplastada. 
+\end{itemize}
 \section{Entropía}
 Definimos la entropía asociada a una variable aleatoria $X$ como
 $$
@@ -68,9 +96,16 @@ H(X)= -\sum p(x_{i}) \log[p(x_{i})]
 $$
 \section{Distribuciones de probabilidad más comunes}
 \subsection{Distribución binomial}
+Se deben dar las siguientes condiciones:
+\begin{itemize}
+	\item El experimento consiste en una secuencia de $n$ ensayos, donde $n$ se conoce con antelación.
+	\item Cada ensayo tiene dos posibles resultados, que definimos como éxito $(S)$, o fracaso $(F)$.
+	\item Cada ensayo es independiente del anterior.
+	\item La probabilidad de éxito es constante y se define como $p$. 
+\end{itemize}
 Si queremos, dada una probabilidad $p$ de que ocurra $A$, que de $n$ elementos, ocurra $A$ $x$ veces, la probabilidad es:     
 \[
-	P(x) = C_{x,n}p^{x}(1-p)^{n-x}
+	P(x) = b(x,n,p) = C_{x,n}p^{x}(1-p)^{n-x} = \frac{n!}{x!(n-x)!}p^{x}(1-p)^{n-x}
 \]
 Y el valor medio es
 \[
@@ -99,7 +134,7 @@ Para $X\sim P(X,\lambda)$, la función distibución de $X$ se denota por
 \]
 Donde se cumple que $\mu = E(X) = \lambda$, y que $V(X) = \sigma ^{2} = \lambda$ 
 \subsection{Distribución geométrica}
-Definimos la probabilidad de que $X=k$ como
+Si tenemos dos posibles resultados, éxito $(S)$ y fracaso $(F)$, y queremos saber la probabilidad de obtener éxito en el ensayo $k$ (es decir, obteniendo fracaso $k-1$ veces), la probabilidad de obtener éxito en el ensayo $k$ es:     
 \[
 	P(X=k)=(1-p)^{k-1}p~si~k=1,2,3\dots 
 \]
@@ -108,6 +143,25 @@ y la función distribución como
 	F(X=k)=P(-\infty,X]= \sum_{j=1}^{k} (1-p)^{j-1}p~si~x=0,1,\dots ,n
 \]
 teniendo que $\mu=E(X)=\frac{1}{p}$, y que $V(X)=\sigma ^{2}= \frac{1-p}{p ^{2}}$
+\section{Distribución binomial negativa}
+Condiciones:
+\begin{itemize}
+	\item Cada ensayo tiene un fracaso o un éxito.
+	\item Los ensayos son independientes.
+	\item La probabilidad de éxito es constante.
+	\item El experimento continua hasta obtener $r$ éxitos observados. 
+\end{itemize}
+Con esto, obtenemos la probabilidad de que se produzcan $x$ fracasos antes de obtener $r$ éxitos, dada una probabilidad $p$:
+\begin{equation}
+	\begin{split}
+		nb(x,r,p) = \mqty(x+r-1\\x) p^{r}(1-p)^{x}
+	\end{split}
+\end{equation}
+Además, se tiene que
+\begin{itemize}
+	\item $\mu = r \frac{1-p}{p}$
+	\item $\sigma^{2} = \frac{\mu}{p}$ 
+\end{itemize}
 \section{Distribución hipergeométrica}
 Tenemos las siguientes suposiciones:
 \begin{itemize}
@@ -117,7 +171,7 @@ Tenemos las siguientes suposiciones:
 \end{itemize}
 Si $X$ es el número de éxitos, entedremos $M$ éxitos y $(N-M)$ fracasos:
 \[
-	P(X=x)=h(x;n,M,N)
+	P(X=x)=h(x;n,M,N) = \frac{\binom{M}{x}\binom{N-M}{n-x}}{\binom{N}{n}}
 \]
 Además, se da que
 \begin{itemize}

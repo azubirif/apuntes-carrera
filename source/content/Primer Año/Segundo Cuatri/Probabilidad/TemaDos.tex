@@ -9,12 +9,19 @@ Supongamos que tenemos $m$ elementos, y vamos a generar grupos. Cada grupo conti
 \subsection{Variaciones con repetición}
 Se llaman variaciones de repetición de $m$ elementos, tomados de $n$ en $n$, a los distintos grupos que se pueden formar de tal manera que cada grupo contiene $n$ elementos distintos o iguales, y que un grupo se diferencia de los demás o bien en algún elemento o su posición.
 El número total es
-
 $$
 VR_{m}^n=m^{n}
 $$
+\textbf{Ejemplo}: una subrutina genera $1$ byte de forma aleatoria en cada ejecución. La cantidad del espacio muestral es:\\
+\begin{itemize}
+	\item Como tenemos $m=2$ elementos $(0,1)$, y los tomamos de $8$ en $8$, la cantidad de elementos en el espacio muestral es $V_{8}^{2}=8^{2}=64$.     
+\end{itemize}
 \subsection{Variaciones sin repetición}
-Se les llama a las diferentes formas en las que se pueden ordenar $m$ elementos formados en grupos de $n$ elementos. El número total es
+Se les llama, de $m$ elementos, tomados de $n$ en $n$, a los diferentes grupos que se pueden formar tal que
+\begin{itemize}
+	\item Cada grupo contiene $n$ elementos \textbf{distintos}.
+	\item Cada grupo se diferencia de los demás en algún elemento o en su orden.
+\end{itemize}
 $$
 V_{m,n}=\frac{m!}{(m-n)!}
 $$
