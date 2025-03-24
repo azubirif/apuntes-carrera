@@ -177,4 +177,62 @@ Tenemos que $f$ tiene en $\vb{a}$ en función de $H(\vb{a})$:
 \end{itemize}
 
 \end{teorema}
+\pagebreak
+\section{Cálculo de extremos en conjuntos compactos}
+\begin{defin}
+Un conjunto $D \subset \mathbb{R}^{n}$ es acotado si existe $M \in \mathbb{R}$ tal que
+\[
+	\norm{\vb{x}} \leq M ~ \forall \vb{x} \in D
+\]
+\end{defin}
+Ahora ya podemos definir el siguiente tipo de conjunto:
+\begin{defin}
+Un conjunto $D \subset \mathbb{R}^{n}$ es compacto si es cerrado y acotado. 
+\end{defin}
+\begin{teorema}
+	Sea $f: U \subset \mathbb{R}^{n} \to \mathbb{R}$ continua en $U$, tal que $U$ es compacto, existen al menos dos puntos $\vb{a}, \vb{b}$ tales que:
+	\[
+		f(\vb{a}) \leq f(\vb{x}) \leq f(\vb{b}) ~\forall \vb{x} \in U
+	\]
+\end{teorema}
+\section{Extremos condicionados y multiplicadores de Lagrange}
+Estos problemas consisten en hallar extremos de una función
+\[
+	f:U \subset \mathbb{R}^{n} \to \mathbb{R}
+\]
+sujetos a una serie de condiciones, que se pueden escribir como ecuaciones.
+\[
+	\begin{pmatrix} 
+	g_1(\vb{x})= 0\\
+	\dots \\
+	g_{n}(\vb{x}) = 0
+	\end{pmatrix} : k < n
+\]
+Para ello, utilizaremos la generalización del siguiente teorema:
+\begin{teorema}[Teorema de multiplicadores de Lagrange]
+Sea $g:U \subset \mathbb{R}^{n} \to \mathbb{R}$, es $\mathcal{C}^{1} \in U$, y sea
+\[
+	S = \{ \vb{x} \in \mathbb{R}^{n} : g(\vb{x})=0, \grad{g}(\vb{x}) \neq \vb{0} \}
+\]
+Entonces sea también $f: U \to \mathbb{R}$, y que también es $\mathcal{C}^{1} \in U$. Entonces si $f$ tiene un extremo sobre $S$ en $\vb{p} \in S$, entonces
+\[
+	\exists \lambda \in \mathbb{R}: \grad{f}(\vb{p})= \lambda \grad{g}(\vb{p})
+\]
+\end{teorema}
+\begin{proof}[Demostración]
+	Vamos a ver que $\grad{f}(\vb{p})$ y $\grad{g}(\vb{p})$ tienen la misma dirección. Vamos a empezar analizando la dirección de $\grad{g}(\vb{p})$. Vemos que $S$ define un conjunto de nivel de $g$, por tanto $\forall \vb{x} \in S \grad{g}(\vb{p}) \perp \vb{x}$. Para ver que $\grad{f}$ tiene la misma dirección tomemos una curva cualquiera $\vb{c}(t): \mathbb{R} \to S$, con la única condición de que pase por $\vb{p}$ en $t=t_0$. Como $f\eval_{S}$ tiene un extremo en $\vb{p}$ y $f \in \mathcal{C}^{1}$ en $S$, entonces
+	\[
+		\dv{f(\vb{c})}{t}\eval_{t=t_0} = 0
+	\]
+	Por la regla de la cadena, podemos reescribir la ecuación anterior como:
+	\[
+		\dv{t}f(\vb{c}(t))\eval_{t=t_0}=\grad{f}(\vb{c}(t_0))\cdot \dv{\vb{c}}{t}
+		= \grad{f}(\vb{p}) \vb{c}'(t_0)=0
+	\]
+	Como esta curva es arbitraria, esto significa que $\grad{f}$ es perpendicular a cualquier curva en $S$ que pase por $\vb{p}$, y por tanto, proporcional a $\grad{g}(\vb{p})$, lo que significa que
+	\[
+		\grad{f}(\vb{p}) = \lambda\grad{g}(\vb{p})
+	\]
+	Donde $\lambda$ se denomina como \textbf{multiplicador de Lagrange}. 
+\end{proof}
 \end{document}
