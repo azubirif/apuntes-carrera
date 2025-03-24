@@ -41,6 +41,12 @@ que es la energía potencial por unidad de carga. También podemos deducir que
 $$
 [E]=\left[ \frac{V}{m} \right]
 $$
+Si sabemos la expresión de un campo elécitro, se da que
+\begin{equation}
+	\begin{split}
+		V(\vb{r}) - V(\infty) = -\int_{\infty}^{\vb{r}}\vb{E}\cdot \dd{\vb{r}}
+	\end{split}
+\end{equation}
 \section{Campo vectorial}
 Supongamos una carga $q_{1}$ que genera un campo eléctrico $\mathbf{E}$ sobre una carga de $1~(C)$ a una distancia $r$ del foco. Se dice que $\mathbf{E}$ es conservativo si cumple que:\\
 - $\mathbf{E}$ solo depende de la posición, y no depende explícitamente del tiempo.\\
@@ -69,4 +75,16 @@ Al tener una carga infinitesimal $\dd{q}$, le corresponde un potencial infinites
 		V(r) = \int \frac{1}{4\pi \varepsilon_{0}} \frac{\lambda \dd{l}}{|r|}
 	\end{split}
 \end{equation}
+\subsection{Superficie equipotencial}
+Una superfície equipotencial (Figura \ref{fig:superficie-equipotencial}) el conjunto de puntos donde el potencial en cada uno de ellos es el mismo. En una superfície equipotencial, se cumple que $V(\vb{r})=C$, por lo que
+\[
+	\pdv{V}{r}=0
+\]
+Las líneas de campo siempre son perpendiculares a la superfície equipotencial.
+\begin{figure}[ht]
+    \centering
+    \incfig{superficie-equipotencial}
+    \caption{Superfície Equipotencial}
+    \label{fig:superficie-equipotencial}
+\end{figure}
 \end{document}

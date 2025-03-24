@@ -5,7 +5,14 @@
 \renewcommand*\contentsname{Índice}
 
 \usepackage[margin=1.1in]{geometry}
-\usepackage{amsmath, physics, amsthm, amsfonts, mdframed, subfiles, tikz}
+\usepackage{amsmath, physics, amsthm, amsfonts, mdframed, subfiles, tikz, hyperref, fancyhdr, silence}
+
+\pagestyle{fancy}
+\fancyfoot[R]{Página \thepage}
+\fancyfoot[L]{Alejandro Zubiri}
+
+\WarningsOff[hyperref]
+\WarningsOff[fancyhdr]
 
 \newmdtheoremenv{teorema}{Teorema}
 \newmdtheoremenv{defin}{Definición}
