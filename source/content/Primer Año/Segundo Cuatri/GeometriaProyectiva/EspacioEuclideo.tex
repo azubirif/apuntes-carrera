@@ -113,4 +113,151 @@ Ahora introducimos el siguiente teorema
     \caption{Proyección Ortogonal}
     \label{fig:p-ortogonal}
 \end{figure}
+\pagebreak
+\section{Distancias}
+\subsection{Distancia entre dos puntos}
+\begin{defin}
+Dado un EAE, y dos puntos $P,Q \in A$, la distancia entre los dos puntos es la norma del vector $\vb{PQ}$:
+\[
+	d(P,Q) = \norm{\vb{PQ}}
+\]
+Propiedades:
+\begin{itemize}
+	\item $d$ es definida positiva.
+	\item $d$ es simétrica: $d(P,Q) = d(Q,P)$.
+	\item $d$ cumple la desigualdad triangular: $d(P,Q) \leq d(P,R) + d(R,Q)$. 
+\end{itemize}
+\end{defin}
+\subsection{Distancia entre variedades}
+\begin{defin}
+Dadas dos variedades $L_1=P_1+S_1$ y $L_2=P_2+S_2$, se define la distancia entre ellas como la menor distancia entre sus respectivos puntos:
+\[
+	d(L_1,L_2) = min(\{ d(X,Y) : X \in L_1, y \in L_2 \})
+\]
+Si se da que $L_1 \cap L_2 \neq \phi, d(L_1,L_2) = 0$.
+\end{defin}
+\subsection{Distancia entre punto y subespacio afín}
+\begin{defin}
+Dado un punto $P$ y un subespacio afín $L$, la distancia entre ambos es la distancia entre $P$ y la proyección ortogonal de $P$ y $L$:
+\[
+	d(P,L)= d(P,P_{L})
+\]
+\end{defin}
+\section{Isometría}
+\begin{defin}
+Dados dos EAEs $(E, V, \phi)$ y $(E', V', \phi')$, diremos que una aplicación $f$ es una isometría si:
+\begin{equation}
+	\begin{split}
+		f&: E \to E'\\
+		(P,Q) &\to f(P,Q)
+	\end{split}
+\end{equation}
+Y se debe cumplir que
+\[
+	\boxed{
+		d'(f(P),f(Q)) = d(P,Q)
+	}
+\]
+Donde $d$ es la distancia definida en $E$ y $d'$ es la distancia definida en $E'$.    
+\end{defin}
+\begin{center}
+	
+
+\end{center}
+\begin{figure}[ht]
+	\centering
+	\caption{Isometrías}
+	\label{fig:isometrias}
+
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+
+%Shape: Ellipse [id:dp16206097342092396]
+\draw   (90.2,157.19) .. controls (90.2,108.52) and (113.22,69.06) .. (141.61,69.06) .. controls (170,69.06) and (193.01,108.52) .. (193.01,157.19) .. controls (193.01,205.86) and (170,245.32) .. (141.61,245.32) .. controls (113.22,245.32) and (90.2,205.86) .. (90.2,157.19) -- cycle ;
+%Shape: Ellipse [id:dp3924000237283274]
+\draw   (405.99,152.78) .. controls (405.99,104.11) and (429,64.66) .. (457.39,64.66) .. controls (485.78,64.66) and (508.8,104.11) .. (508.8,152.78) .. controls (508.8,201.45) and (485.78,240.91) .. (457.39,240.91) .. controls (429,240.91) and (405.99,201.45) .. (405.99,152.78) -- cycle ;
+%Straight Lines [id:da7556011380605056]
+\draw    (163.34,117.53) -- (428.66,113.16) ;
+\draw [shift={(430.66,113.13)}, rotate = 179.06] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Straight Lines [id:da5411924729180644]
+\draw    (154.53,196.85) -- (419.85,196.85) ;
+\draw [shift={(421.85,196.85)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Straight Lines [id:da9279665366462678]
+\draw    (142.8,121.85) -- (137.99,172.86) ;
+\draw [shift={(137.8,174.85)}, rotate = 275.39] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Straight Lines [id:da36632798481514883]
+\draw    (459.89,126.28) -- (457.88,177.85) ;
+\draw [shift={(457.8,179.85)}, rotate = 272.24] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+
+% Text Node
+\draw (133.86,44.09) node [anchor=north west][inner sep=0.75pt]    {$E$};
+% Text Node
+\draw (451.03,40.62) node [anchor=north west][inner sep=0.75pt]    {$E'$};
+% Text Node
+\draw (138.54,107.22) node [anchor=north west][inner sep=0.75pt]    {$P$};
+% Text Node
+\draw (130.44,180.65) node [anchor=north west][inner sep=0.75pt]    {$Q$};
+% Text Node
+\draw (441.39,104.28) node [anchor=north west][inner sep=0.75pt]    {$f( P)$};
+% Text Node
+\draw (437.69,182.12) node [anchor=north west][inner sep=0.75pt]    {$f( Q)$};
+
+
+\end{tikzpicture}
+
+\end{figure}
+\textbf{Propiedades}:
+\begin{itemize}
+	\item La composición de isometrías una isometría.
+	\item Las isometrías afines consevan los ángulos entre subespacios afines:
+		\[
+			\cos (\vb{u}, \vb{v}) = \cos (\bar{f}(\vb{u}), \bar{f}(\vb{v}))
+		\]
+\end{itemize}
+\section{Ejemplos de transformaciones}
+\begin{defin}
+Una traslación por el vector $\vb{v}$ es una transformación afín que lleva un punto $P$ al punto $P + \vb{v}$.
+\[
+	P \mapsto t(P) = P+\vb{v}
+\]
+\end{defin}
+\begin{defin}[Proyección ortogonal]
+La aplicación
+\[
+	\delta:A \mapsto A
+\]
+\[
+	P \mapsto \delta(P)
+\]
+donde $\delta(P)$ es el único punto del conjunto $L \cap L'$, y es una proyección. $\delta(P)$ es la proyección sobre $L$ con dirección $W^{\perp}$, y su aplicación lineal asociada es la proyección vectorial ortogonal sobre $W$.
+\end{defin}
+\pagebreak
+\begin{defin}[Homotecia]
+Sea $(E, V, \phi)$ un EAE, y sea $\lambda \in K - \{ 0,1 \}$, y sea un punto $O \in A$. Una homotecia es una aplicación $h: E \to E$ que deja $O$ fijo, y que tiene por aplicación lineal asociada una homotecia vertical de razón $\lambda$:
+\begin{equation}
+	\begin{split}
+		h&: E \mapsto E\\
+		P &\mapsto O + \lambda \vb{OP}
+	\end{split}
+\end{equation}
+$h$ es una homotecia de razón $\lambda$ y centro $O$.\\
+Si es una homotecia, la aplicación afín asociada de la homotecia es:
+\[
+	\bar{h} = \lambda Id
+\]
+Donde $\lambda$ es la razón de la homotecia.\\
+Propiedades:
+\begin{itemize}
+	\item La homotecia es biyectiva.
+	\item La composición de homotecias es una homotecia.
+	\item El conjunto de homotecias de centro $C$, junto con la identidad, es un grupo.
+\end{itemize}
+\end{defin}
+Para calcular el centro de la homotecia, teniendo la razón $\lambda$, y la definición de $h(P) = O + \lambda \vb{OP}$, el centro es
+\[
+	O = P- \frac{1}{1-\lambda} \vb{P f(P)}
+\]
 \end{document}
