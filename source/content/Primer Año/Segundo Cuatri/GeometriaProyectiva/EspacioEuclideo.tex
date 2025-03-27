@@ -260,4 +260,104 @@ Para calcular el centro de la homotecia, teniendo la razón $\lambda$, y la defi
 \[
 	O = P- \frac{1}{1-\lambda} \vb{P f(P)}
 \]
+\pagebreak
+\section{Simetrías}
+\begin{figure}[ht]
+\centering
+
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+
+%Straight Lines [id:da3197702069809195]
+\draw    (155.65,146.42) -- (296.1,146.42) ;
+%Shape: Rectangle [id:dp5114890032601768]
+\draw  [fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ] (303.57,20.17) -- (388.06,173.4) -- (288.63,272.67) -- (204.14,119.43) -- cycle ;
+%Straight Lines [id:da7013912332146902]
+\draw    (296.1,146.42) -- (436.54,146.42) ;
+
+% Text Node
+\draw (157.65,149.82) node [anchor=north west][inner sep=0.75pt]    {$P$};
+% Text Node
+\draw (438.54,149.82) node [anchor=north west][inner sep=0.75pt]    {$P'$};
+
+
+\end{tikzpicture}
+\caption{Punto simétrico respecto a un plano}
+\end{figure}
+\begin{defin}
+Sea $(A,V, \phi)$ un espacio afín sobre un cuerpo $\mathbb{K}$. Consideramos un subespacio afín $L$ de $A$ con dirección $W$ y un subespacio $U$ de $V$ complementario de $W$ $(U \bigoplus W = V)$. Llamamos simetría respecto de $L$ con dirección $U$ a la aplicación $\sigma$:
+\begin{equation}
+	\begin{split}
+		\sigma: A &\to A\\
+		P &\to P +2 \overline{P \delta(P)}
+	\end{split}
+\end{equation}
+\end{defin}
+Tipos de simetría:
+\begin{itemize}
+	\item Central: respecto a un punto.
+	\item Axial: respecto a una recta.
+	\item Especular: respecto a un plano.
+\end{itemize}
+\section{Giros y rotaciones}
+\begin{defin}
+Sea un EAE y sea un punto $O \in A$. Una rotación  es una aplicación $g$ de $E$ en $E$ que deja fijo $O$ $(g(O) = O)$, y que tiene por aplicación lineal asociada un giro de ángulo $\theta$:
+\begin{equation}
+	\begin{split}
+		g: E &\to E\\
+		P &\to g(P) = O +t(\vb{OP})
+	\end{split}
+\end{equation}
+Donde $t(\vb{OP})$ es el vector después de rotarlo un ángulo $\theta$ respecto a $O$.  
+\end{defin}
+Propiedades:
+\begin{itemize}
+	\item Una rotación es biyectiva.
+	\item La composición de rotaciones es una rotación.
+	\item El único punto fijo de un giro es su centro.
+	\item La rotación viene determinada por la imagen de dos puntos.
+	\item Las rotaciones conservan distancias y ángulos, por lo que son isometrías.
+\end{itemize}
+\begin{defin}
+Fijado un semieje $r$ y un ángulo $\alpha$, el giro se construye como
+\[
+	X' = P + t_{\alpha}(\vb{PX})
+\]
+Es decir, giramos el punto $X$, un ángulo $\alpha$ alrededor del eje $r$.   
+\end{defin}
+Propiedades:
+\begin{itemize}
+	\item Una rotación es biyectiva.
+	\item La composición es una rotación.
+	\item Los puntos fijos son todos aquellos que pertenecen al eje.
+	\item La orientación del giro viene determinada por el sentido del vector director de la recta.
+\end{itemize}
+\section{Puntos fijos}
+\begin{defin}
+Dado un EA, y $f$ una transformación afín de $A$, y $R=\{ O, \mathcal{B} \}$ un sistema de referencia de $A$. Sea la matriz asociada de $f$:
+\[
+	M_{R}(f) = \mqty(1 & 0 \\ a & \mathcal{M})
+\]
+donde $\mathcal{M}$ es la matriz asociada a la aplicación lineal $\bar{f}$ en la base $\mathcal{B}$. Todos los puntos fijos de $f$ satisfacen la ecuación:
+\[
+	O = (\mathcal{M} - I) \vb{OP}+a
+\]
+\end{defin}
+\subsection{Clasificación}
+La ecuación del subespacio de puntos fijos de $f$ es
+\[
+	(\mathcal{M}-I)X +a = O
+\]
+Definamos $M= (\mathcal{M}-I)$ y $M'=(\mathcal{M}-I)|a$.
+\begin{itemize}
+	\item Si $rg(M) =rg(M') = 2$, entonces $f$ tiene un único punto fijo.
+	\item Si $rg(M) = rg(M') = 1$, entonces $f$ tiene una recta de puntos fijos.
+	\item Si $rg(M) = rg(M') = 0$, entonces $f$ es la aplicación identidad.  
+\end{itemize}
+\begin{defin}
+Una simetría deslizante es aquella que consiste en una traslación y una simetría axial paralela al eje de traslación.
+\end{defin}
 \end{document}
