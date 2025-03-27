@@ -235,4 +235,57 @@ Entonces sea también $f: U \to \mathbb{R}$, y que también es $\mathcal{C}^{1} 
 	\]
 	Donde $\lambda$ se denomina como \textbf{multiplicador de Lagrange}. 
 \end{proof}
+Generalicemos el teorema para el caso en el que los extremos han de cumplir más de una condición. Queremos hallar los extremos de $f(\vb{x})$ restringida a los puntos que cumplen el conjunto de ecuaciones 
+\[
+	g_{i<n}(\vb{x}) = 0
+\]
+que podemos abreviar por
+\[
+	\vb{g}(\vb{x}) = (g_1,\dots ,g_{k}) = \vb{0}
+\]
+obteniendo así el siguiente teorema:
+\begin{teorema}
+$\vb{g}$ de clase $\mathcal{C}^{1}$ en un abierto $U \subset \mathbb{R}^{n}$. Sea $S$ el conjunto  
+\[
+	S = \{ \vb{x} \in U : \vb{g}(\vb{x}) = \vb{0}, rg(D\vb{g}(\vb{x})) = k\}
+\]
+Queremos que sea igual a $k$, ya que entonces el rango será máximo, ya que $k \leq n$. Debido a esto, $\dim (S) = n-k$, porque las $k$ ecuaciones $\vb{g}(\vb{x}) = \vb{0}$ son independientes en cada punto. Como $S \subset \mathbb{R}^{n}$ en cada punto de $S$ podemos escoger una base de $\mathbb{R}^{n}$, con $n-k$ vectores tangentes, y el resto, $k$ vectores perpendiculares a $S$. Cada $\grad{g}_{i}$ es perpendicular a $S$, pues $S \subset \{ g_{i}=0 \}$, como estos gradientes son LI, entonces expanden el subespacio ortogonal a $S$ en cada uno de sus puntos.\\
+Suponiendo que $f$ tiene un extremo en $\vb{p}$, condicionado a por $\vb{g}(\vb{p}) = \vb{0}$, dada cualquier curva $\vb{x}(t)$  que pase por $\vb{p}~(\exists t_0 : \vb{x}(t_0) = \vb{p})$ contenida en $S$ se cumplirá
+\[
+	\dv{t}f(\vb{x}(t)) = 0
+\]
+de donde se deduce, como se hizo anteriormente, que
+\[
+	\grad{f}(\vb{p}) \perp S
+\]
+entonces $\grad{f}(\vb{p})$ está en el subespacio ortogonal a $S$, y una base de este subespacio era el conjunto $\{ \grad{g}_{i}(\vb{p}) \}$. Esto quiere decir que existen escalares $\{ \lambda_{i} \}$ tal que:
+\[
+	\grad{f}(\vb{p}) = \sum_{i}^{k} \lambda_{i} \grad{g}_{i}(\vb{p})
+\]
+Y aquí, el conjunto $\{ \lambda_{i} \}$ son los multiplicadores de Lagrange. 
+\end{teorema}
+Para hallar los extremos de una función $f$ condicionados por $g_{i\leq k} = 0$, resolveremos el sistema
+\[
+\]
+\begin{equation}
+	\begin{split}
+		\grad{f}(\vb{x}) &= \sum_{i}^{k} \lambda_{i} \grad{g}_{i}(\vb{x})\\
+		g_{i}(\vb{x}) &= 0\\
+		\dots& \\
+		g_{k}(\vb{x}) &= 0
+	\end{split}
+\end{equation}
+Donde tendremos $n+k$ incógnitas y también $n+k$ incógnitas. A veces para resolver este sistema se introduce la \textbf{función de Lagrange}:
+\[
+	F(x_1,\dots ,x_{n}, \lambda_1,\dots ,\lambda_{k}) =
+	f(\vb{x})-\lambda_1g_{1}(\vb{x})-\dots -\lambda_{k}g_{k}(\vb{x})
+\]
+Con esta función, el sistema planteado anteriormente se reduce a
+\[
+	\grad{F} = \vb{0}
+\]
+Donde ahora el gradiente es
+\[
+	\grad{F} = (\pdv{F}{x_1},\dots \pdv{F}{x_{n}},\pdv{F}{\lambda_1},\dots ,\pdv{F}{\lambda_{k}})
+\]
 \end{document}
