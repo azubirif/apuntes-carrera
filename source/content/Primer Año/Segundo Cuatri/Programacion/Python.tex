@@ -130,4 +130,20 @@ class Abstract(ABC):
 	def funcionAbstracta(self):
 		# codigo
 \end{lstlisting}
+\section{Archivos y operaciones}
+\begin{itemize}
+  \item CSV: permite hacer tablas, y es como una versión más ligera de Excel.
+  \item JSON: JavaScript Object Notation
+\end{itemize}
+\section{Apertura de archivos}
+Para llevar a cabo cualquier operación de archivos, utilizamos \verb|open|
+\begin{lstlisting}[language=python]
+open(file='ruta', mode= 'modo de apertura')
+\end{lstlisting}
+Los modos son:
+\begin{itemize}
+  \item \verb|w|: escritura
+\item \verb|r|: lectura
+\item \verb|a|: append, escritura y lectura.
+\end{itemize}
 \end{document}
