@@ -1,0 +1,84 @@
+%! TEX root = FisicaII.tex
+
+\documentclass{./FisicaII.tex}
+
+\begin{document}
+\chapter{Corriente Eléctrica}
+La habilidad de diferentes substancias para permitir el flujo de una carga está determinada por la movilidad de los electrones portadores de la carga o de los iones que contenga la sustancia.
+\section{Tipos de conductores}
+\begin{itemize}
+	\item Conductores de primer orden: son aquellos que conducen corriente en su interior y tienen poca resistencia.
+\end{itemize}
+\section{Corriente}
+La corriente continua consiste en que los portadores se trasladan de forma continua en el mismo sentido y dirección. Por otro lado, la corriente alterna se caracteriza por los portadores, ya que el sentido de su movimiento cambia.\\
+Al trasladar una carga de un punto $A$ a un punto $B$, la diferencia de potencial es:
+\[
+	V_{A}-V_{B} = -\int_{B}^{A} \vb{E} \cdot \dd{\vb{l}}
+\]
+Si exponemos esta carga a un campo eléctrico a lo largo de su trayectoria, la partícula (si tiene carga positiva) irá del polo positivo al negativo. En este caso la partícula sigue el \textbf{sentido convencional}. Sin embargo, el \textbf{sentido real} es aquel en el que la partícula va del negativo al positivo.
+\subsection{Generadores}
+Tenemos dos tipos:
+\begin{itemize}
+	\item Si generan una diferencial de potencial, entonces son generadores de voltaje.
+	\item Si producen corriente, son generadores de corriente.
+\end{itemize}
+Cuando tenemos un generador de corriente continua, el voltaje es constante respecto al tiempo:
+\[
+	\dv{V}{t}=0
+\]
+Sin embargo, un generador de corriente alterna generará funciones periódicas.\\
+Típicamente, en nuestras casas, tenemos un voltaje de corriente alterna de la siguiente forma.
+\[
+	V(t)=V_0 \cos(\omega t)
+\]
+Donde $\omega = 2\pi f$, siendo $f= 50 s^{-1}$. Típicamente, $V_0 = 250(V)$.
+\section{Parámetros característicos}
+Definimos la intensidad de la corriente como
+\[
+	I = \dv{Q}{t} = q\dv{N}{t}~(A)
+\]
+Esta es una magnitud escalar. Por otro lado, tenemos la densidad volumétrica de carga:
+\[
+	\rho = \dv{Q}{V} = q\dv{N}{V} = qn
+\]
+Donde $n$ es la densidad volumétrica. Finalmente, tenemos el vector densidad de corriente $\vb{J}$, que tiene como dirección y sentido la de la velocidad media de las partículas:
+\[
+	\vb{J} = \frac{I}{S}\vb{n} = \frac{\dd{q}}{\dd{t}S}\cdot \dv{V}{V} \vb{n} = \rho \vb{v}~(\frac{A}{m ^{2}})
+\]
+\section{Densidad de corriente y campo eléctrico}
+Las fuerzas en una corriente eléctrica son:
+\[
+	\sum \vb{F} = m \vb{a} = \eta \vb{v} -q \vb{E}
+\]
+Cuando la aceleración es nula, llegamos a la \textbf{velocidad crítica}, obteniendo:
+\[
+	q \vb{E} = \eta \vb{v}
+\]
+Donde definimos $\mu = \frac{q}{\eta}$. Si combinamos la definición de densidad de corriente en esta ecuación, obtenemos:
+\[
+	q \vb{E} = \eta \frac{\vb{J}}{\rho}
+\]
+De donde, despejando, tenemos que
+\[
+	\vb{J} = \rho \mu \vb{E}
+\]
+Si definimos $\gamma = \frac{1}{\rho \mu}$, obtenemos así 
+Por otro lado, definimos la resistencia como la dificultad que ofrece un conductor al paso de la corriente, y tiene unidades de Ohms $(\Omega)$. Otro parámetro que nos interesa es la conductancia, y es la facilidad que ofrece un conductor al paso de la corriente. 
+\[
+	G = \frac{1}{R} ~(\frac{1}{\Omega})
+\]
+Análogamente, la resistividad $\rho_{r}$ es la resistencia que ofrece un metal por unidad de distancia en una sección de área. Su inverso es la conductividad $\gamma$.  
+\[
+	\rho_{r} = \frac{1}{\gamma}
+\]
+Para un elemento cualquiera, su resistencia es
+\[
+	\boxed{
+		R = \rho_{r} \frac{l}{s}
+	}
+\]
+Sumando lo deducido hasta ahora obtenemos la \textbf{ley de Ohm}, definida como
+\[
+	I = \frac{\Delta V}{R}
+\]
+\end{document}
