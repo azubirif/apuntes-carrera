@@ -1,0 +1,39 @@
+%! TEX root = Calculo.tex
+
+\documentclass{./Calculo.tex}
+
+\begin{document}
+\chapter{La integral de Lebesgue}
+\section{Sobre la integral de Riemann}
+Para integrar una función $f$ en un intervalo $[a,b]$, introducíamos el concepto de partición de $[a,b]$:
+\[
+	P = \{ x_0=a,x_1,\dots ,x_{n} = b \}
+\]
+Una partición de $[a,b]$ es un conjunto finito de puntos ordenados. También necesitamos el ínfimo y el supremo de una funcińo en un conjunto:
+\[
+	\inf f = \inf \{ f(x) : x \in P \}
+\]
+\[
+	\sup f = \sup \{ f(x) : x \in P \}
+\]
+Con esto vamos a construir las \textbf{sumas de Riemann}, superiores e inferiores, denotadas por $S$ y $s$, respectivamente, y se definen como:
+dada $f$ definida en $[a,b]$  introducimos una partición $P$ de este intervalo, y construimos
+\[
+	s = \sum_{i}^{n} (x_{i} - x_{i-1}) \inf f
+\]
+es la suma inferior, y
+\[
+	S = \sum_{i}^{n} (x_{i}-x_{i-1}) \sup f
+\]
+Esto define el área de la curva bajo la función $f$ en el intervalo $[a,b]$. Si tomamos el límite $n \to \infty$, vemos que $S = s$, y entonces
+\[
+	\int_{b}^{a} f = \lim_{n \to \infty} \sum (x_{i}-x_{i-1}) \sup f
+\]
+\begin{teorema}
+	Una función $f(x)$ es integrable de Riemann en $[a,b]$ si es continua en ese intervalo.  
+\end{teorema}
+Sin embargo, la integral de Riemann no es suficientemente buena, ya que:
+\begin{itemize}
+	\item No funciona si hay muchas discontinuidades.
+\end{itemize}
+\end{document}
