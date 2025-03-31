@@ -1,29 +1,6 @@
-\documentclass{report}
-\author{Alejandro Zubiri}
-\title{Calculo}
+\input{../../../azPreamble.tex}
 
-\renewcommand*\contentsname{Índice}
-
-\usepackage[margin=1.1in]{geometry}
-\usepackage{amsmath, physics, amsthm, amsfonts, mdframed, subfiles, tikz, silence}
-\usepackage[a]{esvect}
-
-\usepackage{import}
-\usepackage{pdfpages}
-\usepackage{transparent}
-\usepackage{xcolor}
-
-\newcommand{\incfig}[2][1]{%
-    \def\svgwidth{#1\columnwidth}
-    \import{./figures/}{#2.pdf_tex}
-}
-
-\pdfsuppresswarningpagegroup=1
-
-\newmdtheoremenv{teorema}{Teorema}
-\newmdtheoremenv{defin}{Definición}
-
-\newcommand{\R}{\mathbb{R}}
+\title{Cálculo en varias variables}
 
 \begin{document}
 \maketitle
