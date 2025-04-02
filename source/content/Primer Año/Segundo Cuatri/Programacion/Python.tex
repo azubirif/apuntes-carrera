@@ -146,4 +146,42 @@ Los modos son:
 \item \verb|r|: lectura
 \item \verb|a|: append, escritura y lectura.
 \end{itemize}
+Similarmente, para cerrar archivos, utilizamos \verb|archivo.close()|. Es necesario cerrar el archivo para que el sistema operativo recupere los recursos utilizados. En Python, existen los \verb|context managers|, que nos permiten agilizar este proceso:
+\begin{lstlisting}[language=python]
+with open("archivo.txt", "r") as archivo:
+	#codigo
+\end{lstlisting}
+De esta forma, el archivo se cerrará automáticamente.
+\section{Lectura y escritura}
+Una vez abierto el archivo, podemos leerlo con:
+\begin{itemize}
+	\item \verb|file.read()|: lee todo el archivo.
+	\item Podemos iterar por cada línea así:
+		\begin{lstlisting}[language=python]
+		for linea in file:
+			print(linea.strip())
+		\end{lstlisting}
+\end{itemize}
+Para escribir en el archivo:
+\begin{lstlisting}[language=python]
+texto = "Hola mundo"
+
+with open("archivo.txt", "w") as file:
+	file.write(texto)
+\end{lstlisting}
+\section{Archivos CSV}	
+Para utilizarla, utilizarémos la librería \verb|csv|:
+\begin{lstlisting}[language=python]
+with open("archivo.csv", "r") as file:
+	lectura = csv.reader(file)
+	for linea in lectura:
+		print(linea)
+\end{lstlisting}
+Para escribir en un archivo, utilizamos la clase \verb|writer|:
+\begin{lstlisting}[language=python]
+with open("archivo.csv", "w") as file:
+	writer = csv.writer(file)
+	for fila in datos:
+		writer.writerow(fila)
+\end{lstlisting}
 \end{document}
