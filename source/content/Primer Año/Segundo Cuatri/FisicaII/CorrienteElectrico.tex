@@ -54,7 +54,7 @@ Cuando la aceleración es nula, llegamos a la \textbf{velocidad crítica}, obten
 \[
 	q \vb{E} = \eta \vb{v}
 \]
-Donde definimos $\mu = \frac{q}{\eta}$. Si combinamos la definición de densidad de corriente en esta ecuación, obtenemos:
+Donde definimos $\mu = \frac{q}{\eta}$ como la movilidad de la carga. Si combinamos la definición de densidad de corriente en esta ecuación, obtenemos:
 \[
 	q \vb{E} = \eta \frac{\vb{J}}{\rho}
 \]
@@ -62,7 +62,6 @@ De donde, despejando, tenemos que
 \[
 	\vb{J} = \rho \mu \vb{E}
 \]
-Si definimos $\gamma = \frac{1}{\rho \mu}$, obtenemos así 
 Por otro lado, definimos la resistencia como la dificultad que ofrece un conductor al paso de la corriente, y tiene unidades de Ohms $(\Omega)$. Otro parámetro que nos interesa es la conductancia, y es la facilidad que ofrece un conductor al paso de la corriente. 
 \[
 	G = \frac{1}{R} ~(\frac{1}{\Omega})
@@ -80,5 +79,124 @@ Para un elemento cualquiera, su resistencia es
 Sumando lo deducido hasta ahora obtenemos la \textbf{ley de Ohm}, definida como
 \[
 	I = \frac{\Delta V}{R}
+\]
+Cuando tengamos un circuito, definiremos $V_{\varepsilon}$ como la \textbf{fuerza electromotriz}. Si desarrollamos la potencia, tenemos que:
+\[
+	P = \dv{W}{t} = \frac{-\dd{q} \Delta V}{\dd{t}} = -I \Delta V
+\]
+Lo que nos indica que la potencia generada por una fuente es
+\[
+	P = I V_{\varepsilon}
+\]
+Cuando tenemos una resistencia, parte de la potencia que recibe se disipa en forma de calor. Como se indicó anteriormente, los electrones que se mueven en la banda de conducción chocan con los iones de la red. Este fenómeno se denomina \textbf{fuerza de arrastre}. Es decir, parte de la energía cinética que inyecta el campo eléctrico se transfiere a la red, aumentando la energía vibracional de los iones. Esta energía vibracional es el \textbf{calor}. Esto conduce a un aumento de la temperatura del metal. Este efecto se llama \textbf{efecto Joule}. La potencia disipada es entonces:
+\[
+	P = I \Delta V
+\]
+Aplicando la ley de Ohm:
+\begin{equation}
+	\begin{split}
+		P = I ^{2} R
+	\end{split}
+\end{equation}
+Para entender esta energía calorífica, despejamos el diferencial de trabajo $\dd{W}$ para obtener
+\begin{equation}
+	\begin{split}
+		W = \int_{0}^{t}R I ^{2} \dd{t}
+	\end{split}
+\end{equation}
+Esto nos lleva al concepto de \textbf{densidad de potencia disipada}.
+\begin{equation}
+	\begin{split}
+		u = \dv{P}{V}~(\frac{Wat}{m^{3}})
+	\end{split}
+\end{equation}
+Teniendo potencia y volumen constante:
+\begin{equation}
+	\begin{split}
+		u = \frac{P}{V} = \frac{RI ^{2}}{V} = \frac{R \vb{J}^{2} S ^{2}}{S l} = \vb{J} ^{2} \rho_{r}
+	\end{split}
+\end{equation}
+\section{Cortocircuitos}
+Un cortocircuito es un tramo de un conductor que se le asocia una resistencia \textbf{nula}, mientras que en un cortacircuito, la resistena es \textbf{infinita}.
+\begin{defin}[Circuito]
+Está formado por un conjunto de dispositivos electrónicos que están conectados entre sí. Si uno de los elementos es una fuente de voltaje, puede circular corriente a través de dicho circuito, por lo que la intensidad es distinta de $0$. 
+\end{defin}
+\begin{defin}[Circuito cerrado]
+	Es aquel circuito que nos proporciona un camino continuo a la corriente.
+\end{defin}
+\begin{defin}[Circuito abierto]
+	En este, la intensidad es nula al no poder pasar la corriente.
+\end{defin}
+Por otro lado, los elementos pasivos son aquellos como resistencias, bombillas, conductores, etc.
+\section{Acoplamiento de resistencias}
+\subsection{En serie}
+Es colocar dos o más resistencias una detrás de la otra. La tensión total en los extremos del acoplamiento es igual a la suma de tensiones en los extremos de cada uno de ellos:
+\[
+	V_{A} - V_{B} = \sum_{A}^{B-1} V_{i} - V_{i+1} = I \sum R_{i} = V_{\varepsilon}
+\]
+En estos circuitos,
+\begin{equation}
+	\begin{split}
+		V_{\varepsilon} = I \sum R_{i}
+	\end{split}
+\end{equation}
+Cuando tenemos circuitos complejos, tomamos la misma fuente de voltaje, y utilizamos una resistencia equivalente. El generador se va a caracterizar por una cierta tensión a generar, mientras que mantiene la intensidad del circuito original. La resistencia equivalente produce los mismos efectos térmicos que las resistencias en serie.\\
+En el circuito anterior, la potencia disipada es:
+\begin{equation}
+	\begin{split}
+		P = I ^{2} \sum R_{i}
+	\end{split}
+\end{equation}
+\subsection{En paralelo}
+Consiste en conectar dos o más resistencias de tal forma que los extremos de cada una de ellos estén conectados a dos puntos en común.
+\begin{figure}
+	\centering
+
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+
+%Straight Lines [id:da09723388160955637]
+\draw    (216,51.7) -- (216,209) ;
+%Straight Lines [id:da4511141229886434]
+\draw    (333,50.7) -- (333,208) ;
+%Curve Lines [id:da08328753309413905]
+\draw    (216,51.7) .. controls (256,21.7) and (293,80.7) .. (333,50.7) ;
+%Curve Lines [id:da5416544587909949]
+\draw    (216,116.7) .. controls (256,86.7) and (293,145.7) .. (333,115.7) ;
+%Curve Lines [id:da9699819603338287]
+\draw    (215,80.7) .. controls (255,50.7) and (292,109.7) .. (332,79.7) ;
+%Straight Lines [id:da963327163871941]
+\draw    (261,182.7) -- (261,235) ;
+%Straight Lines [id:da9107474268830901]
+\draw    (262.23,209) -- (216,209) ;
+%Straight Lines [id:da7487721152598041]
+\draw    (286.77,190.77) -- (286.77,225.23) ;
+%Straight Lines [id:da010481869947468692]
+\draw    (333,208) -- (286.77,208) ;
+
+
+
+
+\end{tikzpicture}
+
+\end{figure}
+Las intensidad total es la suma de intensidades:
+\[
+	I = \sum I_{i}
+\]
+Se debe cumplir que la diferencia de potencial debe ser la misma. Por tanto:
+\[
+	I = (V_{A} - V_{B}) \sum \frac{1}{R_{i}} = V_{\varepsilon} \sum \frac{1}{R_{i}}
+\]
+Respecto al circuito equivalente, hay que tener en cuenta que la intensidad va a ser la misma, así como el voltaje de la fuente.
+\[
+	I = \frac{V_{\epsilon}}{R_{eqv}}
+\]
+Igualando ambas expresiones, obtenemos
+\[
+	\frac{1}{R_{eqv}} = \sum \frac{1}{R_{i}}
 \]
 \end{document}
