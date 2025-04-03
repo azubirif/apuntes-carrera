@@ -36,4 +36,55 @@ Sin embargo, la integral de Riemann no es suficientemente buena, ya que:
 \begin{itemize}
 	\item No funciona si hay muchas discontinuidades.
 \end{itemize}
+\section{Una nueva integral}
+Los problemas de la integral de Riemann se deben a querer calcular áreas sobre intervalos, pero las funciones integrables Riemann han de ser lo suficientemente buenas en dichos intervalos.\\
+En vez de considerar solo la medida de intervalos, vamos a fijarnos en los valores que toma $f$, y entonces medir las preimágenes:
+\[
+	f^{1-}(\{ a \}) = \{ x : f(x) = a \}
+\]
+De manera informal, queremos
+\[
+	f: [a,b] \subset \mathbb{R} \to \mathbb{R} : f \geq 0 \forall x \in [a,b]
+\]
+para ello, introducimos una partición en la \textbf{imagen} de $f$. 
+\[
+	P : 0 = y_0 < y_1 <\cdots < y_{n} = \sup f
+\]
+Construimos entonces la suma inferior de Lebesgue:
+\[
+	\mathcal{L}(f, P, [a,b]) = \sum _{j=1}^{n} \mu (f^{-1}([y_{j-1}, y_{j}])) \cdot y_{j-1}
+\]
+Donde $\mu$ es la \textbf{medida} del intervalo. La medida que usaremos será una generalización de la medida de longitud de intervalos abiertos de la forma $(a,b) \subset \mathbb{R}$:
+\[
+	l((a,b)) = b-a
+\]
+además de que $l(\phi) = 0$. También 
+\[
+	l(-\infty, a) = l(a,\infty) = = l(-\infty, \infty) = \infty
+\]
+La generalización para medir cualquier $A \subset \mathbb{R}$ es:
+\[
+	|A| = \inf \{ \sum_{k=1}^{\infty}l(I_{k}) : I_{k} \text{ son intervalos abiertos tales que }A \subset \bigcup I_{k} \}
+\]
+Esta medida no será la que finalmente usemos, ya que existen $A, B \subset  \mathbb{R}$, disjuntos, y para los cuales:
+\[
+	|A \cup B| \neq |A| + |B|
+\]
+De hecho no existe ninguna medida que cumpla las siguientes propiedades que refleje la idea intuitiva de tamaño:
+\begin{itemize}
+	\item $\mu: \mathcal{P}(\mathbb{R}) \to [0, \infty]$ 
+	\item Si $\{ A_{k} \}$ son disjuntos entonces 
+		\[
+			\mu(\bigcup A_{k} ) = \sum |A_{k}|
+		\]
+	\item Si $A \subset \mathbb{R}, t \in \mathbb{R}$ y 
+		\[
+			t+ A = \{ t+a : a \in A \}
+		\]
+		entonces esperamos que $\mu(A) = \mu(A+t)$ 
+	\item Si $I$ es un intervalo abierto entonces
+		\[
+			\mu(I) = l(I)
+		\]
+\end{itemize}
 \end{document}
