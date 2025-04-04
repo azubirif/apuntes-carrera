@@ -54,7 +54,7 @@ que se puede simplificar como:
 \[
   \sigma_{x,y} = E[X,Y] - E[X]E[Y] 
 \]
-Se da que, si $x$ e $y$ son independientes, $\sigma_{x,y}$ = 0.   
+Se da que, si $x$ e $y$ son independientes, $E[XY] = E[X]E[Y]$, y por tanto $\sigma_{x,y}$ = 0.   
 \end{defin}
 \section{Distribuciones condicionadas}
 La probabilidad de que $X = x$ condicionada por $Y = y$, es decir  
@@ -68,5 +68,35 @@ De aquí sigue que:
   \begin{split}
    E(X|Y=y_0) = \sum x_{i} P(x_{i}|Y=y_0)
   \end{split}
+\end{equation}
+\begin{defin}
+Definimos la matriz covarianza como:
+\begin{equation}
+	\begin{split}
+		Cov(x,y) = \mqty(
+		\sigma_{x} ^{2} & \sigma_{xy}\\ \sigma_{xy} & \sigma_{y} ^{2}
+		)
+	\end{split}
+\end{equation}
+Se da que el determinante de esta matriz es:
+\[
+	\det(Cov(x,y)) = \sigma_{x}^{2}\sigma_{y}^{2} - \sigma_{xy}^{2} =
+	\sigma_{x}^{2}\sigma_{y}^{2}(1- ( \frac{\sigma_{xy}}{\sigma_{x}\sigma_{y}})^{2}) = \sigma_{x}^{2}\sigma_{y}^{2}(1-\rho ^{2})
+\]
+donde $\rho$ es el coeficiente de correlación lineal. 
+\end{defin}
+\section{Correlación lineal}
+La recta $y(x)$ que más aproxima los datos es:
+\begin{equation}
+	\begin{split}
+		y(x) = a+bx
+	\end{split}
+\end{equation}
+donde
+\begin{equation}
+	\begin{split}
+		b &= \frac{\sigma_{xy}}{\sigma_{x}}\\
+		a &= E[y] - bE[x]
+	\end{split}
 \end{equation}
 \end{document}

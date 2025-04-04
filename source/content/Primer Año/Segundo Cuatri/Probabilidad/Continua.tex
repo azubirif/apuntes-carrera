@@ -1,0 +1,27 @@
+%! TEX root = Probabilidad.tex
+
+\documentclass{./Probabilidad.tex}
+
+\begin{document}
+\chapter{Variable Continua}
+Definida por variables que toman valores reales.
+\begin{defin}
+	Definimos la función densidad $\rho: \mathbb{R} \to \mathbb{R}$ como la que da la probabilidad de que $x$ se halle en un intervalo $[a,b]$.
+	\begin{itemize}
+		\item $\rho(x)> 0$.
+		\item $\int_{-\infty}^{\infty} \rho(x)\dd{x} = 1$ 
+	\end{itemize}
+	Sin embargo, ya no podemos encontrar la probabilidad de que $x$ tome un valor específico. Solo podemos calcular:
+	\begin{equation}
+		\begin{split}
+			P(a \leq x \leq b) = \int_{a}^{b} \rho(x) \dd{x}
+		\end{split}
+	\end{equation}
+\end{defin}
+Ahora, definimos
+\begin{equation}
+	\begin{split}
+		E[x] = \int x \rho(x) \dd{x}
+	\end{split}
+\end{equation}
+\end{document}
