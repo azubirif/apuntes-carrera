@@ -87,4 +87,86 @@ De hecho no existe ninguna medida que cumpla las siguientes propiedades que refl
 			\mu(I) = l(I)
 		\]
 \end{itemize}
+Por ello, vamos a eliminar la primera propiedad, usando la medida exterior, y nos restringiremos a una familia de conjuntos conocidos como los \textbf{conjuntos de Borel}.
+\begin{defin}
+	Un conjunto de Borel es de la familia $\mathcal{B}$ mínima (en sentido de inclusión) que contiene a todos los intervalos abiertos de $\mathbb{R}$ y que cumple:
+	\begin{enumerate}
+		\item Cerrada bajo uniones numerables.
+		\item Cerrada bajo complementos.
+	\end{enumerate}
+\end{defin}
+Con esto, observamos que $\phi$ es un boreliano.
+\section{Medida de Lebesgue}
+\begin{defin}
+	Cuando restringimos la medida exterior al conjunto de los borelianos, la medida pasa a llamarse \textbf{medida de Lebesgue}, y la denotaremos por $\mu$. 
+	\[
+		\mu: \mathcal{B} \to [0,\infty]
+	\]
+	Esta medida cumple:
+	\begin{enumerate}
+		\item $\mu(I) = l(I)$ si $I$ es un intervalo.  
+		\item $\mu(t+B) = \mu(B)$ para todo $t \in \mathbb{R}$ y todo $B \in \mathcal{B}$.  
+		\item $\mu(\bigcup B_{k}) = \sum \mu (B_{k})$ con $\{ B_{k} \} \in \mathcal{B}$ y disjuntos. 
+	\end{enumerate}
+\end{defin}
+Todos los conjuntos numerables tienen medida $0$. \\
+\begin{defin}
+Una propiedad $P(x)$ con $x \in \mathbb{R}$, decimos que es casi doquier, abreviado como c.d., si  
+\[
+	\mu(\{ x \in \mathbb{R} : P(x) \text{ es falsa} \}) = 0
+\]
+\end{defin}
+\begin{defin}[Conjuntos medibles Lebesgue]
+	Son aquellos conjuntos a los que se puede extender $\mu$. Si $L$ es medible Lebesgue entonces existe un boreliano $B$ tal que   
+	\[
+		B \subset L \wedge \mu(L-B) = 0
+	\]
+\end{defin}
+\begin{defin}[Funciones medibles Borel]
+	$f : D \subset \mathbb{R} \to \mathbb{R}$ es medible Borel si $\forall B \in \mathcal{B}$
+	\[
+		f^{-1}(B) \in \mathcal{B}
+	\]
+	En particular, como $R \in \mathcal{B}$, entonces $f^{-1}(\mathbb{R}) = D \in \mathcal{B}$.\\
+	Es interesante hacer notar el paralelismo entre conjuntos abiertos y funciones continuas, y conjuntos borelianos y funciones medibles de Borel.
+\end{defin}
+A las funciones medibles Borel también se las llama borelianas. Esta definición se extiende también a funciones que toman valores infinitos, donde exigimos que
+\[
+	f^{-1}(\{ -\infty \}) \in \mathcal{B} \wedge f^{-1}(\{ \infty \}) \in \mathcal{B}
+\]
+Para identificar si una función es boreliana, en vez de usar la definición, podemos usar alguno de los siguientes criterios:
+\begin{teorema}
+	$f: D \subset  \mathbb{R} \to \mathbb{R}$ entonces 
+	\begin{itemize}
+		\item $f$ es boreliana si y solo si 
+			\[
+				f^{-1}((a,b)) \in \mathcal{B}
+			\]
+		\item $f$ es boreliana si y solo si 
+			\[
+				f^{-1}((a, \infty)) \in \mathcal{B}
+			\]
+		\item $f$ es boreliana si y solo si 
+			\[
+				\{ x \in D : f(x) < b  \} \in \mathcal{B}
+			\]
+		\item Si $\{ f_{n} \}$ son borelianos tales que 
+			\[
+				\lim_{n \to \infty} f_{n} = f(x)~c.d.
+			\]
+			entonces $f$ es boreliana. 
+		\item Si $f$ es continua en $D$ y $D$ es boreliano entonces $f$ es boreliana.    
+	\end{itemize}
+\end{teorema}
+\section{Integración de Lebesgue}
+Para integrar según Lebesgue una función boreliana no negativa $f: D \subset \mathbb{R} \to [0,\infty]$, dividimos la imagen de $f$ mediante una partición $P = \{ y_0,\dots ,y_{n} \}$ (ordenada), formando las sumas inferiores de Lebesgue:
+\[
+	\mathcal{L}(f,P) = \sum y_{k-1}\mu(f^{-1}([y_{k+1},y_{k}]))
+\]
+La integral de Lebesgue de $f$ en $D$ es entonces:
+\begin{equation}
+	\begin{split}
+		\int_{D}f \dd{\mu} = \sup \mathcal{L}(f,P)
+	\end{split}
+\end{equation}
 \end{document}
