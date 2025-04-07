@@ -199,4 +199,23 @@ Igualando ambas expresiones, obtenemos
 \[
 	\frac{1}{R_{eqv}} = \sum \frac{1}{R_{i}}
 \]
+\begin{defin}
+Un generador de voltaje es aquel que genera una diferencia de voltaje entre dos extremos. A este se le asocia una fuerza electromotriz, de forma que la corriente que genera va de positivo a negativo. Esto genera una corriente interna que va del negativo al positivo. Esto se define como la \textbf{intensidad nominal}, sin provocar efectos adversos en el generador que pueden deteriorarlo. Además, tenemos la resistencia interna $r_{i}$.
+\[
+	V_{a}- V_{b} = V_{\varepsilon} - r_{i}I
+\]
+\end{defin}
+\section{Leyes de Kirchhoff}
+Estas leyes se aplican siempre que trabajemos con circuitos cerrados.
+Tenemos los siguientes elementos:
+\begin{itemize}
+	\item Nudo: son aquellos puntos de intersección en los que se conectan dos o más conductores. Se caracterizan porque entra y sale corriente.
+	\item Rama: tramo entre dos conductores, delimitado por dos nudos.
+	\item Malla: conjunto de ramas que forman un camino cerrado en un circuito, y que no puede dividirse en otros, ni pasar dos veces por la misma rama.
+\end{itemize}
+A cada rama del circuito se le va a asignar una corriente que circula a través de ella y esta se denomina $I_{i}$. $r$ es el número de ramas o de incógnitas del sistema. 
+\begin{enumerate}
+	\item En cada nudo, la suma de las intensidades que entran es igual a la suma de las intensidades que salen. La intensidad es positiva si esta llega al nudo o entra. Por tanto, es negativa si sale. Por tanto, obtendremos $n-1$ ecuaciones. 
+	\item \textbf{Ley de mallas}: la suma de las variaciones de potencial a lo largo de cualquier bucle o malla debe ser igual a cero.
+\end{enumerate}
 \end{document}
