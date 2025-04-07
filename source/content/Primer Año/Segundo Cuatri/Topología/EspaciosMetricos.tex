@@ -13,4 +13,28 @@ Sea un conjunto $X$. Una función $d: X \times X \to \mathbb{R}$ es una métrica
 \end{itemize}
 Al par $(X,d)$ se le llama espacio métrico. 
 \end{defin}
+\begin{defin} 
+	Sea $V$ un espacio vectorial real, y sean $x, y, z \in V$. Decimos que el punto $z$ está entre $x$ e $y$ si y solo si existe $t \in \mathbb{R}$, $0 \leq t \leq 1$ tal que $z = tx +(1-t)y$.     
+
+\end{defin}
+\begin{prop}
+Sea $(V, \cdot )$ un espacio vectorial con producto interno sobre $\mathbb{R}$. La igualdad en la desigualdad triangular se cumple si y solo si $z$ está entre $x$ e $y$.     
+\end{prop}
+\begin{prop}
+	Sea $x \in \mathbb{R}^{n}$. La norma euclidiana se define como:
+	\[
+		\norm{x} = \sqrt{\sum x_{i}^{2}}
+	\]
+	La norma euclidiana es una norma.
+\end{prop}
+\begin{defin}
+Definimos el diámetro de un conjunto y la distancia de un punto a un conjunto como:
+\[
+	diam(A) = \sup \{ d(x,y): x,y \in A \}
+\]
+y la distancia de un punto a un conjunto:
+\[
+	d(x,A) = \inf \{ d(x,y) : y \in A \}
+\]
+\end{defin}
 \end{document}
