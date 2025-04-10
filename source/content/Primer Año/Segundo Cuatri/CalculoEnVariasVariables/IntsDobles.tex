@@ -1,0 +1,36 @@
+%! TEX root = Calculo.tex
+
+\documentclass{./Calculo.tex}
+
+\begin{document}
+\chapter{Integrales múltiples}
+\section{Integrales dobles}
+\begin{defin}
+    Los borelianos en \(\mathbb{R}^{2}\) son la familia mínima que contiene
+    a los conjuntos
+    \[
+        A \times B
+    \]
+    con \(A,B \in \mathcal{B}(\mathbb{R})\) y que cumple:
+    \begin{itemize}
+        \item ser cerrada bajo complementación.
+        \item ser cerrada bajo uniones numerables.
+    \end{itemize}
+    A esta familia la denotaremos por \(\mathcal{B}(\mathbb{R}^{2})\) o
+    \(\mathcal{B}(\mathbb{R}) \otimes \mathcal{B}(\mathbb{R})\).
+\end{defin}
+También necesitaremos una medida para estos borelianos, por lo que usaremos la
+\textbf{medida producto}. Dado
+\[
+    A \times B \in  \mathcal{B}(\mathbb{R}^{2})
+\]
+entonces
+\[
+    \mu_{2}(A \times B) = \mu(A)\cdot \mu(B)
+\]
+Observemos que si, por ejemplo, \(A 0 \{ a \} \subset \mathbb{R}\) entonces
+\[
+    \mu_{2}(\{ a \} \times B) = 0
+\]
+Los conjuntos unidimensionales tienen medida \(\mu_{2}\) nula.
+\end{document}
