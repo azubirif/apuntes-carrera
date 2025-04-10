@@ -209,4 +209,27 @@ tenía la integral de Riemann.
 	\item La integral de Lebesgue puede integrar funciones con infinitas
 	discontinuidades (como la función de Dirichlet).
 \end{itemize}
+\begin{teorema}
+	Sea \(\{ f_{n} \}\) una sucesión de funciones en \(\mathcal{L}_{1}(\mathbb{R})\),
+	tales que existe
+	\[
+		\lim_{n \to \infty} f_{n}(x) = f(x)~c.d.
+	\]
+	Si además existe una función \(g \in  \mathcal{L}_{1}(\mathbb{R})\) no negativa
+	tal que para todo \(n \in  \mathbb{N}\)
+	\[
+		|f_{n}(x)| \leq g(x)~c.d.
+	\]
+	entonces
+	\begin{itemize}
+		\item \(f \in \mathcal{L}_{1}(\mathbb{R})\)
+		\item \[
+			\int_{\mathbb{R}}f = \lim_{n \to \infty}\int_{\mathbb{R}}f_{n}
+		\]
+		o de otra forma
+		\[
+			\int lim = lim \int
+		\]
+	\end{itemize}
+\end{teorema}
 \end{document}
