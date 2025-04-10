@@ -28,9 +28,30 @@ entonces
 \[
     \mu_{2}(A \times B) = \mu(A)\cdot \mu(B)
 \]
-Observemos que si, por ejemplo, \(A 0 \{ a \} \subset \mathbb{R}\) entonces
+Observemos que si, por ejemplo, \(A =\{ a \} \subset \mathbb{R}\) entonces
 \[
     \mu_{2}(\{ a \} \times B) = 0
 \]
-Los conjuntos unidimensionales tienen medida \(\mu_{2}\) nula.
+Los conjuntos unidimensionales tienen medida \(\mu_{2}\) nula.\\
+Primero veamos cómo integrar funciones no negativas. Supongamos que tenemos
+una región \(D\) donde queremos integrar una función \(f\). Esta integral nos va
+a dar el volumen encerrado entre la superfície \(f\) y el plano \(XY\).
+\[
+    \iint_{D} f(x,y) \dd{\mu_{2}(x,y)}
+\]
+Pero esta integral no se suele poder calcular de forma directa. Para ello,
+en vez de integrar respecto a todas las variables a la vez, las integraremos una
+por una, lo que se conoce como una \textbf{integral iterada}:
+\[
+    \int_{b}^a \int_{c}^d f(x,y) \dd{\mu(y)} \dd{\mu(x)}
+\]
+Sin embargo, esto solo tendrá sentido si podemos conmutar y asociar los
+diferenciales como queramos. Para saber esto, utilizaremos el siguiente teorema:
+\begin{teorema}[Teorema de Fulini]
+    Sea \(f: D \subset \mathbb{R}^{2} \to \mathbb{R}\). Si \(f\) es continua e.c.t.
+    \(D\) entonces da igual el orden de las integrales iteradas.
+    \[
+        \iint_{D} f(x,y) \dd{x} \dd{y} = \iint_{D} f(x,y) \dd{y} \dd{x}
+    \]
+\end{teorema}
 \end{document}
