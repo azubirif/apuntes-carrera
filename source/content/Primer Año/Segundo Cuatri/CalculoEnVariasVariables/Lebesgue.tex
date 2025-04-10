@@ -178,4 +178,35 @@ y
 \begin{align}
 	f_{-}(x) = \max \{ -f(x), 0: x \in D \}
 \end{align}
+De esta forma nos aseguramos de estar calculando el área bajo la función. Decimos
+que \(f\) es integrable Lebesgue en \(D\), denotado por
+\[
+	f \in \mathcal{L}_{1}(D)\footnote{El 1 hace referencia a que integramos el módulo
+	elevado a 1.}
+\]
+si
+\[
+	\int_{D}|f| \dd{\mu} = \int_{D}f_{+} \dd{\mu} + \int_{D} f_{-} \dd{\mu} < \infty
+\]
+y la integral de \(f\) se define por
+\begin{equation}
+	\begin{split}
+		\int_{D} f \dd{\mu} = \int_{D} f_{+} \dd{\mu} - \int_{D} f_{-} \dd{\mu}
+	\end{split}
+\end{equation}
+Análogamente se definen las funciones \(f \in  \mathcal{L}_{P}(D)\)
+\[
+	\int_{D} |f|^{P} \dd{\mu} < \infty : p \in [1,\infty)
+\]
+Algunas propiedades de esta integral son:
+\begin{itemize}
+	\item Una función integrable de Riemann es también integrable de Lebesgue.
+	\item \(f=g~e.c.t~D \subset \mathbb{R} \implies \int_{D} f \dd{\mu} = \int_{D} g \dd{\mu}\) 
+\end{itemize}
+Comprobemos, para finalizar, que la integral de Lebesgue no tiene los problemas que
+tenía la integral de Riemann.
+\begin{itemize}
+	\item La integral de Lebesgue puede integrar funciones con infinitas
+	discontinuidades (como la función de Dirichlet).
+\end{itemize}
 \end{document}
