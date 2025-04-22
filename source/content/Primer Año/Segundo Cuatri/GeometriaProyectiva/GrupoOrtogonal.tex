@@ -58,5 +58,12 @@ Dada una matriz \(A\), con columnas linealmente independientes, encontramos matr
     \item \(Q\) es del mismo tamaño que \(A\).
     \item \(R\) es triangular superior invertible.
 \end{itemize}
-Esto nos permite resolver sistemas de ecuaciones.
+Esto nos permite resolver sistemas de ecuaciones. Para obtenerlas, supongamos que
+\(\{ e_{i} \}\) son las columnas de la matriz \(A\). Mediante Gram-Schmidt, obtenemos
+los vectores ortogonales, y después los normalizamos, obteniendo una base
+\(\mathcal{B} = \{ \vb{n}_{i} \}\). Entonces
+\[
+    Q = (n_{1},\dots,n_{k})
+\]
+**Falta la matriz \(R\).
 \end{document}
