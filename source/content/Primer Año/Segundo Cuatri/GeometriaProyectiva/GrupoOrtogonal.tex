@@ -22,9 +22,23 @@
     \[
         P^{T}P = I
     \]
+    El determinante de una matriz de este tipo es siempre \(\pm 1\).
 \end{defin}
 \begin{teorema}
     Las matrices de aplicaciones ortogonales respecto a bases ortonormales son matrices
     ortogonales.
 \end{teorema}
+\begin{defin}
+    Sea \(f\) un endomorfismo de un EVE \(V\). Se dice que \(f\) es simétrico si y solo si
+    \[
+        \vec{x} \cdot f(\vec{y}) = f(\vec{x})\cdot \vec{y}~ \forall \vec{x}, \vec{y} \in V
+    \]
+\end{defin}
+\begin{defin}
+    La matriz de la proyección ortogonal de un subespacio vectorial \(W\) es
+    \[
+        P = A(A^{T}A)^{-1}A^{T}
+    \]
+    Siendo \(A\) la matriz cuyas columnas son las coordenadas de una base de \(W\).
+\end{defin}
 \end{document}
