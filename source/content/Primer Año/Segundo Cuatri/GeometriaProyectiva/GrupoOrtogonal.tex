@@ -6,9 +6,9 @@
 \chapter{Grupo ortogonal}
 \textbf{Resumen}:
 \begin{itemize}
-    \item Ortogonalidad; \(\vec{x} \cdot \vec{y} = 0\)
-    \item Base ortogonal: \(\vec{v}_i \cdot \vec{v}_j = 0\)
-    \item Base ortonormal: \(\vec{v}_i \cdot \vec{v}_j = 0, \norm{\vec{v}} = 1\)
+    \item Ortogonalidad; \(\vb{x} \cdot \vb{y} = 0\)
+    \item Base ortogonal: \(\vb{v}_i \cdot \vb{v}_j = 0\)
+    \item Base ortonormal: \(\vb{v}_i \cdot \vb{v}_j = 0, \norm{\vb{v}} = 1\)
     \item Matriz regular: cuadrada, invertible, \(\det \neq 0\)
     \item Matriz simétrica: \(A^{T} = A\)
     \item Matriz ortogonal: \(A^{T} = A^{-1}\)
@@ -31,7 +31,7 @@
 \begin{defin}
     Sea \(f\) un endomorfismo de un EVE \(V\). Se dice que \(f\) es simétrico si y solo si
     \[
-        \vec{x} \cdot f(\vec{y}) = f(\vec{x})\cdot \vec{y}~ \forall \vec{x}, \vec{y} \in V
+        \vb{x} \cdot f(\vb{y}) = f(\vb{x})\cdot \vb{y}~ \forall \vb{x}, \vb{y} \in V
     \]
 \end{defin}
 \begin{defin}
@@ -40,5 +40,12 @@
         P = A(A^{T}A)^{-1}A^{T}
     \]
     Siendo \(A\) la matriz cuyas columnas son las coordenadas de una base de \(W\).
+\end{defin}
+\begin{defin}[Matriz de Householder]
+    Sea el vector \(\vb{u} \in \mathbb{R}^{n}\) no nulo. Se define la matriz
+    de House holder asociada a \(\vb{u}\) \(H(\vb{u})\) como
+    \[
+        H(\vb{u}) = I - 2 \frac{\vb{u}^{T} \vb{u}}{\vb{u} \vb{u}^{T}}
+    \]
 \end{defin}
 \end{document}
