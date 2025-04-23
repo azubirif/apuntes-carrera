@@ -197,4 +197,11 @@ También podemos utilizar diccionarios:
 	for row in reader:
 	print(row) #Formato diccionario
 \end{lstlisting}
+Y ahora para escribir
+\begin{lstlisting}[language=python]
+	writer = csv.DictWriter(file, fieldnames=["nombre", "edad", "ciudad"])
+	writer.writeheader()
+	for row in data:
+		write(row)
+\end{lstlisting}
 \end{document}
