@@ -191,4 +191,10 @@ with ... as file:
 	for linea in reader:
 		print(linea)
 \end{lstlisting}
+También podemos utilizar diccionarios:
+\begin{lstlisting}[language=python]
+	reader = csv.DictReader(file)
+	for row in reader:
+	print(row) #Formato diccionario
+\end{lstlisting}
 \end{document}
