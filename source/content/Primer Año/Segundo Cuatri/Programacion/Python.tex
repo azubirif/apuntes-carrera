@@ -184,4 +184,11 @@ with open("archivo.csv", "w") as file:
 	for fila in datos:
 		writer.writerow(fila)
 \end{lstlisting}
+Para leer:
+\begin{lstlisting}[language=python]
+with ... as file:
+	reader = csv.reader(file)
+	for linea in reader:
+		print(linea)
+\end{lstlisting}
 \end{document}
