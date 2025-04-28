@@ -262,5 +262,30 @@ perpendicular a la superficie.\\
 La carga por unidad de área polarizada, o \(\sigma _{i}\) es igual a la componente
 normal de \(\vb{P}\).
 \section{Ley de Gauss aplicada a dieléctricos}
-
+Supongamos dos planos conectados a una batería, y dentro, otros dos planos con carga
+inducida \(\sigma _{i}\) y \(-\sigma _{i}\). Si aplicamos la ley de Gauss al centro del
+sistema con un cilindro que corta perpendicularmente a los planos, tenemos que
+\[
+	\oint \vb{E} \cdot \dd{\vb{s}} = \frac{Q}{\varepsilon_{0}} = 
+	\frac{\int \sigma  \dd{s} - \int \sigma _{i}\dd{s}}{\varepsilon _{0}}
+\]
+En total tendríamos tres superfícies:
+\[
+	\int_{S_{1}} \vb{E} \dd{s} + \int_{S_{2}} \vb{E}\dd{s} + \int_{S_{3}}\vb{E}\dd{s}
+	= |E||S_{2}| = |E|2 \pi r d
+\]
+Juntando
+\[
+	\varepsilon _{0} \int \vb{E} \dd{s} = \int \sigma \dd{s} - \int \vb{P} \cdot \hat{n}\dd{s}
+\]
+Pasando al otro lado
+\[
+	\varepsilon _{0} \int (\vb{E}+\vb{P} )\dd{\vb{s}} = \int \sigma \dd{s}
+\]
+Y por tanto definimos el vector desplazamiento como
+\begin{equation}
+	\begin{split}
+		\vb{D} = \vb{P} + \varepsilon _{0} \vb{E}
+	\end{split}
+\end{equation}
 \end{document}
