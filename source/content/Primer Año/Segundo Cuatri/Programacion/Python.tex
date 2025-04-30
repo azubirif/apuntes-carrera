@@ -221,4 +221,13 @@ Existen dos estructuras principales:
 	\item Series: estructura de datos unidimensional que representan una columna o array.
 	\item Dataframe: estructura principal bidimensional. Es como una colección de series.
 \end{itemize}
+Para importar datos, utilizamos
+\begin{itemize}
+	\item \verb|dataframe = pd.read_csv("archivo.csv")|
+	\item \verb|pd.read_excel("file.xlsx")|
+\end{itemize}
+Y también podemos escribir
+\begin{itemize}
+	\item \verb|dataframe.to_csv("file.csv", index = False)|
+\end{itemize}
 \end{document}
