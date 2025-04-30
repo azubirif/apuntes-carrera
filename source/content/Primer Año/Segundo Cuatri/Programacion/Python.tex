@@ -225,9 +225,12 @@ Para importar datos, utilizamos
 \begin{itemize}
 	\item \verb|dataframe = pd.read_csv("archivo.csv")|
 	\item \verb|pd.read_excel("file.xlsx")|
+	\item \verb|dataframe.head(5)|: devuelve las cinco primeras filas.
+	\item \verb|df.describe()| Información estadísticas
 \end{itemize}
 Y también podemos escribir
 \begin{itemize}
 	\item \verb|dataframe.to_csv("file.csv", index = False)|
 \end{itemize}
+Para tomar las columnas o filas de un data frame, utilizamos \verb|df.iloc[3:10, 5:6]|.
 \end{document}
