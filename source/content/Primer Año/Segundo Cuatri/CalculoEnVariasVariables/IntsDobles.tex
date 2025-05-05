@@ -75,6 +75,28 @@ de \(\vb{v}\) y \(\vb{w}\).
 \end{itemize}
 Por tanto
 \[
-    A(\vb{v}, \vb{w}) = | \frac{1}{2}\det (M)|
+    A(\vb{v}, \vb{w}) = | \frac{1}{2}\det (M)| = \frac{1}{2}|v_{1}w_{2}-v_{2}w_{1}|
 \]
+\section{Cambios de variable}
+Dada
+\[
+    \iint_{D} f(x,y) \dd{x} \dd{y}
+\]
+nos puede interesar realizar un cambio de variables, es decir, hacer las sustituciones
+\[
+    x = g_{1}(u,v)
+\]
+\[
+    y = g_{2}(u,v)
+\]
+denotando \(\vb{g} = (g_{1},g_{2})\), \(\vb{x}=(x,y)\) y \(\vb{u}=(u,v)\), obteniendo
+\[
+    \vb{x} = \vb{g}(\vb{u})
+\]
+y sustituyendo
+\[
+    f(\vb{x}) = f(\vb{g}(\vb{u})) = (f\circ \vb{g})(\vb{u})
+\]
+Sin embargo, puede que las áreas finales no sean las mismas que las iniciales. Para ello,
+necesitamos ver la relación entre \( \dd{x} \dd{y}\) y \( \dd{u} \dd{v}\)
 \end{document}
