@@ -98,5 +98,28 @@ y sustituyendo
     f(\vb{x}) = f(\vb{g}(\vb{u})) = (f\circ \vb{g})(\vb{u})
 \]
 Sin embargo, puede que las áreas finales no sean las mismas que las iniciales. Para ello,
-necesitamos ver la relación entre \( \dd{x} \dd{y}\) y \( \dd{u} \dd{v}\)
+necesitamos ver la relación entre \( \dd{x} \dd{y}\) y \( \dd{u} \dd{v}\).\\
+Vamos a ver la relación entre el conjunto final y el inicial. Tenmos que
+\[
+    A(R_{f}) = A(R) + o(\Delta u \Delta v) = \det  \mqty(a_{1} & b_{1} \\ a_{2} & b_{2})
+\]
+Ahora falta calcular esos componentes:
+\[
+    \vb{a} = \vb{g}(u+\Delta u, v) - \vb{g}(u,v) = \pdv{\vb{g}}{u}\eval_{(u,v)}\Delta u
+\]
+y
+\[
+    \vb{b} = \vb{g}(u, v + \Delta v) - \vb{g}(u,v) = \pdv{\vb{g}}{v}\eval_{(u,v)}\Delta v
+\]
+Por tanto, el área es
+\[
+    A(R_{f}) = \det  \mqty(\pdv{g_{1}}{u}\Delta u & \pdv{g_{1}}{v}\Delta v \\ 
+    \pdv{g_{2}}{u}\Delta u & \pdv{g_{2}}{v}\Delta v) = J_{\vb{g}} \Delta u\Delta v
+\]
+Si todo tiende a cero (infinitesimal) entonces
+\begin{equation}
+    \begin{split}
+        \dd{x} \dd{y} = |J_{\vb{g}}| \dd{u} \dd{v}
+    \end{split}
+\end{equation}
 \end{document}
