@@ -47,11 +47,34 @@ por una, lo que se conoce como una \textbf{integral iterada}:
 \]
 Sin embargo, esto solo tendrá sentido si podemos conmutar y asociar los
 diferenciales como queramos. Para saber esto, utilizaremos el siguiente teorema:
-\begin{teorema}[Teorema de Fulini]
+\begin{teorema}[Teorema de Fubini]
     Sea \(f: D \subset \mathbb{R}^{2} \to \mathbb{R}\). Si \(f\) es continua e.c.t.
     \(D\) entonces da igual el orden de las integrales iteradas.
     \[
         \iint_{D} f(x,y) \dd{x} \dd{y} = \iint_{D} f(x,y) \dd{y} \dd{x}
     \]
 \end{teorema}
+\section{Área de un triángulo definido por vectores}
+Si tenemos dos vectores \(\vb{v}\) y \(\vb{w}\) en \(\mathbb{R}^{2}\), tenemos que
+\[
+    A(\vb{v}, \vb{w}) = \frac{1}{2} v_{1} w_{2}
+\]
+Sin embargo, esta expresión no es covariante (cambia respecto al sistema de coordenadas)
+respecto a rotaciones. Por otro lado, sabemos que el área es invariante bajo
+transformaciones, busquemos cantidades que sean invariantes bajo rotaciones y que dependan
+de \(\vb{v}\) y \(\vb{w}\).
+\begin{itemize}
+    \item El producto escalar, pero \(\vb{v} \cdot \vb{w} = v_{1}w_{1}+v_{2}w_{2}\), por
+    lo que no nos sirve.
+    \item La traza de una matriz, por lo que podemos construir
+    \[
+        M = \mqty(v_{1} & w_{1} \\ 0 & w_{2})
+    \]
+    pero \(\tr(M) = v_{1} + w_{2}\)
+    \item El determinante de \(M\) en este caso es \(\det (M) = v_{1}w_{2}\)
+\end{itemize}
+Por tanto
+\[
+    A(\vb{v}, \vb{w}) = | \frac{1}{2}\det (M)|
+\]
 \end{document}
