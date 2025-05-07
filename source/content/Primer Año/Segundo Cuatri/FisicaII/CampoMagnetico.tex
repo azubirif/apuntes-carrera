@@ -1,0 +1,84 @@
+%! TEX root = FisicaII.tex
+
+\documentclass{./FisicaII.tex}
+
+\begin{document}
+\chapter{Campo magnético}
+\begin{defin}
+    Un campo magnético es una región alrededor de una carga en movimiento que es capaz
+de atraer o repeler otra carga en movimiento.
+\end{defin}
+Las líneas de campo asociadas a una carga en movimiento siempre son concéntricas
+alrededor de la carga, y son perpendiculares al vector desplazamiento.
+\begin{figure}[h]
+    \centering
+
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+
+%Straight Lines [id:da4108085125035368] 
+\draw    (321,50.7) -- (321,224) ;
+\draw [shift={(321,48.7)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Shape: Ellipse [id:dp6825538152885552] 
+\draw  [dash pattern={on 4.5pt off 4.5pt}] (238,154.85) .. controls (238,135.44) and (274.99,119.7) .. (320.62,119.7) .. controls (366.24,119.7) and (403.23,135.44) .. (403.23,154.85) .. controls (403.23,174.26) and (366.24,190) .. (320.62,190) .. controls (274.99,190) and (238,174.26) .. (238,154.85) -- cycle ;
+%Shape: Circle [id:dp3189869673475786] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (314.92,154.85) .. controls (314.92,151.7) and (317.47,149.15) .. (320.62,149.15) .. controls (323.76,149.15) and (326.32,151.7) .. (326.32,154.85) .. controls (326.32,158) and (323.76,160.55) .. (320.62,160.55) .. controls (317.47,160.55) and (314.92,158) .. (314.92,154.85) -- cycle ;
+%Straight Lines [id:da6254245189497872] 
+\draw    (403.23,128.7) -- (403.23,154.85) ;
+\draw [shift={(403.23,126.7)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+
+% Text Node
+\draw (335,145.4) node [anchor=north west][inner sep=0.75pt]    {$q$};
+% Text Node
+\draw (330,60.4) node [anchor=north west][inner sep=0.75pt]    {$\vec{I}$};
+% Text Node
+\draw (425,138.4) node [anchor=north west][inner sep=0.75pt]    {$\vec{B}$};
+
+
+\end{tikzpicture}
+\caption{Campo magnético por carga}
+\end{figure}
+\section{Fuerza magnética sobre una carga en movimiento}
+Supongamos una carga en movimiento \(q\) con velocidad \(\vb{v}\), que se desplaza
+en el interior de un campo magnético uniforme \(\vb{B}\). La fuerza magnética sobre
+dicha carga está dada por
+\begin{equation}
+    \begin{split}
+        \vb{F} = q (\vb{v} \times \vb{B})
+    \end{split}
+\end{equation}
+y
+\begin{equation}
+    \begin{split}
+        |\vb{F}| = |q| |\vb{v}| |\vb{B}| \sin \theta 
+    \end{split}
+\end{equation}
+La dirección de la fuerza es la normal del plano generado por \(\vb{v}\) y \(\vb{B}\).
+El sentido de la fuerza se puede determinar haciendo como que recorremos el ángulo
+que va desde \(\vb{v}\) hasta \(\vb{B}\) (el más pequeño). Suponiendo \(q > 0\):
+\begin{itemize}
+    \item Si es antihorario, es saliente.
+    \item Si es horario, es entrante.
+\end{itemize}
+\section{Ley de Laplace}
+Define la fuerza magnética sobre un elemento de carga que se desplaza por un hilo
+conductor. Supongamos un hilo conductor de sección \(S\) y de longitud \(L\),
+en el que circula una corriente \(I\). Este está situado en el interior de una región
+en la que existe un campo magnético uniforme. En un intervalo de tiempo limitado por
+\(t_{0}\) y \(t+ \dd{t}\), un elemento de carga \( \dd{q}\) se desplaza una longitud
+\( \dd{l}\). Las cargas se mueven con velocidad uniforme \(\vb{v}\). La fuerza
+magnética que actua sobre \( \dd{q}\) es igual a
+\begin{equation}
+    \begin{split}
+        \dd{\vb{F}} = \dd{q}(\vb{v} \times \vb{B})
+    \end{split}
+\end{equation}
+teniendo
+\[
+    \dd{\vb{F}} = \dv{q}{t} \dd{t} (\vb{v} \times \vb{B}) =
+    I ( \vb{v} \dd{t} \times \vb{B}) = I ( \dd{\vb{l}} \times \vb{B})
+\]
+\end{document}
