@@ -68,8 +68,8 @@ Define la fuerza magnética sobre un elemento de carga que se desplaza por un hi
 conductor. Supongamos un hilo conductor de sección \(S\) y de longitud \(L\),
 en el que circula una corriente \(I\). Este está situado en el interior de una región
 en la que existe un campo magnético uniforme. En un intervalo de tiempo limitado por
-\(t_{0}\) y \(t+ \dd{t}\), un elemento de carga \( \dd{q}\) se desplaza una longitud
-\( \dd{l}\). Las cargas se mueven con velocidad uniforme \(\vb{v}\). La fuerza
+\(t_{0}\) y \(t+ \dd{t}\), un elemento de carga \( \dd{q}\) se desplaza una distancia
+\( \dd{\vb{l}}\). Las cargas se mueven con velocidad uniforme \(\vb{v}\). La fuerza
 magnética que actua sobre \( \dd{q}\) es igual a
 \begin{equation}
     \begin{split}
@@ -81,4 +81,22 @@ teniendo
     \dd{\vb{F}} = \dv{q}{t} \dd{t} (\vb{v} \times \vb{B}) =
     I ( \vb{v} \dd{t} \times \vb{B}) = I ( \dd{\vb{l}} \times \vb{B})
 \]
+y por tanto
+\[
+    \int \dd{\vb{F}} = \int_{0}^L I ( \dd{\vb{l}} \times \vb{B})
+\]
+Y si "todo" es constante, tenemos
+\begin{equation}
+    \begin{split}
+        \vb{F} = I(\vb{L} \times \vb{B})
+    \end{split}
+\end{equation}
+Si una carga \(q\) está sometida a una fuerza eléctrica \(\vb{E}\) y magnética \(\vb{B}\),
+entonces
+\begin{equation}
+    \begin{split}
+        \vb{F} = q(\vb{E} + \vb{v} \times \vb{B})
+    \end{split}
+\end{equation}
+que es la \textbf{fuerza de Lorentz}.
 \end{document}
