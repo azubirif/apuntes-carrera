@@ -123,4 +123,87 @@ Si todo tiende a cero (infinitesimal) entonces
     \end{split}
 \end{equation}
 Esto es válido si \(J_{\vb{g}} \neq 0\) en casi todo el conjunto.
+\section{Integrales de línea}
+\subsection{Campos escalares}
+Supongamos una función escalar $f$ definida sobre un conjunto $D$. Queremos
+integrar esta función a lo largo de una curva $\vv{c}$. Denotaremos por
+$ \dd{s}$ a la medida de longitud sobre dicha curva. Entonces
+\[
+	\int_{\vv{x}_{a}}^{\vv{x}_{b}}f \dd{s}
+\]
+será el área de la función a lo largo de dicha curva. En la práctica, para hacer
+ la integral parametrizaremos la curva: $\vv{x}(t)$, y supondremos que $c$ no
+ se corta a sí misma. Necesitamos una expresión que componga la función
+ con la curva:
+ \[
+ 	\int f(c(t)) \dots \dd{t}
+ \]
+ Para poder hacer este paso necesitamos hallar la relación entre $\dd{s}$ y
+ las coordenadas. Para ello, volvamos al caso inicial donde $f$ es un campo
+ escalar. Utilizando Pitágoras, podemos relacionar que
+ \[
+ 	\dd{s} ^{2} = \dd{x} ^{2} + \dd{y} ^{2}
+ \]
+ En general
+ \[
+ 	\dd{s} = \sqrt{\sum \dd{x_{i}}^{2}}
+ \]
+ Entonces al hacer los cambios de variables
+ \[
+ 	\dd{x_{i}} = x_{i}(t) \dd{t}
+ \]
+ Obtenemos así
+ \[
+ 	\dd{s} ^{2} = \sum x_{i}'(t)^{2} (\dd{t}) ^{2}
+ \]
+ O
+ \[
+ 	\dd{s} = \dd{t} \sqrt{\sum x_{i}'(t)^{2}} = \sqrt{x'(t) ^{2}} \dd{t}
+	= \norm{x'(t)} \dd{t}
+ \]
+ Habiendo obtenido esta relación, podemos sustituir para obtener
+ \begin{equation}
+ 	\begin{split}
+		\boxed{
+		\int_{C} f \dd{s} = \int_{t_{a}}^{t_{b}} f(x(t))\norm{x'(t)} \dd{t}
+	}
+ 	\end{split}
+ \end{equation}
+ \subsection{Campos vectoriales}
+
+ Dada una función $\vv{f}(\vv{x})$, y dada una curva $C$, haremos una
+ partición de $C$ sobre la cual podemos inducir un orden. Buscaremos el
+ vector que va de cada punto al siguiente en la partición.
+ \[
+ 	\Delta \vv{x}_{i} = x_{i} - x_{i-1}
+ \]
+ Por tanto, desarrollaremos la suma
+ \[
+ 	\sum \vv{f}(x_{i-1}) \cdot  \Delta \vv{x}_{i}, \Delta \vv{x}_{i} \to 0
+ \]
+ Obteniendo así
+ \begin{equation}
+ 	\begin{split}
+ 		\int_{C} \vv{f}(\vv{x}) \cdot \dd{\vv{x}}
+ 	\end{split}
+ \end{equation}
+ Donde $\dd{\vv{x}} = \sum \dd{x}_{i} \vv{e}_{i}$. Ahora podemos parametrizar
+ $C$ para obtener
+ \begin{equation}
+ 	\begin{split}
+		\int_{t_{b}}^{t_{a}} \vv{f}(\vv{x}(t))\cdot \vv{x}'(t) \dd{t}
+ 	\end{split}
+ \end{equation}
+ \begin{teorema}
+ 	Si un campo vectorial $\vv{f}$ deriva de un campo escalar
+	\[
+		\vv{f} = \grad{\phi}
+	\]
+	Entonces
+	\[
+		\pdv{f_{i}}{x_{j}} = \pdv{f_{j}}{x_{i}}
+	\]
+ \end{teorema}
+ Cuando $\vv{f} = \grad{\phi}$ a $\vv{f}$ se le llama un campo conservativo.\\
+ Si $\vv{f} \in \mathcal{C}^{1}$ entonces se cumple la doble implicación. 
 \end{document}
