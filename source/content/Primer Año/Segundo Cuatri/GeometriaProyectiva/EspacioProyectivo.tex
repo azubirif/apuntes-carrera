@@ -39,4 +39,53 @@ Los puntos que no son de la forma \((1:X)\) son puntos en el infinito o impropio
     a un subconjunto de la forma \(\mathbb{P}(W)\) donde \(W\) es un subespacio vectorial
     de \(V\), de dimensión \(k+1\).
 \end{defin}
+\begin{defin}
+    Un sistema de referencia proyectivo se define por \(k+2\) puntos y una base normalizada. Tenemos
+    el punto unidad definido como
+    \[
+        P_{k+1} = \sum _{1}^{n} P_{i}
+    \]
+\end{defin}
+\begin{defin}
+    El espacio afín completado se define como
+    \[
+        \mathbb{P}^n(\mathbb{R}^{n+1}) = A_{n} \cup S_{\infty}
+    \]
+\end{defin}
+Una recta en el espacio proyectivo es una recta afín más un punto en el infinito.
+\begin{defin}
+    Una proyectividad de \(\mathbb{P}^{2} (\mathbb{R})\) es una aplicación \(f: \mathbb{P}^{2}(\mathbb{R})
+    \to  \mathbb{P}^{2}(\mathbb{R})\) dada por
+    \[
+        f([P]) = [\bar{f}(P)]
+    \]
+    \(\forall P \in \mathbb{R}^{3}\), con \(\bar{f}: \mathbb{R}^{3} \to  \mathbb{R}^{3}\) un
+    isomorfismo vectorial, \(\bar{f}(P) = AP\).
+\end{defin}
+\section{Ecuaciones de las rectas del plano proyectivo}
+Dados dos puntos independientes $P,Q \in \mathbb{P} ^{2}$, se tiene que
+$P = <\vv{v}>$ y que $Q = <\vv{w}>$, siendo estos vectores de $\mathbb{R}^{3}$
+linealmente independientes. La recta $r$ que contiene a $P,Q$ es
+\[
+	r = \{ <\lambda \vv{v} + \mu \vv{w}>: (\lambda,\mu) \neq (0,0) \}
+\]
+\subsection{Ecuaciones paramétricas}
+Sean los puntos $P,Q$ con coordenadas homogéneas. Se tiene que un punto $X$
+pertenece a la recta $r$ si y solo si sus coordenadas cumplen las ecuaciones
+\[
+	\alpha x_{i} = \lambda p_{i} + \mu q_{i} : (\alpha, \lambda, \mu)
+	\neq (0,0,0)
+\]
+\subsection{Ecuaciones implícitas}
+Simplemente calculamos
+\[
+	\det (X, P, Q) = 0
+\]
+Teniendo una recta propia
+\[
+	a_{0}x_{0} + a_{1}x_{1} + a_{2}x_{2} = 0
+\]
+El punto impropio tiene coordenadas $(-a_{2}, a_{1})$. La intersección de dos rectas es el producto vectorial de sus componentes. 
+\section{Planos}
+Sean tres puntos $P,Q,R$ de $\mathbb{P} ^{3}$ linealmente independientes. El plano que los contiene es el formado por el subespacio vectorial de los vectores asociados a cada punto.  
 \end{document}
