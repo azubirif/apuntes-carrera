@@ -118,4 +118,67 @@ $\vb{R} = \vb{r} - \vb{r}'$ está dado por
 		\dd{\vb{B}} = \frac{\mu_{0}}{4 \pi} I\frac{(\dd{\vb{l}}\times \vb{R})}{R^{3}}
 	\end{split}
 \end{equation}
+\section{Flujo magnético}
+El flujo que atraviesa una superficie es
+\begin{equation}
+	\begin{split}
+		\phi = \oint \vb{B} \cdot \dd{\vb{s}}
+	\end{split}
+\end{equation}
+\subsection{Ley de Gauss para el campo magnético}
+El flujo magnético a través de una superfície cerrada es siempre nulo
+\begin{equation}
+	\begin{split}
+		\oint_{S} \vb{B} \cdot \dd{\vb{s}} = 0
+	\end{split}
+\end{equation}
+\section{Relación entre un imán y un circuito eléctrico}
+Todo circuito es un dipolo magnético. Similar al momento dipolar, tenemos el momento
+dipolar magnético. Este es directamente proporcional a la superfície del contorno,
+y se define como:
+\begin{equation}
+	\begin{split}
+		| \vb{m}| = I S
+	\end{split}
+\end{equation}
+El origen del vector es el centro de la espira, y la dirección es la recta perpendicular
+a la superfície de la espira. El sentido es saliente si la intensidad va en sentido
+antihorario, o entrante si va en sentido horario.\\
+Si introducimos una espira paralelo a un campo magnético constante, el sur de la espira va
+a ir al norte del campo magnético y viceversa. El momento dipolar magnético siempre se
+acaba alineando con el campo magnético. Esto produce el siguiente torque:
+\begin{equation}
+	\begin{split}
+		\vb{\tau} = \vb{m} \times \vb{B}
+	\end{split}
+\end{equation}
+Cuando un electrón se encuentra en un núcleo, el momento es
+\[
+	|\vb{m}| = \frac{e \pi r ^{2}}{T}
+\]
+Donde $T$ es el período de la órbita. 
+\section{Vector imanación o magnetización}
+Se define como
+\begin{equation}
+	\begin{split}
+		\vb{M} = \frac{1}{V} \sum \vb{m}_{i} (\frac{A}{m})
+	\end{split}
+\end{equation}
+\section{Inducción magnética}
+\subsection{Ley de Faraday}
+En un circuito se induce f.e.m. $\varepsilon$ proporcional a la variación del flujo a
+través de la superficie limitada por el propio circuito.
+\subsection{Ley de Lenz}
+La corriente inducida crea un campo que tiende a conservar el flujo, es decir, el sentido
+de la corriente de f.e.m. tiende a oponerse a la variación de flujo:
+\begin{equation}
+	\begin{split}
+		\varepsilon = -\dv{\phi}{t}
+	\end{split}
+\end{equation}
+\begin{equation}
+	\begin{split}
+		\oint_{C} \vb{E} \cdot \dd{\vb{l}} = -\dv{t}\int_{S} \vb{B}\cdot \dd{\vb{s}}
+	\end{split}
+\end{equation}
 \end{document}
