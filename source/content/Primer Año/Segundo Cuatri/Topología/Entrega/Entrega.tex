@@ -14,7 +14,16 @@
 Demuestre que los únicos conjuntos conexos de \(\mathbb{R}\) son los intervalos, \(\mathbb{R}\) y el
 conjunto vacío.\\
 \subsection{Solución}
-Solución aquí.
+Empezamos definiendo ambos elementos. Un subconjunto $I$ es un intervalo
+si para todo $x,y\in I, x < z < y, z \in I$. Por otro lado, un conjunto $E$
+no es conexo si existen dos conjuntos abiertos $G,H$ tal que $G \neq \phi$,
+$H \neq \phi$, $E = (E \cap G) \cup (E \cap H)$ y $G \cap H $.\\
+Empezaremos demostrando que un conjunto es un intervalo sí y solo sí 
+es conexo.
+\textbf{Si es un intervalo, es conexo}: supongamos que existen dos conjuntos
+$G,H$ que forman una desconexión en un intervalo $I$. Sea $a \in G \cap I$ y $b \in H \cap I$,
+y asumamos que $a < b$. Puesto que $I$ es un intervalo, se tiene que $[a,b] \subseteq I$.
+Ahora definamos
 \section{Ejercicio 2 (3 puntos)}
 Sea \(X\) un espacio topológico y sea \(Y = \{ 0,1 \}\) considerado como espacio
 topológico con la topología discreta. Demuestre que si \(X\) es conexo, entonces
@@ -23,7 +32,7 @@ topológico con la topología discreta. Demuestre que si \(X\) es conexo, entonc
 Si $X \cong Y$, existe una función continua y biyectiva $f: X \to Y$. Como
 $Y$ tiene dos elementos, entonces hay dos casos:
 \begin{itemize}
-	\item Caso 1: $X$ más o menos de dos elementos: entonces la función
+	\item Caso 1: $X$ tiene más o menos de dos elementos: entonces la función
 		ya no es biyectiva.
 	\item Caso 2: $X$ tiene dos elementos: entonces $X$ no es conexo.  
 \end{itemize}
