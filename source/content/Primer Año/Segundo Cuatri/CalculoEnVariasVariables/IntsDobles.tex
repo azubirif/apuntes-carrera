@@ -2,6 +2,8 @@
 
 \documentclass{./Calculo.tex}
 
+\usepackage{esint}
+
 \begin{document}
 \chapter{Integrales múltiples}
 \section{Integrales dobles}
@@ -205,5 +207,87 @@ será el área de la función a lo largo de dicha curva. En la práctica, para h
 	\]
  \end{teorema}
  Cuando $\vv{f} = \grad{\phi}$ a $\vv{f}$ se le llama un campo conservativo.\\
- Si $\vv{f} \in \mathcal{C}^{1}$ entonces se cumple la doble implicación. 
-\end{document}
+ Si $\vv{f} \in \mathcal{C}^{1}$ entonces se cumple la doble implicación. Si $D$ es simplemente
+ conexa, entonces la matriz jacobiana es simétrica.
+ \begin{defin}
+ 	Una región $D$ es conexa si $\forall \vb{a}, \vb{b} \in D$, existe una curva $C \subset D$
+	que contecta ambos elementos.
+ \end{defin}
+ \begin{defin}
+ 	Una región $D$ es simplemente conexa si $D$ es conexa y además cualquier curva cerrada que 
+	no se corta a sí misma, contenida en $D$, se puede contraer a un punto de $D$.  
+ \end{defin}
+ \textbf{Ejemplo}:
+ \begin{itemize}
+ 	\item $\mathbb{R} ^{2}$ es simplemente conexo. 
+ \end{itemize}
+ \section{Teorema de Green}
+ Supongamos un conjunto $D$, y tomemos su frontera $\partial D$, de forma que orientamos esta 
+ frontera en sentido antihorario. Calculemos
+ \[
+	 I=\iint_{D} \pdv{P}{y} \dd[2]{x}
+ \]
+ Donde $P: M \subset \mathbb{R} ^{2} \to \mathbb{R}$, y $D \subset M$, y $P$ es
+ $\mathcal{C}^{1}(M)$    
+ \[
+	 I = \int_{a}^{b}\int_{y_{1}(x)}^{y_{2}(x)} \pdv{P}{y} \dd{y} \dd{x}=
+	 \int_{a}^{b}[P(x,y)]\eval_{y_{1}(x)}^{y_{2}(x)}\dd{x}= \int_{a}^{b}P(x,y_{2}(x))-
+	 P(x,y_{1}(x))\dd{x}
+ \]
+ Podemos interpretar estas integrales como integrales de línea, sobre dos curvas $C_{1}$ y
+ $C_{2}$.
+ \[
+ 	I = \int_{C_{2}}P(x,y)\dd{x} - \int_{C_{1}} P(x,y)\dd{x} =-\int_{-C_{2}}P(x,y)\dd{x}
+	-\int_{C_{1}}P(x,y) \dd{x}
+ \]
+ Como son seguidas estas curvas:
+ \[
+ 	= -\int_{-C_{2}+C_{1}}P \dd{x} = -\oint_{\partial D} P \dd{x}
+ \]
+ Concluyendo
+ \[
+	 \iint \pdv{P}{y} \dd{x} \dd{y} = -\oint_{\partial D} P \dd{x}
+ \]
+ Podemos probar con
+ \[
+	 \iint_{D} \pdv{Q}{x} \dd{x} \dd{y}
+ \]
+ De nuevo, tomemos dos curvas $C_{1}$ y $C_{2}$.  
+ \[
+	 = \int_{c}^{d} \int_{x_{1}(y)}^{x_{2}(y)} \pdv{Q}{x}\dd{x} \dd{y} =
+	 \int_{c}^{d}Q\eval_{x_{1}(y)}^{x_{2}(y)} \dd{y}=
+	 \int_{C_{2}}Q \dd{y} - \int_{C_{1}} Q \dd{y}
+ \]
+ Combinamos ambas integrales otra vez:
+ \[
+ 	= \int_{C_{2}}Q \dd{y} + \int_{-C_{1}}Q \dd{y} = \int_{C_{2}-C_{1}}Q \dd{y} =
+	\oint_{\partial D} Q \dd{y}
+ \]
+ Y por tanto
+ \[
+	 \iint_{D} \pdv{Q}{x} \dd{x} \dd{y} = \oint_{\partial D} Q \dd{y}
+ \]
+ Si combinamos los dos resultados anteriores, obtenemos
+ \[
+	 \iint_{D} [\pdv{Q}{x}-\pdv{P}{y}]\dd{x}\dd{y} = \oint_{\partial D}Q \dd{y} + P \dd{x}
+ \]
+ Lo que conforma el \textbf{teorema de Green}. Esto se puede generalizar al
+ \textbf{teorema de Stokes}:
+ \begin{equation}
+ 	\begin{split}
+		\iint_{S}(\nabla \times \vb{F})\cdot \dd{\vb{S}} = \oint_{\partial S} \vb{F} \cdot \dd{\vb{l}}
+ 	\end{split}
+ \end{equation}
+ También tenemos
+ \begin{equation}
+ 	\begin{split}
+		\iint_{D} \nabla \cdot \vb{F} \dd[2]{x} = \oint_{\partial D} \vb{F} \cdot \dd{\vb{n}}
+ 	\end{split}
+ \end{equation}
+ Junto con el \textbf{teorema de Gauss}:
+ \begin{equation}
+ 	\begin{split}
+		\iiint_{D} \nabla \cdot \vb{F} \dd[3]{x} = \oint \oint_{\partial D}\vb{F}\cdot \dd{\vb{s}}
+ 	\end{split}
+ \end{equation}
+ \end{document}
