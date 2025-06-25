@@ -1,1 +1,0 @@
-[Apuntes](Probabilidad.pdf)
