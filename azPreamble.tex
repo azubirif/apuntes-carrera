@@ -1,0 +1,43 @@
+\documentclass{amsbook}
+
+\author{Alejandro Zubiri}
+
+\renewcommand*\contentsname{Índice}
+
+\usepackage[margin=1.1in]{geometry}
+\usepackage{amsmath, physics, amsthm, amsfonts, mdframed, subfiles, tikz, silence, hyperref}
+\usepackage[a]{esvect}
+
+\usepackage{import}
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{xcolor}
+
+\newcommand{\R}{\mathbb{R}}
+
+\pdfsuppresswarningpagegroup=1
+
+\newtheorem{teorema}{Teorema}
+\newtheorem{defin}{Definición}
+\newtheorem{prop}{Proposición}
+
+\newtheoremstyle{mytheorem}% ⟨name⟩
+{3pt}% ⟨Space above⟩
+{3pt}% ⟨Space below⟩
+{\itshape}% ⟨Body font⟩
+{}% ⟨Indent amount⟩
+{\bf}% ⟨Theorem head font⟩
+{.}% ⟨Punctuation after theorem head⟩
+{.5em}% ⟨Space after theorem head⟩
+{}% ⟨Theorem head spec (can be left empty, meaning ‘normal’)⟩
+
+\theoremstyle{mytheorem}
+
+\newcommand{\incfig}[2][1]{%
+    \def\svgwidth{#1\columnwidth}
+    \import{./figures/}{#2.pdf_tex}
+}
+
+\usepackage{draftwatermark}
+\SetWatermarkText{AZF}
+\SetWatermarkScale{10}

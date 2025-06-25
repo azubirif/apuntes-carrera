@@ -1,0 +1,69 @@
+%! TEX root = Geometria.tex
+
+\documentclass{./Geometria.tex}
+
+\begin{document}
+\chapter{Grupo ortogonal}
+\textbf{Resumen}:
+\begin{itemize}
+    \item Ortogonalidad; \(\vb{x} \cdot \vb{y} = 0\)
+    \item Base ortogonal: \(\vb{v}_i \cdot \vb{v}_j = 0\)
+    \item Base ortonormal: \(\vb{v}_i \cdot \vb{v}_j = 0, \norm{\vb{v}} = 1\)
+    \item Matriz regular: cuadrada, invertible, \(\det \neq 0\)
+    \item Matriz simétrica: \(A^{T} = A\)
+    \item Matriz ortogonal: \(A^{T} = A^{-1}\)
+    \item \(A,B\) congruentes, \(A = P^{T}BP\)
+    \item \(A,B\) semejantes, \(A = P^{-1}BP\)
+    \item Sis. referencia rectangular, con base ortonormal.
+    \item Para todo espacio euclídeo, existe una base ortogonal (Método de Gram-Schmidt) y una base ortonormal.
+\end{itemize}
+\begin{defin}
+    Decimos que una matriz es ortogonal si y solo si
+    \[
+        P^{T}P = I
+    \]
+    El determinante de una matriz de este tipo es siempre \(\pm 1\).
+\end{defin}
+\begin{teorema}
+    Las matrices de aplicaciones ortogonales respecto a bases ortonormales son matrices
+    ortogonales.
+\end{teorema}
+\begin{defin}
+    Sea \(f\) un endomorfismo de un EVE \(V\). Se dice que \(f\) es simétrico si y solo si
+    \[
+        \vb{x} \cdot f(\vb{y}) = f(\vb{x})\cdot \vb{y}~ \forall \vb{x}, \vb{y} \in V
+    \]
+\end{defin}
+\begin{defin}
+    La matriz de la proyección ortogonal de un subespacio vectorial \(W\) es
+    \[
+        P = A(A^{T}A)^{-1}A^{T}
+    \]
+    Siendo \(A\) la matriz cuyas columnas son las coordenadas de una base de \(W\).
+\end{defin}
+\begin{defin}[Matriz de Householder]
+    Sea el vector \(\vb{u} \in \mathbb{R}^{n}\) no nulo. Se define la matriz
+    de House holder asociada a \(\vb{u}\) \(H(\vb{u})\) como
+    \[
+        H(\vb{u}) = I - 2 \frac{\vb{u}^{T} \vb{u}}{\vb{u} \vb{u}^{T}}
+    \]
+    Esta matriz transforma un vector de forma que lo refleja sobre un subespacio.
+\end{defin}
+\section{Factorización QR}
+Dada una matriz \(A\), con columnas linealmente independientes, encontramos matrices
+\(Q,R\) tales que
+\begin{itemize}
+    \item \(A=QR\)
+    \item Las columnas de \(Q\) son ortonormales.
+    \item \(Q\) es del mismo tamaño que \(A\).
+    \item \(R\) es triangular superior invertible.
+\end{itemize}
+Esto nos permite resolver sistemas de ecuaciones. Para obtenerlas, supongamos que
+\(\{ e_{i} \}\) son las columnas de la matriz \(A\). Mediante Gram-Schmidt, obtenemos
+los vectores ortogonales, y después los normalizamos, obteniendo una base
+\(\mathcal{B} = \{ \vb{n}_{i} \}\). Entonces
+\[
+    Q = (n_{1},\dots,n_{k})
+\]
+**Falta la matriz \(R\).
+\end{document}

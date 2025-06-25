@@ -1,0 +1,293 @@
+%! TEX root = Calculo.tex
+
+\documentclass{./Calculo.tex}
+
+\usepackage{esint}
+
+\begin{document}
+\chapter{Integrales múltiples}
+\section{Integrales dobles}
+\begin{defin}
+    Los borelianos en \(\mathbb{R}^{2}\) son la familia mínima que contiene
+    a los conjuntos
+    \[
+        A \times B
+    \]
+    con \(A,B \in \mathcal{B}(\mathbb{R})\) y que cumple:
+    \begin{itemize}
+        \item ser cerrada bajo complementación.
+        \item ser cerrada bajo uniones numerables.
+    \end{itemize}
+    A esta familia la denotaremos por \(\mathcal{B}(\mathbb{R}^{2})\) o
+    \(\mathcal{B}(\mathbb{R}) \otimes \mathcal{B}(\mathbb{R})\).
+\end{defin}
+También necesitaremos una medida para estos borelianos, por lo que usaremos la
+\textbf{medida producto}. Dado
+\[
+    A \times B \in  \mathcal{B}(\mathbb{R}^{2})
+\]
+entonces
+\[
+    \mu_{2}(A \times B) = \mu(A)\cdot \mu(B)
+\]
+Observemos que si, por ejemplo, \(A =\{ a \} \subset \mathbb{R}\) entonces
+\[
+    \mu_{2}(\{ a \} \times B) = 0
+\]
+Los conjuntos unidimensionales tienen medida \(\mu_{2}\) nula.\\
+Primero veamos cómo integrar funciones no negativas. Supongamos que tenemos
+una región \(D\) donde queremos integrar una función \(f\). Esta integral nos va
+a dar el volumen encerrado entre la superfície \(f\) y el plano \(XY\).
+\[
+    \iint_{D} f(x,y) \dd{\mu_{2}(x,y)}
+\]
+Pero esta integral no se suele poder calcular de forma directa. Para ello,
+en vez de integrar respecto a todas las variables a la vez, las integraremos una
+por una, lo que se conoce como una \textbf{integral iterada}:
+\[
+    \int_{b}^a \int_{c}^d f(x,y) \dd{\mu(y)} \dd{\mu(x)}
+\]
+Sin embargo, esto solo tendrá sentido si podemos conmutar y asociar los
+diferenciales como queramos. Para saber esto, utilizaremos el siguiente teorema:
+\begin{teorema}[Teorema de Fubini]
+    Sea \(f: D \subset \mathbb{R}^{2} \to \mathbb{R}\). Si \(f\) es continua e.c.t.
+    \(D\) entonces da igual el orden de las integrales iteradas.
+    \[
+        \iint_{D} f(x,y) \dd{x} \dd{y} = \iint_{D} f(x,y) \dd{y} \dd{x}
+    \]
+\end{teorema}
+\section{Área de un triángulo definido por vectores}
+Si tenemos dos vectores \(\vb{v}\) y \(\vb{w}\) en \(\mathbb{R}^{2}\), tenemos que
+\[
+    A(\vb{v}, \vb{w}) = \frac{1}{2} v_{1} w_{2}
+\]
+Sin embargo, esta expresión no es covariante (cambia respecto al sistema de coordenadas)
+respecto a rotaciones. Por otro lado, sabemos que el área es invariante bajo
+transformaciones, busquemos cantidades que sean invariantes bajo rotaciones y que dependan
+de \(\vb{v}\) y \(\vb{w}\).
+\begin{itemize}
+    \item El producto escalar, pero \(\vb{v} \cdot \vb{w} = v_{1}w_{1}+v_{2}w_{2}\), por
+    lo que no nos sirve.
+    \item La traza de una matriz, por lo que podemos construir
+    \[
+        M = \mqty(v_{1} & w_{1} \\ 0 & w_{2})
+    \]
+    pero \(\tr(M) = v_{1} + w_{2}\)
+    \item El determinante de \(M\) en este caso es \(\det (M) = v_{1}w_{2}\)
+\end{itemize}
+Por tanto
+\[
+    A(\vb{v}, \vb{w}) = | \frac{1}{2}\det (M)| = \frac{1}{2}|v_{1}w_{2}-v_{2}w_{1}|
+\]
+\section{Cambios de variable}
+Dada
+\[
+    \iint_{D} f(x,y) \dd{x} \dd{y}
+\]
+nos puede interesar realizar un cambio de variables, es decir, hacer las sustituciones
+\[
+    x = g_{1}(u,v)
+\]
+\[
+    y = g_{2}(u,v)
+\]
+denotando \(\vb{g} = (g_{1},g_{2})\), \(\vb{x}=(x,y)\) y \(\vb{u}=(u,v)\), obteniendo
+\[
+    \vb{x} = \vb{g}(\vb{u})
+\]
+y sustituyendo
+\[
+    f(\vb{x}) = f(\vb{g}(\vb{u})) = (f\circ \vb{g})(\vb{u})
+\]
+Sin embargo, puede que las áreas finales no sean las mismas que las iniciales. Para ello,
+necesitamos ver la relación entre \( \dd{x} \dd{y}\) y \( \dd{u} \dd{v}\).\\
+Vamos a ver la relación entre el conjunto final y el inicial. Tenmos que
+\[
+    A(R_{f}) = A(R) + o(\Delta u \Delta v) = \det  \mqty(a_{1} & b_{1} \\ a_{2} & b_{2})
+\]
+Ahora falta calcular esos componentes:
+\[
+    \vb{a} = \vb{g}(u+\Delta u, v) - \vb{g}(u,v) = \pdv{\vb{g}}{u}\eval_{(u,v)}\Delta u
+\]
+y
+\[
+    \vb{b} = \vb{g}(u, v + \Delta v) - \vb{g}(u,v) = \pdv{\vb{g}}{v}\eval_{(u,v)}\Delta v
+\]
+Por tanto, el área es
+\[
+    A(R_{f}) = \det  \mqty(\pdv{g_{1}}{u}\Delta u & \pdv{g_{1}}{v}\Delta v \\ 
+    \pdv{g_{2}}{u}\Delta u & \pdv{g_{2}}{v}\Delta v) = J_{\vb{g}} \Delta u\Delta v
+\]
+Si todo tiende a cero (infinitesimal) entonces
+\begin{equation}
+    \begin{split}
+        \dd{x} \dd{y} = |J_{\vb{g}}| \dd{u} \dd{v}
+    \end{split}
+\end{equation}
+Esto es válido si \(J_{\vb{g}} \neq 0\) en casi todo el conjunto.
+\section{Integrales de línea}
+\subsection{Campos escalares}
+Supongamos una función escalar $f$ definida sobre un conjunto $D$. Queremos
+integrar esta función a lo largo de una curva $\vv{c}$. Denotaremos por
+$ \dd{s}$ a la medida de longitud sobre dicha curva. Entonces
+\[
+	\int_{\vv{x}_{a}}^{\vv{x}_{b}}f \dd{s}
+\]
+será el área de la función a lo largo de dicha curva. En la práctica, para hacer
+ la integral parametrizaremos la curva: $\vv{x}(t)$, y supondremos que $c$ no
+ se corta a sí misma. Necesitamos una expresión que componga la función
+ con la curva:
+ \[
+ 	\int f(c(t)) \dots \dd{t}
+ \]
+ Para poder hacer este paso necesitamos hallar la relación entre $\dd{s}$ y
+ las coordenadas. Para ello, volvamos al caso inicial donde $f$ es un campo
+ escalar. Utilizando Pitágoras, podemos relacionar que
+ \[
+ 	\dd{s} ^{2} = \dd{x} ^{2} + \dd{y} ^{2}
+ \]
+ En general
+ \[
+ 	\dd{s} = \sqrt{\sum \dd{x_{i}}^{2}}
+ \]
+ Entonces al hacer los cambios de variables
+ \[
+ 	\dd{x_{i}} = x_{i}(t) \dd{t}
+ \]
+ Obtenemos así
+ \[
+ 	\dd{s} ^{2} = \sum x_{i}'(t)^{2} (\dd{t}) ^{2}
+ \]
+ O
+ \[
+ 	\dd{s} = \dd{t} \sqrt{\sum x_{i}'(t)^{2}} = \sqrt{x'(t) ^{2}} \dd{t}
+	= \norm{x'(t)} \dd{t}
+ \]
+ Habiendo obtenido esta relación, podemos sustituir para obtener
+ \begin{equation}
+ 	\begin{split}
+		\boxed{
+		\int_{C} f \dd{s} = \int_{t_{a}}^{t_{b}} f(x(t))\norm{x'(t)} \dd{t}
+	}
+ 	\end{split}
+ \end{equation}
+ \subsection{Campos vectoriales}
+
+ Dada una función $\vv{f}(\vv{x})$, y dada una curva $C$, haremos una
+ partición de $C$ sobre la cual podemos inducir un orden. Buscaremos el
+ vector que va de cada punto al siguiente en la partición.
+ \[
+ 	\Delta \vv{x}_{i} = x_{i} - x_{i-1}
+ \]
+ Por tanto, desarrollaremos la suma
+ \[
+ 	\sum \vv{f}(x_{i-1}) \cdot  \Delta \vv{x}_{i}, \Delta \vv{x}_{i} \to 0
+ \]
+ Obteniendo así
+ \begin{equation}
+ 	\begin{split}
+ 		\int_{C} \vv{f}(\vv{x}) \cdot \dd{\vv{x}}
+ 	\end{split}
+ \end{equation}
+ Donde $\dd{\vv{x}} = \sum \dd{x}_{i} \vv{e}_{i}$. Ahora podemos parametrizar
+ $C$ para obtener
+ \begin{equation}
+ 	\begin{split}
+		\int_{t_{b}}^{t_{a}} \vv{f}(\vv{x}(t))\cdot \vv{x}'(t) \dd{t}
+ 	\end{split}
+ \end{equation}
+ \begin{teorema}
+ 	Si un campo vectorial $\vv{f}$ deriva de un campo escalar
+	\[
+		\vv{f} = \grad{\phi}
+	\]
+	Entonces
+	\[
+		\pdv{f_{i}}{x_{j}} = \pdv{f_{j}}{x_{i}}
+	\]
+ \end{teorema}
+ Cuando $\vv{f} = \grad{\phi}$ a $\vv{f}$ se le llama un campo conservativo.\\
+ Si $\vv{f} \in \mathcal{C}^{1}$ entonces se cumple la doble implicación. Si $D$ es simplemente
+ conexa, entonces la matriz jacobiana es simétrica.
+ \begin{defin}
+ 	Una región $D$ es conexa si $\forall \vb{a}, \vb{b} \in D$, existe una curva $C \subset D$
+	que contecta ambos elementos.
+ \end{defin}
+ \begin{defin}
+ 	Una región $D$ es simplemente conexa si $D$ es conexa y además cualquier curva cerrada que 
+	no se corta a sí misma, contenida en $D$, se puede contraer a un punto de $D$.  
+ \end{defin}
+ \textbf{Ejemplo}:
+ \begin{itemize}
+ 	\item $\mathbb{R} ^{2}$ es simplemente conexo. 
+ \end{itemize}
+ \section{Teorema de Green}
+ Supongamos un conjunto $D$, y tomemos su frontera $\partial D$, de forma que orientamos esta 
+ frontera en sentido antihorario. Calculemos
+ \[
+	 I=\iint_{D} \pdv{P}{y} \dd[2]{x}
+ \]
+ Donde $P: M \subset \mathbb{R} ^{2} \to \mathbb{R}$, y $D \subset M$, y $P$ es
+ $\mathcal{C}^{1}(M)$    
+ \[
+	 I = \int_{a}^{b}\int_{y_{1}(x)}^{y_{2}(x)} \pdv{P}{y} \dd{y} \dd{x}=
+	 \int_{a}^{b}[P(x,y)]\eval_{y_{1}(x)}^{y_{2}(x)}\dd{x}= \int_{a}^{b}P(x,y_{2}(x))-
+	 P(x,y_{1}(x))\dd{x}
+ \]
+ Podemos interpretar estas integrales como integrales de línea, sobre dos curvas $C_{1}$ y
+ $C_{2}$.
+ \[
+ 	I = \int_{C_{2}}P(x,y)\dd{x} - \int_{C_{1}} P(x,y)\dd{x} =-\int_{-C_{2}}P(x,y)\dd{x}
+	-\int_{C_{1}}P(x,y) \dd{x}
+ \]
+ Como son seguidas estas curvas:
+ \[
+ 	= -\int_{-C_{2}+C_{1}}P \dd{x} = -\oint_{\partial D} P \dd{x}
+ \]
+ Concluyendo
+ \[
+	 \iint \pdv{P}{y} \dd{x} \dd{y} = -\oint_{\partial D} P \dd{x}
+ \]
+ Podemos probar con
+ \[
+	 \iint_{D} \pdv{Q}{x} \dd{x} \dd{y}
+ \]
+ De nuevo, tomemos dos curvas $C_{1}$ y $C_{2}$.  
+ \[
+	 = \int_{c}^{d} \int_{x_{1}(y)}^{x_{2}(y)} \pdv{Q}{x}\dd{x} \dd{y} =
+	 \int_{c}^{d}Q\eval_{x_{1}(y)}^{x_{2}(y)} \dd{y}=
+	 \int_{C_{2}}Q \dd{y} - \int_{C_{1}} Q \dd{y}
+ \]
+ Combinamos ambas integrales otra vez:
+ \[
+ 	= \int_{C_{2}}Q \dd{y} + \int_{-C_{1}}Q \dd{y} = \int_{C_{2}-C_{1}}Q \dd{y} =
+	\oint_{\partial D} Q \dd{y}
+ \]
+ Y por tanto
+ \[
+	 \iint_{D} \pdv{Q}{x} \dd{x} \dd{y} = \oint_{\partial D} Q \dd{y}
+ \]
+ Si combinamos los dos resultados anteriores, obtenemos
+ \[
+	 \iint_{D} [\pdv{Q}{x}-\pdv{P}{y}]\dd{x}\dd{y} = \oint_{\partial D}Q \dd{y} + P \dd{x}
+ \]
+ Lo que conforma el \textbf{teorema de Green}. Esto se puede generalizar al
+ \textbf{teorema de Stokes}:
+ \begin{equation}
+ 	\begin{split}
+		\iint_{S}(\nabla \times \vb{F})\cdot \dd{\vb{S}} = \oint_{\partial S} \vb{F} \cdot \dd{\vb{l}}
+ 	\end{split}
+ \end{equation}
+ También tenemos
+ \begin{equation}
+ 	\begin{split}
+		\iint_{D} \nabla \cdot \vb{F} \dd[2]{x} = \oint_{\partial D} \vb{F} \cdot \dd{\vb{n}}
+ 	\end{split}
+ \end{equation}
+ Junto con el \textbf{teorema de Gauss}:
+ \begin{equation}
+ 	\begin{split}
+		\iiint_{D} \nabla \cdot \vb{F} \dd[3]{x} = \oint \oint_{\partial D}\vb{F}\cdot \dd{\vb{s}}
+ 	\end{split}
+ \end{equation}
+ \end{document}

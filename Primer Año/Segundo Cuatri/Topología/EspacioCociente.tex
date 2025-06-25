@@ -1,0 +1,32 @@
+%! TEX root = Topologia.tex
+
+\documentclass{./Topologia.tex}
+
+\begin{document}
+\chapter{Espacio Cociente}
+\begin{defin}
+    Sea \(X\) un espacio topológico, y sea \(Y\) un conjunto. Sea \(f:X \to Y\) una función
+    sobreyectiva. La topología cociente determiada por \(f\) sobre \(Y\) de la siguiente forma.
+    Un subconjunto \(A\) de \(Y\) es abierto si y solo si \(f^{-1}(A)\) es un subconjunto
+    abierto de \(X\).
+\end{defin}
+Esta topología es la más grande sobre \(Y\).
+\begin{prop}
+    Un subconjunto \(C \subset Y\) es cerrado en \(Y\) si y solo si \(f^{-1}(C)\) es cerrado
+    en \(X\).
+\end{prop}
+\begin{teorema}
+    Sean \(X\) e \(Y\) espacios topológicos y \(\sim\) una relación de equivalencia sobre
+    \(X\). Sea \(\phi :X / \sim \to Y\) una función y sea \(\pi: X \to  X / \sim\) la
+    proyección canónica. Entonces \(\phi \) es continua si y solo si
+    \[
+        \phi \circ \pi: X \to Y
+    \]
+    es continua.
+\end{teorema}
+\begin{defin}
+    Sean \(X\) e \(Y\) espacios topológicos y \(f:X \to  Y\) una aplicación. Se dice que
+    \(f\) es cerrada si la imagen de cualquier conjunto cerrado de \(X\) es un conjunto cerrado
+    de \(Y\).
+\end{defin}
+\end{document}

@@ -1,0 +1,49 @@
+%! TEX root = Calculo.tex
+
+\documentclass{./Calculo.tex}
+
+\begin{document}
+\chapter{Continuidad}
+\begin{defin}
+Dada $\mathbf{f}:D\subset \mathbb{R}^{n}\to \mathbb{R}^{m}$, si $\mathbf{a}$ es un punto límite de $D$, decimos que $\mathbf{f}(\mathbf{x})$ tiende a $\mathbf{b}$ cuando $\mathbf{x}$ tiende a $\mathbf{a}$, y se denota por
+ 
+$$
+\lim_{ \mathbf{x} \to \mathbf{a} } \mathbf{f}(\mathbf{x})=\mathbf{b}
+$$
+Si se cumple que
+ 
+$$
+\forall \varepsilon > 0 \exists\delta>0 : |\mathbf{x}-\mathbf{a}|<\delta \implies |\mathbf{f}(\mathbf{x}) - \mathbf{b}|<\varepsilon
+$$
+
+Esta definición es equivalente al límite
+ 
+$$
+\lim_{ |\mathbf{x}-\mathbf{a}| \to 0 } |\mathbf{f}(\mathbf{x})-\mathbf{b}| = 0 
+$$
+
+En estas definiciones no decimos cómo el punto $\mathbf{x}$ se acerca a $\mathbf{a}$. Por tanto, si el límite depende de por donde nos acerquemos a $\mathbf{a}$, entonces este no existe.
+\end{defin}
+Para evitar utilizar la definición a la hora de calcular límites, utilizaremos los siguientes teoremas.
+\begin{teorema}
+Sean $\mathbf{f}:D\to \mathbb{R}^{m}$ y $\mathbf{g}:C\to \mathbb{R}^{m}$ con $D\cap C \neq \phi$, y sea $\mathbf{a}$ un punto límite de $D\cap C$, y además suponemos que
+$$
+\lim_{ \mathbf{x} \to \mathbf{a} } \mathbf{f}(\mathbf{x})=\mathbf{b}
+$$
+$$
+\lim_{ \mathbf{x} \to \mathbf{a} } \mathbf{g}(\mathbf{x})=\mathbf{c}
+$$
+Entonces se cumple que
+- $\lim_{ \mathbf{x} \to \mathbf{a} } \mathbf{f}(\mathbf{x})+\mathbf{g}(\mathbf{x})=\mathbf{b}+\mathbf{c}$\\
+- $\lim_{ \mathbf{x} \to \mathbf{a} } \lambda\mathbf{f}(\mathbf{x})=\lambda\mathbf{b}$\\
+- $\lim_{ \mathbf{x} \to \mathbf{a} } \mathbf{f}(\mathbf{x})\cdot\mathbf{g}(\mathbf{x})=\mathbf{b}\cdot\mathbf{c}$\\
+- $\lim_{ \mathbf{x} \to \mathbf{a} }|\mathbf{f}(\mathbf{x})|=|\mathbf{b}|$\\
+\end{teorema}
+\section{Continuidad}
+\begin{defin}
+Una función $\mathbf{f}$ es continua en un punto $\mathbf{a}$ si
+$$
+\lim_{ \mathbf{x} \to \mathbf{a} } \mathbf{f}(\mathbf{x})=\mathbf{f}(\mathbf{a})
+$$
+\end{defin}
+\end{document}

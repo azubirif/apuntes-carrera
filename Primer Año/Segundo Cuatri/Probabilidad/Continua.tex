@@ -1,0 +1,89 @@
+%! TEX root = Probabilidad.tex
+
+\documentclass{./Probabilidad.tex}
+
+\begin{document}
+\chapter{Variable Continua}
+Definida por variables que toman valores reales.
+\begin{defin}
+	Definimos la función densidad $\rho: \mathbb{R} \to \mathbb{R}$ como la que da la probabilidad de que $x$ se halle en un intervalo $[a,b]$.
+	\begin{itemize}
+		\item $\rho(x)> 0$.
+		\item $\int_{-\infty}^{\infty} \rho(x)\dd{x} = 1$ 
+	\end{itemize}
+	Sin embargo, ya no podemos encontrar la probabilidad de que $x$ tome un valor específico. Solo podemos calcular:
+	\begin{equation}
+		\begin{split}
+			P(a \leq x \leq b) = \int_{a}^{b} \rho(x) \dd{x}
+		\end{split}
+	\end{equation}
+\end{defin}
+Ahora, definimos
+\begin{equation}
+	\begin{split}
+		E[x] = \int x \rho(x) \dd{x}
+	\end{split}
+\end{equation}
+ahora nuestra función distribución se define como
+\begin{equation}
+	\begin{split}
+		F(x_0) = P(x \leq x_0) = \int_{-\infty}^{x_0} \rho(x) \dd{x}
+	\end{split}
+\end{equation}
+Por tanto, tenemos que si $F(x)$ es derivable en $x_0$, entonces
+\begin{equation}
+	\begin{split}
+		\rho(x_0) = \dv{F}{x}(x_0)
+	\end{split}
+\end{equation}
+\textbf{Propiedades}:
+\begin{itemize}
+	\item $P(a,b]= F(b) - F(a)$ 
+	\item $P[a,b] = F(b) - F(a^{-})$ 
+	\item $P(a) = F(a^{+}) - F(a^{-})$ 
+\end{itemize}
+\section{Percentiles}
+Sea $p$ un número definido entre 0 y 1. El percentil $p$ de una distribución se denota como $\eta(100p)$ y está definido como:
+\begin{equation}
+	\begin{split}
+		p = F(\eta(100p)) = \int_{-\infty}^{x_{M}}\rho(t)\dd{t}
+	\end{split}
+\end{equation}
+En este caso, resolveríamos la ecuación de igualar nuestra función distribución a $\frac{1}{2}$ si quisiéramos obtener la mediana. 
+\section{Probabilidad condicionada}
+Dada una variable continua \(X\) con función densidad \(f(x)\), se define la función densidad de la
+variable aleatoria continua condicionada \(X | A\) como
+\[
+	f(X | A) = \frac{f(x)}{P(A)}
+\]
+\section{Distribución exponencial}
+Se define como
+\[
+	f(x) =  \left\{\begin{matrix}
+		\lambda e^{-\lambda x}~x \geq 0 \\ 0~ x < 0
+		\end{matrix}\right.
+\]
+y se da que la esperanza es
+\[
+	E[X] = \frac{1}{\lambda }
+\]
+y su función distribución
+\[
+	F(x) = 1 -e^{-\lambda x}
+\]
+además de \(V(x) = \frac{1}{\lambda^{2}}\) y \(med = \frac{\ln 2}{\lambda }\).
+\\
+Cuando queremos ver la probabilidad de que $x$ esté a una distancia de
+$k$ desviaciones de la media, buscamos
+\[
+	P (-k \leq \frac{x - \mu}{\sigma} \leq k)
+\]
+\\
+Cuando $n$ tiende a $30$, la distribución binomial se aproxima a una normal.  
+\section{Desigualdad de Chebyshev}
+Supongamos una variable aleatoria $X$ con media $\mu$ y desviación típica
+$\sigma$. Se verifica que
+\[
+	P(|x - \mu| >k \sigma) \leq \frac{1}{k ^{2}} 
+\]
+\end{document}

@@ -1,0 +1,235 @@
+%! TEX root = Calculo.tex
+
+\documentclass{./Calculo.tex}
+
+\begin{document}
+\chapter{La integral de Lebesgue}
+\section{Sobre la integral de Riemann}
+Para integrar una función $f$ en un intervalo $[a,b]$, introducíamos el concepto de partición de $[a,b]$:
+\[
+	P = \{ x_0=a,x_1,\dots ,x_{n} = b \}
+\]
+Una partición de $[a,b]$ es un conjunto finito de puntos ordenados. También necesitamos el ínfimo y el supremo de una funcińo en un conjunto:
+\[
+	\inf f = \inf \{ f(x) : x \in P \}
+\]
+\[
+	\sup f = \sup \{ f(x) : x \in P \}
+\]
+Con esto vamos a construir las \textbf{sumas de Riemann}, superiores e inferiores, denotadas por $S$ y $s$, respectivamente, y se definen como:
+dada $f$ definida en $[a,b]$  introducimos una partición $P$ de este intervalo, y construimos
+\[
+	s = \sum_{i}^{n} (x_{i} - x_{i-1}) \inf f
+\]
+es la suma inferior, y
+\[
+	S = \sum_{i}^{n} (x_{i}-x_{i-1}) \sup f
+\]
+Esto define el área de la curva bajo la función $f$ en el intervalo $[a,b]$. Si tomamos el límite $n \to \infty$, vemos que $S = s$, y entonces
+\[
+	\int_{b}^{a} f = \lim_{n \to \infty} \sum (x_{i}-x_{i-1}) \sup f
+\]
+\begin{teorema}
+	Una función $f(x)$ es integrable de Riemann en $[a,b]$ si es continua en ese intervalo.  
+\end{teorema}
+Sin embargo, la integral de Riemann no es suficientemente buena, ya que:
+\begin{itemize}
+	\item No funciona si hay muchas discontinuidades.
+\end{itemize}
+\section{Una nueva integral}
+Los problemas de la integral de Riemann se deben a querer calcular áreas sobre intervalos, pero las funciones integrables Riemann han de ser lo suficientemente buenas en dichos intervalos.\\
+En vez de considerar solo la medida de intervalos, vamos a fijarnos en los valores que toma $f$, y entonces medir las preimágenes:
+\[
+	f^{1-}(\{ a \}) = \{ x : f(x) = a \}
+\]
+De manera informal, queremos
+\[
+	f: [a,b] \subset \mathbb{R} \to \mathbb{R} : f \geq 0 \forall x \in [a,b]
+\]
+para ello, introducimos una partición en la \textbf{imagen} de $f$. 
+\[
+	P : 0 = y_0 < y_1 <\cdots < y_{n} = \sup f
+\]
+Construimos entonces la suma inferior de Lebesgue:
+\[
+	\mathcal{L}(f, P, [a,b]) = \sum _{j=1}^{n} \mu (f^{-1}([y_{j-1}, y_{j}])) \cdot y_{j-1}
+\]
+Donde $\mu$ es la \textbf{medida} del intervalo. La medida que usaremos será una generalización de la medida de longitud de intervalos abiertos de la forma $(a,b) \subset \mathbb{R}$:
+\[
+	l((a,b)) = b-a
+\]
+además de que $l(\phi) = 0$. También 
+\[
+	l(-\infty, a) = l(a,\infty) = = l(-\infty, \infty) = \infty
+\]
+La generalización para medir cualquier $A \subset \mathbb{R}$ es:
+\[
+	|A| = \inf \{ \sum_{k=1}^{\infty}l(I_{k}) : I_{k} \text{ son intervalos abiertos tales que }A \subset \bigcup I_{k} \}
+\]
+Esta medida no será la que finalmente usemos, ya que existen $A, B \subset  \mathbb{R}$, disjuntos, y para los cuales:
+\[
+	|A \cup B| \neq |A| + |B|
+\]
+De hecho no existe ninguna medida que cumpla las siguientes propiedades que refleje la idea intuitiva de tamaño:
+\begin{itemize}
+	\item $\mu: \mathcal{P}(\mathbb{R}) \to [0, \infty]$ 
+	\item Si $\{ A_{k} \}$ son disjuntos entonces 
+		\[
+			\mu(\bigcup A_{k} ) = \sum |A_{k}|
+		\]
+	\item Si $A \subset \mathbb{R}, t \in \mathbb{R}$ y 
+		\[
+			t+ A = \{ t+a : a \in A \}
+		\]
+		entonces esperamos que $\mu(A) = \mu(A+t)$ 
+	\item Si $I$ es un intervalo abierto entonces
+		\[
+			\mu(I) = l(I)
+		\]
+\end{itemize}
+Por ello, vamos a eliminar la primera propiedad, usando la medida exterior, y nos restringiremos a una familia de conjuntos conocidos como los \textbf{conjuntos de Borel}.
+\begin{defin}
+	Un conjunto de Borel es de la familia $\mathcal{B}$ mínima (en sentido de inclusión) que contiene a todos los intervalos abiertos de $\mathbb{R}$ y que cumple:
+	\begin{enumerate}
+		\item Cerrada bajo uniones numerables.
+		\item Cerrada bajo complementos.
+	\end{enumerate}
+\end{defin}
+Con esto, observamos que $\phi$ es un boreliano.
+\section{Medida de Lebesgue}
+\begin{defin}
+	Cuando restringimos la medida exterior al conjunto de los borelianos, la medida pasa a llamarse \textbf{medida de Lebesgue}, y la denotaremos por $\mu$. 
+	\[
+		\mu: \mathcal{B} \to [0,\infty]
+	\]
+	Esta medida cumple:
+	\begin{enumerate}
+		\item $\mu(I) = l(I)$ si $I$ es un intervalo.  
+		\item $\mu(t+B) = \mu(B)$ para todo $t \in \mathbb{R}$ y todo $B \in \mathcal{B}$.  
+		\item $\mu(\bigcup B_{k}) = \sum \mu (B_{k})$ con $\{ B_{k} \} \in \mathcal{B}$ y disjuntos. 
+	\end{enumerate}
+\end{defin}
+Todos los conjuntos numerables tienen medida $0$. \\
+\begin{defin}
+Una propiedad $P(x)$ con $x \in \mathbb{R}$, decimos que es casi doquier, abreviado como c.d., si  
+\[
+	\mu(\{ x \in \mathbb{R} : P(x) \text{ es falsa} \}) = 0
+\]
+\end{defin}
+\begin{defin}[Conjuntos medibles Lebesgue]
+	Son aquellos conjuntos a los que se puede extender $\mu$. Si $L$ es medible Lebesgue entonces existe un boreliano $B$ tal que   
+	\[
+		B \subset L \wedge \mu(L-B) = 0
+	\]
+\end{defin}
+\begin{defin}[Funciones medibles Borel]
+	$f : D \subset \mathbb{R} \to \mathbb{R}$ es medible Borel si $\forall B \in \mathcal{B}$
+	\[
+		f^{-1}(B) \in \mathcal{B}
+	\]
+	En particular, como $R \in \mathcal{B}$, entonces $f^{-1}(\mathbb{R}) = D \in \mathcal{B}$.\\
+	Es interesante hacer notar el paralelismo entre conjuntos abiertos y funciones continuas, y conjuntos borelianos y funciones medibles de Borel.
+\end{defin}
+A las funciones medibles Borel también se las llama borelianas. Esta definición se extiende también a funciones que toman valores infinitos, donde exigimos que
+\[
+	f^{-1}(\{ -\infty \}) \in \mathcal{B} \wedge f^{-1}(\{ \infty \}) \in \mathcal{B}
+\]
+Para identificar si una función es boreliana, en vez de usar la definición, podemos usar alguno de los siguientes criterios:
+\begin{teorema}
+	$f: D \subset  \mathbb{R} \to \mathbb{R}$ entonces 
+	\begin{itemize}
+		\item $f$ es boreliana si y solo si 
+			\[
+				f^{-1}((a,b)) \in \mathcal{B}
+			\]
+		\item $f$ es boreliana si y solo si 
+			\[
+				f^{-1}((a, \infty)) \in \mathcal{B}
+			\]
+		\item $f$ es boreliana si y solo si 
+			\[
+				\{ x \in D : f(x) < b  \} \in \mathcal{B}
+			\]
+		\item Si $\{ f_{n} \}$ son borelianos tales que 
+			\[
+				\lim_{n \to \infty} f_{n} = f(x)~c.d.
+			\]
+			entonces $f$ es boreliana. 
+		\item Si $f$ es continua en $D$ y $D$ es boreliano entonces $f$ es boreliana.    
+	\end{itemize}
+\end{teorema}
+\section{Integración de Lebesgue}
+Para integrar según Lebesgue una función boreliana no negativa $f: D \subset \mathbb{R} \to [0,\infty]$, dividimos la imagen de $f$ mediante una partición $P = \{ y_0,\dots ,y_{n} \}$ (ordenada), formando las sumas inferiores de Lebesgue:
+\[
+	\mathcal{L}(f,P) = \sum y_{k-1}\mu(f^{-1}([y_{k+1},y_{k}]))
+\]
+La integral de Lebesgue de $f$ en $D$ es entonces:
+\begin{equation}
+	\begin{split}
+		\int_{D}f \dd{\mu} = \sup \mathcal{L}(f,P)
+	\end{split}
+\end{equation}
+\section{Función integrable Lebesgue}
+Dada $f: D \subset \mathbb{R} \to \mathbb{R}$, definimos:
+\begin{align}
+	f_{+}(x) = \max \{ f(x), 0: x \in D \}
+\end{align}
+y
+\begin{align}
+	f_{-}(x) = \max \{ -f(x), 0: x \in D \}
+\end{align}
+De esta forma nos aseguramos de estar calculando el área bajo la función. Decimos
+que \(f\) es integrable Lebesgue en \(D\), denotado por
+\[
+	f \in \mathcal{L}_{1}(D)\footnote{El 1 hace referencia a que integramos el módulo
+	elevado a 1.}
+\]
+si
+\[
+	\int_{D}|f| \dd{\mu} = \int_{D}f_{+} \dd{\mu} + \int_{D} f_{-} \dd{\mu} < \infty
+\]
+y la integral de \(f\) se define por
+\begin{equation}
+	\begin{split}
+		\int_{D} f \dd{\mu} = \int_{D} f_{+} \dd{\mu} - \int_{D} f_{-} \dd{\mu}
+	\end{split}
+\end{equation}
+Análogamente se definen las funciones \(f \in  \mathcal{L}_{P}(D)\)
+\[
+	\int_{D} |f|^{P} \dd{\mu} < \infty : p \in [1,\infty)
+\]
+Algunas propiedades de esta integral son:
+\begin{itemize}
+	\item Una función integrable de Riemann es también integrable de Lebesgue.
+	\item \(f=g~e.c.t~D \subset \mathbb{R} \implies \int_{D} f \dd{\mu} = \int_{D} g \dd{\mu}\) 
+\end{itemize}
+Comprobemos, para finalizar, que la integral de Lebesgue no tiene los problemas que
+tenía la integral de Riemann.
+\begin{itemize}
+	\item La integral de Lebesgue puede integrar funciones con infinitas
+	discontinuidades (como la función de Dirichlet).
+\end{itemize}
+\begin{teorema}
+	Sea \(\{ f_{n} \}\) una sucesión de funciones en \(\mathcal{L}_{1}(\mathbb{R})\),
+	tales que existe
+	\[
+		\lim_{n \to \infty} f_{n}(x) = f(x)~c.d.
+	\]
+	Si además existe una función \(g \in  \mathcal{L}_{1}(\mathbb{R})\) no negativa
+	tal que para todo \(n \in  \mathbb{N}\)
+	\[
+		|f_{n}(x)| \leq g(x)~c.d.
+	\]
+	entonces
+	\begin{itemize}
+		\item \(f \in \mathcal{L}_{1}(\mathbb{R})\)
+		\item \[
+			\int_{\mathbb{R}}f = \lim_{n \to \infty}\int_{\mathbb{R}}f_{n}
+		\]
+		o de otra forma
+		\[
+			\int lim = lim \int
+		\]
+	\end{itemize}
+\end{teorema}
+\end{document}

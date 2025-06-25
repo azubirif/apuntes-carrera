@@ -1,0 +1,292 @@
+%TEX root = Calculo.tex
+
+\documentclass{../Calculo.tex}
+
+\begin{document}
+\chapter{Funciones Implícitas}
+\section{Funciones Inversas}
+Dada $f: A \to B$, se dice que $f$ tiene inversa si existe una función $g: B \to A$ tal que
+\[
+	f\circ g = Id_{b}
+\]
+y similarmente
+\[
+	g \circ f = Id_{a}
+\]
+Si esta función existe, se denota por
+\[
+	f^{-1} \neq \frac{1}{f}
+\]
+Se puede demostrar que $f^{-1}$ existe si y solo si $f$ es inyectiva y sobreyectiva (biyectiva). Sin embargo, dadas ciertas funciones que no sean ni inyectivas ni sobreyectivas, se pueden restringir de forma que sean biyectivas.\\
+\textbf{Ejemplos}:
+\begin{itemize}
+	\item $f(x)=x ^{2}$. Esta función es sobreyectiva, pero no es inyectiva, y por tanto no tiene inversa. Sin embargo, podemos restringir el dominio tal que $x\geq 0$, y entonces sí que es inyectiva, por tanto biyectiva, y por tanto tiene inversa.
+	\item $g(x)=\cos x$. Esta función es periódica, pero si restringimos la función a un período $[0, \pi]$, entonces es biyectiva.  
+\end{itemize}
+Sea $\bar{f}(\mathbf{x}) = \mathbf{y}$. Queremos ver si podemos invertir esta relación $(\bar{f}^{-1})$, y obtener
+\[
+	\mathbf{x} = \bar{f}^{-1}(\mathbf{y})
+\]
+Para ello, introducimos el siguiente teorema.
+\begin{teorema}[Teorema de la función inversa]
+	Dada una función $f:\mathbb{R}^{n} \to \R^{n}$, esta tiene inversa si y solo si el determinante jacobiano (determinante de su diferencial) es distinto a $0$.  
+\end{teorema}
+\pagebreak
+	Dado un sistema de ecuaciones, no necesariamente lineales, siempre lo podemos escribir de la forma:
+	\begin{equation}
+		\begin{split}
+			f_{1}(x_1,\dots ,x_{n+k})&=0\\
+			\dots \\
+			f_{n}(x_1,\dots ,x_{n+k})&=0
+		\end{split}
+	\end{equation}
+	Vamos a analizar en qué condiciones podemos despejar $n$ incógnitas en función de las $k$ restantes, que serían parámetros libres. En este caso, estas ecuaciones describen un objeto de $k$ dimensiones en $\mathbb{R}^{n+k}$. Para distinguir entre parámetros libres e incógnitas, introduciremos la siguiente notación:
+\begin{itemize}
+	\item Las incógnitas son $x_{i},\dots ,x_{n}$.
+	\item Los parámetros libres serán $t_1=x_{n+1},\dots ,t_{k}=x_{n+k}$. 
+\end{itemize}
+Además, introduciremos la función vectorial $\bar{f}=(f_1,\dots ,f_{n})$, entonces el sistema a resolver acaba siendo
+\[
+	\bar{f}(\mathbf{x}, \mathbf{t})=\mathbf{0}
+\]
+Ahora, supongamos que $(\mathbf{x}_{0}, \mathbf{t}_{0})$ es una solución del sistema que cumple la ecuación anteriormente establecida, y que además $\bar{f} \in \mathcal{C}^{1}$. Entonces, podemos hacer la aproximación
+\[
+	\bar{f}(\mathbf{x}, \mathbf{t}) \approx \bar{f}(\mathbf{x}_{0}, \mathbf{t}_{0})+D \bar{f}(\mathbf{x}_{0}, \mathbf{t}_{0})(\mathbf{x}-\mathbf{x}_{0}, \mathbf{t}-\mathbf{t}_{0})
+\]
+Como hemos asumido que la anterior tupla era solución del sistema, y queremos una solución a la ecuación, queda
+\[
+	D \bar{f}(\mathbf{x}_{0}, \mathbf{t}_{0})(\mathbf{x}-\mathbf{x}_{0},\mathbf{t}-\mathbf{t}_{0})=\mathbf{0}
+\]
+Si escribimos explícitamente el diferencial, obtenemos que
+\[
+	\begin{bmatrix}
+	
+		\pdv{f_1}{x_1}&\dots &\pdv{f_1}{x_{n}} & \pdv{f_1}{t_1}&\dots &\pdv{f_1}{t_{k}}\\
+		\dots \\
+		\pdv{f_{n}}{x_{1}}&\dots &\pdv{f_{n}}{x_{n}}&\pdv{f_{n}}{t_{1}}&\dots &\pdv{f_{n}}{t_{k}}
+	
+	\end{bmatrix}^{\text{Evaluado en }(\mathbf{x_{0}}, \mathbf{t}_{0})}\cdot (\mathbf{x}-\mathbf{x}_{0}, \mathbf{t}-\mathbf{t}_{0})= \mathbf{0}
+\]
+Aquí sigue que
+\[
+	\left(D_{x} \bar{f}(\mathbf{x_{0}}, \mathbf{t_0}),D_{t}\bar{f}(\mathbf{x}_{0}, \mathbf{t}_{0}) \right)(\mathbf{x}-\mathbf{x}_{0}, \mathbf{t}-\mathbf{t}_{0})=\mathbf{0}
+\]
+Reordenando y simplificando, obtenemos que debe existir la inversa de la matriz $D_{x} \bar{f}$, y por tanto su determinante debe ser distinto a $0$.
+\begin{defin}
+Dada una función $f:D \subset \mathbb{R}^{n} \to \mathbb{R}$, y sea $\mathbf{a} \in D$, $f$ tiene un mínimo absoluto en $\mathbf{a}$ si
+\[
+	f(\mathbf{a}) \leq f(\mathbf{x}) \forall \mathbf{x} \in D
+\]
+\end{defin}
+La definición de máximo es análoga.
+\begin{defin}[Mínimo local]
+Esta definición sigue de tomar los puntos en una cierta bola. Es decir, un punto $\mathbf{a}$ será mínimo local en $B_{\delta}$ si y solo si
+\[
+	f(\mathbf{a}) \leq f(\mathbf{x}) \forall \mathbf{x} \in B_{\delta}
+\]
+\end{defin}
+\section{Extremos de funciones escalares}
+Usaremos con frecuencia el siguiente teorema:
+\begin{teorema}
+Sea $f:D \subset \mathbb{R}^{n} \to \mathbb{R}$ una función diferenciable en $\mathbf{a} \in int(D)$. Si $f$ tiene un extremo local en $\mathbf{a}$, entonces
+\[
+	\nabla f(\mathbf{a}) = 0
+\]
+\end{teorema}
+\begin{proof}[Demostración]
+Hallemos la derivada de $f$ respecto de un vector $\mathbf{v} \in \mathbb{R}^{n}$ cualquiera:
+\begin{equation}
+	\begin{split}
+		f'(\mathbf{a}, \mathbf{v}) &= \lim_{h \to 0} \frac{f(\mathbf{a}+h \mathbf{v})-f(\mathbf{a})}{h}
+	\end{split}
+\end{equation}
+Sabemos que este límite existe ya que $f$ es diferenciable. Supongamos que $f$ tiene un mínimo local en $\mathbf{a}$. En particular, también existen los límites laterales en $\mathbf{x}=\mathbf{a}$.\\
+Si $f$ tiene un mínimo local en $\mathbf{a}$, entonces
+\[
+	f(\mathbf{a}+h \mathbf{v})-f(\mathbf{a}) \geq 0
+\]
+para un $h$ lo suficientemente pequeño. Entonces, la derivada lateral en ese punto, $f'(\mathbf{a}, \mathbf{v})^{+} \geq 0$. Y la otra derivada lateral, cumple que $f'(\mathbf{a}, \mathbf{v})^{-} \leq 0$. Para que ambas ecuaciones se cumplan, y teniendo en cuenta que es diferenciable:
+\[
+	f'(\mathbf{a}, \mathbf{v})= \nabla f(\mathbf{a}) \cdot \mathbf{v} =0
+\]
+Como esto se debe cumplir para todos los vectores, entonces el gradiente es perpendicular a todos los vectores. El único que lo cumple es
+\[
+	\nabla f(\mathbf{a}) = 0
+\]
+\end{proof}
+\begin{defin}
+	Si $\vb{a} \in int(D)$ y $\grad{f}(\vb{a})= \vb{0}$, entonces $\vb{a}$ se llama punto crítico o punto estacionario de $f$. Si desarrollamos la función como polinomio de Taylor de primer orden en $\vb{a}$, veremos que obtendremos
+	\[
+		P_{1, \vb{a}} = f(\vb{a})
+	\]
+\end{defin}
+Sin embargo, estas herramientas son muy pobres para analizar correctamente el comportamiento de una función. Si desarrollamos $f$ hasta segundo orden mediante el polinomio de Taylor, obtendremos más información acerca de cómo se comporta la función cerca del punto crítico en el que estamos interesados. Supongamos que $\vb{a}$ es un punto crítico:
+\[
+	f(\vb{x}) = f(\vb{a}) + \grad{f} (\vb{a}) \vb{h} +\frac{1}{2} \vb{h}^{T}H(\vb{a}) \vb{h} +o(|\vb{h}|^{2})
+\]
+Donde $\vb{h}=\vb{x}-\vb{a}$. Aplicando el hecho de que $\vb{a}$ es punto crítico, el término del gradiente se va
+\[
+	= f(\vb{a}) +\frac{1}{2} \vb{h}^{T} H(\vb{a}) \vb{h}+ o(|\vb{h}|^{2})
+\]
+Aquí podemos tener los siguientes casos:
+\begin{itemize}
+	\item $\vb{h}^{T} H(\vb{a})\vb{h} > 0 \forall \vb{h} \neq \vb{0}$. Entonces, $f$ crece en puntos cercanos a $\vb{a}$, entonces $\vb{a}$ es un mínimo.
+	\item En el caso de ser menor a $0$, análogamente, $\vb{a}$ es un máximo.
+	\item Si cambia en función de $\vb{h}$, entonces es un \textbf{punto de silla}.   
+	\item Si $H(\vb{a})= \vb{0}$, nos falta información para saber el tipo de punto crítico que tenemos. 
+\end{itemize}
+\begin{defin}
+	Si $A \in \mathcal{M}_{n \times n}$ es simétrica, entonces la función
+	\[
+		Q: \mathbb{R}^{n} \to \mathbb{R}
+	\]
+	donde
+	\[
+		\vb{v} \to Q(\vb{v})=\vb{v}^{t}A \vb{v}
+	\]
+	se llama forma cuadrática simétrica.
+\end{defin}
+\begin{teorema}
+	Sea $A \in \mathcal{M}_{n \times  n}$ una matriz simétrica, y sea $d_{i}$ el determinante de una de sus submatrices:
+	\begin{itemize}
+		\item Si $d_{i} > 0 \forall i$, $Q$ es definida positiva.
+		\item Si $d_{i} > 0$ para $i$ par y $d_{i} < 0$ para $i$ impar, es definida negativa     
+	\end{itemize}
+\end{teorema}
+\begin{teorema}
+	Si tenemos una matriz simétrica $n \times n$, entonces
+	\begin{itemize}
+		\item Si los autovalores de $A$ son positivos entonces $Q$ es definida positiva.
+		\item Si los autovalores de $A$ son negativos entonces $Q$ es definida negativa.
+		\item Si alguno es $0$ entonces $Q$ es singular.
+		\item En el resto de casos $Q$ es indefinida. 
+	\end{itemize}
+	También podemos usar el hecho de que, siendo $\lambda_{i}$ los autovalores de $A$, entonces
+	\[
+		\sum \lambda_{i} = tr(A)
+	\]
+\end{teorema}
+Ahora combinando todo
+\begin{teorema}
+Tenemos que $f$ tiene en $\vb{a}$ en función de $H(\vb{a})$:  
+\begin{itemize}
+	\item Mínimo local si $H$ es definida positiva.
+	\item Máximo local si $H$ es definida negativa.
+	\item Punto de silla si $H$ es indefinida.
+	\item Nos falta información si $H$ es singular. 
+\end{itemize}
+
+\end{teorema}
+\pagebreak
+\section{Cálculo de extremos en conjuntos compactos}
+\begin{defin}
+Un conjunto $D \subset \mathbb{R}^{n}$ es acotado si existe $M \in \mathbb{R}$ tal que
+\[
+	\norm{\vb{x}} \leq M ~ \forall \vb{x} \in D
+\]
+\end{defin}
+Ahora ya podemos definir el siguiente tipo de conjunto:
+\begin{defin}
+Un conjunto $D \subset \mathbb{R}^{n}$ es compacto si es cerrado y acotado. 
+\end{defin}
+\begin{teorema}
+	Sea $f: U \subset \mathbb{R}^{n} \to \mathbb{R}$ continua en $U$, tal que $U$ es compacto, existen al menos dos puntos $\vb{a}, \vb{b}$ tales que:
+	\[
+		f(\vb{a}) \leq f(\vb{x}) \leq f(\vb{b}) ~\forall \vb{x} \in U
+	\]
+\end{teorema}
+\section{Extremos condicionados y multiplicadores de Lagrange}
+Estos problemas consisten en hallar extremos de una función
+\[
+	f:U \subset \mathbb{R}^{n} \to \mathbb{R}
+\]
+sujetos a una serie de condiciones, que se pueden escribir como ecuaciones.
+\[
+	\begin{pmatrix} 
+	g_1(\vb{x})= 0\\
+	\dots \\
+	g_{n}(\vb{x}) = 0
+	\end{pmatrix} : k < n
+\]
+Para ello, utilizaremos la generalización del siguiente teorema:
+\begin{teorema}[Teorema de multiplicadores de Lagrange]
+Sea $g:U \subset \mathbb{R}^{n} \to \mathbb{R}$, es $\mathcal{C}^{1} \in U$, y sea
+\[
+	S = \{ \vb{x} \in \mathbb{R}^{n} : g(\vb{x})=0, \grad{g}(\vb{x}) \neq \vb{0} \}
+\]
+Entonces sea también $f: U \to \mathbb{R}$, y que también es $\mathcal{C}^{1} \in U$. Entonces si $f$ tiene un extremo sobre $S$ en $\vb{p} \in S$, entonces
+\[
+	\exists \lambda \in \mathbb{R}: \grad{f}(\vb{p})= \lambda \grad{g}(\vb{p})
+\]
+\end{teorema}
+\begin{proof}[Demostración]
+	Vamos a ver que $\grad{f}(\vb{p})$ y $\grad{g}(\vb{p})$ tienen la misma dirección. Vamos a empezar analizando la dirección de $\grad{g}(\vb{p})$. Vemos que $S$ define un conjunto de nivel de $g$, por tanto $\forall \vb{x} \in S \grad{g}(\vb{p}) \perp \vb{x}$. Para ver que $\grad{f}$ tiene la misma dirección tomemos una curva cualquiera $\vb{c}(t): \mathbb{R} \to S$, con la única condición de que pase por $\vb{p}$ en $t=t_0$. Como $f\eval_{S}$ tiene un extremo en $\vb{p}$ y $f \in \mathcal{C}^{1}$ en $S$, entonces
+	\[
+		\dv{f(\vb{c})}{t}\eval_{t=t_0} = 0
+	\]
+	Por la regla de la cadena, podemos reescribir la ecuación anterior como:
+	\[
+		\dv{t}f(\vb{c}(t))\eval_{t=t_0}=\grad{f}(\vb{c}(t_0))\cdot \dv{\vb{c}}{t}
+		= \grad{f}(\vb{p}) \vb{c}'(t_0)=0
+	\]
+	Como esta curva es arbitraria, esto significa que $\grad{f}$ es perpendicular a cualquier curva en $S$ que pase por $\vb{p}$, y por tanto, proporcional a $\grad{g}(\vb{p})$, lo que significa que
+	\[
+		\grad{f}(\vb{p}) = \lambda\grad{g}(\vb{p})
+	\]
+	Donde $\lambda$ se denomina como \textbf{multiplicador de Lagrange}. 
+\end{proof}
+Generalicemos el teorema para el caso en el que los extremos han de cumplir más de una condición. Queremos hallar los extremos de $f(\vb{x})$ restringida a los puntos que cumplen el conjunto de ecuaciones 
+\[
+	g_{i<n}(\vb{x}) = 0
+\]
+que podemos abreviar por
+\[
+	\vb{g}(\vb{x}) = (g_1,\dots ,g_{k}) = \vb{0}
+\]
+obteniendo así el siguiente teorema:
+\begin{teorema}
+$\vb{g}$ de clase $\mathcal{C}^{1}$ en un abierto $U \subset \mathbb{R}^{n}$. Sea $S$ el conjunto  
+\[
+	S = \{ \vb{x} \in U : \vb{g}(\vb{x}) = \vb{0}, rg(D\vb{g}(\vb{x})) = k\}
+\]
+Queremos que sea igual a $k$, ya que entonces el rango será máximo, ya que $k \leq n$. Debido a esto, $\dim (S) = n-k$, porque las $k$ ecuaciones $\vb{g}(\vb{x}) = \vb{0}$ son independientes en cada punto. Como $S \subset \mathbb{R}^{n}$ en cada punto de $S$ podemos escoger una base de $\mathbb{R}^{n}$, con $n-k$ vectores tangentes, y el resto, $k$ vectores perpendiculares a $S$. Cada $\grad{g}_{i}$ es perpendicular a $S$, pues $S \subset \{ g_{i}=0 \}$, como estos gradientes son LI, entonces expanden el subespacio ortogonal a $S$ en cada uno de sus puntos.\\
+Suponiendo que $f$ tiene un extremo en $\vb{p}$, condicionado a por $\vb{g}(\vb{p}) = \vb{0}$, dada cualquier curva $\vb{x}(t)$  que pase por $\vb{p}~(\exists t_0 : \vb{x}(t_0) = \vb{p})$ contenida en $S$ se cumplirá
+\[
+	\dv{t}f(\vb{x}(t)) = 0
+\]
+de donde se deduce, como se hizo anteriormente, que
+\[
+	\grad{f}(\vb{p}) \perp S
+\]
+entonces $\grad{f}(\vb{p})$ está en el subespacio ortogonal a $S$, y una base de este subespacio era el conjunto $\{ \grad{g}_{i}(\vb{p}) \}$. Esto quiere decir que existen escalares $\{ \lambda_{i} \}$ tal que:
+\[
+	\grad{f}(\vb{p}) = \sum_{i}^{k} \lambda_{i} \grad{g}_{i}(\vb{p})
+\]
+Y aquí, el conjunto $\{ \lambda_{i} \}$ son los multiplicadores de Lagrange. 
+\end{teorema}
+Para hallar los extremos de una función $f$ condicionados por $g_{i\leq k} = 0$, resolveremos el sistema
+\[
+\]
+\begin{equation}
+	\begin{split}
+		\grad{f}(\vb{x}) &= \sum_{i}^{k} \lambda_{i} \grad{g}_{i}(\vb{x})\\
+		g_{i}(\vb{x}) &= 0\\
+		\dots& \\
+		g_{k}(\vb{x}) &= 0
+	\end{split}
+\end{equation}
+Donde tendremos $n+k$ incógnitas y también $n+k$ incógnitas. A veces para resolver este sistema se introduce la \textbf{función de Lagrange}:
+\[
+	F(x_1,\dots ,x_{n}, \lambda_1,\dots ,\lambda_{k}) =
+	f(\vb{x})-\lambda_1g_{1}(\vb{x})-\dots -\lambda_{k}g_{k}(\vb{x})
+\]
+Con esta función, el sistema planteado anteriormente se reduce a
+\[
+	\grad{F} = \vb{0}
+\]
+Donde ahora el gradiente es
+\[
+	\grad{F} = (\pdv{F}{x_1},\dots \pdv{F}{x_{n}},\pdv{F}{\lambda_1},\dots ,\pdv{F}{\lambda_{k}})
+\]
+Una vez halladas las soluciones de este sistema, evaluamos $f$ en cada una de ellas, lo que nos permitirá saber los máximos y los mínimos de la función. 
+\end{document}

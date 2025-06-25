@@ -1,0 +1,363 @@
+%! TEX root = FisicaII.tex
+
+\documentclass{./FisicaII.tex}
+
+\begin{document}
+\chapter{Corriente Eléctrica}
+La habilidad de diferentes substancias para permitir el flujo de una carga está determinada por la movilidad de los electrones portadores de la carga o de los iones que contenga la sustancia.
+\section{Tipos de conductores}
+\begin{itemize}
+	\item Conductores de primer orden: son aquellos que conducen corriente en su interior y tienen poca resistencia.
+\end{itemize}
+\section{Corriente}
+La corriente continua consiste en que los portadores se trasladan de forma continua en el mismo sentido y dirección. Por otro lado, la corriente alterna se caracteriza por los portadores, ya que el sentido de su movimiento cambia.\\
+Al trasladar una carga de un punto $A$ a un punto $B$, la diferencia de potencial es:
+\[
+	V_{A}-V_{B} = -\int_{B}^{A} \vb{E} \cdot \dd{\vb{l}}
+\]
+Si exponemos esta carga a un campo eléctrico a lo largo de su trayectoria, la partícula (si tiene carga positiva) irá del polo positivo al negativo. En este caso la partícula sigue el \textbf{sentido convencional}. Sin embargo, el \textbf{sentido real} es aquel en el que la partícula va del negativo al positivo.
+\subsection{Generadores}
+Tenemos dos tipos:
+\begin{itemize}
+	\item Si generan una diferencial de potencial, entonces son generadores de voltaje.
+	\item Si producen corriente, son generadores de corriente.
+\end{itemize}
+Cuando tenemos un generador de corriente continua, el voltaje es constante respecto al tiempo:
+\[
+	\dv{V}{t}=0
+\]
+Sin embargo, un generador de corriente alterna generará funciones periódicas.\\
+Típicamente, en nuestras casas, tenemos un voltaje de corriente alterna de la siguiente forma.
+\[
+	V(t)=V_0 \cos(\omega t)
+\]
+Donde $\omega = 2\pi f$, siendo $f= 50 s^{-1}$. Típicamente, $V_0 = 250(V)$.
+\section{Parámetros característicos}
+Definimos la intensidad de la corriente como
+\[
+	I = \dv{Q}{t} = q\dv{N}{t}~(A)
+\]
+Esta es una magnitud escalar. Por otro lado, tenemos la densidad volumétrica de carga:
+\[
+	\rho = \dv{Q}{V} = q\dv{N}{V} = qn
+\]
+Donde $n$ es la densidad volumétrica. Finalmente, tenemos el vector densidad de corriente $\vb{J}$, que tiene como dirección y sentido la de la velocidad media de las partículas:
+\[
+	\vb{J} = \frac{I}{S}\vb{n} = \frac{\dd{q}}{\dd{t}S}\cdot \dv{V}{V} \vb{n} = \rho \vb{v}~(\frac{A}{m ^{2}})
+\]
+\section{Densidad de corriente y campo eléctrico}
+Las fuerzas en una corriente eléctrica son:
+\[
+	\sum \vb{F} = m \vb{a} = \eta \vb{v} -q \vb{E}
+\]
+Cuando la aceleración es nula, llegamos a la \textbf{velocidad crítica}, obteniendo:
+\[
+	q \vb{E} = \eta \vb{v}
+\]
+Donde definimos $\mu = \frac{q}{\eta}$ como la movilidad de la carga. Si combinamos la definición de densidad de corriente en esta ecuación, obtenemos:
+\[
+	q \vb{E} = \eta \frac{\vb{J}}{\rho}
+\]
+De donde, despejando, tenemos que
+\[
+	\vb{J} = \rho \mu \vb{E}
+\]
+Por otro lado, definimos la resistencia como la dificultad que ofrece un conductor al paso de la corriente, y tiene unidades de Ohms $(\Omega)$. Otro parámetro que nos interesa es la conductancia, y es la facilidad que ofrece un conductor al paso de la corriente. 
+\[
+	G = \frac{1}{R} ~(\frac{1}{\Omega})
+\]
+Análogamente, la resistividad $\rho_{r}$ es la resistencia que ofrece un metal por unidad de distancia en una sección de área. Su inverso es la conductividad $\gamma$.  
+\[
+	\rho_{r} = \frac{1}{\gamma}
+\]
+Para un elemento cualquiera, su resistencia es
+\[
+	\boxed{
+		R = \rho_{r} \frac{l}{s}
+	}
+\]
+Sumando lo deducido hasta ahora obtenemos la \textbf{ley de Ohm}, definida como
+\[
+	I = \frac{\Delta V}{R}
+\]
+Cuando tengamos un circuito, definiremos $V_{\varepsilon}$ como la \textbf{fuerza electromotriz}. Si desarrollamos la potencia, tenemos que:
+\[
+	P = \dv{W}{t} = \frac{-\dd{q} \Delta V}{\dd{t}} = -I \Delta V
+\]
+Lo que nos indica que la potencia generada por una fuente es
+\[
+	P = I V_{\varepsilon}
+\]
+Cuando tenemos una resistencia, parte de la potencia que recibe se disipa en forma de calor. Como se indicó anteriormente, los electrones que se mueven en la banda de conducción chocan con los iones de la red. Este fenómeno se denomina \textbf{fuerza de arrastre}. Es decir, parte de la energía cinética que inyecta el campo eléctrico se transfiere a la red, aumentando la energía vibracional de los iones. Esta energía vibracional es el \textbf{calor}. Esto conduce a un aumento de la temperatura del metal. Este efecto se llama \textbf{efecto Joule}. La potencia disipada es entonces:
+\[
+	P = I \Delta V
+\]
+Aplicando la ley de Ohm:
+\begin{equation}
+	\begin{split}
+		P = I ^{2} R
+	\end{split}
+\end{equation}
+Para entender esta energía calorífica, despejamos el diferencial de trabajo $\dd{W}$ para obtener
+\begin{equation}
+	\begin{split}
+		W = \int_{0}^{t}R I ^{2} \dd{t}
+	\end{split}
+\end{equation}
+Esto nos lleva al concepto de \textbf{densidad de potencia disipada}.
+\begin{equation}
+	\begin{split}
+		u = \dv{P}{V}~(\frac{Wat}{m^{3}})
+	\end{split}
+\end{equation}
+Teniendo potencia y volumen constante:
+\begin{equation}
+	\begin{split}
+		u = \frac{P}{V} = \frac{RI ^{2}}{V} = \frac{R \vb{J}^{2} S ^{2}}{S l} = \vb{J} ^{2} \rho_{r}
+	\end{split}
+\end{equation}
+\section{Cortocircuitos}
+Un cortocircuito es un tramo de un conductor que se le asocia una resistencia \textbf{nula}, mientras que en un cortacircuito, la resistena es \textbf{infinita}.
+\begin{defin}[Circuito]
+Está formado por un conjunto de dispositivos electrónicos que están conectados entre sí. Si uno de los elementos es una fuente de voltaje, puede circular corriente a través de dicho circuito, por lo que la intensidad es distinta de $0$. 
+\end{defin}
+\begin{defin}[Circuito cerrado]
+	Es aquel circuito que nos proporciona un camino continuo a la corriente.
+\end{defin}
+\begin{defin}[Circuito abierto]
+	En este, la intensidad es nula al no poder pasar la corriente.
+\end{defin}
+Por otro lado, los elementos pasivos son aquellos como resistencias, bombillas, conductores, etc.
+\section{Acoplamiento de resistencias}
+\subsection{En serie}
+Es colocar dos o más resistencias una detrás de la otra. La tensión total en los extremos del acoplamiento es igual a la suma de tensiones en los extremos de cada uno de ellos:
+\[
+	V_{A} - V_{B} = \sum_{A}^{B-1} V_{i} - V_{i+1} = I \sum R_{i} = V_{\varepsilon}
+\]
+En estos circuitos,
+\begin{equation}
+	\begin{split}
+		V_{\varepsilon} = I \sum R_{i}
+	\end{split}
+\end{equation}
+Cuando tenemos circuitos complejos, tomamos la misma fuente de voltaje, y utilizamos una resistencia equivalente. El generador se va a caracterizar por una cierta tensión a generar, mientras que mantiene la intensidad del circuito original. La resistencia equivalente produce los mismos efectos térmicos que las resistencias en serie.\\
+En el circuito anterior, la potencia disipada es:
+\begin{equation}
+	\begin{split}
+		P = I ^{2} \sum R_{i}
+	\end{split}
+\end{equation}
+\subsection{En paralelo}
+Consiste en conectar dos o más resistencias de tal forma que los extremos de cada una de ellos estén conectados a dos puntos en común.
+\begin{figure}
+	\centering
+
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+
+%Straight Lines [id:da09723388160955637]
+\draw    (216,51.7) -- (216,209) ;
+%Straight Lines [id:da4511141229886434]
+\draw    (333,50.7) -- (333,208) ;
+%Curve Lines [id:da08328753309413905]
+\draw    (216,51.7) .. controls (256,21.7) and (293,80.7) .. (333,50.7) ;
+%Curve Lines [id:da5416544587909949]
+\draw    (216,116.7) .. controls (256,86.7) and (293,145.7) .. (333,115.7) ;
+%Curve Lines [id:da9699819603338287]
+\draw    (215,80.7) .. controls (255,50.7) and (292,109.7) .. (332,79.7) ;
+%Straight Lines [id:da963327163871941]
+\draw    (261,182.7) -- (261,235) ;
+%Straight Lines [id:da9107474268830901]
+\draw    (262.23,209) -- (216,209) ;
+%Straight Lines [id:da7487721152598041]
+\draw    (286.77,190.77) -- (286.77,225.23) ;
+%Straight Lines [id:da010481869947468692]
+\draw    (333,208) -- (286.77,208) ;
+
+
+
+
+\end{tikzpicture}
+
+\end{figure}
+Las intensidad total es la suma de intensidades:
+\[
+	I = \sum I_{i}
+\]
+Se debe cumplir que la diferencia de potencial debe ser la misma. Por tanto:
+\[
+	I = (V_{A} - V_{B}) \sum \frac{1}{R_{i}} = V_{\varepsilon} \sum \frac{1}{R_{i}}
+\]
+Respecto al circuito equivalente, hay que tener en cuenta que la intensidad va a ser la misma, así como el voltaje de la fuente.
+\[
+	I = \frac{V_{\epsilon}}{R_{eqv}}
+\]
+Igualando ambas expresiones, obtenemos
+\[
+	\frac{1}{R_{eqv}} = \sum \frac{1}{R_{i}}
+\]
+\begin{defin}
+Un generador de voltaje es aquel que genera una diferencia de voltaje entre dos extremos. A este se le asocia una fuerza electromotriz, de forma que la corriente que genera va de positivo a negativo. Esto genera una corriente interna que va del negativo al positivo. Esto se define como la \textbf{intensidad nominal}, sin provocar efectos adversos en el generador que pueden deteriorarlo. Además, tenemos la resistencia interna $r_{i}$.
+\[
+	V_{a}- V_{b} = V_{\varepsilon} - r_{i}I
+\]
+\end{defin}
+\section{Leyes de Kirchhoff}
+Estas leyes se aplican siempre que trabajemos con circuitos cerrados.
+Tenemos los siguientes elementos:
+\begin{itemize}
+	\item Nudo: son aquellos puntos de intersección en los que se conectan dos o más conductores. Se caracterizan porque entra y sale corriente.
+	\item Rama: tramo entre dos conductores, delimitado por dos nudos.
+	\item Malla: conjunto de ramas que forman un camino cerrado en un circuito, y que no puede dividirse en otros, ni pasar dos veces por la misma rama.
+\end{itemize}
+A cada rama del circuito se le va a asignar una corriente que circula a través de ella y esta se denomina $I_{i}$. $r$ es el número de ramas o de incógnitas del sistema. 
+\begin{enumerate}
+	\item En cada nudo, la suma de las intensidades que entran es igual a la suma de las intensidades que salen. La intensidad es positiva si esta llega al nudo o entra. Por tanto, es negativa si sale. Por tanto, obtendremos $n-1$ ecuaciones. 
+	\item \textbf{Ley de mallas}: la suma de las variaciones de potencial a lo largo de cualquier bucle o malla debe ser igual a cero.
+\end{enumerate}
+En la práctica, esto es:
+\begin{itemize}
+	\item En cada \textbf{nodo} (intersección), la suma de las corrientes entrantes es igual a la suma
+	de las corrientes salientes.
+	\item La suma de los voltajes (en una malla) es igual a la suma del producto de las intensidades
+	por la resistencia por la que pasan.
+\end{itemize}
+\section{Vector polarización}
+Supongamos el sistema formado por una batería conectado a dos metales. Se genera un campo
+exterior que va del polo positivo al negativo, denominado \(\vb{E}_{0}\). Los metales son
+dos planos con densidad uniforme \(\sigma \) y \(-\sigma \). Esta densidad se debe a la
+carga libre de electrones. Como respuesta a esta campo, los dipolos se alinean, de tal
+forma que en la superfície de los dieléctricos se crea una densidad superficial
+\(\-sigma _{i}\) inducida en \(x=0\), y otra \(\sigma _{i}\) en \(x=l\). Esta carga se
+conoce como \textbf{carga ligada}, ya que está fija y no se puede desplazar. En el
+interior, la carga total es \(0\).\\
+Como consecuencia de esto, se genera un campo inducido \(\vb{E}_i = \frac{-\sigma _{i}}{\varepsilon _{0}} \vb{i}\), cuyo sentido es
+opuesto al campo externo. El campo total es ahora
+\[
+	\vb{E} = \vb{E}_0 + \vb{E}_i
+\]
+\begin{defin}
+	El vector polarización se define como la suma de momentos dipolares por unidad de volumen
+	\begin{equation}
+		\begin{split}
+			\vb{P} = \dv{\vb{p}}{V} = \frac{\sum \vb{p}_i}{V} = \frac{Nq}{S} \vb{i}
+		\end{split}
+	\end{equation}
+	Este vector cumple que
+	\begin{equation}
+		\begin{split}
+			\sigma _{i} = \vb{P} \cdot \hat{n}
+		\end{split}
+	\end{equation}
+	Por tanto, cuando están alineados, \(\theta \) es \(0\), y por tanto \(\sigma _{i}\)
+	es máximo.
+\end{defin}
+La densidad superficial inducida \(\sigma _{i}\) es máxima cuando los dipolos eléctricos
+giran hasta obtener el alineamiento perfecto. Es decir, los dipolos se orientan todos
+en la misma dirección que el campo exterior, o bien en dirección del vector
+perpendicular a la superficie.\\
+La carga por unidad de área polarizada, o \(\sigma _{i}\) es igual a la componente
+normal de \(\vb{P}\).
+\section{Ley de Gauss aplicada a dieléctricos}
+Supongamos dos planos conectados a una batería, y dentro, otros dos planos con carga
+inducida \(\sigma _{i}\) y \(-\sigma _{i}\). Si aplicamos la ley de Gauss al centro del
+sistema con un cilindro que corta perpendicularmente a los planos, tenemos que
+\[
+	\oint \vb{E} \cdot \dd{\vb{s}} = \frac{Q}{\varepsilon_{0}} = 
+	\frac{\int \sigma  \dd{s} - \int \sigma _{i}\dd{s}}{\varepsilon _{0}}
+\]
+En total tendríamos tres superfícies:
+\[
+	\int_{S_{1}} \vb{E} \dd{s} + \int_{S_{2}} \vb{E}\dd{s} + \int_{S_{3}}\vb{E}\dd{s}
+	= |E||S_{2}| = |E|2 \pi r d
+\]
+Juntando
+\[
+	\varepsilon _{0} \int \vb{E} \dd{s} = \int \sigma \dd{s} - \int \vb{P} \cdot \hat{n}\dd{s}
+\]
+Pasando al otro lado
+\[
+	\varepsilon _{0} \int (\vb{E}+\vb{P} )\dd{\vb{s}} = \int \sigma \dd{s}
+\]
+Y por tanto definimos el vector desplazamiento como
+\begin{equation}
+	\begin{split}
+		\vb{D} = \vb{P} + \varepsilon _{0} \vb{E}
+	\end{split}
+\end{equation}
+Esto conforma la \textbf{ley de Gauss}:
+\begin{equation}
+	\begin{split}
+		\int \vb{D} \cdot \dd{\vb{s}} = q_{\text{libre}}
+	\end{split}
+\end{equation}
+O de otra forma
+\begin{equation}
+	\begin{split}
+		\sigma = \vb{D} \cdot \hat{n}
+	\end{split}
+\end{equation}
+\subsection{Conclusión}
+La densidad superficial de carga libre es igual a la componente normal del vector
+desplazamiento. Este tiene unidades de densidad de carga superficial.
+\section{Campo eléctrico y polarización}
+Se tiene que
+\[
+	\vb{P} = \varepsilon _{0}(\varepsilon _{r}-1) \vb{E}
+\]
+Si \(\vb{P}\) tiene esa forma y \(\vb{D} = \varepsilon_{0}\vb{E} + \vb{P}\), podemos
+sustituir para obtener
+\[
+	\vb{D} = \varepsilon _{0}\vb{E} + \varepsilon _{0}(\varepsilon _{r}-1)\vb{E}=
+	\varepsilon  \vb{E}
+\]
+Es decir
+\begin{equation}
+	\begin{split}
+		\vb{D} = \varepsilon \vb{E}
+	\end{split}
+\end{equation}
+\section{Capacidad de un condensador plano paralelo}
+Relacionando el campo de un condensador y lo deducido hasta ahora, tenemos que
+\[
+	\vb{E} = \frac{\sigma }{\varepsilon _{0}} \hat{u} - \frac{1}{\varepsilon _{0}}
+	(\varepsilon _{r}-1)\varepsilon |E| \hat{u}
+\]
+También se puede deducir que
+\[
+	\vb{P} = \sigma (1-\frac{1}{\varepsilon _{r}})
+\]
+Deduciendo que el campo del condensador es \(\vb{E} = \frac{\sigma }{\varepsilon } \hat{i}\)
+, tenemos que
+\[
+	V(0) - V(l) = \int_{0}^l \vb{E} \dd{\vb{l}} = \int_{0}^{l} \frac{\sigma }{\varepsilon }\hat{i}  \dd{x}
+\]
+Cuando calculemos esto y lo introdujamos en la ecuación de la capacidad:
+\[
+	C = \frac{Q}{\Delta V} = \frac{q\varepsilon }{\sigma l}= \frac{\sigma S \varepsilon }{\sigma l}
+	= \varepsilon \frac{S}{l}
+\]
+\subsection{Energía electroestática almacenada}
+Anteriormente vimos que la energía electroestática de una esfera cargada era
+\[
+	U = \frac{1}{2}CV^{2}
+\]
+Cuando sustituimos la capacidad, obtenemos
+\[
+	U = \frac{1}{2} \varepsilon \frac{S}{l} (EL)^{2} = \frac{1}{2}\varepsilon SlE^{2}
+\]
+Por otra parte, sabiendo que \(Vol = Sl\), tenemos
+\[
+	U = \frac{1}{2}\varepsilon Vol\cdot E^{2}
+\]
+\subsection{Densidad de energía electroestática}
+Denotada como \(u\), es
+\begin{equation}
+	\begin{split}
+		u = \dv{U}{(Vol)} = \frac{U}{Vol} = \frac{1}{2}\varepsilon E^{2}
+	\end{split}
+\end{equation}
+\end{document}

@@ -1,0 +1,668 @@
+%! TEX root = Topologia.tex
+
+\documentclass{../Topologia.tex}
+
+\begin{document}
+\chapter{Nociones Básicas}
+\section{Conjuntos}
+Cuando definimos algo, tiene que estar definido de forma que cualquier persona
+esté de acuerdo con dicha definición.
+\begin{defin}
+	Un conjunto se puede definir por su \textbf{extensión}, mencionando todos
+	sus elementos, o por \textbf{compresión}, defininiendo la regla que todos
+	los elementos del conjunto deben cumplir.
+	\begin{itemize}
+		\item Extensión:\\
+			\begin{equation}
+				\begin{split}
+					S = \{ 1,2,3,\dots  \}
+				\end{split}
+			\end{equation}
+		\item Comprensión:\\
+			\begin{equation}
+				\begin{split}
+					S = \{ x \in \mathbb{N} \}
+				\end{split}
+			\end{equation}
+	\end{itemize}
+	Denotamos los conjuntos por letras mayúsculas, y sus elementos por letras
+	minúsculas.\\
+	Si $x$ es un elemento del conjunto $S$, decimos que $a \in S$, y si no
+	pertenece, $a \notin S$. Es importante tener en cuenta que, a menos que se
+	especifique, el orden de los elementos de un conjunto es irrelevante, solo nos
+	interesan sus elementos. Para especificar orden, podemos utilizar $(a,b)$,
+	que se define como \textbf{par ordenado}, tal que
+	\[
+		(a,b) = (c,d) \iff a=c \wedge b = d
+	\]
+\end{defin}
+
+\begin{defin}
+	El \textbf{cardinal} de un conjunto es el número de elementos del conjunto,
+	denotado por $\#S$. 
+\end{defin}
+Dados dos conjuntos $A$ y $B$, decimos que $A$ es un subconjunto de $B$ si y solo
+si
+\begin{equation}
+	\begin{split}
+		\forall x \in A, x \in B \implies A \subset B
+	\end{split}
+\end{equation}
+Sino, decimos que $A \not\subset B$.
+\begin{defin}
+	Decimos que $A$ es subconjunto de $B$ si
+	\begin{equation}
+		\begin{split}
+			A \subset B \iff (a \in A \implies a \in B)
+		\end{split}
+	\end{equation}
+\end{defin}
+Un ejemplo de conjuntos es el conjunto vacío:
+\begin{equation}
+	\begin{split}
+		\phi / \# \phi = 0
+	\end{split}
+\end{equation}
+\begin{defin}
+	Decimos que dos conjuntos $A$ y $B$ son iguales si y solo si
+	\begin{equation}
+		\begin{split}
+			A \subset B \wedge B \subset A
+		\end{split}
+	\end{equation}
+\end{defin}
+\subsection{Operaciones con conjuntos}
+\begin{defin}
+	La unión $S$ de dos conjuntos $A$ y $B$ es
+	\begin{equation}
+		\begin{split}
+			S = A \cup B = \{x / x \in A \vee x \in B \}
+		\end{split}
+	\end{equation}
+\end{defin}
+\begin{defin}
+	La intersección $S$ de dos conjuntos $A$ y $B$ es
+	\begin{equation}
+		\begin{split}
+			S = A \cap B = \{ x / x \in A \wedge x \in B \}
+		\end{split}
+	\end{equation}
+\end{defin}
+\begin{defin}
+	Definimos la diferencia $S$ de $A$ menos $B$ tal que
+	\begin{equation}
+		\begin{split}
+			S = A - B = \{ x / x \in A \wedge x \notin B  \}
+		\end{split}
+	\end{equation}
+\end{defin}
+\begin{defin}
+	La diferencia simétrica entre $E$ y $A$ es
+	\begin{equation}
+		\begin{split}
+			A \Delta B = (A-B)\cup (B-A)
+		\end{split}
+	\end{equation}
+\end{defin}
+
+\begin{defin}
+	Definimos el complemento $S^{c}$ de un conjunto $S$ como
+	\begin{equation}
+		\begin{split}
+			S \cup S^{c} &= E\\
+			S \cap S^{c} &= \phi
+		\end{split}
+	\end{equation}
+	Siendo $E$ el conjunto total. 
+\end{defin}
+\begin{defin}
+	Definimos el producto cartesiano entre $A$ y $B$ como
+	\[
+		A \times B = \{ (a,b): a \in A \wedge b \in B \}
+	\]
+	Ejemplos:
+	\begin{itemize}
+		\item $\emptyset \times B = \emptyset$
+		\item $A \times B \neq B \times A$ (ya que son pares con órdenes diferentes)
+	\end{itemize}
+\end{defin}
+
+\begin{prop}
+	$A\cap (B\cup C) = (A\cap B)\cup (A\cap C)$ 
+\end{prop}
+\begin{proof}[Demostración]
+	Sea $x \in A\cap (B\cup C) \iff x \in A \wedge x \in B \cup C$
+	\begin{equation}
+		\begin{split}
+			&\iff x \in A \wedge (x \in B \vee x \in C)\\
+			&\iff (x\in A \wedge x \in B) \vee (x \in A \wedge x \in C)\\
+			&\iff x \in A\cap B \vee x \in A \cap C\\
+			&\iff x \in (A\cap B) \cup (A\cap C)
+		\end{split}
+	\end{equation}
+\end{proof}
+\begin{prop}
+	$(A\cup B)^{c} = A^{c} \cup B^{c}$ 
+\end{prop}
+\begin{proof}[Demostración]
+	\begin{equation}
+		\begin{split}
+			x \in A^{c} \cup B^{c} &\iff x \in A^{c} \vee x \in B^{c}\\
+								   &\iff x \notin A \vee x \notin B\\
+								   &\iff x \notin A\cap B\\
+								   &\iff x \in (A\cap B)^{c}
+		\end{split}
+	\end{equation}
+\end{proof}
+\section{Tablas de verdad}
+Una tabla de verdad nos permite analizar como se comportan dos proposiciones:
+\begin{table}[h]
+	\centering
+
+	\begin{tabular}{c|c|c|c}
+		$p$ & $q$ & $p\vee q$\\
+		\hline
+		$V$ & $V$ & $V$\\
+		$V$ & $F$ & $V$\\
+		$F$ & $V$ & $V$\\
+		$F$ & $F$ & $F$\\  
+	\end{tabular}
+\end{table}
+\begin{table}[h]
+	\centering
+
+	\begin{tabular}{c|c|c}
+		$p$ & $q$ & $p\wedge q$\\
+		\hline
+		$V$ & $F$ &$F$\\
+		$F$&$V$&$F$\\
+		$F$ & $F$ & $F$\\
+		$V$ & $V$ & $V$
+	\end{tabular}
+\end{table}
+\begin{table}[h]
+	\centering
+
+	\begin{tabular}{c|c|c}
+		$p$ & $q$ & $p \implies q$\\
+		\hline
+		$V$ & $V$ & $V$\\
+		$V$&$F$&$F$\\
+		$F$&$V$&$V$\\
+		$F$&$F$&$V$
+		
+	\end{tabular}
+\end{table}
+Se puede deducir que $p \implies q \iff \neg p \vee q$. Con esto, también podemos
+deducir que
+\[
+	(p \implies q) \iff (\neg q \implies \neg p)
+\]
+\begin{defin}
+	Sea $S\subset \R$, una función $f:S\to \R$ es continua en $a\subset S$ si:
+	\begin{equation}
+		\begin{split}
+			\forall \varepsilon > 0 \exists \delta > 0 /
+			|f(x)-f(a)|<\varepsilon \implies |x-a| < \delta
+		\end{split}
+	\end{equation}
+\end{defin}
+\begin{defin}
+	Sea $S \subset \R$. $S$ es abierto si:
+	\begin{equation}
+		\begin{split}
+			\forall x \in S \exists I \subset S / I =
+			(x-\delta, x+\delta) / \delta > 0
+		\end{split}
+	\end{equation}
+\end{defin}
+\begin{prop}
+	La unión de abiertos es un abierto.
+\end{prop}
+\begin{proof}[Demostración]
+	Sea $S_{i}$ cada conjunto abierto. Sabemos que
+	\begin{equation}
+		\begin{split}
+			\forall x \in S_{i} \exists \delta > 0 / (x-\delta, x+\delta) \subset S
+		\end{split}
+	\end{equation}
+	Sea $U$ la unión de los conjuntos:
+	\begin{equation}
+		\begin{split}
+			U = S_{1} \cup S_{2}\dots \cup S_{n} = 
+			\{ x / x \in S_{1} \vee \dots \vee x \in S_{n} \}
+		\end{split}
+	\end{equation}
+	Sabemos que para cada punto $x \exists \delta > 0 / (x-\delta,x+\delta) \in S_{i}$.
+	Por tanto, estos subintervalos estarán contenidos en la unión, y por tanto
+	esta es abierta.
+\end{proof}
+\begin{prop}
+	La intersección finita de abiertos es abierta
+\end{prop}
+\begin{proof}[Demostración]
+	Vamos a definir dos casos:
+	\begin{itemize}
+		\item \textbf{Caso 1}: La intersección es $\emptyset$. 
+		Como sabemos que $\emptyset$ es abierto, se cumple.
+		\item \textbf{Caso 2}: La intersección no es $\emptyset$.\\
+		La intersección estará formada por una serie de conjuntos no nulos que
+		sabemos que contienen intervalos abiertos $\forall x$. Sea $\delta
+		 / \delta = min(\delta_{1}, \dots ,\delta_{n})$. Como este $\delta$
+		 es el más pequeño, estará contenido en todos los abiertos para
+		 todos los puntos, y por tanto lo estará también en la intersección.
+	\end{itemize}
+\end{proof}
+\subsection{Continuidad por conjuntos abiertos}
+Vamos a definir el concepto de preimagen:
+\begin{defin}
+	Sea $f:D \to C$ una función y $S\subset C$. La preimagen de $S$ bajo $f$,
+	escrita como $f^{-1}(S)$ es el subconjunto de $D$ definido como:
+	\begin{equation}
+		\begin{split}
+			f^{-1}(S) = \{ x \in D / f(x) \in S \}
+		\end{split}
+	\end{equation}
+\end{defin}
+
+Sea $f:S \to T / U,V \subset T$
+\section{Relaciones}
+Existen dos tipos de relaciones:
+\begin{itemize}
+    \item De orden
+    \item De equivalencia
+\end{itemize}
+
+Una relación $R$ de $A$ en $B$ es cualquier subconjunto de $A \times B$:
+$$
+R \subset A \times B
+$$
+Y denotamos $(a,b) \in R$ por $a~R~b$, diciendo que $a$ está relacionado con $b$.
+
+\subsection{Relaciones de equivalencia}
+Podemos hablar de relaciones \textbf{internas} $(a=b)$ o \textbf{externas} $(a \neq b)$.
+Sea $A \neq \phi$, una relación de equivalencia definida sobre $A$ es una relación que satisface las siguientes propiedades:
+\begin{enumerate}
+    \item $\forall x \in A,~x \sim x$ (reflexiva).
+    \item Dados $x$ e $y$ en $A$, si $x\sim y$, entonces $y \sim x$ (simetría).
+    \item Dados $x\sim y$, e $y \sim z$, entonces $x \sim z$ (transitiva).
+\end{enumerate}
+Todo esto se lee como $x$ equivalente a $y$. Todas estas propiedades se deben cumplir.
+Para escribir esto como subconjuntos del producto cartesiano:
+$$
+x \sim x \equiv (x,x) \in \sim
+$$
+Si tenemos un conjunto $A$, y este esta dividido en subconjuntos disjuntos, entonces dados dos elementos en $A$, estos son equivalentes sí y solo sí ambos pertenecen al mismo subconjunto.
+$$
+S_{i} \subset A, x \sim y \iff x,y \in S_{i}~ :~ A = S_{1} \cap\dots \cap S_{n}
+$$
+\textbf{Ejemplos}:
+Tomamos en $\mathbb{Z}$, dado un entero $n>1$, entonces definimos para $a,b \in \mathbb{Z}$,
+$$
+a \equiv b ~ mod_{n} \iff n | b -a
+$$
+$a$ congruente con $b$ módulo $n$.
+Esto define una relación de equivalencia en $\mathbb{Z}$ de módulo $n$.
+Debemos demostrar que esa relación cumple las propiedades definidas anteriormente para poder afirmar que es de equivalencia.
+\begin{enumerate}
+\setcounter{enumi}{3}
+    \item Es reflexiva: dado un $a \in \mathbb{Z}$, $n | a-a$, ya que $a-a = 0$, entonces $a$ es congruente con $a ~ mod_{n} \forall a \in \mathbb{Z}$.
+    \item Es simétrica: dados dos $a,b \in \mathbb{Z}$, si $a \equiv b ~mod_{n} \iff n|b-a$, entonces $n |a-b \iff b \equiv a ~mod_{n}$.
+    \item Es transitiva: dados $a,b,c \in \mathbb{Z} / a \equiv b~ mod_{n}$ y $b \equiv c ~ mod_{n}$, entonces $n |b-a$ y $n|c-b$, por tanto $b-a = nx$ y $c-b = ny$, entonces $c-a=n(x+y)=nz \implies n |c-a$.
+\end{enumerate}
+Como cumple con las propiedades, es una relación de equivalencia.
+Si $n>1$, ¿cuáles son las clases de equivalencia de la congruencia módulo $n$?
+Sean $a,b\in \mathbb{Z}$, y los dividimos entre $n$:
+$$
+a = q_{1}n+r_{1}:0\leq r_{1}<n
+$$
+$$
+b=q_{2}n+r_{2}:0\leq r_{2}<n
+$$
+¿Qué pasa si $a$ es congruente con $b$ módulo $n$?
+Entonces, $n |b-a$, y $b-a=n(q_{2}-q_{1}) +r_{2}-r_{1}$. Si $n|b-a$, entonces $\exists m \in \mathbb{Z}: b-a=nm \implies nm=(q_{2}-q_{1})n+r_{2}-r_{1}\implies n(m-q_{2}+q_{1})=r_{2}-r_{1}$.
+Pero como $0\leq|r_{2}-r_{1}|<n$. Sabiendo que $r_{2}-r_{1} = kn$, y $r_{2}-r_{1} < n$, entonces la única posibilidad es que $k=0$. Esto implica que $\frac{n}{a}$ y $\frac{n}{b}$ tienen el mismo resto.
+Vamos a demostrar ahora el recíproco:
+Supongamos ahora que $a = qn+r$ y $b=q'n+r$. Entonces, $b-a = n(q'-q)$ es decir, $n|b-a$, y por tanto, $a \sim b~mod_{n}$
+Con esto podemos afirmar para $a\in \mathbb{Z}$,
+$$
+[a] = \{ b \in \mathbb{Z}:n\%a=n\%b \}
+$$
+Es decir, el conjunto de todos los $b$ congruentes con $a$ módulo $n$. Como los residuos de dividir un entero entre $n$ van desde $[0,n-1]$, las clases son las clases de $[0],[1],\dots,[n-1]$. Entonces la clase de un número $r$ es
+$$
+[r]= \{ qn+r:q\in \mathbb{Z} \}
+$$
+Por ejemplo, si dividimos un número entre $3$, solo podemos obtener resto $0,1$ o $2$.
+
+\begin{teorema}
+Sea $A \neq \phi$ y $\sim$ una relación de equivalencia sobre $A$. Entonces
+$$
+a\sim b\iff[a]=[b]
+$$
+$$
+a\not\sim b \iff [a] \cap  [b]=\phi
+$$
+\end{teorema}
+\begin{proof}[Demostración]
+Supongamos que $a\sim b$. Sea $x \in[a]$, entonces $x\sim a$. Como es una relación de equivalencia, $x\sim b$ y por tanto $x \in [b]$, y por tanto, como se cumple para todo elemento, $[a]=[b]$.
+Supongamos $[a]=[b]$. Por la reflexividad, $b\in[b]$, entonces $b\in[a]$, y por tanto $a\sim b$.
+Para la segunda parte, si $x \in[a]\cap[b]\iff x\sim a$ y $x\sim b\iff a\sim b$. Por tanto, dos clases de equivalencia de una misma relación o son iguales o son disjuntas.
+Sea $X$ un conjunto. Una partición de $X$ es un conjunto $P$ cuyos elementos son subconjuntos de $X= \cup A : A \in P$ y $A \in P \wedge B \in P \implies A \cap B = \phi$.
+\end{proof}
+\textbf{Corolario}
+Si $\sim$ es una relación de equivalencia definida sobre $A$, entonces el conjunto de todas las clases de equivalencia distintas es una partición.
+
+\vspace{1em}
+Vamos a tomar en el plano $\mathbb{R}^2$, decimos que dos puntos $P$ y $Q$ son equivalentes (o están relacionados) sí y solo sí la distancia de $P$ al origen es la distancia de $Q$ al origen, donde $\vec{O} = (0,0)$. Vamos a ver si cumple las propiedades:
+$$
+P \sim Q \iff d(P,O)=d(Q,O)
+$$
+\begin{enumerate}
+\setcounter{enumi}{6}
+    \item Es reflexivo: $P \sim P \iff d(P,O) = d(P,O)$. Esto se cumple por sí mismo.
+    \item Es simétrico: $P\sim Q \iff d(P,O) = d(Q,O)$, y se cumple que como $d(Q,O)=d(P,O) \iff Q\sim P$.
+    \item Es transitivo: $P\sim Q \iff d(P,O) = d(Q,O)$. Si $Q\sim R \iff d(Q,O) = d(R,O)$, entonces si sustituimos tenemos que $d(P,O)=d(R,O) \iff P \sim R$.
+\end{enumerate}
+
+\begin{defin}
+Sea $A \neq \phi$ y $\sim$ una relación de equivalencia sobre $A$. Entonces $\forall a \in A$, el conjunto $[a] = \{ x \in A : a \sim x \}$ se llama la clase de equivalencia de $a$.
+\end{defin}
+
+\begin{defin}
+El conjunto de todas las clases de equivalencia que define la relación $\sim$ sobre $A$, se llama el conjunto cociente de la relación y se denota por
+\begin{equation}
+	\begin{split}
+\boxed{A / \sim}
+	\end{split}
+\end{equation}
+Para la congruencia de módulo $n$ en $\mathbb{Z}$:
+$$
+\frac{\mathbb{Z}}{\sim} = \{ [0],[1],\dots,[n-1] \} \equiv \mathbb{Z}_{n}
+$$
+\end{defin}
+
+\begin{defin}
+$f:X\to Y$ es una función si y solo si:
+\begin{enumerate}
+    \item Para cada elemento $x \in X \exists y \in y : (x,y) \in f$
+    \item $(x,y) \in f \wedge (x,z) \in F \implies y = z$
+\end{enumerate}
+Si $(x,y) \in f$, escribimos $f(x)=y$. El conjunto $X$ se llama \textbf{dominio} de la función, y el conjunto $Y$ se llama \textbf{rango} o \textbf{codominio} o \textbf{conjunto de llegada} de $f$.
+Además, la \textbf{imagen} de $f$ es el conjunto
+$$
+\mathrm{Im}(f)=\{ y \in Y : (\exists x \in X)(f(x)=y) \} \subset Y
+$$
+$$
+Dom (f) = X
+$$
+\end{defin}
+
+Por ejemplo, para buscar el dominio de la función $f$ dada por la fórmula
+$$
+f(x)=\sqrt{ x^{2}-1 }:x \in \mathbb{R}
+$$
+Necesitamos saber el conjunto de valores de $x$ para los cuales $f(x)$ existe. Es decir, para los cuales $\sqrt{ x^{2}-1 }$ tiene sentido. En este caso, esto se cumple cuando
+$$
+x^{2}-1\geq 0 \implies |x|\geq 1
+$$
+\vspace{1em}
+Dado un conjunto $A \subset X$, definimos
+$$
+f(A)= \{ f(x) / x \in A \}
+$$
+y además, definimos la \textbf{preimagen} de un conjunto $B \subset Y$:
+$$
+f^{-1}(B)= \{ x \in X : f(x) \in B \}
+$$
+Es decir, teniendo $y \subset Y$:
+\begin{equation}
+	\begin{split}
+f^{-1}(y)&= \{ x \in X : f(x)=y \}\\ \\
+f^{-1}(\{ y \})&= \{ x \in X : f(x)\in \{ y \} \}\\ \\
+f(x) \in \{  y \}&\iff f(x)=y
+	\end{split}
+\end{equation}
+\section{Tipos de funciones}
+Sea $f:X\to Y$. $f$ es \textbf{injectiva} (o 1:1) si y solo si:
+$$
+f(x_{1})=f(x_{2}) \implies x_{1}=x_{2}~ \forall x_{1},x_{2}\in X
+$$
+O, equivalentemente
+$$
+x_{1}\neq x_{2} \implies f(x_{1})\neq f(x_{2})
+$$
+Una función es \textbf{sobreyectiva} si y solo si:
+$$
+\mathrm{Im}(f)=Y
+$$
+Es decir, $\forall y \in Y \exists x \in X:f(x)=y$
+Si ocurren ambas propiedades, la función es \textbf{biyectiva}.
+Con esto podemos deducir que:
+\begin{itemize}
+    \item $f:A\to B. \#A=\#B \iff~f$ es biyectiva.
+\end{itemize}
+Sea $f:X\to Y$ una función biyectiva. Sea $g:Y\to X : g(y)=x \iff f(x)=y$.
+¿$g$ define una función de $Y\to X$?
+Es decir, ¿$\forall y \in Y$, existe un único $x \in X : g(y)=x$?
+Dado $y \subset Y$, sabemos que $\exists x \in X : f(x)=y$, ya que $f$ es sobreyectiva. Entonces $g(y)=x$.
+Demostremos que si $\exists ! x \in X :g(y)=x$. Esto se cumple ya que $f$ es inyectiva. Por tanto, tenemos una función $g:Y\to X : g(y)=x \iff f(x)=y$. Esta función se llama la \textbf{inversa} de $f$ y la denotamos por $f^{-1}$.
+$$
+f^{-1}:Y\to X: f^{-1}(y)=x\iff f(x)=y
+$$
+
+\begin{defin}
+Sean $f:X\to Y$, $g:Y\to Z$ dos funciones. Definimos la composición de $f$ con $g$ como la función $g\circ f: X\to Z:(g\circ f)(x)=g(f(x))$.
+\end{defin}
+
+Esto se puede entender como un producto de funciones no conmutativo, pero sí es asociativa:
+$$
+h\circ(g\circ f)=(h\circ g)\circ f
+$$
+Si $f:X\to Y$ es biyectiva, entonces
+$$
+(f\circ f^{-1})(y)=y \iff (f^{-1}\circ f)(x)=x
+$$
+La función que cumple que $f(x)=x \forall x$ se llama la función \textbf{identidad}:
+$$
+id:X\to X
+$$
+\vspace{1em}
+Sea $X$ un conjunto no vacío. $f:X\to Y$ una función sobreyectiva. Definimos la siguiente relación: dados $x_{1},x_{2}\in X$, decimos que $x_{1} \sim x_{2} \iff f(x_{1})=f(x_{2})$.
+¿Es una relación de equivalencia?
+\begin{itemize}
+    \item Reflexiva: $f(x)=f(x) \iff x \sim x$
+    \item Simétrica: $x_{1}\sim x_{2} \implies f(x_{1})=f(x_{2})\iff f(x_{2})=f(x_{1})\iff x_{2}\sim x_{1}$
+    \item Transitiva: $x_{1}\sim x_{2} \wedge x_{2}\sim x_{1} \implies f(x_{1})=f(x_{2}), f(x_{2})=f(x_{3})\implies f(x_{1})=f(x_{3})\implies x_{1}\sim x_{3}$
+\end{itemize}
+Consideremos el conjunto cociente $\frac{X}{\sim}$, es decir, el conjunto formado por todas las clases de equivalencia. Entonces, ¿existe una biyección entre $X / \sim$ e $Y$?
+Sea $\hat{f}:X / \sim \to Y : \hat{f}([x])=f(x)$
+$\hat{f}$ está bien definida ya que $[x_{1}]=[x_{2}] \implies x_{1}\sim x_{2} \implies f(x_{1})=f(x_{2})$. Por tanto, $\hat{f}([x_{1}])=\hat{f}([x_{2}])$. Por tanto todos los elementos de $\frac{X}{\sim}$ tienen imagen y esta es única. Dado $y \in Y$, como $f$ es sobreyectiva $\exists x \in X:y=f(x)$, pero como $f(x)=\hat{f}([x])$, entonces dado $y \in Y$ existe $[x] \in \frac{X}{\sim}:\hat{f}([x])=y$.
+Además, podemos definir la función $\pi:X \to \frac{X}{\sim}$ como la \textbf{proyección canónica}.
+$$
+\pi(x)=[x] \forall x \in X
+$$
+
+\begin{defin}
+Sea $X$ un conjunto no vacío. Una colección $\mathbf{T}$ de subconjuntos $X$ se dice que es una topología sobre $X$ si
+\begin{enumerate}
+    \item $X$ y el conjunto vacío $\phi$ pertenecen a $\mathbf{T}$.
+    \item La unión de cualquier número (finito o infinito) de conjuntos de $\mathbf{T}$ pertenece a $\mathbf{T}$.
+    \item La intersección de dos conjuntos cualesquiera de $\mathbf{T}$ pertenece a $\mathbf{T}$
+\end{enumerate}
+El par $(X,\mathbf{T})$ se llama \textbf{espacio topológico}.
+Por la propiedad 3 y mediante inducción, se puede demostrar que si $A_{i}$ conjuntos están en $\mathbf{T}$, entonces
+$$
+\bigcap A_{i} \in \mathbf{T}
+$$
+\end{defin}
+La pertenencia no es transitiva
+
+\begin{defin}
+Sea $X$ no vacío, y $\mathbf{T}$ la colección de todos los subconjuntos de $X$. Entonces $\mathbf{T}$ es una \textbf{topología discreta} sobre $X$, y $(X,\mathbf{T})$ es un \textbf{espacio discreto}.
+Si para un espacio topológico, se cumple que $\forall x \in X, \{ x \} \in \mathbf{T}$, entonces $\mathbf{T}$ es una topología discreta.
+La topología formada por $(X,\phi)$ es la topología indiscreta.
+\end{defin}
+
+El conjunto $X$ de la definición anterior puede ser cualquier conjunto no vacío, por tanto, hay una cantidad infinita de espacios discretos para cada conjunto no vacío $X$.
+
+\begin{defin}
+Dado un espacio topológico $(X,\mathbf{T})$, los elementos de $\mathbf{T}$ se llaman \textbf{conjuntos abiertos}.
+\end{defin}
+
+\begin{defin}
+Sea $(X, \mathbf{T})$ un espacio topológico. Un subconjunto $S$ de $X$ es cerrado en $(X,\mathbf{T})$ si su complemento es abierto.
+\end{defin}
+
+\begin{defin}
+Sea $X\neq \phi$. Una topología $\mathbf{T}$ sobre $X$ es llamada \textbf{topología cofinita} si y solo si los conjuntos cerrados de $X$ son, $X$ y todos los subconjuntos finitos de $X$. Por tanto, los conjuntos abiertos son $\phi$ y todos los subconjuntos de $X$ con complemento finito.
+$$
+T_{cof}=\{ A \subseteq X : X-A \text{ es finito o }A=\phi \}
+$$
+Un subconjunto de $X$ es abierto si su complemento es finito.
+\end{defin}
+
+\section{Topología Euclidiana}
+
+\begin{defin}
+Un subconjunto $S\subset \mathbb{R}$ se llamaba abierto en la topología euclidiana de $\mathbb{R}$ si y solo si
+$$
+\forall x \in S \exists a,b \in \mathbb{R}:a<b \wedge x \in (a,b) \subseteq S
+$$
+Otra forma de formular esto es
+$$
+\forall x \in S \exists \delta > 0 : (x-\delta,x+\delta)\subseteq S
+$$
+\end{defin}
+
+\subsection{Conjuntos abiertos y cerrados}
+Los intervalos abiertos $(r,s)$ son abiertos, ya que $\forall x \in (r,s) \exists \delta > 0 : (x-\delta,x+\delta)\subset (r,s)$.
+
+Propiedades
+\begin{itemize}
+    \item $\mathbb{R},\phi, \mathbb{Z}$ son abiertos.
+    \item $(a,b),(-\infty,a),(a,\infty)$ son abiertos.
+    \item $\mathbb{Q}$ no es ni abierto ni cerrado.
+    \item Un subconjunto $S \subset \mathbb{R}$ es abierto si y solo si es la unión de intervalos abiertos.
+\end{itemize}
+
+\begin{defin}
+Base de una topología
+Una colección $B$ de subconjuntos abiertos de $X$ es una base de $\mathbf{T}$ si y solo si, cada conjunto abierto es una unión de elementos de $B$, es decir:
+$$
+\forall D \in \mathbf{T} \exists \{ S_{i} \} \subset B :D = \bigcup S_{i}
+$$
+Se cumplirá que $B$ es una base de una topología sobre $X$ si:
+\begin{itemize}
+    \item $X=\bigcup_{S\in B}S$
+    \item Para todo $S_{1},S_{2}\in B$, el conjunto $S_{1}\cap S_{2}$ es una unión de elementos de $B$.
+\end{itemize}
+Otra forma de demostrar si algo es una base de una topología es la siguiente:
+$$
+\forall x \in A \subset \mathbf{T} \exists S \in B : x \in S \subseteq A
+$$
+\end{defin}
+
+Sean $B_{1}$ y $B_{2}$ bases de $T_{1}$ y $T_{2}$ respectivamente. $T_{1}=T_{2}$ si y solo si:
+\begin{itemize}
+    \item $\forall S\in B_{1},x \in S, \exists S'\in B_{2}:x \in S'\subseteq S$
+    \item $\forall S \in B_{2},x \in S, \exists S' \in B_{1}:x \in S' \subseteq S$
+\end{itemize}
+
+\begin{defin}
+Sea $A$ un subconjunto de un espacio topológico $(X,\mathbf{T})$. Un punto $x \in X$ se llama punto límite de $A$ si y solo si, todo conjunto abierto $U$ que contiene a $x$ contiene también otro punto de $A$ diferente de $x$, es decir, si $U\cap A-\{ x \} \neq \phi$. Si $x \not\in A$, basta con verificar si para todo conjunto abierto, $U\cap A \neq \phi$.
+Si la topología contiene el singular de un elemento $x$, entonces $x$ nunca puede ser punto límite de ningún subconjunto.
+\end{defin}
+
+Con esto podemos llegar a un criterio para demostrar si un conjunto es cerrado:
+
+\begin{defin}
+Un conjunto $A$ es cerrado si y solo si todos los puntos límites de $A$ pertenecen a $A$.
+\end{defin}
+
+\begin{defin}
+La clausura de un conjunto $A$, denominado como $\bar{A}$, se define como $A$ unido con sus puntos límites, es decir, $\bar{A}=A\cup A'$. Además, será el cerrado más pequeño que contenga a $A$.
+\end{defin}
+
+\begin{defin}
+Un subconjunto $D$ de un espacio topológico $(X,\mathbf{T})$ es denso en $X$ si y solo si $\overline{D}=X$.
+\end{defin}
+
+\begin{prop}
+Sea $D\subset(X,\mathbf{T})$. Entonces, $D$ es denso en $X$, si y solo si, todo subconjunto abierto y no vacío de $X$ interseca (no trivialmente) a $D$, es decir, $U \neq \phi, U \cap D \neq \phi$.
+\end{prop}
+
+\begin{defin}
+Sea $(X,\mathbf{T}), V$ un subconjunto de $X$ y $p \in V$. $V$ es una vecindad de $P$ si y solo si existe un abierto $A$ tal que $p \in A \subseteq V$. Con esta definición se cumple que:
+\begin{itemize}
+    \item En $\mathbb{R}$, los intervalos abiertos (y cerrados) que contengan a $p$, son vecindades de este.
+\end{itemize}
+\end{defin}
+
+\begin{prop}
+Un punto $x \in X$ es punto límite de $S$ si y solo si toda vecindad de $x$ contiene un punto de $S$ diferente de $x$.
+\end{prop}
+
+\begin{teorema}
+\begin{enumerate}
+    \item Sea $S$ un subconjunto de un ET. Entonces $S$ es cerrado si y solo si, para cada $x \in X-S$ existe una vecindad $V$ de $x$ tal que $V \subseteq X - S$.
+    \item Sea $A$ un subconjunto de un ET. Entonces $A\in \mathbf{T}$ si y solo si, para cada $x \in A$ existe una vecindad $V$ de $x$ tal que $V\subseteq A$.
+    \item Sea $A$ un subconjunto de un ET. Entonces $A \in \mathbf{T}$ si y solo si, para $x \in A$ existe un $V \in \mathbf{T}$ tal que $x \in V \subseteq A$.
+\end{enumerate}
+\end{teorema}
+
+\section{Conexidad y conjuntos acotados}
+Sea $S$ un subconjunto de $\mathbb{R}$. Si existe $\alpha \in S$ tal que para todo $x \in S, x \leq \alpha$, se dice que $\alpha$ es el máximo de $S$ (y análogo para el mínimo). $S \subset \mathbb{R}$, se dice que $S$ está acotado superiormente si y solo si, existe un $c \in \mathbb{R}$ tal que $\forall x \in S, x \leq c$ (análogo para acotado inferiormente).
+$S$ es un conjunto acotado si y solo si tiene cota inferior y superior.
+Si $S$ está acotado superiormente, entonces la menor cota superior se llama \textbf{supremo} de $S$, denotado por $sup(S)$. El máximo será el supremo de $S$ si este está en $S$.
+
+\begin{itemize}
+    \item Si $S$ está acotado superiormente y $S$ es cerrado, entonces $sup(S) \in S$.
+\end{itemize}
+\begin{defin}
+
+	Sea $(X,\mathbf{T})$ un espacio topológico. Este es conexo si y solo si los únicos subconjuntos abiertos y cerrados son $X$ y $\phi$.\\
+	Por tanto, $\mathbb{R}$ es un espacio topológico conexo. 
+
+\end{defin}
+Vamos a pasar a una definición que nos permite saber si dos espacios topológicos son equivalentes.
+\begin{defin}
+	Dados dos espacios topológicos, estos son homeomorfos is existe una función $f:X \to Y$ que satisface:
+	\begin{itemize}
+		\item $f$ es biyectiva.
+		\item Para cada $U \in T_{2}, f ^{-1}(U) \in T_{1}$
+		\item Para cada $V \in T_{1}, f^{-1}(V) \in T_{2}$ 
+	\end{itemize}
+	La función $f$ es un homemorfismo entre $(X,\mathbf{T}_{1})$ y $(Y, \mathbf{T}_{2})$, y escribimos $(X,\mathbf{T}_{1}) \equiv (Y,\mathbf{T}_{2})$    
+\end{defin}
+Con esto podemos llegar a que dos intervalos $(a,b)$ y $(c,d)$ son homeomorfos, y que cualquier intervalo abierto es homeomorfo a $\mathbb{R}$.
+\begin{defin}
+	
+	Una propiedad topológica es una propiedad de un espacio topológico que se conserva mediante un homeomorfismo.\\
+	Es decir, si un espacio tiene una propiedad, y ese espacio es homeomorfo a otro espacio, este otro espacio también tiene esa propiedad.
+
+\end{defin}
+De aquí sigue que
+\begin{teorema}
+
+	Cualquier espacio topológico homeomorfo a un espacio conexo es conexo.
+
+\end{teorema}
+Con estas propiedades, y teniendo la definición usual de $\varepsilon-\delta$ de continuidad, podemos definir la condición para una función continua:
+\begin{teorema}
+
+	Una función $f:\mathbb{R} \to \mathbb{R}$ es continua si y solo si, para todo $U \subset \mathbb{R}$, $f^{-1}(U)$ es un conjunto abierto de $\mathbb{R}$.       
+
+\end{teorema}
+Y en genérico para dos espacios topológicos:
+\begin{teorema}
+
+	Sea $(X, \mathbf{T}_{1})$ y $(Y,\mathbf{T}_{2})$ dos espacios topológicos. $f:X \to Y$ es una función continua respecto a ambas topologías si y solo si,
+	$U \in \mathbf{T}_{2}, f^{-1}(U) \in \mathbf{T}_{1}$ 
+
+\end{teorema}
+\begin{teorema}[Lema del pegamento]
+
+	Sea $X = A \cup B$, donde $A,B$ son subconjuntos cerrados de $X$. Sean $f:A \to Y$ y $g:B \to Y$ funciones continuas. Si $f(x)=g(x)$ para todo $x \in A \cap B$, entonces $h:X \to Y$ definida por $h(x)=f(x)$ si $x \in A$ y $h(x)=g(x)$ si $x \in B$, es continua.             
+
+\end{teorema}
+\end{document}

@@ -1,0 +1,102 @@
+%! TEX root = Probabilidad.tex
+
+\documentclass{./Probabilidad.tex}
+
+\begin{document}
+\chapter{Tema Cinco}
+\section{Distribución conjunta de un vector aleatorio discreto}
+Supongamos un experimento caracterizado por un espacio muestral $\Omega = \{ \omega_{i} \}$. Empezamos con variables aleatorias discretas, dadas por 
+\[
+	X = \{ x_1,\dots ,x_{n} \}
+\]
+A cada elemento $\omega$ de $\Omega$ se le asigna un vector aleatorio discreto $(X(\omega))$.
+\subsection{Función distribución}
+Se define como
+\[
+	P(X \leq x_{i}, Y \leq y_{i}) = \sum^{i}_{k=1}\sum^{j}_{k=1} P(x_{k}, y_{k})
+\]
+\begin{defin}
+	La distribución marginal de $X$ es la probabilidad de que $X$ tome el valor $x_{i}$ a medida que $Y$ cambia:
+	\[
+		P(X=x_{i}) = \sum_{j=1}^{n} P(x_{i}, y_{j})
+	\]
+\end{defin}
+\section{Momentos y parámetros de una distribución}
+\begin{defin}
+El momento respeto al origen de orden $(k,s)$ se define como:
+\[
+ \alpha_{k,s} = E(X^{k}, y^{S}) = \sum \sum x^{k}_{i} y^{s}_{j}P(x_{i}, y_{j})
+\]
+El momento $k=1, s=0$ corresponde a la media de $X$, y el momento $k=0, s=1$ corresponde a la media de $Y$.
+
+\end{defin}
+El conjunto de las medias se denomina \textbf{vector de medias}.
+\begin{defin}
+El momento respecto al valor medio de orden $k,s$ se define como:
+\[
+  \mu_{k,s} = E[(X-\mu_{x})^{k}(Y-\mu_{y})^{s}]= \sum \sum (x_{i}-\mu_{x})^{k}(y_{j}-\mu_{y})^{s}P(x_{i},y_{j})
+\]
+\end{defin}
+Con esto podemos definir la desviación típica como:
+\[
+ \sigma_{ y} ^{2} = \mu_{0,2} 
+\]
+y
+\[
+ \sigma_{x} ^{2} = \mu_{2,0} 
+\]
+\begin{defin}
+Definimos la covarianza $\sigma_{x,y}$ como:
+\[
+  \sigma_{x,y} = \mu_{1,1}
+\]
+que se puede simplificar como:
+\[
+  \sigma_{x,y} = E[X,Y] - E[X]E[Y] 
+\]
+Se da que, si $x$ e $y$ son independientes, $E[XY] = E[X]E[Y]$, y por tanto $\sigma_{x,y}$ = 0.   
+\end{defin}
+\section{Distribuciones condicionadas}
+La probabilidad de que $X = x$ condicionada por $Y = y$, es decir  
+\[
+ P(X=x | Y=y) = \frac{P(x,y)}{P(y)} 
+\]
+Con esto podemos generar una distribución de probabilidad para una variable,
+condicionada a que la segunda variable sea igual a un valor determinado $y_0$.
+De aquí sigue que:
+\begin{equation}
+  \begin{split}
+   E(X|Y=y_0) = \sum x_{i} P(x_{i}|Y=y_0)
+  \end{split}
+\end{equation}
+\begin{defin}
+Definimos la matriz covarianza como:
+\begin{equation}
+	\begin{split}
+		Cov(x,y) = \mqty(
+		\sigma_{x} ^{2} & \sigma_{xy}\\ \sigma_{xy} & \sigma_{y} ^{2}
+		)
+	\end{split}
+\end{equation}
+Se da que el determinante de esta matriz es:
+\[
+	\det(Cov(x,y)) = \sigma_{x}^{2}\sigma_{y}^{2} - \sigma_{xy}^{2} =
+	\sigma_{x}^{2}\sigma_{y}^{2}(1- ( \frac{\sigma_{xy}}{\sigma_{x}\sigma_{y}})^{2}) = \sigma_{x}^{2}\sigma_{y}^{2}(1-\rho ^{2})
+\]
+donde $\rho$ es el coeficiente de correlación lineal. 
+\end{defin}
+\section{Correlación lineal}
+La recta $y(x)$ que más aproxima los datos es:
+\begin{equation}
+	\begin{split}
+		y(x) = a+bx
+	\end{split}
+\end{equation}
+donde
+\begin{equation}
+	\begin{split}
+		b &= \frac{\sigma_{xy}}{\sigma_{x}}\\
+		a &= E[y] - bE[x]
+	\end{split}
+\end{equation}
+\end{document}
